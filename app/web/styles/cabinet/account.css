@@ -1,0 +1,684 @@
+/* Freeman ONE — account. Authoritative source; edit this module, not a later override. */
+
+.login-shell {
+  display: grid;
+  place-items: center;
+  background: var(--bg);
+  padding: 20px 16px;
+  min-height: 100svh;
+}
+
+.login-card {
+  position: relative;
+  text-align: center;
+  backdrop-filter: blur(20px) saturate(1.18);
+  -webkit-backdrop-filter: blur(20px) saturate(1.18);
+  width: min(400px,100%);
+}
+
+.login-card h1 {
+  color: var(--ink);
+}
+
+.login-card p {
+  margin: 0 auto 28px;
+  max-width: 340px;
+  color: var(--muted);
+}
+
+html[data-theme=dark] .login-shell {
+  background: var(--bg);
+}
+
+.login-card .login-form-error {
+  margin: 0;
+  color: var(--danger);
+  font-size: .78rem;
+}
+
+.login-card .login-form-error[hidden] {
+  display: none;
+}
+
+.login-card h1 {
+  margin: 24px 0 10px;
+}
+
+.login-card p {
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 18px;
+}
+
+.account-form label {
+  display: grid;
+  gap: 7px;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.account-form input {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.login-card .bot-login-link {
+  min-height: 44px;
+  height: 44px;
+  border-radius: 13px;
+  font-size: 15px;
+}
+
+.login-form-error {
+  color: #c93535 !important;
+  margin: 0 !important;
+  font-size: 13px !important;
+}
+
+.account-settings {
+  margin-top: 14px;
+}
+
+.account-form {
+  width: calc(min(400px,100vw - 32px));
+  display: grid;
+  gap: 14px;
+}
+
+.account-form h2 {
+  margin: 0;
+}
+
+.account-form p {
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--muted);
+}
+
+.auth-page .login-shell {
+  box-sizing: border-box;
+  min-height: 100svh;
+  padding: 24px 16px;
+  display: grid;
+  place-items: center;
+  background: #f7f9fc !important;
+}
+
+.auth-page .login-card {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 420px;
+  backdrop-filter: none;
+}
+
+.auth-page .login-card h1 {
+  margin: 32px 0 12px;
+  color: #0b1026;
+}
+
+.auth-page .bot-code-form {
+  gap: 12px;
+}
+
+.auth-page .bot-code-form .auth-primary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  height: 56px;
+  min-height: 56px;
+  border-radius: 16px;
+  background: #0a84ff !important;
+  color: #fff !important;
+  font-size: 16px;
+  font-weight: 650;
+  border: 0;
+  box-shadow: 0 8px 18px rgba(10,132,255,.18);
+  transition: transform .15s,background .15s;
+  transform: none;
+}
+
+@media (hover:hover) and (pointer:fine) {
+
+.auth-page .bot-code-form .auth-primary:hover {
+  background: #087cf0 !important;
+  color: #fff !important;
+  transform: none;
+}
+}
+
+.auth-page .auth-primary:active {
+  transform: none;
+}
+
+.auth-page .auth-primary:disabled {
+  opacity: .7;
+  cursor: wait;
+}
+
+.auth-page .login-card .bot-login-link {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  margin: 0;
+  transform: none;
+}
+
+@media (hover:hover) and (pointer:fine) {
+
+.auth-page .login-card .bot-login-link:hover {
+  color: #0a66d8 !important;
+  transform: none;
+  background: #f2f4f7 !important;
+  border-color: #d9dee5 !important;
+}
+}
+
+.auth-page .bot-login-link .telegram-logo {
+  width: 22px;
+  height: 22px;
+}
+
+.auth-page .login-form-error {
+  color: #ff3b30 !important;
+  font-size: 13px !important;
+  text-align: center;
+}
+
+.auth-spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid hsla(0,0%,100%,.4);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: auth-spin .7s linear infinite;
+}
+
+@media (max-width:359px) {
+  .auth-page .login-shell {
+    padding: 16px 12px;
+  }
+}
+
+@media (prefers-reduced-motion:reduce) {
+  .auth-page .auth-primary {
+    transition: none;
+  }
+  .auth-spinner {
+    animation: none;
+  }
+}
+
+.auth-page .login-card .bot-login-link {
+  height: 52px !important;
+  min-height: 52px !important;
+  width: 100%;
+  border-radius: 16px !important;
+  background: #f7f8fa !important;
+  border: 1px solid #e2e6eb !important;
+  color: #1f2937 !important;
+  box-shadow: 0 4px 16px rgba(15,23,42,.035) !important;
+  font-size: 15px !important;
+  font-weight: 600 !important;
+}
+
+.telegram-auth-status {
+  font-size: 13px;
+  line-height: 1.5;
+  color: #67738a;
+  margin-top: 12px;
+}
+
+.telegram-auth-status a {
+  color: #0a84ff;
+}
+
+html[data-theme=dark] body .login-shell {
+  background: var(--bg-page) !important;
+  color: var(--text-primary) !important;
+  background-image: none !important;
+}
+
+html[data-theme=dark] body :is(input:not([type=checkbox]):not([type=radio]):not([type=file]),select,textarea,.auth-page .bot-code-form .auth-identity input,.otp-boxes span,.bot-code-form input):where(:not(.fo-scope, .fo-scope *)) {
+  background: var(--bg-secondary) !important;
+  color: var(--text-primary) !important;
+  border-color: var(--border-subtle) !important;
+  background-image: none !important;
+}
+
+html[data-theme=dark] body.auth-page .login-card .bot-login-link {
+  background: var(--bg-secondary) !important;
+  color: var(--text-primary) !important;
+  border-color: var(--border-subtle) !important;
+  box-shadow: var(--surface-shadow-small) !important;
+}
+
+html[data-theme=dark] body :is(.auth-error,.login-form-error) {
+  color: #ff817b !important;
+}
+
+html body.auth-unified {
+  min-height: 100dvh;
+  background: var(--fo-bg-page);
+  color: var(--fo-text-primary);
+}
+
+html body.auth-unified #app {
+  width: 100% !important;
+  max-width: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  background: none !important;
+}
+
+html body.auth-unified #app .unified-shell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100dvh;
+  padding: 48px 24px;
+  box-sizing: border-box;
+}
+
+html body.auth-unified #app .unified-card {
+  width: 100%;
+  max-width: 720px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+html body.auth-unified #app .unified-brand {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 15px;
+  margin: 0 0 48px;
+}
+
+html body.auth-unified #app .unified-brand img {
+  display: block;
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  filter: none !important;
+}
+
+html body.auth-unified #app .unified-brand span {
+  color: var(--fo-text-primary);
+  font-size: 23px;
+  font-weight: 600;
+  letter-spacing: 7px;
+  padding-left: 7px;
+}
+
+html body.auth-unified #app h1 {
+  color: var(--fo-text-primary);
+  margin: 0 0 20px !important;
+}
+
+html body.auth-unified #app .unified-subtitle {
+  color: var(--fo-text-secondary);
+  font-size: 18px;
+  line-height: 1.6;
+  margin: 0 0 40px;
+}
+
+html body.auth-unified #app [data-unified-auth] {
+  display: grid;
+  gap: 22px;
+  margin: 0;
+  width: 100%;
+}
+
+html body.auth-unified #app .unified-field {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+html body.auth-unified #app .unified-field svg {
+  width: 25px;
+  height: 25px;
+  color: var(--fo-text-secondary);
+  flex-shrink: 0;
+}
+
+html body.auth-unified #app .unified-field input {
+  width: 100%;
+  min-width: 0;
+}
+
+html body.auth-unified #app .unified-primary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+}
+
+html body.auth-unified #app .unified-primary svg {
+  width: 23px;
+  height: 23px;
+}
+
+html body.auth-unified #app .unified-helper {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--fo-text-secondary);
+  margin: 22px 0 0;
+}
+
+html body.auth-unified #app .unified-divider {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  color: var(--fo-text-secondary);
+  font-size: 14px;
+  margin: 32px 0 24px;
+}
+
+html body.auth-unified #app .unified-divider:before {
+  content: "";
+  height: 1px;
+  background: var(--fo-border-interactive);
+  flex: 1;
+}
+
+html body.auth-unified #app .unified-divider:after {
+  content: "";
+  height: 1px;
+  background: var(--fo-border-interactive);
+  flex: 1;
+}
+
+html body.auth-unified #app .unified-alternatives {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+html body.auth-unified #app .unified-alternatives :is(button,a) {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 11px;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+html body.auth-unified #app .unified-alternatives :is(svg,img) {
+  width: 24px;
+  height: 24px;
+  flex: 0 0 24px;
+  filter: none !important;
+}
+
+html body.auth-unified #app .unified-buy svg {
+  color: var(--fo-control-success-text);
+}
+
+html body.auth-unified #app .unified-info {
+  background: var(--fo-bg-secondary);
+  border: 1px solid var(--fo-border-subtle);
+  border-radius: 17px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  text-align: left;
+  padding: 20px;
+  margin-top: 30px;
+}
+
+html body.auth-unified #app .unified-info svg {
+  width: 30px;
+  height: 30px;
+  flex-shrink: 0;
+  color: var(--fo-info-text);
+}
+
+html body.auth-unified #app .unified-info p {
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--fo-text-secondary);
+  margin: 0;
+  padding-left: 20px;
+  border-left: 1px solid var(--fo-border-interactive);
+}
+
+html body.auth-unified #app .unified-text {
+  display: block;
+  width: 100%;
+  margin: 12px 0 0;
+  text-decoration: none;
+}
+
+html body.auth-unified #app [data-unified-error] {
+  color: var(--fo-danger-text);
+  background: var(--fo-danger-bg);
+  border-radius: 12px;
+  padding: 12px;
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 16px 0 0;
+}
+
+html body.auth-unified #app [hidden] {
+  display: none !important;
+}
+
+html body.auth-unified #app button:disabled {
+  cursor: default;
+}
+
+html body.auth-unified #app .unified-code {
+  position: relative;
+  display: block;
+}
+
+html body.auth-unified #app .unified-code div {
+  display: grid;
+  grid-template-columns: repeat(6,1fr);
+  gap: 10px;
+}
+
+html body.auth-unified #app .unified-code div span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 58px;
+  border: 1px solid var(--fo-border-interactive);
+  border-radius: 13px;
+  font-size: 24px;
+  background: var(--fo-bg-surface);
+}
+
+html body.auth-unified #app .unified-code input {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: text;
+}
+
+html body.auth-unified #app .unified-code:focus-within div {
+  outline: 3px solid var(--fo-focus);
+  border-radius: 13px;
+}
+
+.unified-spinner {
+  width: 18px;
+  height: 18px;
+  border: 2px solid #ffffff60;
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: unified-spin .8s linear infinite;
+}
+
+@media (max-width:600px) {
+  html body.auth-unified #app .unified-shell {
+    padding: 16px 12px calc(16px + env(safe-area-inset-bottom));
+    align-items: center;
+  }
+  html body.auth-unified #app .unified-brand {
+    margin-bottom: 18px;
+  }
+  html body.auth-unified #app .unified-brand img {
+    width: 40px;
+    height: 40px;
+  }
+  html body.auth-unified #app .unified-brand span {
+    font-size: 17px;
+    letter-spacing: 4px;
+  }
+  html body.auth-unified #app h1 {
+    margin-bottom: 12px !important;
+  }
+  html body.auth-unified #app .unified-subtitle {
+    margin-bottom: 16px;
+    font-size: var(--fo-font-size-body);
+    line-height: 1.55;
+  }
+  html body.auth-unified #app .unified-field {
+    gap: 8px;
+  }
+  html body.auth-unified #app [data-unified-auth] {
+    gap: 12px;
+  }
+  html body.auth-unified #app .unified-alternatives {
+    gap: 10px;
+    grid-template-columns: 1fr;
+  }
+  html body.auth-unified #app .unified-info {
+    padding: 12px;
+    gap: 10px;
+    margin-top: 16px;
+  }
+  html body.auth-unified #app .unified-info p {
+    font-size: 13px;
+    padding-left: 14px;
+  }
+  html body.auth-unified #app .unified-code div {
+    gap: 6px;
+  }
+  html body.auth-unified #app .unified-code div span {
+    height: 44px;
+  }
+}
+
+@media (min-width:440px) and (max-width:600px) {
+  html body.auth-unified #app .unified-alternatives {
+    grid-template-columns: 1fr 1fr;
+  }
+  html body.auth-unified #app .unified-alternatives :is(button,a) {
+    gap: 7px;
+  }
+}
+
+@media (prefers-reduced-motion:reduce) {
+  html body.auth-unified #app * {
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+  }
+}
+
+@media (max-width:600px) {
+  html body.auth-unified #app .unified-subtitle-break {
+    display: none;
+  }
+}
+
+html body.auth-unified #app .unified-spam-note {
+  margin: 20px 0 0;
+  padding: 14px 16px;
+  border: 1px solid var(--fo-warning-border);
+  border-radius: 14px;
+  background: var(--fo-warning-bg);
+  color: var(--fo-warning-text);
+  text-align: left;
+  font-size: 14px;
+  line-height: 1.55;
+  box-shadow: var(--fo-surface-shadow-small);
+}
+
+.identity-devices-dialog {
+  width: min(560px,100% - 28px);
+  border: 1px solid #dfe3e9;
+  border-radius: 20px;
+  background: #fff;
+  color: #171a22;
+  padding: 18px;
+  font: 14px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  animation: identity-open .25s ease;
+}
+
+.identity-devices-dialog::backdrop {
+  background: #11182766;
+}
+
+.identity-devices-dialog header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.identity-devices-dialog h2 {
+  margin: 0;
+}
+
+.identity-devices-dialog p {
+  color: #7a8293;
+  line-height: 1.5;
+}
+
+.identity-devices-dialog button {
+  cursor: pointer;
+}
+
+.identity-device-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 0;
+  border-bottom: 1px solid #e1e4eb;
+}
+
+.identity-device-row small {
+  display: block;
+  color: #7a8293;
+  margin-top: 5px;
+  font-size: 12px;
+}
+
+.identity-device-row button {
+  flex: none;
+}
+
+[data-theme=dark] .identity-devices-dialog {
+  background: #181b20;
+  color: #f2f3f5;
+  border-color: #343942;
+}
+
+@media (max-width:430px) {
+  .identity-device-row {
+    align-items: flex-start;
+    gap: 7px;
+  }
+}
+
+@media (prefers-reduced-motion:reduce) {
+  .identity-devices-dialog {
+    animation: none;
+  }
+}
+
+[data-theme=dark] .identity-device-row {
+  border-color: #343942;
+}

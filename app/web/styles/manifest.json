@@ -1,0 +1,97 @@
+{
+  "cabinet.css": {
+    "sources": [
+      "shared/theme.css",
+      "shared/components.css",
+      "shared/forms.css",
+      "shared/navigation.css",
+      "shared/overlays.css",
+      "shared/dictation.css",
+      "cabinet/foundation.css",
+      "cabinet/shell.css",
+      "cabinet/components.css",
+      "cabinet/account.css",
+      "cabinet/profile.css",
+      "cabinet/keys.css",
+      "cabinet/plans.css",
+      "cabinet/clients.css",
+      "cabinet/support.css",
+      "cabinet/payments.css",
+      "cabinet/reports.css",
+      "cabinet/publications.css",
+      "cabinet/proxy.css",
+      "cabinet/referrals.css",
+      "cabinet/catalog.css",
+      "cabinet/motion.css",
+      "shared/chat.css",
+      "shared/motion.css",
+      "shared/admin.css",
+      "shared/analytics.css"
+    ],
+    "bytes": 748930,
+    "sha256": "a8a5f219b08a2d3257c843d6675e0d03c8b7f4cdd4287de1276f1bd8acd1e492"
+  },
+  "freeman-assistant.css": {
+    "sources": [
+      "shared/theme.css",
+      "shared/components.css",
+      "shared/forms.css",
+      "shared/navigation.css",
+      "shared/overlays.css",
+      "shared/legacy-standalone.css",
+      "pages/assistant.css",
+      "shared/dictation.css",
+      "shared/chat.css",
+      "shared/motion.css"
+    ],
+    "bytes": 197283,
+    "sha256": "7abe9f64e76853d3eafb3fb5cdd2b06cc99eb77111c2be69ce0d864fd2454499"
+  },
+  "freeman-ai.css": {
+    "sources": [
+      "shared/theme.css",
+      "shared/components.css",
+      "shared/forms.css",
+      "shared/navigation.css",
+      "shared/overlays.css",
+      "shared/legacy-standalone.css",
+      "pages/ai-console.css",
+      "shared/dictation.css",
+      "shared/chat.css",
+      "shared/motion.css"
+    ],
+    "bytes": 180124,
+    "sha256": "73d917fe1af0c22f5b429c623817dccb12fb2cc9a6c8b6fae84a543b6c88b716"
+  },
+  "guest-purchase.css": {
+    "sources": [
+      "shared/theme.css",
+      "shared/components.css",
+      "shared/forms.css",
+      "shared/navigation.css",
+      "shared/overlays.css",
+      "pages/auth-payment.css",
+      "pages/guest-purchase.css",
+      "pages/post-payment.css",
+      "shared/chat.css",
+      "shared/motion.css"
+    ],
+    "bytes": 165019,
+    "sha256": "fccbab4a44835483aac119c0d8bb8a85dc980fbad0e0d8b040dc326bd5fc83b7"
+  },
+  "account-management.css": {
+    "sources": [
+      "shared/theme.css",
+      "shared/components.css",
+      "shared/forms.css",
+      "shared/navigation.css",
+      "shared/overlays.css",
+      "pages/guest-purchase.css",
+      "pages/account-management.css",
+      "shared/chat.css",
+      "shared/motion.css"
+    ],
+    "bytes": 161581,
+    "sha256": "5f7d3d8071a87d24d91fa601d424353bf5198267f2969844b88a57e5cbe4f959"
+  }
+}

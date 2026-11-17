@@ -1,0 +1,48 @@
+/* One segmented-control presentation. Controllers retain state and routing. */
+.fo-tabs{display:flex;flex-wrap:wrap;align-items:stretch;gap:3px;max-width:100%;min-width:0;padding:3px;margin:0;background:var(--fo-segment-track);border:0;border-radius:12px;box-shadow:none;overflow:visible}
+.fo-tab{appearance:none;display:inline-flex;align-items:center;justify-content:center;gap:6px;flex:1 1 auto;min-width:0;max-width:100%;min-height:36px;padding:7px 10px;border:1px solid transparent;border-radius:var(--fo-segment-radius);background:transparent;color:var(--fo-text-secondary);font:var(--fo-weight-emphasis) var(--fo-font-size-secondary)/var(--fo-line-heading) var(--fo-font-family);text-decoration:none;white-space:normal;overflow-wrap:anywhere;cursor:pointer;touch-action:manipulation;box-shadow:none;transition:background-color var(--fo-motion-press) var(--fo-motion-ease),box-shadow var(--fo-motion-press) var(--fo-motion-ease),color var(--fo-motion-press) var(--fo-motion-ease),scale var(--fo-motion-press) var(--fo-motion-ease)}
+.fo-tab:is(.active,[aria-selected=true],[aria-pressed=true],[aria-current=page]){background:var(--fo-segment-selected);color:var(--fo-text-primary);border-color:var(--fo-segment-stroke);box-shadow:var(--fo-segment-shadow)}
+.fo-tab :is(svg,img){width:18px;height:18px;max-width:18px;object-fit:contain;flex:none}.fo-tab small{font-size:.85em;opacity:.8}
+.fo-tab:not(:disabled):active{filter:brightness(.94);transition-duration:0s}
+.fo-tab:focus-visible{outline:2px solid var(--fo-focus);outline-offset:1px}.fo-tab:disabled{opacity:.45;cursor:not-allowed}.fo-tabs>.customer-tab-pill{display:none}
+.fo-tabs>.fo-tab-action{background:transparent;border-color:transparent;box-shadow:none;color:var(--fo-text-secondary);font-size:12px}
+@media(hover:hover) and (pointer:fine){.fo-tab:not(:disabled):not(.active):not([aria-selected=true]):not([aria-pressed=true]):not([aria-current=page]):hover{background:var(--fo-hover-surface);color:var(--fo-text-primary)}}
+@media(pointer:coarse){.fo-tab{min-height:var(--fo-control-touch-target)}}
+@media(prefers-reduced-motion:reduce){.fo-tab{transition:none,scale var(--fo-motion-press) var(--fo-motion-ease)}}
+
+.fo-tabs--compact>.fo-tab{min-height:32px;padding:5px 4px;font-size:12px;line-height:18px;white-space:nowrap;overflow-wrap:normal}
+
+/* Cabinet and standalone apps share these navigation leaves. */
+.fo-nav-item {
+  min-width: 0;
+  width: 100%;
+  min-height: var(--fo-control-default);
+  justify-content: flex-start;
+  text-align: start;
+  box-shadow: none;
+  color: var(--fo-text-secondary);
+  flex: none;
+  transition:scale var(--fo-motion-press) var(--fo-motion-ease),background-color var(--fo-motion-press) var(--fo-motion-ease);
+}
+.fo-nav-item[aria-current=page] {
+  color: var(--fo-text-primary);
+  background: var(--fo-bg-elevated);
+  border-color: transparent;
+}
+.fo-nav-item>span {
+  min-width: 0;
+}
+.fo-nav-item>.telegram-logo {
+  width: 20px;
+  height: 20px;
+}
+.fo-navigation .sidebar-nav-label {
+  color: var(--fo-text-secondary);
+  font-size: var(--fo-font-size-caption);
+  padding: var(--fo-space-3) var(--fo-space-3) var(--fo-space-1);
+}
+@media(prefers-reduced-motion:no-preference){.fo-tab:not(:disabled):active{scale:.98}}
+@media(prefers-reduced-motion:no-preference){.fo-nav-item:not(:disabled):active{scale:.98;transition-duration:0s}}
+
+/* Tabs scroll by touch, trackpad and keyboard without a bar covering labels. */
+.fo-tabs{scrollbar-width:none}.fo-tabs::-webkit-scrollbar{display:none;height:0;width:0}

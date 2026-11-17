@@ -1,0 +1,175 @@
+#!/usr/bin/env python3
+"""Freeman ONE / Telemt connection export. Read-only; Python 3.8+; no packages.
+
+Reads only selected API configuration fields. Never exports users, proxy secrets,
+SSH credentials or the full configuration. Performs GET health requests on the
+local API only. Does not install, write files, change firewall or restart Telemt.
+The exported Authorization is sensitive: paste it only in your Freeman admin UI.
+"""
+import base64
+import ipaddress
+import json
+from pathlib import Path
+import re
+import sys
+import urllib.parse
+import urllib.request
+
+
+def api_settings_text(text, scalar_only=False):
+    if not scalar_only:
+        try:
+            import tomllib
+        except ImportError:
+            pass
+        else:
+            return tomllib.loads(text).get('server', {}).get('api', {})
+    # Older Python: read only simple scalar keys in [server.api]. Fail closed on
+    # unsupported/multiline syntax; never evaluate code or parse access.users.
+    result = {}
+    section = ''
+    for line in text.splitlines():
+        stripped = line.strip()
+        if stripped.startswith('['):
+            section = stripped.split('#', 1)[0].strip()
+            continue
+        if section != '[server.api]':
+            continue
+        match = re.match(r'^\s*(enabled|listen|auth_header)\s*=\s*(.*?)\s*$', line)
+        if not match:
+            continue
+        key, raw = match.groups()
+        if key in result:
+            raise ValueError('Повторяющиеся параметры API: проверьте конфигурацию.')
+        if key == 'enabled':
+            raw = raw.split('#', 1)[0].strip()
+            if raw not in ('true', 'false'):
+                raise ValueError('Не удалось прочитать enabled API.')
+            result[key] = raw == 'true'
+        elif raw.startswith('"') and not raw.startswith('"""'):
+            try:
+                value, end = json.JSONDecoder().raw_decode(raw)
+            except ValueError:
+                raise ValueError('Сложный формат TOML: введите данные вручную.') from None
+            if not isinstance(value, str) or raw[end:].strip().split('#', 1)[0].strip():
+                raise ValueError('Неподдерживаемый формат параметра API.')
+            result[key] = value
+        else:
+            match = re.fullmatch(r"'([^'\n]*)'\s*(?:#.*)?", raw)
+            if not match:
+                raise ValueError('Сложный формат TOML: введите данные вручную.')
+            result[key] = match.group(1)
+    return result
+
+
+def api_settings(path):
+    path = Path(path)
+    if not path.is_file() or path.stat().st_size > 1048576:
+        raise ValueError('Не найден небольшой файл конфигурации Telemt.')
+    return api_settings_text(path.read_text(encoding='utf-8'))
+
+
+def valid_host(host):
+    if not isinstance(host, str) or not host or len(host) > 255:
+        return False
+    try:
+        ipaddress.ip_address(host)
+        return True
+    except ValueError:
+        return all(re.fullmatch(r'[A-Za-z0-9](?:[A-Za-z0-9-]{0,61}[A-Za-z0-9])?', x)
+                   for x in host.rstrip('.').split('.'))
+
+
+def make_bundle(path, api_url, host, port):
+    settings = api_settings(path)
+    auth = settings.get('auth_header', '')
+    if settings.get('enabled', True) is not True:
+        raise ValueError('API Telemt выключен. Настройте его перед подключением.')
+    if not isinstance(auth, str) or not auth.strip() or len(auth) > 2000 or any(ord(c) < 32 or ord(c) > 126 for c in auth):
+        raise ValueError('Нужен настроенный непустой Authorization API. Полную конфигурацию не вставляйте.')
+    url = urllib.parse.urlsplit(api_url)
+    # Validate port separately; a malformed HTTPS port is not a private IP test.
+    if url.port is not None and not 1 <= url.port <= 65535:
+        raise ValueError('Недопустимый порт API.')
+    try:
+        ip = ipaddress.ip_address(url.hostname)
+        private = any(ip in ipaddress.ip_network(net) for net in
+                      ('10.0.0.0/8', '172.16.0.0/12', '192.168.0.0/16', 'fc00::/7'))
+    except ValueError:
+        private = False
+    if (url.scheme not in ('https', 'http') or not valid_host(url.hostname)
+            or url.username or url.password or url.path not in ('', '/')
+            or url.query or url.fragment or len(api_url) > 512
+            or (url.scheme == 'http' and not private)):
+        raise ValueError('Укажите базовый HTTPS URL API без /v1, пароля и параметров. HTTP допустим только в частной сети.')
+    if not valid_host(host) or type(port) is not int or not 1 <= port <= 65535:
+        raise ValueError('Нужен публичный IP/домен Proxy без ссылки и порт от 1 до 65535.')
+    return dict(kind='freeman-telemt-connect', version=1, api_url=api_url.rstrip('/'),
+                authorization=auth, host=host, port=port)
+
+
+class NoRedirect(urllib.request.HTTPRedirectHandler):
+    def redirect_request(self, req, fp, code, msg, headers, newurl):
+        raise ValueError('Локальный API перенаправляет запрос. Проверьте listen Telemt.')
+
+
+def probe_local(settings):
+    listen = settings.get('listen', '0.0.0.0:9091')
+    try:
+        address = urllib.parse.urlsplit('http://' + listen)
+        port = address.port
+        ipaddress.ip_address(address.hostname)
+        if not port:
+            raise ValueError()
+    except (TypeError, ValueError):
+        raise ValueError('Не удалось определить локальный порт API из server.api.listen.') from None
+    # Never send the token to the public URL from this diagnostic script.
+    local = '[::1]' if ':' in address.hostname else '127.0.0.1'
+    opener = urllib.request.build_opener(urllib.request.ProxyHandler({}), NoRedirect())
+    for path in ('/v1/health', '/v1/health/ready'):
+        request = urllib.request.Request('http://%s:%s%s' % (local, port, path),
+                                        headers={'Authorization': settings['auth_header']}, method='GET')
+        with opener.open(request, timeout=8) as response:
+            value = json.loads(response.read(65536))
+        if not isinstance(value, dict) or value.get('ok') is False:
+            raise ValueError('Telemt сообщил, что API не готов.')
+        data = value.get('data', value)
+        if not isinstance(data, dict) or data.get('read_only') is True:
+            raise ValueError('API Telemt работает только на чтение: выдача недоступна.')
+
+
+def main():
+    if hasattr(sys.stdout, 'reconfigure'):
+        sys.stdout.reconfigure(encoding='utf-8')
+    try:
+        # Separate streams: a terminal is not seekable, so Python's r+ buffer
+        # cannot be used. Reading /dev/tty also works when code uses a heredoc.
+        with open('/dev/tty', 'r', encoding='utf-8') as tty_in, open('/dev/tty', 'w', encoding='utf-8', buffering=1) as tty:
+            def ask(label, default=''):
+                tty.write(label + (' [' + default + ']' if default else '') + ': ')
+                tty.flush()
+                answer = tty_in.readline()
+                if not answer:
+                    raise ValueError('Ввод отменён.')
+                return answer.strip() or default
+            tty.write('\nFreeman ONE: только чтение и GET-проверки. Файлы и служба не изменяются.\n')
+            known = ['/etc/telemt/telemt.toml', '/etc/telemt/config.toml', '/opt/telemt/config.toml', '/opt/telemt/telemt.toml']
+            default = next((p for p in known if Path(p).is_file()), known[0])
+            config = ask('Путь к конфигурации Telemt (для Docker — файл на хосте)', default)
+            api_url = ask('HTTPS адрес API, доступный с сайта, без /v1')
+            host = ask('Публичный IP или домен Proxy', urllib.parse.urlsplit(api_url).hostname or '')
+            port = int(ask('Порт самого Proxy (не API)', '443'))
+            bundle = make_bundle(config, api_url, host, port)
+            probe_local(api_settings(config))
+            tty.write('\nЛокальный API готов. Следующая строка содержит токен API.\nВставьте её только в форму подключения сервера на сайте; не в чат.\n')
+        payload = base64.urlsafe_b64encode(json.dumps(bundle, ensure_ascii=True).encode()).decode().rstrip('=')
+        print('FREEMAN_TELEMT_CONNECT_V1:' + payload)
+    except (OSError, ValueError, KeyError):
+        # No raw exception text: URL/header/contents must never leak on failure.
+        print('Не удалось подготовить подключение. Проверьте путь/доступ к файлу, непустой auth_header, HTTPS адрес и локальный API. Для Docker проверьте публикацию порта API на localhost. Используйте инструкцию или ручной ввод на сайте.', file=sys.stderr)
+        return 1
+    return 0
+
+
+if __name__ == '__main__':
+    raise SystemExit(main())

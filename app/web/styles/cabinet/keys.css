@@ -1,0 +1,2106 @@
+/* Freeman ONE — keys. Authoritative source; edit this module, not a later override. */
+
+.key-card {
+  padding: 17px 19px;
+  display: grid;
+  grid-template-columns: 44px 1fr auto;
+  align-items: center;
+  gap: 14px;
+}
+
+.key-card>span {
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border-radius: 0 !important;
+  background: transparent !important;
+  background-image: none !important;
+  color: var(--icon) !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+.key-card h3 {
+  margin: 0 0 5px;
+}
+
+.key-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: .82rem;
+}
+
+@media (max-width:1100px) {
+  .key-card {
+    grid-template-columns: 42px 1fr;
+  }
+  .key-card .btn {
+    grid-column: 2;
+    justify-self: start;
+  }
+}
+
+.keys-header:where(:not(.fo-scope, .fo-scope *)) {
+  display: grid;
+  align-items: center;
+  padding: 34px 0 22px;
+}
+
+.keys-header>button:first-child:where(:not(.fo-scope, .fo-scope *)) {
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+
+.keys-header>button:first-child svg:where(:not(.fo-scope, .fo-scope *)) {
+  width: 28px;
+  height: 28px;
+}
+
+.keys-header h1:where(:not(.fo-scope, .fo-scope *)) {
+  margin: 0;
+}
+
+.key-search:where(:not(.fo-scope, .fo-scope *)) {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.key-search svg:where(:not(.fo-scope, .fo-scope *)) {
+  width: 27px;
+  height: 27px;
+}
+
+.key-search input:where(:not(.fo-scope, .fo-scope *)) {
+  width: 100%;
+}
+
+.key-actions {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  margin: 13px 0 16px;
+}
+
+.key-actions button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  cursor: pointer;
+}
+
+.key-actions button svg {
+  width: 23px;
+  height: 23px;
+  color: var(--muted);
+  stroke-width: 1.8;
+}
+
+.device-row {
+  display: grid;
+  gap: 12px;
+  align-items: center;
+}
+
+.device-row strong {
+  display: block;
+  font-size: .94rem;
+}
+
+.device-row small {
+  display: block;
+  color: var(--muted);
+  font-size: .78rem;
+  margin-top: 4px;
+}
+
+html[data-theme=dark] .key-card {
+  background: var(--paper);
+  border-color: var(--line);
+}
+
+@media (max-width:520px) {
+  .keys-header:where(:not(.fo-scope, .fo-scope *)) {
+    grid-template-columns: 42px 1fr auto;
+    padding: 29px 0 18px;
+    gap: 9px;
+  }
+  .keys-header>button:first-child:where(:not(.fo-scope, .fo-scope *)) {
+    width: 41px;
+    height: 41px;
+  }
+  .keys-header h1:where(:not(.fo-scope, .fo-scope *)) {
+    font-size: 1.42rem;
+  }
+  .key-search:where(:not(.fo-scope, .fo-scope *)) {
+    height: 50px;
+    border-radius: 15px;
+    padding: 0 15px;
+  }
+  .key-search svg:where(:not(.fo-scope, .fo-scope *)) {
+    width: 23px;
+    height: 23px;
+  }
+  .key-actions {
+    grid-template-columns: repeat(6,1fr);
+    gap: 8px;
+  }
+  .key-actions button {
+    grid-column: span 2;
+    gap: 5px;
+  }
+  .key-actions button:nth-child(n+4) {
+    grid-column: span 3;
+  }
+  .key-actions button svg {
+    width: 19px;
+    height: 19px;
+  }
+}
+
+.key-actions button:disabled {
+  cursor: not-allowed;
+}
+
+.qr-modal:where(:not(.fo-scope, .fo-scope *)) {
+  position: relative;
+  width: min(390px,100%);
+  color: var(--ink);
+  padding: 24px;
+}
+
+.qr-modal>button:where(:not(.fo-scope, .fo-scope *)) {
+  position: absolute;
+  right: 13px;
+  top: 13px;
+  width: 32px;
+  height: 32px;
+}
+
+.qr-modal h2:where(:not(.fo-scope, .fo-scope *)) {
+  font-size: 1.12rem;
+  margin: 0 34px 16px 0;
+}
+
+.qr-modal img:where(:not(.fo-scope, .fo-scope *)) {
+  width: 220px;
+  height: 220px;
+  display: block;
+  margin: auto;
+  border-radius: 16px;
+  background: #fff;
+  padding: 8px;
+}
+
+.qr-modal p:where(:not(.fo-scope, .fo-scope *)) {
+  font-size: .75rem;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+html[data-theme=dark] .qr-modal:where(:not(.fo-scope, .fo-scope *)) {
+  border-color: var(--line);
+}
+
+.device-row {
+  grid-template-columns: 36px minmax(0,1fr) 36px;
+}
+
+.device-row>button {
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+
+.device-row>button svg {
+  width: 18px;
+  height: 18px;
+}
+
+.key-card {
+  background: var(--paper);
+  border: 0;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  background-image: none;
+}
+
+.qr-modal:where(:not(.fo-scope, .fo-scope *)) {
+  border-radius: var(--radius);
+  background-image: none;
+}
+
+.keys-header:where(:not(.fo-scope, .fo-scope *)) {
+  padding-top: 30px;
+  padding-bottom: 20px;
+  gap: 14px;
+}
+
+.keys-header h1:where(:not(.fo-scope, .fo-scope *)) {
+  color: var(--ink);
+  font-weight: 650;
+  letter-spacing: -.035em;
+}
+
+.key-search:where(:not(.fo-scope, .fo-scope *)) {
+  padding: 0 18px;
+  border-radius: 18px;
+  color: var(--muted);
+  height: 60px;
+}
+
+.key-actions button.primary svg {
+  color: #fff;
+}
+
+html[data-theme=dark] .qr-modal:where(:not(.fo-scope, .fo-scope *)) {
+  background: var(--paper);
+  border: 0;
+}
+
+html[data-theme=dark] .key-search:where(:not(.fo-scope, .fo-scope *)) {
+  color: var(--ink);
+}
+
+@media (max-width:650px) {
+  .keys-header:where(:not(.fo-scope, .fo-scope *)) {
+    padding-top: 27px;
+    padding-bottom: 18px;
+  }
+}
+
+.keys-header h1:where(:not(.fo-scope, .fo-scope *)) {
+  text-align: center;
+  font-size: 1.8rem;
+  grid-column: 2;
+}
+
+.keys-header>button:first-child:where(:not(.fo-scope, .fo-scope *)) {
+  width: 50px;
+  height: 50px;
+  backdrop-filter: blur(18px) saturate(1.14);
+  -webkit-backdrop-filter: blur(18px) saturate(1.14);
+}
+
+.key-search svg:where(:not(.fo-scope, .fo-scope *)) {
+  color: #8d949e;
+}
+
+.key-actions {
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.device-row {
+  min-height: 76px;
+  margin: 10px 0;
+  padding: 11px 14px;
+  border-radius: 15px;
+  backdrop-filter: blur(20px) saturate(1.18);
+  -webkit-backdrop-filter: blur(20px) saturate(1.18);
+}
+
+.device-row>span {
+  color: #58616d;
+}
+
+.device-row>button {
+  backdrop-filter: blur(18px) saturate(1.14);
+  -webkit-backdrop-filter: blur(18px) saturate(1.14);
+}
+
+html[data-theme=dark] .key-search:where(:not(.fo-scope, .fo-scope *)) {
+  border-color: #343940;
+  background: #16181b;
+}
+
+html[data-theme=dark] .device-row {
+  border: 1px solid #30343a;
+  background: #202328;
+}
+
+@media (max-width:650px) {
+  .keys-header:where(:not(.fo-scope, .fo-scope *)) {
+    grid-template-columns: 42px minmax(0,1fr) auto;
+    gap: 9px;
+  }
+  .keys-header h1:where(:not(.fo-scope, .fo-scope *)) {
+    font-size: 1.42rem;
+  }
+  .keys-header>button:first-child:where(:not(.fo-scope, .fo-scope *)) {
+    width: 41px;
+    height: 41px;
+  }
+  .key-search:where(:not(.fo-scope, .fo-scope *)) {
+    height: 52px;
+    border-radius: 16px;
+  }
+  .device-row {
+    min-height: 68px;
+    padding: 9px 11px;
+  }
+}
+
+.keys-header:where(:not(.fo-scope, .fo-scope *)) {
+  grid-template-columns: 52px minmax(0,1fr) 52px;
+}
+
+@media (max-width:650px) {
+  .keys-header:where(:not(.fo-scope, .fo-scope *)) {
+    grid-template-columns: 42px minmax(0,1fr) 42px;
+  }
+}
+
+.device-row {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-small);
+}
+
+.key-actions button[data-key-devices] {
+  grid-column: 1/-1;
+}
+
+.key-actions button[data-key-devices] svg:last-child {
+  width: 16px;
+  margin-left: auto;
+  transition: transform var(--t-tap);
+}
+
+.key-actions button[data-key-devices][aria-expanded=true] svg:last-child {
+  transform: rotate(180deg);
+}
+
+.modal-backdrop>section.install-modal:where(:not(.fo-scope, .fo-scope *)) {
+  width: calc(min(480px,100vw - 32px));
+  padding: 24px;
+  border-radius: 24px;
+  color: var(--ink);
+}
+
+.install-modal>small:where(:not(.fo-scope, .fo-scope *)) {
+  color: var(--muted);
+  font-size: .74rem;
+}
+
+.install-modal h2:where(:not(.fo-scope, .fo-scope *)) {
+  margin: 5px 36px 18px 0;
+  font-size: 1.3rem;
+}
+
+.install-modal ol:where(:not(.fo-scope, .fo-scope *)) {
+  display: grid;
+  gap: 15px;
+  margin: 0;
+  padding-left: 23px;
+}
+
+.install-modal li:where(:not(.fo-scope, .fo-scope *)) {
+  padding-left: 4px;
+}
+
+.install-modal li:where(:not(.fo-scope, .fo-scope *))::marker {
+  color: var(--accent-deep);
+  font-weight: 600;
+}
+
+.install-modal li b:where(:not(.fo-scope, .fo-scope *)) {
+  font-size: .91rem;
+}
+
+.install-modal li p:where(:not(.fo-scope, .fo-scope *)) {
+  color: var(--muted);
+  font-size: .83rem;
+  line-height: 1.5;
+  margin: 5px 0 9px;
+}
+
+.install-modal li a:where(:not(.fo-scope, .fo-scope *)) {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--accent-deep);
+  font-size: .81rem;
+  font-weight: 600;
+}
+
+.install-modal li button:where(:not(.fo-scope, .fo-scope *)) {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  cursor: pointer;
+  backdrop-filter: blur(18px) saturate(1.14);
+  -webkit-backdrop-filter: blur(18px) saturate(1.14);
+}
+
+.install-modal li button svg:where(:not(.fo-scope, .fo-scope *)) {
+  width: 17px;
+  height: 17px;
+}
+
+.install-done:where(:not(.fo-scope, .fo-scope *)) {
+  display: block;
+  width: 100%;
+  margin-top: 18px;
+  cursor: pointer;
+  backdrop-filter: blur(18px) saturate(1.14);
+  -webkit-backdrop-filter: blur(18px) saturate(1.14);
+}
+
+.key-actions button.key-install svg {
+  color: #fff !important;
+}
+
+.key-actions button:not(.primary):not(.key-install) {
+  backdrop-filter: blur(18px) saturate(1.14);
+  -webkit-backdrop-filter: blur(18px) saturate(1.14);
+}
+
+.qr-modal>button .aegis-svg:where(:not(.fo-scope, .fo-scope *)) {
+  width: 19px;
+  height: 19px;
+}
+
+.install-modal li a .aegis-svg:where(:not(.fo-scope, .fo-scope *)) {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  vertical-align: -3px;
+  margin-left: 3px;
+}
+
+.key-actions button[data-autorenew].is-enabled svg {
+  color: #248a3d;
+}
+
+.device-expander {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows var(--t-expand) var(--spring);
+}
+
+.device-expander.is-open {
+  grid-template-rows: 1fr;
+}
+
+.install-modal:where(:not(.fo-scope, .fo-scope *)) {
+  background: hsla(0,0%,100%,.82);
+  border: 1px solid rgba(89,108,145,.12);
+  box-shadow: 0 8px 28px rgba(24,38,66,.055);
+  backdrop-filter: blur(22px) saturate(135%);
+  -webkit-backdrop-filter: blur(22px) saturate(135%);
+}
+
+.qr-modal:where(:not(.fo-scope, .fo-scope *)) {
+  background: hsla(0,0%,100%,.82);
+  border: 1px solid rgba(89,108,145,.12);
+  box-shadow: 0 8px 28px rgba(24,38,66,.055);
+  backdrop-filter: blur(22px) saturate(135%);
+  -webkit-backdrop-filter: blur(22px) saturate(135%);
+}
+
+.key-search:where(:not(.fo-scope, .fo-scope *)) {
+  background: hsla(0,0%,100%,.82);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-small);
+}
+
+.subscription-title:where(:not(.fo-scope, .fo-scope *)) {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  column-gap: 13px;
+  row-gap: 7px;
+  align-items: center;
+  min-width: 0;
+}
+
+.subscription-title small:where(:not(.fo-scope, .fo-scope *)) {
+  grid-column: 1/-1;
+  margin: 0 !important;
+  font-size: .94rem !important;
+  color: #66708a !important;
+}
+
+.subscription-status:where(:not(.fo-scope, .fo-scope *)) {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  justify-self: start;
+  padding: 8px 12px;
+  border-radius: 999px;
+  font-size: .84rem;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.subscription-status:before:where(:not(.fo-scope, .fo-scope *)) {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.subscription-status.is-active:where(:not(.fo-scope, .fo-scope *)) {
+  color: #087b37;
+  background: #e8f9ed;
+}
+
+.subscription-status.is-inactive:where(:not(.fo-scope, .fo-scope *)) {
+  color: #69738b;
+  background: #eef1f6;
+}
+
+.subscription-devices-panel:where(:not(.fo-scope, .fo-scope *)) {
+  min-width: 0;
+  background: hsla(0,0%,100%,.86);
+  border: 1px solid rgba(89,108,145,.1);
+}
+
+.subscription-qr:where(:not(.fo-scope, .fo-scope *)) {
+  display: grid;
+  align-items: center;
+  text-align: left;
+  cursor: pointer;
+  border-radius: 19px;
+  border: 1px solid rgba(89,108,145,.14);
+  background: rgba(250,252,255,.85);
+  color: #0b1028;
+  box-shadow: 0 4px 14px rgba(29,45,73,.035);
+}
+
+.subscription-qr>span:where(:not(.fo-scope, .fo-scope *)) {
+  display: grid;
+  place-items: center;
+  border-radius: 13px;
+  background: hsla(0,0%,100%,.82);
+  box-shadow: var(--shadow-small);
+}
+
+.subscription-qr>b:where(:not(.fo-scope, .fo-scope *)) {
+  min-width: 0;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.subscription-qr b small:where(:not(.fo-scope, .fo-scope *)) {
+  margin-top: 4px;
+  color: #7b859b;
+  font-size: .75rem;
+  font-weight: 400;
+  display: none;
+}
+
+.subscription-qr>.aegis-svg:where(:not(.fo-scope, .fo-scope *)) {
+  width: 17px;
+  height: 17px;
+  color: #66708a;
+}
+
+.subscription-key-field:where(:not(.fo-scope, .fo-scope *)) {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 0;
+  gap: 10px;
+  border: 1px solid rgba(111,134,174,.15);
+  background: rgba(247,250,254,.78);
+}
+
+.subscription-key-field code:where(:not(.fo-scope, .fo-scope *)) {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #10172f;
+  font: 500 1rem/1.4 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  letter-spacing: .02em;
+}
+
+.subscription-key-field button:where(:not(.fo-scope, .fo-scope *)) {
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  cursor: pointer;
+}
+
+.subscription-key-field button svg:where(:not(.fo-scope, .fo-scope *)) {
+  width: 20px;
+  height: 20px;
+}
+
+.subscription-key-help:where(:not(.fo-scope, .fo-scope *)) {
+  display: block;
+  margin: 8px 0 0 204px;
+  color: #7b869e;
+  font-size: .76rem;
+}
+
+.subscription-primary-actions:where(:not(.fo-scope, .fo-scope *)) {
+  display: grid;
+  grid-template-columns: repeat(2,minmax(0,1fr));
+  gap: 9px !important;
+}
+
+.subscription-primary-actions button:where(:not(.fo-scope, .fo-scope *)) {
+  grid-template-columns: 34px 1fr 22px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.subscription-primary-actions button svg:first-child:where(:not(.fo-scope, .fo-scope *)) {
+  width: 30px;
+  height: 30px;
+}
+
+.subscription-primary-actions button svg:last-child:where(:not(.fo-scope, .fo-scope *)) {
+  width: 22px;
+  height: 22px;
+  justify-self: end;
+}
+
+.subscription-devices-panel h3:where(:not(.fo-scope, .fo-scope *)) {
+  color: #0b1028;
+  font-weight: 620;
+}
+
+.subscription-devices-panel>p:where(:not(.fo-scope, .fo-scope *)) {
+  margin: 0 0 15px;
+  color: #66708a;
+  font-size: .86rem;
+}
+
+.subscription-device:where(:not(.fo-scope, .fo-scope *)) {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 10px;
+  border: 1px solid rgba(89,108,145,.1);
+  background: hsla(0,0%,100%,.92);
+  box-shadow: 0 4px 14px rgba(24,38,66,.04);
+}
+
+.subscription-device-icon:where(:not(.fo-scope, .fo-scope *)) {
+  display: grid;
+  place-items: center;
+  flex: none;
+  border-radius: 14px;
+  background: linear-gradient(145deg,#f6f9fd,#eef3fa);
+  color: #102047;
+  width: 36px !important;
+  height: 36px !important;
+}
+
+.subscription-device-icon svg:where(:not(.fo-scope, .fo-scope *)) {
+  width: 24px;
+  height: 24px;
+}
+
+.subscription-device-copy:where(:not(.fo-scope, .fo-scope *)) {
+  display: grid;
+  gap: 4px;
+  flex: 1;
+  min-width: 0;
+}
+
+.subscription-device-copy strong:where(:not(.fo-scope, .fo-scope *)) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #0b1028;
+  font-weight: 620;
+}
+
+.subscription-device-copy small:where(:not(.fo-scope, .fo-scope *)) {
+  color: #66708a;
+  font-size: .78rem;
+}
+
+.subscription-delete:where(:not(.fo-scope, .fo-scope *)) {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  flex: none;
+  min-height: 43px;
+  cursor: pointer;
+}
+
+.subscription-delete svg:where(:not(.fo-scope, .fo-scope *)) {
+  width: 18px;
+  height: 18px;
+}
+
+.subscription-devices-panel footer:where(:not(.fo-scope, .fo-scope *)) {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-top: 16px;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+  color: #66708a;
+  font-size: .8rem;
+}
+
+.subscription-devices-panel footer svg:where(:not(.fo-scope, .fo-scope *)) {
+  width: 17px;
+  height: 17px;
+  flex: none;
+}
+
+.subscription-devices-empty:where(:not(.fo-scope, .fo-scope *)) {
+  padding: 17px;
+  text-align: center;
+  border-radius: 14px;
+  background: #f8fafc;
+}
+
+.modal-backdrop :is(.install-modal,.qr-modal,.shortfall-modal,.form-modal):where(:not(.fo-scope, .fo-scope *)) {
+  background: hsla(0,0%,100%,.94);
+  border: 1px solid var(--line);
+  box-shadow: 0 18px 55px rgba(24,38,66,.14);
+}
+
+@media (max-width:650px) {
+  .subscription-title:where(:not(.fo-scope, .fo-scope *)) {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+  .subscription-title small:where(:not(.fo-scope, .fo-scope *)) {
+    font-size: .76rem !important;
+  }
+  .subscription-status:where(:not(.fo-scope, .fo-scope *)) {
+    padding: 5px 8px;
+    font-size: .68rem;
+  }
+  .subscription-status:before:where(:not(.fo-scope, .fo-scope *)) {
+    width: 6px;
+    height: 6px;
+  }
+  .subscription-devices-panel:where(:not(.fo-scope, .fo-scope *)) {
+    padding: 14px;
+    border-radius: 18px;
+  }
+  .subscription-qr:where(:not(.fo-scope, .fo-scope *)) {
+    min-height: 58px;
+    grid-template-columns: 35px 1fr 17px;
+  }
+  .subscription-qr>span:where(:not(.fo-scope, .fo-scope *)) {
+    width: 35px;
+    height: 35px;
+  }
+  .subscription-qr>span svg:where(:not(.fo-scope, .fo-scope *)) {
+    width: 21px;
+    height: 21px;
+  }
+  .subscription-key-field:where(:not(.fo-scope, .fo-scope *)) {
+    min-height: 64px;
+    padding: 8px 8px 8px 12px;
+  }
+  .subscription-key-field code:where(:not(.fo-scope, .fo-scope *)) {
+    font-size: .8rem;
+  }
+  .subscription-key-field button:where(:not(.fo-scope, .fo-scope *)) {
+    min-height: 43px;
+  }
+  .subscription-key-help:where(:not(.fo-scope, .fo-scope *)) {
+    margin: 8px 0 0;
+  }
+  .subscription-primary-actions:where(:not(.fo-scope, .fo-scope *)) {
+    gap: 9px;
+  }
+  .subscription-primary-actions button:where(:not(.fo-scope, .fo-scope *)) {
+    grid-template-columns: 22px 1fr 14px;
+    gap: 5px;
+    min-height: 60px;
+  }
+  .subscription-primary-actions button svg:first-child:where(:not(.fo-scope, .fo-scope *)) {
+    width: 22px;
+    height: 22px;
+  }
+  .subscription-primary-actions button svg:last-child:where(:not(.fo-scope, .fo-scope *)) {
+    width: 15px;
+    height: 15px;
+  }
+  .subscription-device:where(:not(.fo-scope, .fo-scope *)) {
+    min-height: 70px;
+    gap: 9px;
+    padding: 9px;
+  }
+  .subscription-device-icon:where(:not(.fo-scope, .fo-scope *)) {
+    width: 38px;
+    height: 38px;
+    border-radius: 11px;
+  }
+  .subscription-device-icon svg:where(:not(.fo-scope, .fo-scope *)) {
+    width: 21px;
+    height: 21px;
+  }
+  .subscription-device-copy strong:where(:not(.fo-scope, .fo-scope *)) {
+    font-size: .84rem;
+  }
+  .subscription-device-copy small:where(:not(.fo-scope, .fo-scope *)) {
+    font-size: .7rem;
+  }
+  .subscription-delete:where(:not(.fo-scope, .fo-scope *)) {
+    min-height: 37px;
+  }
+  .subscription-delete svg:where(:not(.fo-scope, .fo-scope *)) {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+html[data-theme=dark] .subscription-devices-panel:where(:not(.fo-scope, .fo-scope *)) {
+  background: rgba(28,35,49,.88);
+  border-color: var(--line);
+}
+
+html[data-theme=dark] .subscription-device:where(:not(.fo-scope, .fo-scope *)) {
+  background: rgba(28,35,49,.88);
+  border-color: var(--line);
+}
+
+html[data-theme=dark] .subscription-devices-panel h3:where(:not(.fo-scope, .fo-scope *)) {
+  color: var(--ink);
+}
+
+html[data-theme=dark] .subscription-device-copy strong:where(:not(.fo-scope, .fo-scope *)) {
+  color: var(--ink);
+}
+
+html[data-theme=dark] .subscription-title small:where(:not(.fo-scope, .fo-scope *)) {
+  color: var(--muted) !important;
+}
+
+html[data-theme=dark] .subscription-devices-panel>p:where(:not(.fo-scope, .fo-scope *)) {
+  color: var(--muted) !important;
+}
+
+html[data-theme=dark] .subscription-device-copy small:where(:not(.fo-scope, .fo-scope *)) {
+  color: var(--muted) !important;
+}
+
+html[data-theme=dark] .subscription-qr:where(:not(.fo-scope, .fo-scope *)) {
+  background: rgba(19,27,40,.9);
+  border-color: var(--line);
+  color: var(--ink);
+}
+
+html[data-theme=dark] .subscription-key-field:where(:not(.fo-scope, .fo-scope *)) {
+  background: rgba(19,27,40,.9);
+  border-color: var(--line);
+}
+
+html[data-theme=dark] .subscription-key-field code:where(:not(.fo-scope, .fo-scope *)) {
+  color: var(--ink);
+}
+
+html[data-theme=dark] .subscription-status.is-active:where(:not(.fo-scope, .fo-scope *)) {
+  background: #193d2c !important;
+  color: #74dfa0 !important;
+}
+
+html[data-theme=dark] .subscription-status.is-inactive:where(:not(.fo-scope, .fo-scope *)) {
+  background: #303748;
+  color: #bdc6d7;
+}
+
+html[data-theme=dark] .subscription-device-icon:where(:not(.fo-scope, .fo-scope *)) {
+  background: #263146;
+  color: #c9d6f3;
+}
+
+.subscription-devices-panel:where(:not(.fo-scope, .fo-scope *)) {
+  padding: 12px !important;
+  border-radius: 14px !important;
+  box-shadow: var(--shadow) !important;
+}
+
+.subscription-devices-panel h3:where(:not(.fo-scope, .fo-scope *)) {
+  font-size: 15px !important;
+  margin: 0 0 10px !important;
+}
+
+.subscription-key-field:where(:not(.fo-scope, .fo-scope *)) {
+  min-height: 44px !important;
+  border-radius: 12px !important;
+}
+
+.subscription-primary-actions button:where(:not(.fo-scope, .fo-scope *)) {
+  height: 44px !important;
+  min-height: 44px !important;
+  display: flex !important;
+  align-items: center;
+  justify-content: center !important;
+  gap: 7px !important;
+}
+
+.subscription-primary-actions button>svg:last-child:where(:not(.fo-scope, .fo-scope *)) {
+  display: none;
+}
+
+.subscription-primary-actions svg:where(:not(.fo-scope, .fo-scope *)) {
+  width: 18px !important;
+  height: 18px !important;
+  flex-shrink: 0;
+}
+
+.subscription-device:where(:not(.fo-scope, .fo-scope *)) {
+  min-height: 64px !important;
+  padding: 10px !important;
+  border-radius: 12px !important;
+}
+
+.subscription-device-copy strong:where(:not(.fo-scope, .fo-scope *)) {
+  font-size: 14px !important;
+}
+
+.subscription-qr:where(:not(.fo-scope, .fo-scope *)) {
+  padding: 9px 12px !important;
+  min-height: 44px !important;
+  grid-template-columns: 28px 1fr 16px !important;
+  gap: 8px !important;
+}
+
+.subscription-qr>span:where(:not(.fo-scope, .fo-scope *)) {
+  width: 28px !important;
+  height: 28px !important;
+}
+
+.subscription-qr>span svg:where(:not(.fo-scope, .fo-scope *)) {
+  width: 18px !important;
+  height: 18px !important;
+}
+
+.subscription-qr b:where(:not(.fo-scope, .fo-scope *)) {
+  font-size: 14px !important;
+}
+
+.subscription-key-field:where(:not(.fo-scope, .fo-scope *)) {
+  padding: 6px 10px !important;
+}
+
+.subscription-key-field button:where(:not(.fo-scope, .fo-scope *)) {
+  height: 36px !important;
+  min-height: 36px !important;
+}
+
+.subscription-key-field code:where(:not(.fo-scope, .fo-scope *)) {
+  font-size: 13px !important;
+}
+
+.modal-backdrop .qr-modal:where(:not(.fo-scope, .fo-scope *)) {
+  animation: nav-panel-enter 200ms var(--ease-standard) both;
+}
+
+@media (prefers-reduced-motion:reduce) {
+  .modal-backdrop .qr-modal:where(:not(.fo-scope, .fo-scope *)) {
+    animation: none !important;
+  }
+}
+
+html[data-theme=dark] body :is(.danger,.subscription-delete,.subscription-device button.danger):where(:not(.fo-scope, .fo-scope *)) {
+  color: #ff817b !important;
+  background: rgba(255,59,48,.09) !important;
+}
+
+html[data-theme=dark] body :is(.danger,.subscription-delete) .aegis-svg:where(:not(.fo-scope, .fo-scope *)) {
+  color: #ff817b !important;
+}
+
+html body #app .subscription-title strong:where(:not(.fo-scope, .fo-scope *)) {
+  font-size: 14px !important;
+  line-height: 19px !important;
+}
+
+html body #app .subscription-title small:where(:not(.fo-scope, .fo-scope *)) {
+  font-size: 11px !important;
+  line-height: 16px !important;
+}
+
+html body #app .subscription-title .key-date:where(:not(.fo-scope, .fo-scope *)) {
+  display: block;
+  color: var(--text-secondary) !important;
+  margin-top: 2px;
+}
+
+html body #app .subscription-time-left:where(:not(.fo-scope, .fo-scope *)) {
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 18px;
+  color: #159957 !important;
+}
+
+html body #app .subscription-connection-date:where(:not(.fo-scope, .fo-scope *)) {
+  font-size: 10px;
+  line-height: 14px;
+  color: var(--text-secondary,var(--muted));
+  white-space: nowrap;
+}
+
+html body #app .subscription-connection-date time:where(:not(.fo-scope, .fo-scope *)) {
+  font-variant-numeric: tabular-nums;
+}
+
+@media (max-width:380px) {
+  html body #app .subscription-time-left:where(:not(.fo-scope, .fo-scope *)) {
+    font-size: 12px;
+  }
+  html body #app .subscription-connection-date:where(:not(.fo-scope, .fo-scope *)) {
+    font-size: 9px;
+  }
+  html body #app .subscription-title strong:where(:not(.fo-scope, .fo-scope *)) {
+    font-size: 12px !important;
+  }
+}
+
+html[data-theme=dark] body #app .subscription-time-left:where(:not(.fo-scope, .fo-scope *)) {
+  color: #63d99a !important;
+}
+
+.key-expanded-primary {
+  display: grid;
+  grid-template-columns: repeat(2,minmax(0,1fr));
+  gap: 10px;
+  margin-top: 10px;
+}
+
+html body #app .key-expanded-primary button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.key-expanded-primary button svg {
+  width: 18px;
+  height: 18px;
+}
+
+@media (max-width:480px) {
+  .key-expanded-primary {
+    gap: 6px;
+  }
+}
+
+@media (max-width:420px) {
+  html body #app .key-expanded-primary button {
+    flex-direction: row !important;
+  }
+  html body #app .subscription-connection-date:where(:not(.fo-scope, .fo-scope *)) {
+    white-space: normal !important;
+    max-width: 120px;
+  }
+}
+
+html body #app .subscription-plan-line .subscription-time-left:where(:not(.fo-scope, .fo-scope *)) {
+  font-size: 11px !important;
+  line-height: 16px !important;
+  white-space: nowrap;
+}
+
+.subscription-plan-divider:where(:not(.fo-scope, .fo-scope *)) {
+  opacity: .4;
+}
+
+@media (max-width:480px) {
+  html body #app .key-expanded-primary {
+    grid-template-columns: 1fr !important;
+    gap: 8px !important;
+  }
+  html body #app .key-expanded-primary button {
+    flex-direction: row !important;
+    width: 100% !important;
+  }
+}
+
+html body #app#app .qr-modal img:where(:not(.fo-scope, .fo-scope *)) {
+  display: block;
+  width: 220px !important;
+  height: 220px !important;
+  max-width: 100%;
+  margin: 16px auto;
+  object-fit: contain;
+  background: #fff;
+  border-radius: 12px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+html body #app#app .admin-key-actions>button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+.admin-key-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 14px 0;
+}
+
+.admin-key-actions.is-compact {
+  gap: 5px;
+  margin: 0;
+  min-width: 190px;
+}
+
+@media (max-width:700px) {
+  .admin-key-actions>button {
+    flex: 1 0 calc(50% - 8px);
+  }
+}
+
+.admin-vpn-grant .grant-manual-field {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  font-size: 11px;
+  color: var(--text-secondary);
+}
+
+.admin-vpn-grant .grant-manual-field input {
+  min-width: 0 !important;
+  text-align: center;
+}
+
+.admin-vpn-grant>label:has(+.grant-presets) {
+  font-size: 12px;
+  margin-top: 14px;
+}
+
+.admin-vpn-grant [hidden] {
+  display: none !important;
+}
+
+.keys-danger {
+  color: #c63232 !important;
+}
+
+html body #overlay-root .keys-reset-modal {
+  width: calc(min(440px,100vw - 32px));
+  max-height: 90dvh;
+  overflow: auto;
+  padding: 22px !important;
+  border-radius: 22px !important;
+  background: #fff !important;
+  color: #171a21 !important;
+  border: 1px solid #e8ecf1 !important;
+  box-shadow: 0 16px 48px #17263a1a !important;
+  font-family: var(--fo-font-family);
+}
+
+.keys-reset-modal h2 {
+  margin: 12px 0;
+}
+
+.keys-reset-modal>p {
+  font-size: 13px;
+  line-height: 1.55;
+  color: #667085;
+}
+
+.keys-reset-icon {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 13px;
+  background: #fff0ef;
+  color: #d34f46;
+}
+
+.keys-reset-icon svg {
+  width: 23px;
+  height: 23px;
+}
+
+.keys-reset-choices {
+  display: grid;
+  gap: 8px;
+  margin: 18px 0;
+}
+
+.keys-reset-choices label {
+  display: flex !important;
+  align-items: center;
+  gap: 10px;
+  padding: 12px;
+  border: 1px solid #e4e8ee;
+  border-radius: 13px;
+  background: #f8f9fb;
+  cursor: pointer;
+}
+
+.keys-reset-choices label:has(input:checked) {
+  border-color: #8fbaa5;
+  background: #edf7f1;
+}
+
+.keys-reset-choices input {
+  margin: 0 !important;
+  flex: none;
+  accent-color: #249e68;
+}
+
+.keys-reset-choices strong {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.keys-reset-choices small {
+  display: block;
+  color: #667085;
+  font-size: 11px;
+  line-height: 1.45;
+  margin-top: 4px;
+}
+
+.keys-reset-modal footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+html body #overlay-root .keys-reset-modal footer button {
+  position: static !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  margin: 0 !important;
+}
+
+html[data-theme=dark] body #overlay-root .keys-reset-modal {
+  background: #252b36 !important;
+  color: #edf1f6 !important;
+  border-color: #414b5d !important;
+}
+
+html[data-theme=dark] .keys-reset-modal :is(p,small) {
+  color: #a9b5c8;
+}
+
+html[data-theme=dark] .keys-reset-choices label {
+  background: #303846;
+  border-color: #414b5d;
+}
+
+html[data-theme=dark] .keys-reset-choices label:has(input:checked) {
+  background: #214939;
+  border-color: #4a8366;
+}
+
+html body #overlay-root#overlay-root#overlay-root#overlay-root .keys-reset-modal footer button {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-sizing: border-box !important;
+  width: 100% !important;
+  white-space: nowrap !important;
+}
+
+html body #overlay-root#overlay-root .keys-reset-modal {
+  background: var(--bg-surface) !important;
+  color: var(--text-primary) !important;
+  border-color: var(--border-subtle) !important;
+}
+
+html body #overlay-root#overlay-root .keys-reset-modal :is(p,small) {
+  color: var(--text-secondary) !important;
+}
+
+html body #overlay-root#overlay-root .keys-reset-choices label:has(input:checked) {
+  background: var(--accent-soft) !important;
+  border-color: var(--accent) !important;
+}
+
+.key-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  border-radius: 8px;
+  padding: 6px 8px;
+  font-size: 10px;
+  white-space: nowrap;
+  background: #0ab18a12;
+  color: #069768;
+}
+
+.key-status i {
+  width: 6px;
+  height: 6px;
+  background: currentColor;
+  border-radius: 50%;
+}
+
+.key-status.expired {
+  background: #f24e6212;
+  color: #ec5264;
+}
+
+.key-status.blocked {
+  background: #f24e6212;
+  color: #ec5264;
+}
+
+.key-status.soon {
+  background: #ee951b15;
+  color: #b8780f;
+}
+
+@media (max-width:700px) {
+  .key-status {
+    padding: 5px;
+    font-size: 9px;
+  }
+}
+
+#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root :is(.key-renew-dialog,.keys-device-v186):where(:not(.fo-scope, .fo-scope *)) {
+  width: calc(min(540px,100vw - 28px)) !important;
+  max-height: calc(100dvh - 36px) !important;
+  margin: auto !important;
+  padding: 0 !important;
+  overflow: auto !important;
+  background: var(--bg-surface) !important;
+  color: var(--text-primary) !important;
+  border: 1px solid var(--border-subtle) !important;
+  border-radius: 22px !important;
+  box-shadow: 0 18px 70px #00000025 !important;
+  animation: keyDialogEnter 200ms cubic-bezier(.2,.7,.3,1) !important;
+}
+
+#overlay-root :is(.key-renew-dialog,.keys-device-v186) *:where(:not(.fo-scope, .fo-scope *)) {
+  box-sizing: border-box;
+}
+
+#overlay-root :is(.key-renew-dialog,.keys-device-v186) .key-dialog-heading:where(:not(.fo-scope, .fo-scope *)) {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 18px;
+  border-bottom: 1px solid var(--border-subtle);
+  margin: 0;
+  position: sticky;
+  top: 0;
+  background: var(--bg-surface);
+  z-index: 2;
+}
+
+#overlay-root :is(.key-renew-dialog,.keys-device-v186) h2:where(:not(.fo-scope, .fo-scope *)) {
+  margin: 0;
+  font-size: 19px;
+  line-height: 1.4;
+}
+
+#overlay-root :is(.key-renew-dialog,.keys-device-v186) h3:where(:not(.fo-scope, .fo-scope *)) {
+  margin: 0 0 12px;
+  font-size: 14px;
+}
+
+#overlay-root .key-dialog-heading p:where(:not(.fo-scope, .fo-scope *)) {
+  font-size: 12px;
+  color: var(--text-secondary);
+  margin: 4px 0 0;
+}
+
+#overlay-root .key-dialog-icon:where(:not(.fo-scope, .fo-scope *)) {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 13px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  flex: none;
+}
+
+#overlay-root .key-dialog-icon svg:where(:not(.fo-scope, .fo-scope *)) {
+  width: 22px;
+  height: 22px;
+}
+
+#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root .key-dialog-heading>button:where(:not(.fo-scope, .fo-scope *)) {
+  position: static !important;
+  display: grid !important;
+  place-items: center !important;
+  flex: none !important;
+  min-height: 38px !important;
+  height: 38px !important;
+  width: 38px !important;
+  margin: 0 0 0 auto !important;
+}
+
+#overlay-root :is(.key-renew-dialog,.keys-device-v186) svg:where(:not(.fo-scope, .fo-scope *)) {
+  width: 18px;
+  height: 18px;
+  flex: none;
+}
+
+#overlay-root :is(.key-renew-dialog,.keys-device-v186) button:where(:not(.fo-scope, .fo-scope *)) {
+  min-height: 40px;
+  cursor: pointer;
+}
+
+#overlay-root :is(.key-renew-dialog,.keys-device-v186) button:disabled:where(:not(.fo-scope, .fo-scope *)) {
+  opacity: .5;
+  cursor: default;
+}
+
+#overlay-root .key-renew-dialog section {
+  padding: 15px 18px;
+  margin: 0;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+#overlay-root .key-renew-dialog label {
+  font-size: 12px;
+  display: block;
+  margin: 8px 0;
+  color: var(--text-secondary);
+}
+
+#overlay-root .key-renew-dialog :is(input:not([type=checkbox]),select) {
+  display: block;
+  width: 100%;
+  margin-top: 6px;
+}
+
+#overlay-root .key-renew-fields {
+  display: grid;
+  grid-template-columns: 1fr 1.6fr;
+  gap: 10px;
+}
+
+#overlay-root .key-renew-dialog [hidden] {
+  display: none !important;
+}
+
+#overlay-root .key-renew-current {
+  margin: 14px 18px 0;
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+#overlay-root .key-renew-presets {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+
+#overlay-root .key-renew-dialog :is(.key-renew-explanation,.key-renew-payment-note) {
+  font-size: 12px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin: 10px 0 0;
+}
+
+#overlay-root .key-renew-dialog .key-renew-paid-confirm {
+  display: flex;
+  align-items: flex-start;
+  gap: 7px;
+  line-height: 1.5;
+  padding: 10px;
+  background: #f2a02512;
+  border-radius: 10px;
+  color: var(--text-primary);
+}
+
+#overlay-root .key-renew-paid-confirm input {
+  margin: 3px 0;
+  accent-color: var(--accent);
+}
+
+#overlay-root .key-renew-preview {
+  margin: 14px 18px;
+  padding: 12px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-size: 13px;
+  line-height: 1.5;
+  border-radius: 12px;
+}
+
+#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root :is(.key-renew-dialog,.keys-device-v186)>footer:where(:not(.fo-scope, .fo-scope *)) {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 9px !important;
+  padding: 14px 18px calc(14px + env(safe-area-inset-bottom)) !important;
+  background: var(--bg-surface) !important;
+  border-top: 1px solid var(--border-subtle) !important;
+  position: sticky !important;
+  bottom: 0 !important;
+  z-index: 2 !important;
+}
+
+#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root :is(.key-renew-dialog,.keys-device-v186)>footer button:where(:not(.fo-scope, .fo-scope *)) {
+  width: 100% !important;
+  min-height: 44px !important;
+  margin: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  white-space: normal !important;
+}
+
+#overlay-root .key-device-summary:where(:not(.fo-scope, .fo-scope *)) {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  padding: 15px 18px;
+}
+
+#overlay-root .key-device-summary>span:where(:not(.fo-scope, .fo-scope *)) {
+  padding: 12px;
+  background: var(--bg-secondary);
+  border-radius: 12px;
+  border: 1px solid var(--border-subtle);
+}
+
+#overlay-root .key-device-summary small:where(:not(.fo-scope, .fo-scope *)) {
+  display: block;
+  font-size: 11px;
+  color: var(--text-secondary);
+}
+
+#overlay-root .key-device-summary strong:where(:not(.fo-scope, .fo-scope *)) {
+  display: block;
+  font-size: 20px;
+  margin-top: 5px;
+}
+
+#overlay-root .key-device-scroll:where(:not(.fo-scope, .fo-scope *)) {
+  padding: 0 18px 16px;
+}
+
+#overlay-root .key-device-detail:where(:not(.fo-scope, .fo-scope *)) {
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+#overlay-root .key-device-detail>header:where(:not(.fo-scope, .fo-scope *)) {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+#overlay-root .key-device-symbol:where(:not(.fo-scope, .fo-scope *)) {
+  display: grid;
+  place-items: center;
+  width: 35px;
+  height: 35px;
+  flex: none;
+  border-radius: 11px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
+}
+
+#overlay-root .key-device-detail strong:where(:not(.fo-scope, .fo-scope *)) {
+  font-size: 13px;
+}
+
+#overlay-root .key-device-detail header small:where(:not(.fo-scope, .fo-scope *)) {
+  font-size: 11px;
+  display: block;
+  margin-top: 3px;
+  color: var(--text-secondary);
+}
+
+#overlay-root .key-device-detail .key-status:where(:not(.fo-scope, .fo-scope *)) {
+  margin-left: auto;
+  font-size: 10px;
+}
+
+#overlay-root .key-device-detail dl:where(:not(.fo-scope, .fo-scope *)) {
+  margin: 12px 0;
+  font-size: 11px;
+}
+
+#overlay-root .key-device-detail dl>div:where(:not(.fo-scope, .fo-scope *)) {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  margin: 7px 0;
+  line-height: 1.4;
+}
+
+#overlay-root .key-device-detail dt:where(:not(.fo-scope, .fo-scope *)) {
+  color: var(--text-secondary);
+  flex-shrink: 0;
+}
+
+#overlay-root .key-device-detail dd:where(:not(.fo-scope, .fo-scope *)) {
+  margin: 0;
+  text-align: right;
+  overflow-wrap: anywhere;
+  color: var(--text-primary);
+}
+
+#overlay-root .key-device-unlink:where(:not(.fo-scope, .fo-scope *)) {
+  display: flex;
+  gap: 7px;
+  align-items: center;
+  min-height: 36px;
+}
+
+#overlay-root .key-device-empty:where(:not(.fo-scope, .fo-scope *)) {
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--text-secondary);
+}
+
+@media (max-width:600px) {
+  #overlay-root :is(.key-renew-dialog,.keys-device-v186) h2:where(:not(.fo-scope, .fo-scope *)) {
+    font-size: 17px;
+  }
+  #overlay-root .key-dialog-icon:where(:not(.fo-scope, .fo-scope *)) {
+    width: 35px;
+    height: 35px;
+  }
+  #overlay-root .key-dialog-heading:where(:not(.fo-scope, .fo-scope *)) {
+    padding: 14px !important;
+    gap: 8px !important;
+  }
+  #overlay-root .key-renew-fields {
+    grid-template-columns: 1fr 1.5fr;
+  }
+  #overlay-root .key-device-detail .key-status:where(:not(.fo-scope, .fo-scope *)) {
+    font-size: 9px;
+    padding: 5px;
+  }
+  #overlay-root .key-device-unlink:where(:not(.fo-scope, .fo-scope *)) {
+    min-height: 44px;
+  }
+}
+
+@media (prefers-reduced-motion:reduce) {
+  #overlay-root :is(.key-renew-dialog,.keys-device-v186):where(:not(.fo-scope, .fo-scope *)) {
+    animation: none !important;
+  }
+}
+
+#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root .key-renew-paid-confirm input[type=checkbox] {
+  flex: 0 0 16px !important;
+  margin: 3px 0 !important;
+}
+
+#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root .device-row-title:where(:not(.fo-scope, .fo-scope *)) {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3px 8px;
+  align-items: center;
+}
+
+#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root .device-row-title strong:where(:not(.fo-scope, .fo-scope *)) {
+  font-size: 12px;
+  overflow-wrap: anywhere;
+}
+
+#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root .device-row-title small:where(:not(.fo-scope, .fo-scope *)) {
+  font-size: 10px;
+  color: var(--text-secondary);
+}
+
+#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root .compact-device-row .key-device-symbol:where(:not(.fo-scope, .fo-scope *)) {
+  width: 28px;
+  height: 28px;
+  border-radius: 9px;
+}
+
+#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root .compact-device-row .key-device-unlink:where(:not(.fo-scope, .fo-scope *)) {
+  flex: none;
+  min-height: 36px !important;
+  margin: 2px 0 !important;
+}
+
+#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root .compact-device-row .key-device-unlink svg:where(:not(.fo-scope, .fo-scope *)) {
+  width: 14px;
+  height: 14px;
+}
+
+#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root .key-device-summary:where(:not(.fo-scope, .fo-scope *)) {
+  padding: 10px 18px !important;
+  gap: 8px !important;
+}
+
+#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root .key-device-summary>span:where(:not(.fo-scope, .fo-scope *)) {
+  padding: 8px 10px !important;
+}
+
+#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root .key-device-summary strong:where(:not(.fo-scope, .fo-scope *)) {
+  font-size: 16px !important;
+  margin-top: 3px !important;
+}
+
+/* Customer subscriptions: one compact disclosure, shared controls and surfaces. */
+.fo-keys {display:grid;gap:12px;max-width:720px;margin-inline:auto;min-width:0}
+.fo-keys .keys-header {display:grid;grid-template-columns:32px minmax(0,1fr) auto;align-items:center;gap:10px;padding-block:6px}
+.fo-keys .keys-header h1 {font-size:21px;line-height:26px;font-weight:500;letter-spacing:-.035em;margin:0}
+.fo-keys .keys-header p {font-size:12px;line-height:18px;color:var(--fo-text-secondary);margin:2px 0 0}
+.fo-keys .keys-header .fo-button {margin:0}
+.fo-keys .my-keys-buy {width:auto;white-space:nowrap;padding-inline:10px}
+.fo-keys .my-keys-buy svg {width:15px;height:15px}
+.fo-keys .key-search {display:flex;align-items:center;gap:8px;min-height:34px;padding:0 10px;border-radius:10px}
+.fo-keys .key-search>svg {width:15px;height:15px;flex:none;color:var(--fo-text-secondary)}
+.fo-keys .key-search input {width:100%;min-width:0;min-height:32px;padding:5px 0;border:0;background:transparent;box-shadow:none;font-size:13px}
+.fo-keys .access-list {display:grid;gap:10px}
+.fo-keys .my-key-card {margin:0;min-width:0;border-radius:16px;overflow:visible}
+.fo-keys .my-key-head {display:grid;grid-template-columns:32px minmax(0,1fr) auto;align-items:center;gap:10px;min-height:66px;padding:10px 12px;box-sizing:border-box;cursor:pointer;border-radius:inherit;transition:background-color 140ms ease}
+.fo-keys .my-key-icon {width:32px;height:32px;border-radius:10px}
+.fo-keys .my-key-icon svg {width:17px;height:17px}
+.fo-keys .my-key-preview {min-width:0}
+.fo-keys .my-key-heading {display:flex;align-items:center;gap:4px;min-width:0}
+.fo-keys .my-key-heading strong {display:block;min-width:0;font-size:14px;line-height:20px;font-weight:500;letter-spacing:-.015em;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.fo-keys .my-key-rename {flex:none;padding:5px;color:var(--fo-text-secondary);border:0;box-shadow:none;background:transparent;background-image:none;margin:0}
+.fo-keys .my-key-heading .my-key-rename {margin:0}
+.fo-keys .my-key-rename svg {width:13px;height:13px}
+.fo-keys .my-key-meta {display:flex;align-items:center;gap:4px 9px;flex-wrap:wrap;font-size:11px;line-height:16px;color:var(--fo-text-secondary)}
+.fo-keys .my-key-status {display:inline-flex;align-items:center;gap:4px;font-weight:400}
+.fo-keys .my-key-status i {width:5px;height:5px}
+.fo-keys .my-key-status[data-tone=success] {color:var(--fo-success-text)}
+.fo-keys .my-key-status[data-tone=warning] {color:var(--fo-warning-text)}
+.fo-keys .my-key-status.my-key-limit {padding:1px 6px;border-radius:999px;background:var(--fo-warning-bg)}
+.fo-keys .my-key-head .subscription-summary {display:flex;align-items:center;gap:10px;min-height:44px;width:auto;margin:0;padding:4px 0 4px 5px;border:0;border-radius:8px;background:transparent;box-shadow:none;text-align:end}
+.fo-keys .my-key-capacity {display:grid;gap:2px;font-size:12px;line-height:16px;white-space:nowrap}
+.fo-keys .my-key-capacity>span {display:flex;align-items:center;justify-content:end;gap:5px}
+.fo-keys .my-key-capacity svg {width:14px;height:14px;color:var(--fo-text-secondary)}
+.fo-keys .my-key-capacity small {font-size:10px;line-height:14px;color:var(--fo-text-secondary)}
+.fo-keys .my-key-chevron {display:grid;color:var(--fo-text-secondary);transition:transform 240ms var(--fo-motion-ease)}
+.fo-keys .my-key-chevron svg {width:14px;height:14px}
+.fo-keys .open .my-key-chevron {transform:rotate(180deg)}
+.fo-keys .access-expander {display:grid;grid-template-rows:0fr;transition:grid-template-rows 260ms var(--fo-motion-ease)}
+.fo-keys .access-expander.is-open {grid-template-rows:1fr}
+.fo-keys .access-expander-inner {min-height:0;overflow:hidden;border-radius:0 0 16px 16px}
+.fo-keys .subscription-body {display:grid;gap:0;margin:0 12px;padding:12px 0 0;border-top:1px solid var(--fo-border-subtle)}
+.fo-keys .subscription-access {display:grid;grid-template-columns:96px minmax(0,1fr);gap:14px;align-items:center;min-width:0}
+.fo-keys .my-key-qr.fo-row-action {display:grid;justify-items:center;gap:5px;padding:0;min-height:0;margin:0;border:0;border-radius:10px;background:transparent;box-shadow:none;font-size:10px;line-height:15px;color:var(--fo-text-secondary)}
+.fo-keys .my-key-qr .fo-key-qr-frame {width:96px;height:96px;padding:6px;border-radius:10px}
+.fo-keys .my-key-qr>span:last-child {display:flex;align-items:center;gap:4px}
+.fo-keys .my-key-qr>span:last-child svg {width:11px;height:11px}
+.fo-keys .my-key-connection {min-width:0}
+.fo-keys .subscription-access h3 {font-size:12px;line-height:18px;font-weight:500;margin:0 0 6px}
+.fo-keys .my-key-link {display:flex;align-items:center;gap:2px;min-width:0;padding:2px 3px 2px 8px;border-radius:9px}
+.fo-keys .my-key-value.fo-row-action {display:block;flex:1;min-width:0;width:0;min-height:28px;margin:0;padding:4px 0;border:0;border-radius:6px;background:transparent;box-shadow:none;text-align:start}
+.fo-keys .my-key-link code {display:block;font:400 11px/20px var(--fo-font-mono);min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.fo-keys .my-key-copy {flex:none;width:108px;min-height:28px;margin:0;padding:4px 6px;border:0;box-shadow:none;background:transparent;background-image:none;font-size:11px;line-height:18px;gap:4px;white-space:nowrap}
+.fo-keys .my-key-link .my-key-copy {margin:0}
+.fo-keys .my-key-copy svg {width:14px;height:14px}
+.fo-keys .my-key-copy-note {font-size:11px;line-height:16px;color:var(--fo-text-secondary);margin:6px 0 0}
+.fo-keys .my-key-plan {display:block;font-size:11px;line-height:16px;color:var(--fo-text-secondary);margin-top:6px}
+.fo-keys .my-key-actions {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));align-items:center;gap:8px;margin:12px 0}
+.fo-keys .my-key-actions .fo-button:where(:not(.fo-key-action)) {min-width:0;min-height:32px;margin:0;padding:6px 10px;font-size:12px;line-height:18px;font-weight:500}
+.fo-keys .my-key-actions svg {width:14px;height:14px}
+.fo-keys .subscription-devices-toggle.fo-row-action {display:flex;align-items:center;gap:9px;min-height:48px;min-width:0;width:100%;margin:0;padding:9px 0;border:0;border-top:1px solid var(--fo-border-subtle);border-radius:0;background:transparent;box-shadow:none;text-align:start}
+.fo-keys .subscription-devices-toggle>span {flex:1;min-width:0;font-size:12px;line-height:17px}
+.fo-keys .subscription-devices-toggle small {display:block;font-size:11px;line-height:16px;color:var(--fo-text-secondary)}
+.fo-keys .subscription-devices-toggle svg {width:16px;height:16px;flex:none;color:var(--fo-text-secondary)}
+.fo-keys .my-key-settings {min-width:0;border-top:1px solid var(--fo-border-subtle);padding:0 0 2px}
+.fo-keys .my-key-auto.fo-row-action {display:flex;align-items:center;justify-content:space-between;gap:10px;min-height:44px;width:100%;min-width:0;margin:0;padding:8px 0;border:0;border-radius:0;background:transparent;box-shadow:none;font-size:12px;line-height:18px}
+.fo-keys .my-key-auto .fo-switch {flex:none}
+.fo-keys .my-key-auto small {display:block;font-size:10px;line-height:15px;color:var(--fo-text-secondary);text-align:start}
+.fo-keys .subscription-renew-note {font-size:11px;line-height:16px;color:var(--fo-text-secondary);margin:0 0 10px;overflow-wrap:anywhere}
+.fo-keys .subscription-renew-note a {color:var(--fo-link)}
+.fo-keys .fo-empty {padding:24px 12px;text-align:center}
+.fo-keys .fo-empty h2 {font-size:15px;font-weight:500}
+.fo-keys .fo-empty p {font-size:12px;margin:8px 0 14px}
+.fo-keys .my-key-head:active {background:var(--fo-surface-selected);transition-duration:0s}
+@media(hover:hover) and (pointer:fine) {.fo-keys .my-key-head:hover {background:var(--fo-service-hover)}}
+@media(max-width:600px) {
+ .fo-keys {gap:10px}
+ .fo-keys .keys-header {gap:8px}
+ .fo-keys .keys-header h1 {font-size:20px;line-height:25px}
+ .fo-keys .keys-header p {font-size:11px}
+ .fo-keys .my-key-head {grid-template-columns:28px minmax(0,1fr) auto;gap:8px;min-height:64px;padding:9px 10px}
+ .fo-keys .my-key-icon {width:28px;height:28px;border-radius:9px}
+ .fo-keys .my-key-icon svg {width:16px;height:16px}
+ .fo-keys .my-key-heading strong {font-size:13px}
+ .fo-keys .my-key-heading .my-key-tariff-title {white-space:normal;overflow-wrap:anywhere;line-height:16px}
+ .fo-keys .my-key-meta {gap:2px 7px;font-size:10px;line-height:15px}
+ .fo-keys .my-key-head .subscription-summary {gap:7px}
+ .fo-keys .my-key-capacity {font-size:11px}
+ .fo-keys .my-key-capacity small {font-size:9px;line-height:12px}
+ .fo-keys .subscription-body {margin-inline:10px}
+ .fo-keys .subscription-access {gap:12px}
+ .fo-keys .my-key-copy-note {font-size:10px;line-height:15px}
+}
+@media(max-width:360px) {
+ .fo-keys .keys-header p {display:none}
+ .fo-keys .my-key-head {grid-template-columns:minmax(0,1fr) auto}
+ .fo-keys .my-key-head>.my-key-icon {display:none}
+ .fo-keys .subscription-access {grid-template-columns:96px minmax(0,1fr);gap:10px}
+ .fo-keys .my-key-qr .fo-key-qr-frame {width:96px;height:96px}
+}
+@media(pointer:coarse) {.fo-keys .key-search input {font-size:16px}}
+@media(prefers-reduced-motion:reduce) {.fo-keys .access-expander,.fo-keys .my-key-chevron,.fo-keys .my-key-head {transition:none}}
+
+.fo-rename {
+  display: grid;
+  gap: var(--fo-space-4);
+}
+
+/* Key content layout; shared fo-dialog owns the surface and lifecycle. */
+
+.fo-key-dialog .key-device-summary {
+  display: grid;
+  grid-template-columns: repeat(2,minmax(0,1fr));
+  gap: var(--fo-space-3);
+  padding-block: var(--fo-space-4);
+}
+
+.fo-key-dialog .key-device-summary :is(strong,small) {
+  display: block;
+}
+
+.fo-key-dialog .key-device-scroll {
+  display: grid;
+}
+
+.fo-key-dialog .key-device-detail {
+  display: grid;
+  grid-template-columns: minmax(0,1fr) auto;
+  gap: var(--fo-space-2);
+  align-items: start;
+  border-top: 1px solid var(--fo-border-subtle);
+  padding-inline: 0;
+}
+
+.fo-key-dialog .key-device-detail summary {
+  display: flex;
+  align-items: center;
+  gap: var(--fo-space-2);
+  min-height: var(--fo-control-default);
+  cursor: pointer;
+  list-style: none;
+}
+
+.fo-key-dialog .key-device-detail summary::-webkit-details-marker {
+  display: none;
+}
+
+.fo-key-dialog .device-row-title {
+  display: grid;
+  flex: 1;
+  min-width: 0;
+}
+
+.fo-key-dialog dl {
+  font-size: var(--fo-font-size-caption);
+  margin: var(--fo-space-3) 0;
+}
+
+.fo-key-dialog dl>div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--fo-space-2);
+  margin-block: var(--fo-space-2);
+}
+
+.fo-key-dialog dt {
+  color: var(--fo-text-secondary);
+}
+
+.fo-key-dialog dd {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+.fo-key-dialog ol {
+  display: grid;
+  gap: var(--fo-space-4);
+  padding-inline-start: var(--fo-space-5);
+}
+
+.fo-key-dialog ol p {
+  font-size: var(--fo-font-size-secondary);
+  color: var(--fo-text-secondary);
+  margin-block: var(--fo-space-2);
+}
+
+.fo-key-dialog .install-done {
+  width: 100%;
+}
+
+.fo-key-dialog.qr-modal {
+  text-align: center;
+  max-width: var(--fo-dialog-compact);
+}
+
+
+
+.fo-key-dialog.qr-modal p {
+  font-size: var(--fo-font-size-secondary);
+  color: var(--fo-text-secondary);
+}
+
+/* Registry layout. Shared fo controls own all control visuals and states. */
+.fo-key-registry {display:grid;gap:var(--fo-space-4);min-width:0}
+.fo-registry-heading {display:flex;align-items:center;justify-content:space-between;gap:var(--fo-space-3);flex-wrap:wrap}
+.fo-registry-heading p {color:var(--fo-text-secondary);font-size:var(--fo-font-size-secondary);margin-top:var(--fo-space-1)}
+.fo-registry-toolbar {display:flex;align-items:end;gap:var(--fo-space-2);flex-wrap:wrap}
+.fo-registry-toolbar>.fo-input-group {flex:1;min-width:220px}
+.fo-registry-toolbar>.fo-field {font-size:var(--fo-font-size-caption)}
+.fo-registry-toolbar .fo-select {width:auto;max-width:180px}
+.fo-registry-toolbar summary {list-style:none}
+.fo-registry-toolbar summary::-webkit-details-marker {display:none}
+.fo-key-list {overflow:clip}
+.fo-registry-pagination {display:flex;align-items:center;justify-content:space-between;gap:var(--fo-space-3);flex-wrap:wrap}
+.fo-registry-pagination nav {display:flex;align-items:center;gap:var(--fo-space-2);font-size:var(--fo-font-size-caption)}
+@media(max-width:767px){
+ .fo-registry-toolbar>.fo-input-group {flex-basis:100%}
+ .fo-registry-toolbar>.fo-field {flex:1;min-width:0}
+ .fo-registry-toolbar .fo-select {width:100%;max-width:100%}
+}
+
+
+
+/* Renewal source selection uses the account API, not an immediate payment. */
+.key-renewal-form {display:grid;gap:12px;max-width:420px}
+.key-renewal-form>h2 {margin:0;font-size:18px;font-weight:500}
+.key-renewal-form>p,.key-renewal-form small {font-size:12px;line-height:18px;color:var(--fo-text-secondary);margin:0}
+.key-renewal-sources {display:grid;gap:8px;margin:0;padding:0;border:0;min-width:0}
+.key-renewal-sources legend {font-size:12px;margin-bottom:7px}
+.key-renewal-sources label {display:flex;gap:8px;align-items:center;min-height:40px;padding:8px 10px;font-size:13px}
+.key-renewal-form [data-renewal-card] {display:grid;gap:8px}
+.key-renewal-form [data-renewal-card][hidden] {display:none}
+.key-renewal-form .fo-dialog-actions {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+/* Compact device list within the shared subscription dialog. */
+.fo-dialog.fo-key-dialog.keys-device-modal {
+  width:min(100%,480px);
+  padding:14px;
+  gap:10px;
+}
+.fo-key-dialog.keys-device-modal .key-dialog-heading{margin:0;gap:8px}
+.fo-key-dialog.keys-device-modal h2{font-size:16px;font-weight:500;line-height:22px}
+.fo-key-dialog.keys-device-modal .key-device-summary{
+  display:flex;flex-wrap:wrap;gap:5px 16px;padding:6px 0;color:var(--fo-text-secondary);
+}
+.fo-key-dialog.keys-device-modal .key-device-summary>span{display:flex;align-items:baseline;gap:5px}
+.fo-key-dialog.keys-device-modal .key-device-summary :is(strong,small){font-size:11px;font-weight:500}
+.fo-key-dialog.keys-device-modal>footer{display:flex;justify-content:flex-end;gap:6px;flex-wrap:wrap;padding:8px 0 0;margin:0;border-top:1px solid var(--fo-border-subtle)}
+.fo-key-dialog.keys-device-modal>footer>.fo-button{flex:none;width:auto;min-height:32px;padding:4px 9px;margin:0;font-size:11px}
+
+
+.fo-key-dialog .key-device-scroll{gap:0}
+.fo-key-dialog .device-card{
+  --device-header:48px;
+  position:relative;
+  min-width:0;
+  background:transparent;
+}
+.fo-key-dialog .device-card-disclosure>summary{
+  display:flex;align-items:center;gap:8px;
+  box-sizing:border-box;height:var(--device-header);
+  padding:0 10px;list-style:none;cursor:pointer;
+}
+.fo-key-dialog .device-card:has(>.key-device-unlink) summary{padding-inline-end:49px}
+.fo-key-dialog .device-card summary::-webkit-details-marker{display:none}
+.fo-key-dialog .device-card summary:focus-visible{outline-offset:-3px}
+.fo-key-dialog .device-card .key-device-symbol{
+  display:grid;place-items:center;width:28px;height:28px;flex:none;
+  border-radius:9px;background:var(--fo-info-bg);color:var(--fo-info-text);
+}
+.fo-key-dialog .device-card summary svg{width:15px;height:15px;flex:none}
+.fo-key-dialog .device-card .device-row-title strong{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:13px;line-height:16px;font-weight:500}
+.fo-key-dialog .device-card .device-row-title small{font-size:11px;line-height:14px;color:var(--fo-text-secondary)}
+.fo-key-dialog .device-card>.key-device-unlink{
+  position:absolute;inset-block-start:5px;inset-inline-end:5px;
+  width:38px;height:38px;min-height:38px;margin:0;padding:0;border:0;background:transparent;box-shadow:none;color:var(--fo-text-secondary);
+}
+.fo-key-dialog .device-card>.key-device-unlink svg{width:15px;height:15px}
+.fo-key-dialog .device-card+.device-card{border-top:1px solid var(--fo-border-subtle)}
+.fo-key-dialog .device-card dl{margin:0;padding:0 10px 8px 46px}
+.fo-key-dialog .device-card dl>div{margin:0;padding:5px 0}
+
+.fo-key-dialog .device-card summary>svg:last-child{transition:rotate 180ms ease}
+.fo-key-dialog .device-card details[open] summary>svg:last-child{rotate:180deg}
+@media(prefers-reduced-motion:reduce){.fo-key-dialog .device-card summary>svg:last-child{transition:none}}
+
+.fo-key-dialog .device-card-disclosure{margin:0;padding:0;border:0;background:transparent}
+
+#overlay-root .fo-key-dialog .device-card-disclosure>summary.fo-button{margin:0;border:0;background:transparent;box-shadow:none}
+
+/* Customer device workspace, shared between the list and individual details. */
+.fo-device-page{
+  --device-screen:linear-gradient(146deg,#e5e9eb 4%,#9faab0 48%,#e8ecee 50%,#aab5ba 95%);
+  max-width:580px;margin-inline:auto;padding:12px clamp(8px,3vw,24px) 28px;
+  color:var(--fo-text-primary);
+}
+.fo-device-top{display:grid;grid-template-columns:40px 1fr 40px;align-items:center;margin-bottom:22px}
+.fo-device-top .fo-button{width:38px;height:38px;min-height:38px;border-radius:50%;margin:0}
+.fo-device-top>span{text-align:center;letter-spacing:.29em;font-size:12px;font-weight:500}
+.fo-device-page :is(h1,h2,p){margin:0}
+.fo-device-page h1{font-size:clamp(27px,5vw,38px);line-height:1.12;letter-spacing:-.035em;font-weight:600;overflow-wrap:anywhere}
+.fo-device-intro{display:grid;gap:7px;margin-bottom:24px}
+.fo-device-page :is(p,small,dt){color:var(--fo-text-secondary);font-size:12px;line-height:1.45}
+.fo-device-list{display:grid;gap:8px}
+.fo-device-list h2{font-size:17px;font-weight:500;margin:0 0 3px}
+.fo-device-item,.fo-device-facts{
+  background:var(--fo-bg-elevated);border:1px solid var(--fo-border-subtle);
+  border-radius:15px;box-shadow:var(--fo-elevation-1)
+}
+.fo-device-item{display:flex;align-items:center;gap:6px;min-width:0;padding:5px 7px}
+.fo-device-open{
+  display:flex;align-items:center;gap:8px;flex:1;min-width:0;min-height:50px;padding:3px;
+  color:inherit;background:transparent;border:0;border-radius:10px;text-align:start;font:inherit;cursor:pointer;
+}
+.fo-device-open:focus-visible,.fo-device-page .fo-button:focus-visible{outline:2px solid var(--fo-focus);outline-offset:2px}
+.fo-device-open>span:last-child{min-width:0;display:grid;gap:2px}
+.fo-device-open :is(strong,small){overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.fo-device-open strong{font-size:14px;font-weight:500}
+.fo-device-page .fo-device-unlink{
+  flex:none;margin:0;min-height:32px;padding:4px 9px;border:0;border-radius:999px;
+  background:var(--fo-danger-bg);color:var(--fo-danger-text);font-size:12px;box-shadow:none
+}
+.fo-device-page .fo-device-wide{width:100%;min-height:42px;border-radius:13px;margin-top:12px}
+.fo-device-page .fo-device-status,.fo-device-page [role=alert]{margin-top:10px}
+.fo-device-hero{text-align:center;display:grid;justify-items:center;gap:5px;margin:4px 0 20px}
+.fo-device-hero .fo-device-art{
+  width:min(230px,100%);height:150px;margin-bottom:7px;
+  background:radial-gradient(ellipse,color-mix(in srgb,#70d5a4 35%,transparent),transparent 72%);
+}
+.fo-device-facts{margin:0;padding:3px 12px}
+.fo-device-facts>div{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:8px;align-items:baseline;padding:11px 0}
+.fo-device-facts>div+div{border-top:1px solid var(--fo-border-subtle)}
+.fo-device-facts dd{margin:0;text-align:end;overflow-wrap:anywhere;font-size:13px}
+.fo-device-art{display:grid;position:relative;place-items:center;width:36px;height:36px;flex:none;color:var(--fo-text-secondary);container-type:size}
+.fo-device-art>svg{width:50%;height:50%}
+.fo-device-art>i{
+  position:relative;width:48%;height:76%;border-radius:13%;border:1px solid #667178;
+  background:var(--device-screen);box-shadow:inset 0 0 0 1px #ecf0f1,0 2px 4px #1520233c
+}
+.fo-device-art[data-type=tablet]>i{width:61%}
+.fo-device-art[data-type=laptop]>i{width:68%;height:59%;border-radius:5%;transform:perspective(180px) rotateX(8deg)}
+.fo-device-art[data-type=laptop]>i::after{
+  content:"";position:absolute;top:100%;left:-12%;width:124%;height:15%;
+  border-radius:18% 18% 40% 40%;background:linear-gradient(#dbe1e4,#77848c)
+}
+.fo-device-art[data-type=phone]>i::after{
+  content:"";position:absolute;top:5%;left:34%;width:32%;height:5%;border-radius:999px;background:#343d42
+}
+
+/* Long, explicit management actions retain comfortable touch targets. */
+.fo-antig-dialog.fo-dialog{max-width:440px;border-radius:24px;background:var(--fo-bg-surface);box-shadow:var(--fo-surface-shadow);backdrop-filter:none}
+.fo-antig-dialog .fo-antig-header{display:grid;grid-template-columns:40px minmax(0,1fr) 30px;gap:10px;align-items:start}
+.fo-antig-header h2{font-size:19px;line-height:1.25;font-weight:500;margin:0 0 4px;letter-spacing:-.3px}.fo-antig-header p{font-size:12px;line-height:1.4;margin:0;overflow-wrap:anywhere;color:var(--fo-text-secondary)}
+.fo-antig-symbol{display:grid;place-items:center;width:40px;height:40px;border-radius:13px;background:var(--fo-control-success);color:var(--fo-control-success-text)}.fo-antig-symbol svg{width:23px;height:23px}
+.fo-antig-dialog .fo-dialog-description{font-size:13px;line-height:1.5;margin:0 0 14px;color:var(--fo-text-secondary)}
+.fo-antig-dialog .fo-antig-summary{display:grid;gap:0;margin:0 0 12px;padding:2px 12px;background:var(--fo-nav-active-bg);border-radius:15px}.fo-antig-summary>div{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:11px 0;font-size:12px}.fo-antig-summary>div+div{border-top:1px solid var(--fo-border-subtle)}.fo-antig-summary dt{display:flex;align-items:center;gap:8px;color:var(--fo-text-secondary)}.fo-antig-summary dt svg{width:16px;height:16px}.fo-antig-summary dd{margin:0;color:var(--fo-text-primary)}
+.fo-antig-total{display:grid;gap:5px;padding:16px;background:var(--fo-nav-active-bg);border-radius:15px}.fo-antig-total span{font-size:12px;color:var(--fo-text-secondary)}.fo-antig-total strong{font-size:29px;font-weight:500;letter-spacing:-.6px;line-height:1.1;color:var(--fo-text-primary)}
+.fo-antig-explanation{margin:12px 0;font-size:12px;color:var(--fo-text-secondary)}.fo-antig-explanation summary{cursor:pointer;padding:5px 0}.fo-antig-explanation p{line-height:1.5;margin:6px 0}.fo-antig-dialog .fo-personal-note{font-size:12px;line-height:1.5;margin:12px 0 0}.fo-antig-dialog [data-antig-error]:empty{display:none}.fo-antig-dialog footer{margin-top:8px}.fo-antig-dialog footer .fo-button{font-size:13px;min-height:36px;border-radius:12px}
+.fo-antig-dialog.fo-dialog{background:#fff;color:#17191e;width:min(460px,calc(100vw - 24px));height:auto;max-height:calc(100dvh - 24px);overflow:auto;gap:12px;padding:20px;border-radius:25px;backdrop-filter:none}.fo-antig-dialog .fo-dialog-description{color:#727680;margin:0 0 12px;font-size:13px}.fo-antig-feature{display:flex;gap:12px;align-items:center;background:#f0f8f2;border-radius:17px;padding:14px;margin-bottom:12px}.fo-antig-feature>span{color:#168b3e;display:flex}.fo-antig-feature svg{width:28px;height:28px}.fo-antig-feature h3{font-size:14px;font-weight:500;margin:0 0 5px;color:#20242b}.fo-antig-feature p{font-size:12px;line-height:1.5;margin:0;color:#727680}.fo-antig-duration{display:flex;gap:12px;align-items:center;background:#f5f5f7;border-radius:17px;padding:14px;margin-bottom:12px;font-size:12px;line-height:1.5;color:#727680}.fo-antig-duration svg{width:24px;height:24px;flex:none}.fo-antig-duration small{display:block;margin-top:5px;font-size:11px}.fo-antig-dialog .fo-antig-total{display:flex;align-items:center;justify-content:space-between;padding:16px;background:#f5f5f7;border-radius:17px}.fo-antig-total>div{display:grid;gap:7px}.fo-antig-dialog .fo-antig-total strong{color:#12151a;font-size:32px}.fo-antig-total>div>span{font-size:10px;letter-spacing:.5px}.fo-antig-total .fo-checkout-confirm-art b{color:#18913b}.fo-antig-total svg{width:30px;height:30px}.fo-antig-dialog footer{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:0}.fo-antig-dialog footer .fo-button{min-height:42px;border-radius:14px}.fo-antig-dialog footer [data-antig-apply],.fo-antig-dialog footer [data-antig-fund]{background:#20a747;color:white;border-color:#199a3e;background-image:none;box-shadow:none}.fo-antig-header p{color:#727680}.fo-antig-dialog [data-antig-error]{margin:0;font-size:12px;line-height:1.5;color:#a34c32}
+.fo-antig-dialog footer.fo-dialog-actions{border-top:0;padding-top:0}.fo-antig-dialog footer .fo-button{min-height:44px}
+
+/* Entitlement is independent of the ellipsized subscription name. */
+.fo-keys .my-key-addon-name{display:inline-flex;align-items:center;gap:5px;max-width:100%;box-sizing:border-box;margin-top:5px;padding:3px 6px;border-radius:7px;background:var(--fo-control-success);color:var(--fo-control-success-text);font-size:10px;font-weight:400;line-height:14px;white-space:normal;overflow:visible}.my-key-addon-name>svg{width:12px;height:12px;flex:none}.my-key-addon-name>span{min-width:0;overflow-wrap:anywhere}.my-key-addon-detail{display:flex;gap:8px;align-items:center;margin:0 0 12px;padding:8px 0;font-size:12px;color:var(--fo-text-primary)}.my-key-addon-detail>svg{width:18px;height:18px;color:var(--fo-control-success-text);flex:none}.my-key-addon-detail small{display:block;color:var(--fo-text-secondary);font-size:11px;line-height:16px;margin-top:2px}

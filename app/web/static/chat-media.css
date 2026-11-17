@@ -1,0 +1,37 @@
+/* Generated from app/web/styles/shared/chat-media.css. */
+/* Shared authenticated photo loading controls; no nested cards inside bubbles. */
+[data-photo-frame].fo-chat-photo{position:relative;display:block;isolation:isolate;overflow:hidden;width:100%;min-width:0;margin:0;padding:0;aspect-ratio:4/3;background:var(--fo-bg-muted,#e7ebee);border:0;border-radius:inherit;box-shadow:none}
+[data-photo-frame] .fo-photo-open{display:block;width:100%;height:100%;padding:0;border:0;border-radius:inherit;background:transparent;cursor:zoom-in;overflow:hidden;position:relative;z-index:0}
+[data-photo-frame] .fo-photo-open img{display:block;width:100%;height:100%;max-height:none;max-width:none;object-fit:contain;margin:0;filter:blur(12px);transform:scale(1.04);transition:filter .22s ease-out,transform .22s ease-out}
+[data-photo-frame][data-photo-state=ready] .fo-photo-open img{filter:none;transform:none}
+[data-photo-frame] .fo-photo-transfer{position:absolute;z-index:2;inset:50% auto auto 50%;transform:translate(-50%,-50%);display:grid;place-items:center;min-width:44px;min-height:44px;width:44px;height:44px;border:0;border-radius:50%;padding:0;background:rgba(20,27,34,.72);color:white;box-shadow:0 3px 12px rgba(0,0,0,.13);cursor:pointer}
+[data-photo-frame] .fo-photo-transfer svg{grid-area:1/1;width:24px;height:24px;pointer-events:none}
+[data-photo-frame] .fo-photo-spinner{position:absolute;inset:2px;border:2px solid rgba(255,255,255,.3);border-top-color:white;border-radius:50%;animation:fo-photo-spin .85s linear infinite;pointer-events:none}
+[data-photo-frame] [data-photo-status]{position:absolute;z-index:1;bottom:12px;left:12px;right:12px;text-align:center;color:white;font-size:12px;line-height:1.4;text-shadow:0 1px 4px rgba(0,0,0,.7);pointer-events:none}
+[data-photo-frame][data-photo-state=ready] .fo-photo-transfer,[data-photo-frame][data-photo-state=ready] [data-photo-status]{display:none}
+[data-photo-frame] button:focus-visible,.fo-photo-view-transfer:focus-visible{outline:2px solid var(--fo-action-primary,#1675e8);outline-offset:-3px}
+.fo-chat-photo-overlay .fo-chat-photo-dialog>header{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.fo-chat-photo-overlay .fo-chat-photo-dialog>header>span{margin-right:auto}
+.fo-chat-photo-overlay .fo-chat-photo-dialog [data-photo-download]{flex:0 0 40px;width:40px;min-height:40px;padding:8px}
+.fo-chat-photo-overlay [data-photo-download] svg{width:20px;height:20px}
+.fo-chat-photo-overlay [role=status]{display:flex;align-items:center;justify-content:center;gap:12px;min-height:32px;margin:8px 0 0;font-size:13px;line-height:1.4}
+.fo-chat-photo-overlay [role=status][data-photo-view-state=loading]::before{content:'';width:16px;height:16px;flex:0 0 16px;border:2px solid var(--fo-border-default,#c9d0d6);border-top-color:var(--fo-text-primary,#25303a);border-radius:50%;animation:fo-photo-spin .85s linear infinite}
+.fo-chat-photo-overlay .fo-photo-view-transfer{min-height:36px;padding:6px 12px;font:inherit}
+@keyframes fo-photo-spin{to{rotate:360deg}}
+@media(prefers-reduced-motion:reduce){[data-photo-frame] .fo-photo-open img{transition:none;transform:none}[data-photo-frame] .fo-photo-spinner,.fo-chat-photo-overlay [role=status][data-photo-view-state=loading]::before{animation:none}}
+
+.fo-chat-photo-overlay .fo-photo-view-transfer[hidden]{display:none}
+
+.cm-inline-keyboard .cm-inline-button.cm-inline-choice {
+  justify-content: flex-start;
+  min-height: 44px;
+  padding-inline: 12px;
+  gap: 8px;
+  text-align: start;
+}
+
+.cm-inline-keyboard .cm-inline-choice .cm-choice-emoji {
+  flex: 0 0 1.3em;
+  font-size: 16px;
+  text-align: center;
+}

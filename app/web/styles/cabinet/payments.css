@@ -1,0 +1,912 @@
+/* Freeman ONE — payments. Authoritative source; edit this module, not a later override. */
+
+.money-hero>small {
+  display: block;
+  color: var(--muted);
+  font-size: .78rem;
+}
+
+.money-hero>strong {
+  display: block;
+  font-size: 2.35rem;
+  letter-spacing: -.05em;
+  margin: 5px 0 18px;
+}
+
+.money-hero>div {
+  display: flex;
+  gap: 8px;
+}
+
+.money-hero button {
+  cursor: pointer;
+}
+
+.money-hero p {
+  margin: 4px 0 0;
+  color: var(--muted);
+}
+
+.ledger-row {
+  min-height: 58px;
+  padding: 10px 2px;
+  border-top: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.ledger-row strong {
+  display: block;
+  font-size: .8rem;
+}
+
+.ledger-row small {
+  display: block;
+  font-size: .66rem;
+  margin-top: 4px;
+}
+
+.ledger-row>b {
+  font-size: .82rem;
+}
+
+@media (max-width:520px) {
+  .money-hero>strong {
+    font-size: 2rem;
+  }
+}
+
+.money-hero {
+  margin-bottom: 15px;
+  backdrop-filter: blur(20px) saturate(1.18);
+  -webkit-backdrop-filter: blur(20px) saturate(1.18);
+}
+
+.money-hero>strong {
+  color: var(--ink);
+  font-weight: 680;
+}
+
+.ledger-row small {
+  color: var(--muted);
+}
+
+.money-hero button.soft {
+  backdrop-filter: blur(18px) saturate(1.14);
+  -webkit-backdrop-filter: blur(18px) saturate(1.14);
+}
+
+.payout-details-card .section-line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.payout-details-card .section-line h2 {
+  margin: 0;
+}
+
+.payout-minimum {
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--text-secondary);
+  margin: 12px 0 0;
+}
+
+.payout-empty {
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--text-secondary);
+  margin: 12px 0 0;
+}
+
+.payout-details-list {
+  display: grid;
+  gap: 8px;
+  margin: 12px 0 0;
+}
+
+.payout-details-list>div {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  font-size: 13px;
+}
+
+.payout-details-list dt {
+  color: var(--text-secondary);
+}
+
+.payout-details-list dd {
+  margin: 0;
+  text-align: right;
+  overflow-wrap: anywhere;
+  min-width: 0;
+}
+
+.payout-form label {
+  display: block;
+  font-size: 12px;
+  line-height: 18px;
+  margin: 10px 0;
+  color: var(--text-secondary);
+}
+
+.payout-form label input {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 5px;
+}
+
+.payout-form label select {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 5px;
+}
+
+.payout-form {
+  max-height: 85vh;
+  overflow: auto;
+}
+
+.money-hero button:disabled {
+  cursor: default;
+}
+
+html body #app#app .payout-details-card [data-payout-edit] {
+  background: linear-gradient(145deg,hsla(0,0%,100%,.24),hsla(0,0%,100%,.015)),var(--bg-surface) !important;
+  color: var(--text-primary) !important;
+  border: 1px solid var(--border-interactive) !important;
+  border-radius: 9px !important;
+  box-shadow: var(--surface-shadow-small),var(--inner-highlight) !important;
+  font-family: inherit !important;
+  font-weight: 600 !important;
+  font-size: 12px !important;
+  line-height: 16px !important;
+  cursor: pointer;
+  transition: box-shadow var(--motion-fast),filter var(--motion-fast);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 34px !important;
+  padding: 7px 12px !important;
+  white-space: nowrap;
+}
+
+html body #app#app .money-hero [data-withdraw] {
+  cursor: pointer;
+}
+
+html body #app#app .money-hero>div {
+  display: grid !important;
+  grid-template-columns: repeat(2,minmax(0,1fr));
+  gap: 8px !important;
+}
+
+html body #app#app .money-hero>div>button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+html body #app#app .money-hero [data-withdraw]:disabled {
+  cursor: not-allowed !important;
+}
+
+@media (hover:hover) and (pointer:fine) {
+
+html body #app#app :is(.payout-details-card [data-payout-edit],.money-hero [data-withdraw]):not(:disabled):hover {
+  box-shadow: none !important;
+  filter: var(--fo-hover-filter);
+}
+}
+
+html body #app#app :is(.payout-details-card [data-payout-edit],.money-hero [data-withdraw]):focus-visible {
+  outline: 2px solid var(--text-secondary);
+  outline-offset: 3px;
+}
+
+html[data-theme=dark] body #app#app :is(.payout-details-card [data-payout-edit],.money-hero [data-withdraw]) {
+  background: linear-gradient(145deg,hsla(0,0%,100%,.07),transparent),var(--bg-elevated) !important;
+}
+
+.topup-presets button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.topup-presets {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 7px;
+}
+
+html body #app#app .money-hero [data-topup] {
+  background: linear-gradient(145deg,hsla(0,0%,100%,.25),transparent),rgba(61,125,184,.18) !important;
+  color: var(--text-primary) !important;
+  border: 1px solid rgba(61,125,184,.2) !important;
+  box-shadow: var(--surface-shadow-small),var(--inner-highlight) !important;
+}
+
+html body #app#app#app .payout-details-card {
+  padding: 18px !important;
+  border-radius: 22px !important;
+  background: var(--bg-surface,var(--bg-secondary)) !important;
+  border: 1px solid var(--line,#8882) !important;
+  box-shadow: 0 4px 18px #00000005 !important;
+}
+
+html body #app#app#app .payout-details-card .section-line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+
+html body #app#app#app .payout-details-card h2 {
+  margin: 0;
+}
+
+html body #app#app#app .payout-details-card [data-payout-edit] {
+  font-size: 12px !important;
+  font-weight: 600;
+  padding: 8px 12px !important;
+  min-height: 34px !important;
+  border-radius: 11px !important;
+  color: var(--text-primary) !important;
+  background: var(--bg-secondary) !important;
+  border: 1px solid var(--line,#8882) !important;
+  box-shadow: inset 0 1px #ffffff40 !important;
+}
+
+html body #app#app#app .payout-details-card .payout-empty {
+  font-size: 13px;
+  line-height: 20px;
+  margin: 0;
+  color: var(--text-secondary);
+}
+
+html body #app#app#app .payout-details-list {
+  display: grid;
+  gap: 0;
+  margin: 0;
+}
+
+html body #app#app#app .payout-details-list>div {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--line,#8882);
+}
+
+html body #app#app#app .payout-details-list>div:last-child {
+  border: 0;
+  padding-bottom: 0;
+}
+
+html body #app#app#app .payout-details-list dt {
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+html body #app#app#app .payout-details-list dd {
+  font-size: 13px;
+  font-weight: 500;
+  margin: 0;
+  text-align: right;
+  overflow-wrap: anywhere;
+}
+
+.pp-flow {
+  max-width: 760px;
+  margin: 0 auto;
+  color: var(--pp-ink);
+  font: 15px/1.45 var(--fo-legacy-font-chat);
+}
+
+.pp-card {
+  margin: 0 0 14px;
+}
+
+.pp-flow h1 {
+  margin: 0 0 6px;
+}
+
+.pp-flow h2 {
+  margin: 0 0 6px;
+}
+
+.pp-flow p {
+  color: var(--pp-muted);
+  margin: 6px 0 12px;
+}
+
+.pp-small {
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.pp-flow .pp-small {
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.pp-accepted {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.pp-accepted h1 {
+  color: #148547;
+}
+
+.pp-accepted p {
+  margin: 0;
+}
+
+.pp-check {
+  display: grid;
+  place-items: center;
+  width: 58px;
+  height: 58px;
+  flex: none;
+  background: #20ae5b;
+  color: #fff;
+  border: 9px solid #eaf8f1;
+  border-radius: 50%;
+  font-size: 27px;
+  font-weight: 700;
+  animation: pp-check .26s ease both;
+}
+
+.pp-sub-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.pp-facts {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 9px;
+  color: var(--pp-muted);
+  font-size: 13px;
+}
+
+.pp-active {
+  color: #128b48;
+  background: #ecfaf3;
+  padding: 6px 10px;
+  border-radius: 10px;
+}
+
+.pp-qr {
+  flex: none;
+  cursor: pointer;
+}
+
+.pp-qr img {
+  display: block;
+  width: 96px;
+  height: 96px;
+  border-radius: 5px;
+  background: #fff;
+}
+
+.pp-qr small {
+  display: block;
+  font-size: 10px;
+  line-height: 1.3;
+  margin-top: 4px;
+}
+
+.pp-label {
+  display: block;
+  font-size: 13px;
+  color: var(--pp-muted);
+  margin: 0 0 7px;
+}
+
+.pp-value {
+  display: flex;
+  gap: 8px;
+  min-width: 0;
+}
+
+.pp-value input {
+  width: 100%;
+  min-width: 0;
+  text-overflow: ellipsis;
+}
+
+.pp-flow .pp-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+  text-decoration: none;
+  margin: 0;
+  cursor: pointer;
+}
+
+.pp-qr-modal .pp-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+  text-decoration: none;
+  margin: 0;
+  cursor: pointer;
+}
+
+.pp-button svg {
+  width: 20px;
+  height: 20px;
+  flex: none;
+}
+
+.pp-button.pp-icon {
+  flex: none;
+}
+
+.pp-actions {
+  display: flex;
+  gap: 9px;
+  margin-top: 13px;
+}
+
+.pp-actions>* {
+  flex: 1;
+}
+
+.pp-account {
+  width: 100%;
+  margin-top: 12px !important;
+}
+
+.pp-credentials-title {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.pp-credentials-title>span {
+  display: grid;
+  place-items: center;
+  background: #fff4db;
+  color: #c48710;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  flex: none;
+}
+
+.pp-credential {
+  display: grid;
+  grid-template-columns: 135px minmax(0,1fr);
+  align-items: center;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.pp-credential label {
+  font-size: 13px;
+  color: var(--pp-muted);
+  margin: 0;
+}
+
+.pp-warning {
+  padding: 12px 14px;
+  border: 1px solid #ffe19b;
+  border-radius: 13px;
+  background: #fff6dc;
+  color: #8d6619;
+  font-size: 13px;
+  margin: 14px 0;
+}
+
+.pp-information {
+  padding: 13px;
+  border-radius: 13px;
+  background: #f3f6fa;
+  color: var(--pp-muted);
+  font-size: 13px;
+  margin: 16px 0;
+}
+
+.pp-feedback:empty {
+  display: none;
+}
+
+.pp-footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-size: 12px;
+  color: var(--pp-muted);
+  padding: 10px 0 16px;
+}
+
+.pp-footer a {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: #087fff;
+}
+
+.pp-wait {
+  text-align: center;
+  padding: 30px 18px;
+}
+
+.pp-spinner {
+  display: block;
+  width: 48px;
+  height: 48px;
+  border: 3px solid var(--pp-line);
+  border-top-color: #087fff;
+  border-radius: 50%;
+  margin: 0 auto 18px;
+  animation: pp-spin 1s linear infinite;
+}
+
+.pp-qr-modal {
+  width: min(360px,100% - 32px);
+  border: 1px solid #e2e6ed;
+  border-radius: 22px;
+  padding: 22px;
+  background: var(--pp-bg,#fff);
+  color: var(--pp-ink,#131722);
+  text-align: center;
+  animation: pp-enter .25s ease;
+}
+
+.pp-qr-modal::backdrop {
+  background: #11182766;
+}
+
+.pp-qr-modal>img {
+  display: block;
+  width: 100%;
+  background: #fff;
+  border-radius: 10px;
+}
+
+.pp-close {
+  margin-left: auto !important;
+}
+
+.pp-qr-modal p {
+  font-size: 13px;
+}
+
+.pp-qr-modal button[data-pp] {
+  width: 100%;
+}
+
+.shell:has(.pp-flow) {
+  max-width: 780px;
+}
+
+.shell:has(.pp-flow)>header {
+  min-height: 60px;
+  padding: 10px 14px;
+  margin-bottom: 14px;
+  backdrop-filter: none;
+  background: var(--pp-bg,#fff);
+}
+
+.shell:has(.pp-flow)>.pp-footer {
+  display: none;
+}
+
+.shell:has(.pp-flow)>footer {
+  display: none;
+}
+
+nav a.pp-header-account {
+  width: auto;
+  gap: 7px;
+  display: flex;
+}
+
+.pp-header-account svg {
+  width: 19px;
+}
+
+.shell:has(.pp-flow) nav {
+  gap: 6px;
+}
+
+[data-theme=dark] .pp-information {
+  background: #252a32;
+}
+
+[data-theme=dark] .pp-warning {
+  background: #342d1c;
+  border-color: #625022;
+  color: #e7c887;
+}
+
+[data-theme=dark] .pp-active {
+  background: #173729;
+  color: #87dba9;
+}
+
+[data-theme=dark] .pp-check {
+  border-color: #193829;
+}
+
+[data-theme=dark] .shell:has(.pp-flow)>header {
+  background: #181b20;
+}
+
+@media (max-width:430px) {
+  .pp-credential {
+    grid-template-columns: 105px minmax(0,1fr);
+    gap: 6px;
+  }
+  .pp-sub-top {
+    gap: 8px;
+  }
+  .pp-facts {
+    gap: 6px;
+  }
+  .pp-actions .pp-button {
+    gap: 5px;
+  }
+  .pp-qr img {
+    width: 84px;
+    height: 84px;
+  }
+  .pp-check {
+    width: 54px;
+    height: 54px;
+  }
+  .pp-accepted {
+    gap: 12px;
+  }
+  .shell:has(.pp-flow)>header {
+    padding: 10px;
+  }
+}
+
+@media (max-width:350px) {
+  .pp-actions {
+    flex-direction: column;
+  }
+  .pp-credential {
+    grid-template-columns: 1fr;
+  }
+  .pp-header-account svg {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion:reduce) {
+  .pp-flow * {
+    animation: none !important;
+    transition: none !important;
+  }
+  .pp-qr-modal {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+.shell:has(.pp-flow) nav a.pp-header-account {
+  width: auto;
+  max-width: none;
+  white-space: nowrap;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+/* Unified payment registry. Shared controls are owned by shared/components.css. */
+.payments-page {color:var(--fo-text-primary);display:grid;gap:16px;min-width:0}
+.payments-page svg {display:block;width:18px;height:18px;flex:none}
+.payments-page :is(h1,h2,h3,p,dl,dd) {margin:0}
+.payments-page .fo-button {gap:6px}
+.payments-page .fo-icon-button {flex:none}
+.payments-page :is(.fo-input,.fo-select) {min-height:36px;font-size:13px;border-radius:var(--fo-radius-control)}
+.pay-heading,.pay-title,.pay-period-tools,.pay-register-tools,.pay-pagination,.pay-detail>header,.pay-filter>header {display:flex;align-items:center;justify-content:space-between;gap:12px;min-width:0}
+.pay-title {justify-content:flex-start}
+.pay-heading h1 {font-size:var(--fo-font-size-title);font-weight:var(--fo-weight-heading);letter-spacing:-.03em}
+.pay-heading p {font-size:12px;color:var(--fo-text-secondary);margin-top:4px}
+.pay-period-tools {flex-wrap:wrap;justify-content:flex-end;gap:8px}
+.pay-periods {display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
+.pay-kpis {display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.pay-kpi {display:flex;align-items:flex-start;gap:10px;padding:15px;min-width:0}
+.pay-kpi-icon {display:grid;place-items:center;width:34px;height:34px;border-radius:10px;background:var(--fo-accent-soft);color:var(--fo-accent);flex:none}
+.pay-kpi p,.pay-kpi-caption {line-height:1.3;font-size:11px;color:var(--fo-text-secondary)}
+.pay-kpi>div {min-width:0}
+.pay-kpi strong {display:block;margin:5px 0;font-size:24px;line-height:1.2;font-weight:var(--fo-weight-heading);font-variant-numeric:tabular-nums;overflow-wrap:anywhere}
+.pay-kpi strong.pay-figure-medium {font-size:20px}
+.pay-kpi strong.pay-figure-long {font-size:17px}
+.pay-growth {font-size:11px;color:var(--fo-success-text)}
+.pay-growth.negative {color:var(--fo-danger-text)}
+.pay-kpi-caption {display:block;margin-top:2px}
+.pay-red .pay-kpi-icon {color:var(--fo-danger-text);background:var(--fo-danger-bg)}
+.pay-orange .pay-kpi-icon {color:var(--fo-warning-text);background:var(--fo-warning-bg)}
+.pay-green .pay-kpi-icon {color:var(--fo-success-text);background:var(--fo-success-bg)}
+.pay-toolbar {display:flex;align-items:center;gap:8px;position:relative;min-width:0}
+.pay-search {position:relative;flex:1;min-width:0;display:flex;align-items:center}
+.pay-search>svg {position:absolute;left:12px;color:var(--fo-text-secondary);pointer-events:none}
+.pay-search .fo-input {width:100%}
+.pay-search kbd {position:absolute;right:12px;font:10px inherit;color:var(--fo-text-secondary);pointer-events:none}
+.pay-workspace {display:grid;grid-template-columns:minmax(0,1fr);gap:14px;align-items:start;min-width:0}
+.has-detail .pay-workspace {grid-template-columns:minmax(0,1fr) 340px}
+.pay-register {min-width:0;background:var(--fo-bg-surface);border:1px solid var(--fo-border-subtle);border-radius:var(--fo-radius-surface);overflow:hidden}
+.pay-tabs {display:grid;grid-template-columns:repeat(6,minmax(0,1fr))}
+.pay-tabs :is(.fo-button,.fo-tab) {white-space:normal;min-width:0;font-size:11px}
+.pay-tabs small {font-size:10px;opacity:.8}
+.pay-register-tools {padding:10px 14px;font-size:11px;color:var(--fo-text-secondary)}
+.pay-register-tools label {display:flex;align-items:center;gap:8px;white-space:nowrap}
+.pay-register-tools .fo-select {min-height:32px;max-width:175px}
+.pay-table-shell {min-width:0;overflow:hidden}
+.pay-table {width:100%;border-collapse:collapse;table-layout:fixed;font-size:12px}
+.pay-table th {padding:10px 12px;text-align:left;background:var(--fo-bg-secondary);color:var(--fo-text-secondary);font-size:10px;font-weight:var(--fo-weight-emphasis)}
+.pay-table td {padding:12px;border-top:1px solid var(--fo-border-subtle);vertical-align:middle;overflow-wrap:anywhere}
+.pay-table tbody tr {cursor:pointer;transition:background-color var(--fo-motion-press) var(--fo-motion-ease)}
+.pay-table .is-selected {background:var(--fo-accent-soft)}
+@media(hover:hover) and (pointer:fine){.pay-table tbody tr:not(.is-selected):hover>td{background:var(--fo-hover-surface)}.pay-table tbody tr:hover>td:first-child{border-radius:var(--fo-hover-radius) 0 0 var(--fo-hover-radius)}.pay-table tbody tr:hover>td:last-child{border-radius:0 var(--fo-hover-radius) var(--fo-hover-radius) 0}}
+.pay-table tbody tr:focus-visible {outline:2px solid var(--fo-accent);outline-offset:-2px}
+.pay-table .pay-number {width:50px;font-variant-numeric:tabular-nums;color:var(--fo-text-secondary)}
+.pay-table .pay-customer {width:18%}
+.pay-table .pay-operation {width:20%}
+.pay-table .pay-amount {width:12%;text-align:right;font-weight:var(--fo-weight-heading);font-variant-numeric:tabular-nums}
+.pay-table .pay-amount.is-outgoing {color:var(--fo-danger-text)}
+.pay-table .pay-method {width:12%}
+.pay-table .pay-state {width:14%;text-align:center}
+.pay-table .pay-date {width:12%;font-variant-numeric:tabular-nums;font-size:11px}
+.pay-table .pay-open {width:44px;padding:6px}
+.pay-client-link.fo-button {display:inline-flex;text-align:left;max-width:100%;justify-content:flex-start}
+.pay-client-link>span {display:block;min-width:0}
+.pay-customer .pay-owner {display:block;max-width:100%;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;font-size:12px;font-weight:var(--fo-weight-emphasis)}
+.pay-table :is(.pay-customer button,.pay-operation strong) {font-size:12px;font-weight:var(--fo-weight-emphasis)}
+.pay-table :is(.pay-customer small,.pay-operation small,.pay-method small,.pay-date small) {display:block;color:var(--fo-text-secondary);font-size:10px;font-weight:var(--fo-weight-body);margin-top:3px}
+.pay-method-icon {display:none}
+.pay-status {display:inline-flex;align-items:center;gap:5px;padding:4px 7px;border-radius:6px;background:var(--fo-bg-secondary);color:var(--fo-text-secondary);font-size:10px;line-height:1.3;max-width:100%}
+.pay-status i {width:5px;height:5px;border-radius:50%;background:currentColor;flex:none}
+.pay-status.is-success {background:var(--fo-success-bg);color:var(--fo-success-text)}
+.pay-status:is(.is-pending,.is-processing) {background:var(--fo-warning-bg);color:var(--fo-warning-text)}
+.pay-status:is(.is-error,.is-refund) {background:var(--fo-danger-bg);color:var(--fo-danger-text)}
+.pay-attention {display:block;font-size:10px;color:var(--fo-warning-text);margin-top:4px}
+.pay-status-short,.pay-mobile-summary,.pay-mobile-date,.pay-mobile-method {display:none}
+.pay-pagination {padding:12px 14px;border-top:1px solid var(--fo-border-subtle);font-size:11px;color:var(--fo-text-secondary);flex-wrap:wrap;gap:8px}
+.pay-pagination>div {display:flex;align-items:center;gap:8px}
+.pay-pagination .fo-select {width:70px;min-height:32px}
+.pay-accounting {font-size:12px;color:var(--fo-text-secondary);line-height:1.5}
+.pay-accounting summary {cursor:pointer;padding:4px 0}
+.pay-accounting p {margin-top:8px}
+.pay-empty,.pay-error {display:grid;justify-items:center;text-align:center;gap:10px;padding:32px 16px;font-size:13px}
+.pay-empty>svg {width:28px;height:28px;color:var(--fo-text-secondary)}
+.pay-empty h2 {font-size:16px}
+.pay-error {color:var(--fo-danger-text)}
+.pay-skeleton {display:grid;gap:12px;padding:16px;min-height:85px}
+.pay-skeleton span {display:block;height:12px;border-radius:4px;background:var(--fo-bg-secondary)}
+.pay-date-form {display:flex;align-items:end;gap:10px;padding:12px;background:var(--fo-bg-surface);border:1px solid var(--fo-border-subtle);border-radius:var(--fo-radius-surface)}
+.pay-date-form label,.pay-filter label {display:grid;gap:5px;font-size:12px;color:var(--fo-text-secondary);min-width:0}
+.pay-detail {min-width:0;max-height:calc(100dvh - 125px);overflow:auto;overscroll-behavior:contain}
+.pay-detail>header,.pay-filter>header {padding:16px;border-bottom:1px solid var(--fo-border-subtle);background:var(--fo-bg-surface);position:sticky;top:0;z-index:1}
+.pay-detail h2,.pay-filter h2 {font-size:17px;font-weight:var(--fo-weight-heading)}
+.pay-detail>header .pay-status {margin-top:6px}
+.pay-detail-body {padding:16px}
+.pay-detail-date {font-size:11px;color:var(--fo-text-secondary);margin-bottom:12px}
+.pay-fact {display:grid;grid-template-columns:100px minmax(0,1fr);gap:10px;border-bottom:1px solid var(--fo-border-subtle);padding:12px 0;font-size:12px;line-height:1.4}
+.pay-fact dt {color:var(--fo-text-secondary)}
+.pay-fact dd {min-width:0;overflow-wrap:anywhere}
+.pay-fact dd>.fo-button {vertical-align:middle}
+.pay-fact .pay-client-link svg {display:none}
+.pay-fact small {display:block;color:var(--fo-text-secondary);margin-top:4px;font-weight:400}
+.pay-detail-actions {display:grid;gap:8px;margin-top:16px}
+.pay-identifier {overflow-wrap:anywhere;font-variant-numeric:tabular-nums}
+.pay-notice {padding:10px;border-radius:8px;background:var(--fo-warning-bg);color:var(--fo-warning-text);font-size:12px;margin-top:12px}
+.pay-filter-veil,.pay-detail-veil {position:fixed;inset:0;background:rgb(0 0 0 / .24);z-index:510;backdrop-filter:blur(3px)}
+.pay-filter {position:fixed;right:20px;top:100px;width:420px;max-width:calc(100vw - 24px);max-height:calc(100dvh - 24px);overflow:auto;overscroll-behavior:contain;z-index:511}
+.pay-filter-fields {padding:16px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.pay-wide {grid-column:1/-1}
+.pay-filter footer {position:sticky;bottom:0;display:flex;justify-content:flex-end;gap:8px;padding:12px 16px;background:var(--fo-bg-surface);border-top:1px solid var(--fo-border-subtle)}
+.pay-portal {display:contents}
+body.pay-modal-open {overflow:hidden}
+.pay-visually-hidden {position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+@media(max-width:1350px) {
+ .has-detail .pay-table :is(.pay-number,.pay-method) {display:none}
+ .has-detail .pay-table .pay-operation {width:22%}
+}
+@media(max-width:1100px) {
+ .has-detail .pay-workspace {grid-template-columns:minmax(0,1fr)}
+ .pay-portal .pay-detail {position:fixed;inset:12px 12px 12px auto;width:420px;max-width:calc(100vw - 24px);max-height:calc(100dvh - 24px);z-index:511}
+ .pay-table :is(.pay-number,.pay-method) {display:none}
+ .pay-kpi {padding:12px}
+ .pay-kpi-icon {display:none}
+ .pay-heading {align-items:flex-start;flex-direction:column}
+ .pay-period-tools {width:100%;justify-content:space-between}
+}
+@media(max-width:767px) {
+ .payments-page {gap:12px}
+ .pay-heading h1 {font-size:23px}
+ .pay-heading p {font-size:11px}
+ .pay-period-tools {flex-direction:column;align-items:stretch}
+ .pay-period-tools>button {width:100%;justify-content:center}
+ .pay-kpis {grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+ .pay-kpi {padding:12px}
+ .pay-kpi strong {font-size:21px}
+ .pay-kpi-caption {display:none}
+ .pay-kpi .pay-growth {display:block;line-height:1.2;font-size:10px}
+ .pay-toolbar {flex-wrap:wrap}
+ .pay-search {flex:1 1 100%}
+ .pay-search kbd {display:none}
+ .pay-toolbar>button {flex:1}
+ .pay-tabs {grid-template-columns:repeat(3,minmax(0,1fr))}
+ .pay-tabs :is(.fo-button,.fo-tab) {font-size:11px}
+ .pay-register-tools {padding:8px 10px}
+ .pay-register-tools>span {max-width:45%;font-size:10px}
+ .pay-register-tools label {font-size:0;gap:0}
+ .pay-register-tools .fo-select {max-width:155px}
+ .pay-table th {padding:8px 6px}
+ .pay-table td {padding:10px 6px}
+ .pay-table :is(.pay-number,.pay-method,.pay-operation,.pay-date) {display:none}
+ .pay-table .pay-customer {width:auto;padding-left:10px}
+ .pay-table .pay-amount {width:78px;font-size:12px}
+ .pay-table .pay-state {width:80px}
+ .pay-table .pay-open {width:38px;padding:3px}
+ .pay-table .pay-client-link {min-height:0;display:block;max-width:100%}
+ .pay-client-link>span {display:flex;align-items:baseline;gap:5px}
+ .pay-customer .pay-owner {flex:1;min-width:0}
+ .pay-customer .pay-client-link small {flex:none}
+ .pay-table .pay-client-link small {display:inline;font-size:9px;margin:0}
+ .pay-status-long {display:none}
+ .pay-status-short {display:inline}
+ .pay-status {font-size:9px;padding:4px;gap:4px;white-space:nowrap}
+ .pay-mobile-summary {display:block;font-size:10px;color:var(--fo-text-secondary);margin-top:4px;line-height:1.35}
+ .pay-mobile-date {display:block;font-size:9px;color:var(--fo-text-secondary);margin-top:4px;line-height:1.3}
+ .pay-mobile-method {display:block;color:var(--fo-text-secondary);font-size:9px;font-weight:400;margin-top:4px}
+ .pay-pagination {padding:10px;font-size:10px;gap:8px}
+ .pay-pagination>span {flex:1 1 100%}
+ .pay-pagination>div {margin-right:auto}
+ .pay-pagination .fo-select {width:65px}
+ .pay-date-form {flex-wrap:wrap;gap:8px}
+ .pay-date-form label {flex:1;min-width:0}
+ .pay-date-form .fo-input {width:100%;min-width:0}
+ .pay-date-form>button {width:100%}
+ .pay-portal :is(.pay-detail,.pay-filter) {inset:auto 8px max(8px,env(safe-area-inset-bottom)) 8px;width:auto;max-width:none;max-height:calc(100dvh - env(safe-area-inset-top) - 24px);border-radius:16px}
+ .pay-filter .fo-input,.pay-filter .fo-select {max-width:100%;width:100%}
+ .pay-filter-fields {gap:10px;padding:12px}
+ .pay-fact {grid-template-columns:90px minmax(0,1fr)}
+}
+@media(prefers-reduced-motion:no-preference){.pay-portal :is(.pay-filter,.pay-detail){animation:fo-payment-panel var(--fo-motion-panel) var(--fo-motion-ease) both}}
+@keyframes fo-payment-panel {from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+
+/* Customer wallet: shared cards and actions; ledger/payment controllers unchanged. */
+.wallet-page{max-width:960px;margin:auto;display:grid;gap:12px;min-width:0;padding-bottom:24px}.wallet-heading{display:flex;align-items:center;gap:10px;margin:0}.wallet-page h1{font-size:20px;font-weight:400}.wallet-page h2{font-size:14px;font-weight:400;margin:0}.wallet-page small{font-size:11px;line-height:17px;color:var(--fo-text-secondary)}.wallet-page .fo-card{padding:16px;border-radius:16px;border-color:color-mix(in srgb,var(--fo-text-primary) 12%,transparent);box-shadow:0 1px 2px rgb(0 0 0 / .05),0 3px 7px rgb(0 0 0 / .045),var(--fo-inner-highlight);min-width:0}
+.wallet-summary{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:12px;background:linear-gradient(120deg,color-mix(in srgb,var(--fo-control-success) 80%,var(--fo-bg-surface)),var(--fo-bg-surface))}.wallet-available{display:flex;align-items:center;gap:12px;min-width:0}.wallet-summary-icon{display:grid;place-items:center;flex:none;width:38px;height:38px;border:1px solid var(--fo-control-success-border);border-radius:12px;color:var(--fo-control-success-text);background:var(--fo-control-success)}.wallet-summary-icon svg{width:20px;height:20px}.wallet-available>div{display:grid;gap:5px;min-width:0}.wallet-available>div>span{font-size:28px;line-height:34px;font-weight:400;overflow-wrap:anywhere}.wallet-summary>small{grid-column:1/-1}.wallet-actions{display:flex;align-items:center;gap:6px;flex-wrap:wrap}.wallet-actions .fo-button{font-size:12px;min-height:32px;padding:6px 10px}
+.wallet-services{display:grid;grid-template-columns:1fr 1fr;gap:10px;min-width:0}.wallet-service.fo-button{padding:12px;min-width:0;gap:8px;white-space:normal;font-size:12px;box-shadow:var(--fo-surface-shadow-small)}.wallet-service>span{flex:1;min-width:0}.wallet-service svg{width:16px;height:16px;flex:none}.wallet-section-heading{display:flex;justify-content:space-between;align-items:center;gap:10px;min-width:0}.wallet-section-heading>div{display:grid;gap:4px}.wallet-section-heading .fo-button{flex:none;font-size:11px;min-height:30px;padding:5px 9px}
+.wallet-requisites>p,.wallet-empty{font-size:12px;line-height:19px;color:var(--fo-text-secondary);margin:12px 0}.wallet-requisites>small{display:block;margin-top:8px}.wallet-details{margin-top:12px;border-top:1px solid var(--fo-border-subtle)}.wallet-details>summary{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:10px 0;list-style:none;font-size:12px}.wallet-details>summary::-webkit-details-marker{display:none}.wallet-details[open]>summary svg{rotate:180deg}.wallet-details dl{display:grid;gap:8px;margin:4px 0 10px}.wallet-details dl>div{display:flex;justify-content:space-between;gap:12px;font-size:12px}.wallet-details dt{color:var(--fo-text-secondary)}.wallet-details dd{margin:0;text-align:end;overflow-wrap:anywhere}
+.wallet-filters{display:flex;gap:6px;margin:12px 0 4px;flex-wrap:wrap}.wallet-filters .fo-button{font-size:11px;padding:5px 9px;min-height:30px}.wallet-filters .fo-button[aria-pressed=true]{background-color:var(--fo-control-primary);color:var(--fo-control-primary-text);border-color:var(--fo-control-primary-border)}.wallet-record-count{font-size:11px;color:var(--fo-text-secondary)}
+.wallet-ledger-row{display:flex;align-items:center;gap:10px;padding:12px 0;border-bottom:1px solid var(--fo-border-subtle);font-size:12px;min-width:0}.wallet-ledger-row:last-child{border:0}.wallet-operation-icon{display:grid;place-items:center;flex:none;width:28px;height:28px;border-radius:9px;background:var(--fo-bg-elevated);color:var(--fo-text-secondary);border:1px solid var(--fo-border-subtle)}.wallet-operation-icon[data-income=true]{background:var(--fo-control-success);color:var(--fo-control-success-text)}.wallet-operation-icon svg{width:15px;height:15px}.wallet-operation-copy{flex:1;min-width:0;display:grid;gap:4px;overflow-wrap:anywhere}.wallet-operation-amount{flex:none;text-align:right;font-variant-numeric:tabular-nums;font-weight:400}.wallet-operation-amount[data-income=true]{color:var(--fo-success-text)}.wallet-withdrawals .ledger-row{padding:10px 0}.wallet-withdrawals .ledger-row :is(strong,b){font-size:12px;font-weight:400}
+@media(max-width:600px){.wallet-page .fo-card{padding:13px}.wallet-page h1{font-size:18px}.wallet-summary{grid-template-columns:1fr}.wallet-actions{margin-left:50px}.wallet-services{grid-template-columns:1fr}.wallet-available>div>span{font-size:26px}.wallet-details dl>div{font-size:11px}.wallet-ledger-row{gap:8px}.wallet-operation-amount{font-size:11px;max-width:36%;overflow-wrap:anywhere}}
+/* Pending is only shown for an unsettled provider order. */
+.fo-scope .pp-flow .pp-wait{background:var(--fo-bg-surface);border:1px solid var(--fo-border-subtle);border-radius:22px;padding:24px;box-shadow:var(--fo-surface-shadow-small);max-width:520px;margin:20px auto}.fo-scope .pp-wait h1{font-size:21px;font-weight:500;color:var(--fo-text-primary)}.fo-scope .pp-wait p,.fo-scope .pp-information{font-size:13px;color:var(--fo-text-secondary);line-height:1.5}.fo-scope .pp-information{padding:12px;background:var(--fo-nav-active-bg);border-radius:14px;margin:12px 0}.fo-scope .pp-spinner{display:block;width:24px;height:24px;border:2px solid var(--fo-border-subtle);border-top-color:var(--fo-text-secondary);border-radius:50%;animation:fo-payment-spin .9s linear infinite;margin-bottom:16px}@keyframes fo-payment-spin{to{transform:rotate(360deg)}}@media(prefers-reduced-motion:reduce){.fo-scope .pp-spinner{animation:none}}

@@ -1,0 +1,14 @@
+{
+  "android_source": "https://storage.googleapis.com/play_public/supported_devices.csv",
+  "apple_source": "https://github.com/devicekit/DeviceKit/blob/master/Source/Device.generated.swift",
+  "snapshot_date": "2026-10-23",
+  "android_rows": 54241,
+  "apple_identifiers": 237,
+  "unique_identifiers": 55812,
+  "ambiguous_excluded": 6206,
+  "source_sha256": {
+    "android.csv": "3030eb5a0b89884dd677427f03901596a40f9573a2da54a3e4e0716480657246",
+    "apple.swift": "763aeba4fc67672d49e9a918eae56f0d3e12c60712dbcc71ed25447613b16fed",
+    "DeviceKit-LICENSE": "725a298bb896f12220f691494f72639f5e4a280627f3222955aed4b441d9b91c"
+  }
+}

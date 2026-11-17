@@ -1,0 +1,525 @@
+/* Freeman ONE administrative workbench. One compact desk, shared navigation,
+   command rows, data registers, forms and portaled menus. */
+:is(.fo-admin-workspace,.fo-admin-controls){
+ --fo-admin-control-height:30px;--fo-control-touch-target:44px;
+ --fo-admin-line:var(--fo-border-subtle);
+ --fo-admin-wash:color-mix(in srgb,var(--fo-text-primary) 2.5%,var(--fo-bg-surface));
+ --fo-admin-shadow:0 1px 3px rgba(18,28,45,.045);
+ font:400 12px/1.45 var(--fo-font-family);color:var(--fo-text-primary);
+}
+.fo-admin-workspace{width:100%;max-width:1320px;margin:0 auto;padding:4px 14px 28px;box-sizing:border-box}
+.fo-admin-workspace :is(.crm-page,.cp-workspace,.catalog-page,.payments-page,.fo-insights,.publications-page,.ra-page,.fo-infrastructure,.px-console,.keys-manager){display:block;max-width:none;min-width:0;padding:0;gap:10px}
+.fo-admin-workspace :is(h1,h2,h3,h4,p){margin-block-start:0}
+.fo-admin-workspace :is(h1,h2,h3,h4,strong,b){font-weight:500}
+.fo-admin-workspace h1{font-size:20px;line-height:1.25;letter-spacing:-.45px}
+.fo-admin-workspace h2{font-size:13px;line-height:1.4;letter-spacing:-.15px}
+.fo-admin-workspace :is(h3,h4){font-size:12px;line-height:1.4}
+.fo-admin-workspace .fo-admin-header{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;margin:0 0 12px;padding:0;min-height:32px}
+.fo-admin-workspace .fo-admin-heading{display:flex;align-items:center;gap:8px;min-width:0;flex:1}
+.fo-admin-workspace .fo-admin-title{display:flex;align-items:baseline;flex-wrap:wrap;gap:6px 12px;min-width:0}
+.fo-admin-workspace .fo-admin-title h1{margin:0;font-size:20px;line-height:1.25;letter-spacing:-.45px;overflow-wrap:anywhere}
+.fo-admin-workspace .fo-admin-title p{margin:0;font-size:11px;line-height:1.5;color:var(--fo-text-secondary)}
+.fo-admin-workspace .fo-admin-header-actions{display:flex;align-items:center;gap:6px;flex-wrap:wrap;min-width:0}
+.fo-admin-workspace .fo-admin-desk{border:1px solid var(--fo-admin-line);border-radius:14px;background:var(--fo-bg-surface);box-shadow:var(--fo-admin-shadow);min-width:0}
+.fo-admin-workspace :is(.fo-admin-desk-nav,.fo-admin-desk-summary,.fo-admin-desk-tools){padding:8px 12px;border-bottom:1px solid var(--fo-admin-line);min-width:0}
+.fo-admin-workspace .fo-admin-desk-nav{padding-block:0}
+.fo-admin-workspace .fo-admin-body{min-width:0}
+.fo-admin-workspace .fo-admin-desk-footer{border-top:1px solid var(--fo-admin-line)}
+/* Shared controls: domain classes identify actions, never a different material. */
+:is(.fo-admin-workspace,.fo-admin-controls) :is(button.fo-button,a.fo-button,summary.fo-button){--fo-button-size:var(--fo-admin-control-height);min-height:var(--fo-admin-control-height);height:auto;max-width:100%;margin:0;padding:5px 9px;border-radius:8px;font:400 12px/1.35 var(--fo-font-family);gap:5px;white-space:normal;overflow-wrap:anywhere;box-shadow:0 1px 1px rgba(18,28,45,.035),var(--fo-inner-highlight);transform:none;transition:background-color 120ms ease,border-color 120ms ease,box-shadow 120ms ease,transform 80ms ease}
+:is(.fo-admin-workspace,.fo-admin-controls) :is(button.fo-button,a.fo-button,summary.fo-button):active{transform:scale(.975);transition-duration:60ms}
+:is(.fo-admin-workspace,.fo-admin-controls) :is(button.fo-icon-button,a.fo-icon-button){width:var(--fo-admin-control-height);height:var(--fo-admin-control-height);min-width:var(--fo-admin-control-height);padding:6px;flex:none}
+:is(.fo-admin-workspace,.fo-admin-controls) :is(.fo-button,.fo-tab)>:is(svg,img){width:15px;height:15px;flex:0 0 15px;object-fit:contain}
+:is(.fo-admin-workspace,.fo-admin-controls) :is(input:not([type=checkbox],[type=radio]),select,textarea){min-height:32px;min-width:0;max-width:100%;box-sizing:border-box;padding:6px 9px;border-radius:8px;font:400 12px/1.45 var(--fo-font-family)}
+:is(.fo-admin-workspace,.fo-admin-controls) .fo-select{padding-inline-end:28px}
+:is(.fo-admin-workspace,.fo-admin-controls) textarea{min-height:72px;resize:vertical}
+:is(.fo-admin-workspace,.fo-admin-controls) :is(.fo-check,.fo-radio){width:16px;height:16px;flex:0 0 16px;margin:0}
+:is(.fo-admin-workspace,.fo-admin-controls) :is(label,.fo-field){font-size:11px;font-weight:400;line-height:1.5}
+:is(.fo-admin-workspace,.fo-admin-controls) .fo-input-group{min-height:32px;padding:0 9px;gap:7px;border-radius:8px;box-shadow:none}
+:is(.fo-admin-workspace,.fo-admin-controls) .fo-input-group>svg{position:static;width:15px;height:15px;flex:none}
+:is(.fo-admin-workspace,.fo-admin-controls) .fo-input-group .fo-input{padding-inline:0;border:0;background:transparent;box-shadow:none}
+.fo-admin-workspace .fo-tabs{display:flex;align-items:center;flex-wrap:nowrap;gap:2px;padding:2px;max-width:100%;width:max-content;box-sizing:border-box;border:1px solid var(--fo-admin-line);border-radius:8px;background:var(--fo-admin-wash);box-shadow:none;overflow-x:auto;overflow-y:hidden;scrollbar-width:none;margin:0;grid-template-columns:none}
+.fo-admin-workspace :is(button.fo-tab,.fo-tab-action){display:flex;align-items:center;justify-content:center;gap:5px;flex:0 0 auto;width:auto;min-width:0;min-height:27px;padding:4px 8px;border:0;border-radius:6px;white-space:nowrap;font:400 11px/1.4 var(--fo-font-family);box-shadow:none;background:transparent;color:var(--fo-text-secondary);transition:background-color 120ms ease,color 120ms ease}
+.fo-admin-workspace .fo-tab[aria-pressed=true],.fo-admin-workspace .fo-tab[aria-selected=true]{color:var(--fo-info-text);background:var(--fo-bg-surface);box-shadow:var(--fo-admin-shadow)}
+.fo-admin-workspace .fo-tab small{font-size:10px;color:var(--fo-text-secondary);margin:0}
+.fo-admin-workspace .fo-admin-desk-nav .fo-tabs{width:100%;border:0;background:transparent;border-radius:0;gap:14px;padding:0;overflow-x:auto;margin:0}
+.fo-admin-workspace .fo-admin-desk-nav .fo-tab{position:relative;min-height:38px;padding:7px 2px;background:transparent;border:0;border-radius:0;box-shadow:none;font-size:12px}
+.fo-admin-workspace .fo-admin-desk-nav .fo-tab[aria-pressed=true]:after,.fo-admin-workspace .fo-admin-desk-nav .fo-tab[aria-selected=true]:after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:var(--fo-info-text);border-radius:2px}
+.fo-admin-workspace :is(.fo-admin-toolbar,.crm-toolbar,.pay-toolbar,.pub-commandbar,.ra-toolbar,.analytics-controls,.catalog-list-tools,.fo-registry-toolbar,.px-toolbar){display:flex;align-items:center;gap:7px;min-width:0;margin:0;padding:0;border:0;background:transparent;box-shadow:none;flex-wrap:wrap}
+.fo-admin-workspace :is(.fo-admin-panel,.catalog-panel,.pay-register,.pub-list-card,.ra-overview,.ra-personal-section,.ra-payouts,.ra-invitations,.ra-rules){border:0;border-radius:0;box-shadow:none;background:transparent;min-width:0}
+.fo-admin-workspace :is(.catalog-panel,.ra-overview,.ra-personal-section,.ra-rules){padding:12px}
+.fo-admin-workspace :is(.catalog-panel>header,.ra-personal-section>header){display:flex;justify-content:space-between;align-items:center;gap:8px;margin:0 0 10px}
+/* Reporting retains its summary strip; dashboards use shared tiles. */
+.fo-admin-workspace .analytics-primary{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;margin:0;border:0;border-radius:0;background:transparent;box-shadow:none}
+.fo-admin-workspace .analytics-kpi{min-width:0;padding:4px 14px;border-radius:0;border:0;border-right:1px solid var(--fo-admin-line);background:transparent;box-shadow:none}
+.fo-admin-workspace .analytics-kpi strong{font-size:20px;line-height:1.2;font-weight:500}
+.fo-admin-workspace :is(table th,table td){font-size:12px;line-height:1.4;padding:10px 9px;white-space:normal}
+.fo-admin-workspace table th{font-weight:400;color:var(--fo-text-secondary);background:var(--fo-admin-wash);border-bottom:1px solid var(--fo-admin-line)}
+.fo-admin-workspace table td{border-bottom:1px solid var(--fo-admin-line)}
+.fo-admin-workspace table tbody tr:last-child td{border-bottom:0}
+.fo-admin-workspace :is(.fo-status,.cp-status,.pay-status){min-height:18px;font-size:10px;font-weight:400;line-height:1.3;padding:2px 6px;border-radius:6px;white-space:nowrap}
+.fo-admin-workspace :is(.crm-pagination,.pub-pagination,.pay-pagination,.ra-pagination,.fo-registry-pagination){display:flex;align-items:center;justify-content:space-between;gap:8px;margin:0;padding:8px 12px;border:0;font-size:10px;color:var(--fo-text-secondary)}
+.fo-admin-workspace :is(.crm-pagination nav,.pub-pagination>div,.pay-pagination>div,.ra-pagination>div,.fo-registry-pagination nav){display:flex;gap:5px;align-items:center}
+/* Client records use the shared compact contact row below. */
+/* Catalogue rows share one registry frame, with no repeated price-card containers. */
+.fo-admin-workspace .fo-catalog .catalog-panel{display:grid;gap:9px}
+.fo-admin-workspace .fo-catalog .catalog-panel h2{font-size:12px;margin:0}
+.fo-admin-workspace .fo-catalog :is(.catalog-policy,.catalog-muted){font-size:11px;line-height:1.5;color:var(--fo-text-secondary);margin:0}
+.fo-admin-workspace .fo-admin-help{font-size:11px;color:var(--fo-text-secondary);padding:8px 0}
+.fo-admin-workspace .fo-admin-help>summary.fo-button{min-height:24px;padding:3px 0;border:0;box-shadow:none;background:transparent;color:var(--fo-text-secondary);font-size:11px;justify-content:flex-start}
+.fo-admin-workspace .fo-admin-help svg{width:12px;height:12px}
+.fo-admin-workspace .fo-admin-help p{margin-top:8px}
+.fo-admin-workspace .fo-catalog .catalog-register{display:grid;grid-template-columns:minmax(0,1fr);gap:0;border:0;border-radius:0;overflow:visible}
+.fo-admin-workspace .fo-catalog .catalog-register .catalog-tile{display:grid;grid-template-columns:96px minmax(140px,1.4fr) 100px minmax(130px,1fr) auto;align-items:center;gap:10px;margin:0;padding:12px 0;border:0;border-top:1px solid var(--fo-admin-line);border-radius:0;box-shadow:none;background:transparent}
+.fo-admin-workspace .catalog-register .catalog-tile>header{display:grid;justify-content:start;gap:4px;margin:0}
+.fo-admin-workspace .catalog-register .catalog-tile>header small{font-size:9px}
+.fo-admin-workspace .catalog-register .catalog-tile h3{font-size:12px;font-weight:500;line-height:1.4;margin:0}
+.fo-admin-workspace .catalog-register .catalog-tile-price{display:grid;gap:2px;font-size:17px;font-weight:500;letter-spacing:-.3px;line-height:1.25}
+.fo-admin-workspace .catalog-register .catalog-tile-price small{font-size:9px;font-weight:400;letter-spacing:0;color:var(--fo-text-secondary)}
+.fo-admin-workspace .catalog-register .catalog-tile-facts{display:flex;flex-wrap:wrap;gap:10px;margin:0}
+.fo-admin-workspace .catalog-register .catalog-tile-facts>div{min-width:0;flex:0 1 auto}
+.fo-admin-workspace .catalog-register .catalog-tile-facts dt{font-size:10px;margin-bottom:3px}
+.fo-admin-workspace .catalog-register .catalog-tile-facts dd{font-size:11px;font-weight:400}
+.fo-admin-workspace .catalog-register .catalog-row-actions{display:flex;align-items:center;justify-content:flex-end;gap:5px;margin:0;padding:0;border:0}
+.fo-admin-workspace .catalog-register .catalog-row-actions .fo-button:first-child{flex:0 1 auto}
+.fo-admin-workspace .catalog-register .catalog-retirement{grid-column:2/-1;font-size:10px}
+.fo-admin-workspace .fo-catalog .catalog-tabs .fo-tab{width:auto;flex:0 0 auto;white-space:nowrap;overflow-wrap:normal}
+.fo-admin-workspace .catalog-register .is-discount{grid-template-columns:96px minmax(140px,1.3fr) minmax(140px,1fr) auto}
+.fo-admin-workspace .catalog-register .is-discount>p{grid-column:2/-1}
+/* Payments keep tools, summaries and records together. */
+.fo-admin-workspace .pay-period-tools{display:flex;gap:7px;align-items:center;flex-wrap:wrap}
+.fo-admin-workspace .pay-toolbar{position:relative;flex-wrap:nowrap}
+.fo-admin-workspace .pay-search{flex:1;min-width:100px}
+.fo-admin-workspace .pay-search .fo-input{padding-inline-end:50px}
+.fo-admin-workspace .pay-toolbar>label:last-of-type{max-width:170px}
+.fo-admin-workspace .pay-toolbar select{width:auto;max-width:100%}
+.fo-admin-workspace .pay-workspace{display:grid;grid-template-columns:minmax(0,1fr);gap:0;align-items:start}
+.fo-admin-workspace .has-detail .pay-workspace{grid-template-columns:minmax(0,1fr) 300px}
+.fo-admin-workspace .pay-register{overflow:clip;padding:0;min-width:0}
+.fo-admin-workspace .pay-table-shell{border:0;border-radius:0;min-width:0;overflow:clip}
+.fo-admin-workspace .pay-pagination{border-top:1px solid var(--fo-admin-line)}
+.fo-admin-workspace .pay-detail{border:0;border-left:1px solid var(--fo-admin-line);border-radius:0;box-shadow:none;max-height:calc(100dvh - 240px);font-size:12px}
+.fo-admin-workspace .pay-accounting{padding:8px 0;font-size:11px;color:var(--fo-text-secondary)}
+/* Reports: a working overview, compact graphs and progressive detail. */
+.fo-admin-workspace .fo-insights .analytics-controls{display:inline-flex;gap:6px;margin:0;vertical-align:middle}
+.fo-admin-workspace .analytics-filter-panel{display:inline-block;margin:0 0 0 8px;padding:0;border:0;border-radius:0;vertical-align:middle;box-shadow:none;background:transparent}
+.fo-admin-workspace .analytics-filter-panel>summary{min-height:30px;padding:5px 9px;gap:6px;border:1px solid var(--fo-border-interactive);border-radius:8px;font-size:11px}
+.fo-admin-workspace .analytics-filter-panel>summary b{font-size:10px;font-weight:400}
+.fo-admin-controls .fo-report-filter-content{width:min(560px,calc(100vw - 24px));padding:12px;box-sizing:border-box}
+.fo-admin-controls .analytics-filters{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.fo-admin-controls .fo-report-filter-content footer{display:flex;align-items:center;justify-content:space-between;gap:10px;border-top:1px solid var(--fo-admin-line);margin-top:12px;padding-top:10px;font-size:10px}
+.fo-admin-workspace :is(.report-dates,.analytics-loading,.report-error){margin-top:8px}
+.fo-admin-workspace .analytics-grid{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:0;margin:0;border-bottom:1px solid var(--fo-admin-line)}
+.fo-admin-workspace .analytics-card{padding:12px;border:0;border-right:1px solid var(--fo-admin-line);border-radius:0;box-shadow:none;background:transparent;min-width:0}
+.fo-admin-workspace .analytics-card:last-child{border-right:0}
+.fo-admin-workspace .analytics-card>header{gap:8px;margin-bottom:10px}
+.fo-admin-workspace .analytics-card>header h2{font-size:12px}
+.fo-admin-workspace .analytics-card>header select{min-height:28px;font-size:11px;width:auto;max-width:150px}
+.fo-admin-workspace .analytics-chart{margin-top:8px}
+.fo-admin-workspace .analytics-chart svg{width:100%;max-height:220px}
+.fo-admin-workspace .analytics-legend{font-size:10px;margin:8px 0}
+.fo-admin-workspace .analytics-note{font-size:10px;line-height:1.5}
+.fo-admin-workspace .analytics-more{border:0;border-bottom:1px solid var(--fo-admin-line);border-radius:0;margin:0;padding:0;background:transparent;box-shadow:none}
+.fo-admin-workspace .analytics-more>summary{padding:10px 12px;font-size:11px;border:0;border-radius:0;box-shadow:none;background:transparent}
+.fo-admin-workspace .analytics-more .analytics-three{gap:0}
+.fo-admin-workspace .insights-highlights{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;margin:0;border-bottom:1px solid var(--fo-admin-line)}
+.fo-admin-workspace .insights-highlights article{padding:10px 12px;border:0;border-right:1px solid var(--fo-admin-line);border-radius:0;background:var(--fo-admin-wash);box-shadow:none}
+.fo-admin-workspace .insights-highlights article:last-child{border-right:0}
+.fo-admin-workspace .insights-highlights strong{font-size:13px}
+.fo-admin-workspace .insights-highlights :is(small,p){font-size:10px}
+.fo-admin-workspace .insights-links{padding:10px 12px;gap:6px;margin:0;border-bottom:1px solid var(--fo-admin-line)}
+.fo-admin-workspace .digest-settings{padding:12px;border:0;border-radius:0;box-shadow:none;margin:0}
+.fo-admin-workspace .analytics-methodology{padding:0 12px 12px;margin:0}
+/* Publication list and full-height editor share the same controls. */
+.fo-admin-workspace .pub-commandbar{flex-wrap:nowrap}
+.fo-admin-workspace .pub-commandbar .pub-search{flex:1;width:auto;min-width:0;max-width:none}
+.fo-admin-workspace .pub-workspace,.fo-admin-workspace .has-editor .pub-workspace{display:block;grid-template-columns:minmax(0,1fr);gap:0}
+.fo-admin-workspace .pub-list-card{padding:0;overflow:clip}
+.fo-admin-workspace .pub-table{table-layout:fixed;width:100%}
+.fo-admin-workspace .pub-table th:first-child{width:auto}
+.fo-admin-workspace .pub-table th:nth-child(2){width:12%}
+.fo-admin-workspace .pub-table th:nth-child(3){width:18%}
+.fo-admin-workspace .pub-table th:nth-child(4){width:9%}
+.fo-admin-workspace .pub-table th:nth-child(5){width:14%}
+.fo-admin-workspace .pub-table th:nth-child(6){width:48px}
+.fo-admin-workspace .pub-table td{height:auto;padding:11px 9px}
+.fo-admin-workspace .pub-table strong{font-size:12px}
+.fo-admin-workspace .pub-table small{font-size:10px}
+.fo-admin-workspace .pub-thumbnail{width:30px;height:30px;border-radius:7px;flex:none}
+.fo-admin-workspace .pub-table :is(.pub-section,.pub-badge){font-size:9px;min-height:18px;padding:2px 5px;border-radius:6px}
+.fo-admin-workspace .pub-pagination{border-top:1px solid var(--fo-admin-line)}
+.fo-admin-workspace .pub-metric-note{margin:6px 0 0;font-size:10px;color:var(--fo-text-secondary)}
+.fo-admin-controls.pub-portal{position:fixed;inset:0;z-index:150;pointer-events:none;padding:0}
+.fo-admin-controls.pub-portal :is(.pub-row-menu,.pub-filter,.pub-menu-veil,.pub-filter-veil){pointer-events:auto}
+.fo-admin-controls .fo-menu .fo-button--danger{color:var(--fo-danger-text)}
+.fo-admin-controls.pub-portal .pub-editor-veil{display:block;position:absolute;inset:0;background:rgba(15,23,42,.18);backdrop-filter:blur(3px);pointer-events:auto}
+.fo-admin-controls.pub-portal .pub-editor{position:absolute;top:12px;right:12px;bottom:12px;width:min(540px,calc(100% - 24px));max-width:none;max-height:calc(100dvh - 24px);height:auto;display:flex;flex-direction:column;min-height:0;border:1px solid var(--fo-admin-line);border-radius:16px;box-shadow:0 12px 40px rgba(15,23,42,.16);background:var(--fo-bg-surface);pointer-events:auto;overflow:hidden;margin:0}
+.fo-admin-controls .pub-editor>header{padding:12px;gap:10px;flex:none;border-bottom:1px solid var(--fo-admin-line)}
+.fo-admin-controls .pub-editor>header h2{font-size:15px}
+.fo-admin-controls .pub-editor>form{display:flex;flex-direction:column;flex:1;min-height:0;gap:0}
+.fo-admin-controls .pub-editor-fields{padding:12px;display:grid;gap:12px;overflow:auto;min-height:0;flex:1}
+.fo-admin-controls .pub-editor footer{display:flex;justify-content:flex-end;gap:7px;padding:10px 12px;flex:none;border-top:1px solid var(--fo-admin-line)}
+.fo-admin-controls .pub-destinations{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px;padding:0;border:0}
+.fo-admin-controls .pub-destinations legend{font-size:11px;margin-bottom:6px}
+.fo-admin-controls .pub-destinations label>span{min-height:44px;padding:8px;border-radius:9px}
+.fo-admin-controls .pub-destinations small{font-size:10px}
+.fo-admin-controls .pub-destinations strong{font-size:11px;font-weight:500}
+.fo-admin-controls .pub-cover-tools{display:block}
+.fo-admin-controls .pub-cover-tools>button{width:100%;min-height:44px;justify-content:flex-start}
+.fo-admin-controls .pub-settings .pub-toggle{padding:9px 0;border:0;border-top:1px solid var(--fo-admin-line);border-radius:0;background:transparent}
+.fo-admin-controls .pub-toggle strong{font-size:12px}
+.fo-admin-controls .pub-toggle small{font-size:10px;line-height:1.5}
+.fo-admin-controls .pub-rich-toolbar{padding:6px;border-radius:9px 9px 0 0;gap:3px}
+.fo-admin-controls .pub-quill .ql-editor{min-height:160px;font-size:13px;line-height:1.6}
+/* Referral rules are a small editable table, not three nested stacks of cards. */
+.fo-admin-workspace .ra-toolbar{justify-content:space-between}
+.fo-admin-workspace .ra-toolbar label{display:flex;align-items:center;gap:7px;margin:0}
+.fo-admin-workspace .ra-toolbar small{font-size:10px}
+.fo-admin-workspace .ra-overview h2{font-size:12px;margin:0}
+.fo-admin-workspace .ra-chart{height:125px;margin:14px 0 6px;gap:6px;justify-content:space-around;border-bottom:1px solid var(--fo-admin-line);background:repeating-linear-gradient(to top,transparent 0,transparent 29px,var(--fo-admin-line) 30px,transparent 31px)}
+.fo-admin-workspace .ra-chart>span{max-width:24px}
+.fo-admin-workspace .ra-chart i{background:var(--fo-info-text);opacity:.75;border-radius:4px 4px 0 0}
+.fo-admin-workspace .ra-chart-period{display:flex;justify-content:space-between;font-size:9px;color:var(--fo-text-secondary);margin-bottom:12px}
+.fo-admin-workspace .ra-note{font-size:10px;line-height:1.5;margin:7px 0;color:var(--fo-text-secondary)}
+.fo-admin-workspace :is(.ra-search,.ra-personal-search,.ra-payout-toolbar){padding:10px 12px;margin:0;gap:7px}
+.fo-admin-workspace .ra-personal-section .ra-personal-search{padding-inline:0}
+.fo-admin-workspace :is(.ra-table,.ra-payouts){padding:0;border:0;overflow:clip}
+.fo-admin-workspace .ra-table table{table-layout:auto}
+.fo-admin-workspace .ra-payouts .ra-payout-table :is(th,td){font-size:12px;padding:10px 9px}
+.fo-admin-workspace .ra-payout-client strong{font-size:12px}
+.fo-admin-workspace .ra-payout-client small{font-size:10px}
+.fo-admin-workspace .ra-rules>header{display:block;margin-bottom:12px}
+.fo-admin-workspace .ra-rules>header p{font-size:11px;color:var(--fo-text-secondary)}
+.fo-admin-workspace .ra-rule{display:block;padding:12px 0;margin:0;border-top:1px solid var(--fo-admin-line)}
+.fo-admin-workspace .ra-rule h3{font-size:12px;margin-bottom:10px}
+.fo-admin-workspace .ra-rule-options{display:grid;grid-template-columns:1fr 180px;align-items:center;gap:10px}
+.fo-admin-workspace .ra-rule-options>label:not(.ra-toggle){display:grid;gap:5px;max-width:180px}
+.fo-admin-workspace .ra-toggle{display:flex;align-items:center;gap:7px;margin:0;font-size:12px}
+.fo-admin-workspace .ra-levels-table{border:1px solid var(--fo-admin-line);border-radius:9px;overflow:clip}
+.fo-admin-workspace .ra-levels-table table{width:100%;table-layout:fixed;border-collapse:collapse}
+.fo-admin-workspace .ra-levels-table th:first-child{width:62px}
+.fo-admin-workspace .ra-levels-table .fo-input{width:100%;font-variant-numeric:tabular-nums}
+.fo-admin-workspace .ra-rules footer{padding-top:8px;display:flex;justify-content:flex-end}
+.fo-admin-workspace .ra-partner-row{padding:10px 0;border-bottom:1px solid var(--fo-admin-line);border-radius:0}
+/* Customer context also follows the compact page hierarchy. */
+.fo-admin-workspace .cp-summary{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:16px;padding:14px;border:1px solid var(--fo-admin-line);border-radius:12px;background:var(--fo-bg-surface);box-shadow:var(--fo-admin-shadow);margin:0 0 10px}
+.fo-admin-workspace .cp-identity{gap:10px;min-width:0}
+.fo-admin-workspace .cp-avatar{width:36px;height:36px;min-width:36px;border-radius:11px}
+.fo-admin-workspace .cp-name{gap:7px;align-items:center;flex-wrap:wrap}
+.fo-admin-workspace .cp-name h2{font-size:16px}
+.fo-admin-workspace .cp-id{font-size:11px;margin:3px 0;gap:6px}
+.fo-admin-workspace .cp-member-since{font-size:10px;color:var(--fo-text-secondary)}
+.fo-admin-workspace .cp-balance{display:grid;grid-template-columns:1fr auto;gap:3px 10px;align-items:center;padding-left:16px;border-left:1px solid var(--fo-admin-line)}
+.fo-admin-workspace .cp-balance h3{grid-column:1;font-size:10px;color:var(--fo-text-secondary);margin:0;font-weight:400}
+.fo-admin-workspace .cp-balance strong{grid-column:1;font-size:20px;line-height:1.2;letter-spacing:-.4px}
+.fo-admin-workspace .cp-balance>.fo-button{grid-column:2;grid-row:1/3;margin:0}
+.fo-admin-workspace .cp-workspace .cp-actions{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 12px;padding:0}
+.fo-admin-workspace .cp-workbench{display:grid;grid-template-columns:minmax(0,1fr) 270px;align-items:start;gap:12px}
+.fo-admin-workspace :is(.cp-main-services,.cp-context,.cp-services-grid,.cp-lower-grid){display:grid;grid-template-columns:minmax(0,1fr);gap:10px;min-width:0}
+.fo-admin-workspace .cp-workbench .cp-card{padding:11px 12px;margin:0;border:1px solid var(--fo-admin-line);border-radius:12px;background:var(--fo-bg-surface);box-shadow:var(--fo-admin-shadow)}
+.fo-admin-workspace .cp-disclosure>summary{padding:0;min-height:28px;gap:7px}
+.fo-admin-workspace .cp-disclosure>summary h2{font-size:12px}
+.fo-admin-workspace .cp-panel-count{font-size:10px}
+.fo-admin-workspace .cp-context-contacts header h2{display:flex;align-items:center;gap:7px;font-size:12px}
+.fo-admin-workspace .cp-context-contacts header svg{width:15px;height:15px}
+.fo-admin-workspace .cp-contacts{display:grid;grid-template-columns:minmax(0,1fr);gap:0}
+.fo-admin-workspace .cp-contacts>div{display:flex;align-items:center;gap:7px;padding:7px 0;min-height:34px;border:0;border-top:1px solid var(--fo-admin-line);border-radius:0;background:transparent;font-size:11px}
+.fo-admin-workspace .cp-contacts>div>span:nth-child(2){flex:1;min-width:0;overflow-wrap:anywhere}
+.fo-admin-workspace .cp-contact-icon{width:17px;height:17px;flex:none}
+.fo-admin-workspace .cp-copy{min-height:26px;width:26px;height:26px;min-width:26px;padding:5px}
+.fo-admin-workspace .cp-section-toolbar{margin:5px 0}
+.fo-admin-workspace .cp-service{border:0;border-top:1px solid var(--fo-admin-line);border-radius:0;background:transparent;margin:0;padding:10px 0}
+.fo-admin-workspace .cp-service b{font-size:12px}
+.fo-admin-workspace .cp-service-facts{padding:6px 0 0;gap:8px;border:0;background:transparent}
+.fo-admin-workspace .cp-service-facts small{font-size:10px}
+.fo-admin-workspace .cp-record{padding:9px 0;border:0;border-top:1px solid var(--fo-admin-line);border-radius:0;box-shadow:none;background:transparent}
+.fo-admin-workspace .cp-ref-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.fo-admin-workspace .cp-ref-grid label{grid-column:1/-1}
+.fo-admin-workspace .cp-ref-grid strong{font-size:16px}
+.fo-admin-workspace .cp-record-fields>div{display:block;padding:8px 0}
+.fo-admin-workspace .cp-record-fields dd{margin:4px 0 0;font-size:11px}
+.fo-admin-workspace .cp-context :is(.cp-note,.cp-empty){font-size:10px}
+.fo-admin-workspace .fo-flat-content .px-console .px-surface{border:0;border-radius:0;box-shadow:none;background:transparent}
+.fo-admin-workspace .fo-infra-content .fo-key-registry{padding:12px}
+.fo-admin-workspace .fo-infra-content .fo-registry-heading{margin-bottom:10px}
+.fo-admin-workspace .fo-infra-content .fo-registry-heading h1{font-size:15px}
+.fo-admin-workspace .fo-infra-content .fo-registry-heading p{font-size:10px}
+.fo-admin-workspace .fo-key-row{border-radius:10px;padding:10px;box-shadow:none}
+.fo-admin-workspace .fo-registry-toolbar{margin-bottom:10px}
+.fo-admin-workspace .fo-registry-toolbar>.fo-input-group{flex:1;min-width:160px}
+.fo-admin-workspace .fo-registry-toolbar>.fo-field{width:auto;gap:3px;font-size:9px}
+.fo-admin-workspace .fo-registry-toolbar>.fo-field .fo-select{width:auto;max-width:180px}
+.fo-admin-workspace .fo-registry-pagination>.fo-field{display:flex;align-items:center;gap:6px;font-size:10px}
+.fo-admin-workspace .fo-registry-pagination .fo-select{width:60px;min-height:28px;padding-block:4px;font-size:12px}
+.fo-admin-workspace .fo-filter-grid{gap:8px;padding:12px;border:1px solid var(--fo-admin-line);border-radius:10px;box-shadow:none;margin:8px 0 12px}
+.fo-admin-workspace .px-console{padding:12px}
+.fo-admin-workspace .px-console :is(.px-heading,.px-toolbar){margin-bottom:10px;gap:7px}
+.fo-admin-workspace .px-heading h1{font-size:16px}
+.fo-admin-workspace .px-heading p{font-size:10px}
+/* Embedded Proxy uses the same command strip and flat row controls. */
+.fo-admin-workspace .px-command-heading{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:10px}
+.fo-admin-workspace .px-command-heading :is(.px-tabs,.px-section-heading){margin:0;padding:0}
+.fo-admin-workspace .px-command-heading .px-section-heading{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.fo-admin-workspace .px-toolbar{display:flex;flex-wrap:nowrap}
+.fo-admin-workspace .px-toolbar form{flex:1;min-width:0;height:32px;min-height:32px;padding:0 7px;border-radius:8px}
+.fo-admin-workspace .px-toolbar .fo-input{min-height:28px;padding:4px 0;border:0;background:transparent;box-shadow:none}
+.fo-admin-workspace .px-client-table th .fo-button--plain{min-height:24px;padding:0;border:0;box-shadow:none;background:transparent;border-radius:4px;font-size:11px}
+.fo-admin-workspace .px-client-table td .fo-button--plain{border:0;box-shadow:none;background:transparent}
+.fo-admin-workspace .px-console .px-client-identity{border:0;box-shadow:none;background:transparent;padding:2px 0;border-radius:6px}
+.fo-admin-workspace .px-pagination{margin:0;padding:8px;font-size:10px}
+.fo-admin-workspace .px-pagination .px-limit select{width:60px;min-height:28px;font-size:12px;padding-block:3px}
+
+.fo-admin-workspace .px-console :is(.px-card,.px-server-card,.px-chart-card){border:1px solid var(--fo-admin-line);border-radius:10px;box-shadow:none;padding:12px}
+.fo-admin-workspace .px-console :is(.px-summary,.px-metrics){gap:8px}
+.fo-admin-workspace .px-client-table-wrap{padding:0}
+.fo-admin-workspace .px-client-table :is(th,td){padding:9px 6px;font-size:11px}
+.fo-admin-workspace .px-client-table .px-avatar{width:28px;height:28px;margin:0}
+.fo-admin-workspace .proxy-server-detail>.data-card{padding:12px;border:1px solid var(--fo-admin-line);border-radius:12px;box-shadow:var(--fo-admin-shadow)}
+.fo-admin-workspace .proxy-server-detail .admin-proxy-actions{display:flex;gap:6px;flex-wrap:wrap}
+.fo-admin-workspace .px-surface{border:1px solid var(--fo-admin-line);border-radius:10px;box-shadow:none;padding:0;overflow:clip}
+.fo-admin-workspace .px-settings{padding:12px}
+.fo-admin-workspace .px-settings h3{font-size:12px;margin-bottom:10px}
+.fo-admin-workspace .px-field-grid{gap:10px;padding:10px 0;grid-template-columns:repeat(2,minmax(0,1fr))}
+.fo-admin-workspace .px-check{padding:7px 0;font-size:12px;gap:7px}
+.fo-admin-controls .px-tools-list{display:grid;gap:0}
+.fo-admin-controls .px-tools-list>.fo-button{min-height:44px;padding:9px 0;border:0;border-bottom:1px solid var(--fo-admin-line);border-radius:0;background:transparent;box-shadow:none;justify-content:space-between}
+.fo-admin-controls .px-tools-list b{font-size:12px;font-weight:500}
+.fo-admin-controls .px-tools-list small{font-size:10px}
+/* Every portaled command belongs to the admin kit, even outside its page. */
+.fo-admin-controls :is(.fo-popover,.fo-menu-surface){border:1px solid var(--fo-admin-line);border-radius:12px;background:var(--fo-bg-surface);box-shadow:0 8px 26px rgba(18,28,45,.12);padding:5px;max-height:min(620px,calc(100dvh - 24px));overflow:auto}
+.fo-admin-controls :is(.fo-menu,.crm-list-menu,.crm-selection-menu,.crm-menu){gap:1px;min-width:210px;max-width:min(320px,calc(100vw - 24px))}
+.fo-admin-controls :is(.fo-popover,.fo-menu-surface) :is(button.fo-button,a.fo-button,summary.fo-button){display:flex;align-items:center;justify-content:flex-start;width:100%;min-height:31px;height:auto;max-height:none;margin:0;padding:7px 9px;border:0;border-radius:7px;background:transparent;box-shadow:none;color:var(--fo-text-primary);font-size:12px;font-weight:400;line-height:1.35;white-space:normal}
+.fo-admin-controls :is(.fo-popover,.fo-menu-surface) :is(.fo-button,.fo-row-action):active{transform:none;background:var(--fo-admin-wash)}
+.fo-admin-controls .fo-popover :is(.crm-list-limit,.crm-page-selection){display:flex;align-items:center;justify-content:space-between;padding:7px 9px;border-top:1px solid var(--fo-admin-line);font-size:11px;gap:10px}
+.fo-admin-controls .crm-filters{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));width:min(500px,calc(100vw - 24px));gap:10px;padding:12px}
+.fo-admin-controls :is(.fo-dialog,.form-modal,.px-drawer){border-radius:16px;box-shadow:0 14px 45px rgba(18,28,45,.16);max-width:calc(100vw - 24px)}
+.fo-admin-controls :is(.fo-dialog-header,.form-modal>header,.px-drawer>header){padding-block:10px;gap:9px;align-items:center}
+.fo-admin-controls :is(h1,h2){font-size:16px;line-height:1.3;font-weight:500}
+.fo-admin-controls :is(h3,h4){font-size:12px;font-weight:500}
+.fo-admin-controls :is(p,small){font-size:11px;line-height:1.5}
+.fo-admin-controls .catalog-fields{gap:9px}
+.fo-admin-controls .ra-personal-fields{gap:9px}
+.fo-admin-controls .ra-personal-summary{padding:8px 0;background:transparent;border:0;font-size:11px}
+.fo-admin-controls .crm-sheet-body{padding:12px}
+.fo-admin-controls .crm-filter-group summary{font-size:12px}
+.fo-admin-workspace :is(details,section,article){scroll-margin-top:16px}
+@media(hover:hover) and (pointer:fine){
+ .fo-admin-workspace :is(.crm-row,.catalog-tile,.pay-table tbody tr,.pub-table tbody tr,.ra-partner-row):hover{background:var(--fo-admin-wash)}
+ .fo-admin-controls :is(.fo-popover,.fo-menu-surface) :is(.fo-button,.fo-row-action):hover{background:var(--fo-admin-wash);box-shadow:none}
+}
+@media(max-width:1199px){
+ .fo-admin-workspace .crm-toolbar .crm-history-launch{font-size:11px}
+ .fo-admin-workspace .fo-catalog .catalog-register .catalog-tile{grid-template-columns:85px minmax(130px,1fr) 90px auto}
+ .fo-admin-workspace .catalog-register .is-plan .catalog-tile-facts{display:flex;grid-column:2/4;grid-row:2}
+ .fo-admin-workspace .cp-workbench{grid-template-columns:minmax(0,1fr) 240px}
+ .fo-admin-workspace .fo-infra-panel{grid-template-columns:minmax(0,1fr) auto}
+ .fo-admin-workspace .fo-infra-panel dl{grid-column:1;grid-row:2}
+ .fo-admin-workspace .fo-infra-sync{grid-column:1;grid-row:3}
+ .fo-admin-workspace .fo-infra-panel>.fo-button{grid-column:2;grid-row:1/4}
+}
+@media(max-width:1100px){.fo-admin-workspace .has-detail .pay-workspace{grid-template-columns:minmax(0,1fr)}}
+@media(max-width:1099px){
+ .fo-admin-workspace .crm-column-head{display:none}
+ .fo-admin-workspace .crm-row{grid-template-columns:24px minmax(0,1fr) 86px 30px;gap:3px 8px;min-height:66px}
+ .fo-admin-workspace .crm-check{grid-column:1;grid-row:1/3}
+ .fo-admin-workspace .crm-person{grid-column:2;grid-row:1;gap:0}
+ .fo-admin-workspace .crm-person .fo-avatar{display:flex;width:28px;height:28px;min-width:28px;margin-right:8px}
+ .fo-admin-workspace .crm-identity{display:flex;align-items:baseline;gap:6px;width:100%}
+ .fo-admin-workspace .crm-identity strong{flex:0 1 auto;min-width:0}
+ .fo-admin-workspace .crm-freeman-id{flex:none}
+ .fo-admin-workspace .crm-contact-label{grid-column:2;grid-row:2}
+ .fo-admin-workspace .crm-state-label{grid-column:3;grid-row:1;justify-self:end}
+ .fo-admin-workspace .crm-services{grid-column:3;grid-row:2;justify-content:flex-end;gap:5px}
+ .fo-admin-workspace .crm-registration{display:none}
+ .fo-admin-workspace .crm-actions{grid-column:4;grid-row:1/3}
+ .fo-admin-workspace .crm-toolbar .crm-list-limit{display:none}
+ .fo-admin-workspace .crm-toolbar>.fo-input-group{flex:1;min-width:0}
+ .fo-admin-workspace .crm-bulk{height:34px;min-height:34px;gap:4px}
+ .fo-admin-workspace .crm-bulk strong{max-width:50%;font-size:10px}
+}
+@media(max-width:899px){
+ .fo-admin-workspace .cp-workbench{grid-template-columns:minmax(0,1fr)}
+ .fo-admin-workspace .cp-context{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .fo-admin-workspace .cp-context .cp-referral{grid-column:1/-1}
+ .fo-admin-workspace .analytics-grid{grid-template-columns:minmax(0,1fr)}
+ .fo-admin-workspace .analytics-card{border-right:0;border-bottom:1px solid var(--fo-admin-line)}
+ .fo-admin-workspace .analytics-grid .analytics-card:last-child{border-bottom:0}
+ .fo-admin-workspace .pay-toolbar{flex-wrap:wrap}
+ .fo-admin-workspace .pay-toolbar .pay-search{flex-basis:100%}
+}
+@media(max-width:767px){
+ :is(.fo-admin-workspace,.fo-admin-controls){--fo-admin-control-height:34px}
+ .fo-admin-workspace{padding:0 9px calc(96px + env(safe-area-inset-bottom,0px))}
+ .fo-admin-workspace .fo-admin-header{min-height:32px;margin-bottom:9px;gap:8px;align-items:center}
+ .fo-admin-workspace .fo-admin-title{gap:3px 8px}
+ .fo-admin-workspace .fo-admin-title h1{font-size:18px;letter-spacing:-.35px}
+ .fo-admin-workspace .fo-admin-title p{font-size:10px}
+ .fo-admin-workspace .fo-admin-header-actions{gap:5px}
+ .fo-admin-workspace .fo-admin-desk{border-radius:12px}
+ .fo-admin-workspace :is(.fo-admin-desk-nav,.fo-admin-desk-summary,.fo-admin-desk-tools){padding-inline:9px}
+ .fo-admin-workspace .fo-admin-desk-nav .fo-tabs{gap:13px}
+ .fo-admin-workspace .fo-admin-desk-nav .fo-tab{min-height:36px;font-size:11px}
+ .fo-admin-workspace :is(button.fo-button,a.fo-button,summary.fo-button){font-size:11px;padding:6px 8px}
+ :is(.fo-admin-workspace,.fo-admin-controls) :is(input:not([type=checkbox],[type=radio]),select,textarea){font-size:16px;min-height:34px;padding-block:6px}
+ .fo-admin-workspace .crm-toolbar{gap:6px}
+ .fo-admin-workspace .crm-row{padding:8px 9px;gap:3px 6px}
+ .fo-admin-workspace .crm-person strong{font-size:12px}
+ .fo-admin-workspace .crm-freeman-id{font-size:9px}
+ .fo-admin-workspace .crm-contact-label{font-size:10px}
+ .fo-admin-workspace .crm-bulk{padding-inline:9px}
+ .fo-admin-workspace .catalog-panel{padding:10px}
+ .fo-admin-workspace .catalog-panel>header{gap:6px;margin-bottom:4px}
+ .fo-admin-workspace .fo-catalog .catalog-register .catalog-tile{grid-template-columns:minmax(0,1fr) auto;gap:5px 10px;padding:10px 0}
+ .fo-admin-workspace .catalog-register .catalog-tile>header{grid-column:1;grid-row:1;display:flex;align-items:center;gap:6px}
+ .fo-admin-workspace .catalog-register .catalog-tile h3{grid-column:1;grid-row:2;font-size:12px}
+ .fo-admin-workspace .catalog-register .catalog-tile-price{grid-column:2;grid-row:1/3;font-size:18px;text-align:right}
+ .fo-admin-workspace .catalog-register .is-plan .catalog-tile-facts{display:flex;grid-column:1;grid-row:3;gap:8px;padding-top:2px}
+ .fo-admin-workspace .catalog-register .catalog-tile-facts>div{display:flex;align-items:baseline;gap:5px}
+ .fo-admin-workspace .catalog-register .catalog-tile-facts dt{font-size:10px;margin:0}
+ .fo-admin-workspace .catalog-register .catalog-tile-facts dd{font-size:11px}
+ .fo-admin-workspace .catalog-register .catalog-row-actions{grid-column:2;grid-row:3;gap:4px;padding:0}
+ .fo-admin-workspace .catalog-register .catalog-row-actions .fo-button{padding:5px 7px;font-size:10px}
+ .fo-admin-workspace .catalog-register .catalog-row-actions .fo-icon-button{width:28px;min-width:28px;height:30px;min-height:30px}
+ .fo-admin-workspace .catalog-register .catalog-retirement{grid-column:1/-1;grid-row:4}
+ .fo-admin-workspace .catalog-register .is-discount .catalog-tile-facts{grid-column:1/-1;grid-row:3;display:flex}
+ .fo-admin-workspace .catalog-register .is-discount .catalog-row-actions{grid-column:1/-1;grid-row:auto}
+ .fo-admin-workspace :is(.pay-kpis,.analytics-primary,.ra-metrics){grid-template-columns:repeat(2,minmax(0,1fr));row-gap:8px}
+ .fo-admin-workspace :is(.pay-kpi,.analytics-kpi,.ra-metrics>article){padding:2px 9px}
+ .fo-admin-workspace :is(.pay-kpi,.analytics-kpi,.ra-metrics>article):nth-child(2n){border-right:0}
+ .fo-admin-workspace :is(.pay-kpi,.analytics-kpi,.ra-metrics>article) strong{font-size:18px}
+ .fo-admin-workspace .pay-heading .fo-admin-header-actions{flex-basis:100%}
+ .fo-admin-workspace .pay-period-tools{width:100%;justify-content:space-between;gap:6px}
+ .fo-admin-workspace .pay-period-tools>.fo-button{min-height:30px;font-size:10px}
+ .fo-admin-workspace .pay-period-tools .fo-tabs{padding:2px;gap:0}
+ .fo-admin-workspace .pay-period-tools .fo-tab{font-size:10px;padding-inline:5px}
+ .fo-admin-workspace .pay-search kbd{display:none}
+ .fo-admin-workspace .pay-search .fo-input{padding-inline-end:0}
+ .fo-admin-workspace .pay-toolbar>label:last-of-type{margin-left:auto;max-width:145px}
+ .fo-admin-workspace .pay-toolbar select{font-size:12px;min-height:30px}
+ .fo-admin-workspace .analytics-controls{flex-wrap:wrap;gap:5px}
+ .fo-admin-workspace .analytics-controls>button:last-child{display:none}
+ .fo-admin-workspace .analytics-filter-panel{margin:7px 0 0}
+ .fo-admin-workspace .analytics-filter-panel>summary{font-size:11px}
+ .fo-admin-controls .analytics-filters{grid-template-columns:minmax(0,1fr)}
+ .fo-admin-workspace .insights-highlights{grid-template-columns:minmax(0,1fr)}
+ .fo-admin-workspace .insights-highlights article{padding:8px 10px;border:0;border-bottom:1px solid var(--fo-admin-line)}
+ .fo-admin-workspace .insights-highlights article p{margin:3px 0 0}
+ .fo-admin-workspace .analytics-chart svg{max-height:190px}
+ .fo-admin-workspace .pub-commandbar{gap:6px}
+ .fo-admin-workspace .pub-table tr{display:grid;grid-template-columns:minmax(0,1fr) minmax(75px,auto) 30px;gap:5px 7px;padding:10px}
+ .fo-admin-workspace .pub-table td{padding:0;height:auto;border:0}
+ .fo-admin-workspace .pub-table .pub-title-cell{gap:8px;grid-column:1/3;grid-row:1}
+ .fo-admin-workspace .pub-table .pub-menu-cell{grid-column:3;grid-row:1/4;align-self:start}
+ .fo-admin-workspace .pub-title-cell small{display:none}
+ .fo-admin-workspace .pub-section-cell{margin-left:38px}
+ .fo-admin-workspace .pub-view-cell{margin-left:38px}
+ .fo-admin-workspace .pub-notification-state{display:none}
+ .fo-admin-controls.pub-portal .pub-editor{top:0;right:0;bottom:0;width:100%;max-height:100dvh;border:0;border-radius:0}
+ .fo-admin-controls .pub-destinations{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .fo-admin-controls .pub-destinations small{display:none}
+ .fo-admin-workspace .ra-rule-options{grid-template-columns:minmax(0,1fr);gap:10px}
+ .fo-admin-workspace .ra-levels-table :is(th,td){font-size:10px;padding:8px 5px}
+ .fo-admin-workspace .ra-levels-table th:first-child{width:42px}
+ .fo-admin-workspace .ra-levels-table .fo-input{font-size:16px;padding:5px}
+ .fo-admin-workspace .ra-payout-toolbar{flex-wrap:wrap}
+ .fo-admin-workspace .ra-table table{table-layout:fixed}
+ .fo-admin-workspace .ra-table :is(th,td){font-size:11px;padding:9px 6px}
+ .fo-admin-workspace .ra-table .fo-status{white-space:normal}
+ .fo-admin-workspace .cp-summary{grid-template-columns:minmax(0,1fr);gap:12px;padding:12px}
+ .fo-admin-workspace .cp-name h2{font-size:15px}
+ .fo-admin-workspace .cp-balance{border-left:0;border-top:1px solid var(--fo-admin-line);padding:10px 0 0;width:100%}
+ .fo-admin-workspace .cp-context{grid-template-columns:minmax(0,1fr)}
+ .fo-admin-workspace .cp-context .cp-referral{grid-column:auto}
+ .fo-admin-workspace .cp-service-facts{gap:6px;grid-template-columns:repeat(3,minmax(0,1fr))}
+ .fo-admin-workspace .cp-proxy-line{flex-wrap:wrap;gap:8px}
+ .fo-admin-workspace .fo-infra-panel{grid-template-columns:minmax(0,1fr);gap:8px}
+ .fo-admin-workspace .fo-infra-panel>header{grid-column:1;grid-row:1}
+ .fo-admin-workspace .fo-infra-panel dl{grid-column:1;grid-row:2}
+ .fo-admin-workspace .fo-infra-panel>.fo-button{grid-column:1;grid-row:4;justify-self:start}
+ .fo-admin-workspace .fo-infra-summary>article{padding-inline:9px}
+ .fo-admin-workspace .fo-infra-summary strong{font-size:18px}
+ .fo-admin-workspace .fo-infra-content .fo-key-registry{padding:10px}
+ .fo-admin-workspace .fo-infra-content .fo-registry-heading{flex-wrap:wrap;gap:6px}
+ .fo-admin-workspace .fo-registry-toolbar{gap:6px}
+ .fo-admin-workspace .fo-registry-toolbar>.fo-input-group{flex-basis:100%}
+ .fo-admin-workspace .fo-registry-toolbar>.fo-field .fo-select{font-size:12px;min-height:30px}
+ .fo-admin-workspace .fo-infra-proxy-stats{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .fo-admin-workspace .px-console{padding:10px}
+ .fo-admin-workspace .px-client-table :is(th,td){font-size:10px;padding:8px 4px}
+ .fo-admin-workspace .px-client-table .px-avatar{width:24px;height:24px}
+ .fo-admin-workspace :is(.crm-pagination,.pub-pagination,.pay-pagination,.ra-pagination,.fo-registry-pagination){padding:8px 9px;gap:6px}
+}
+@media(prefers-reduced-motion:reduce){:is(.fo-admin-workspace,.fo-admin-controls) *{scroll-behavior:auto;animation-duration:0ms;transition-duration:0ms}}
+@media(prefers-reduced-transparency:reduce){.fo-admin-controls .fo-popover{backdrop-filter:none;background:var(--fo-bg-surface)}}
+@media(prefers-contrast:more){:is(.fo-admin-workspace,.fo-admin-controls){--fo-admin-line:var(--fo-text-secondary)}}
+
+/* Selection is explicit; ordinary rows have no checkbox column. */
+.fo-admin-workspace .crm-page:not(.crm-selection-mode) :is(.crm-check,.crm-bulk){display:none}
+.fo-admin-workspace .catalog-tile h3{min-width:0;overflow-wrap:anywhere}
+/* Remnawave is a working registry in the shared administrative desk. */
+.fo-admin-workspace .rw-manager{padding:12px;min-width:0}
+.fo-admin-workspace :is(.rw-panelbar,.rw-toolbar){display:flex;align-items:center;gap:8px;flex-wrap:wrap;min-width:0;margin-bottom:12px}
+.fo-admin-workspace .rw-panelbar>label{display:flex;align-items:center;gap:7px;font-size:11px;max-width:100%}
+.fo-admin-workspace .rw-panelbar select{width:auto;max-width:260px}
+.fo-admin-workspace .rw-tabs{max-width:100%;margin-bottom:12px;overflow-x:auto}
+.fo-admin-workspace .rw-toolbar .fo-input-group{flex:1;min-width:160px}
+.fo-admin-workspace .rw-toolbar small{font-size:10px;color:var(--fo-text-secondary)}
+.fo-admin-workspace .rw-register{border:1px solid var(--fo-border-subtle);border-radius:10px;overflow:clip;min-width:0}
+.fo-admin-workspace .rw-row{display:grid;grid-template-columns:minmax(160px,1.2fr) minmax(145px,1fr) minmax(100px,.7fr) auto auto;align-items:center;gap:10px;padding:12px;border-bottom:1px solid var(--fo-border-subtle)}
+.fo-admin-workspace .rw-row:last-child{border-bottom:0}
+.fo-admin-workspace .rw-manager:not([data-resource=nodes],[data-resource=hosts]) .rw-row{grid-template-columns:minmax(140px,1fr) minmax(160px,1fr) auto}
+.fo-admin-workspace .rw-identity{display:flex;align-items:center;gap:9px;min-width:0;text-align:left;padding:0;background:transparent;border:0;box-shadow:none;border-radius:6px}
+.fo-admin-workspace :is(.rw-identity>span:last-child,.rw-address,.rw-usage){display:grid;gap:3px;min-width:0;overflow-wrap:anywhere}
+.fo-admin-workspace .rw-identity strong{font-size:13px;font-weight:500}
+.fo-admin-workspace .rw-row small{font-size:10px;color:var(--fo-text-secondary)}
+.fo-admin-workspace .rw-node-icon{display:grid;place-items:center;width:30px;height:30px;border-radius:8px;color:var(--fo-info-text);background:var(--fo-info-bg);flex:none}
+.fo-admin-workspace .rw-node-icon svg{width:17px;height:17px}
+.fo-admin-workspace .rw-actions{display:flex;align-items:center;gap:3px;justify-content:flex-end}
+.fo-admin-workspace .rw-actions details{position:relative}
+.fo-admin-workspace .rw-actions>.fo-icon-button{width:26px;min-width:26px;min-height:28px;height:28px;padding:5px;border:0;box-shadow:none;background:transparent}
+.fo-admin-workspace .rw-note,.fo-admin-controls .rw-note{color:var(--fo-text-secondary);font-size:11px;line-height:1.5;margin:10px 0 0}
+.fo-admin-workspace .rw-empty{padding:20px 12px;font-size:12px;color:var(--fo-text-secondary);margin:0}
+.fo-admin-controls .rw-editor{width:min(640px,calc(100vw - 24px));max-height:calc(100dvh - 32px);display:flex;flex-direction:column;overflow:hidden}
+.fo-admin-controls .rw-editor>header{padding:14px 16px;border-bottom:1px solid var(--fo-border-subtle);flex:none}
+.fo-admin-controls .rw-editor>form{display:grid;gap:12px;overflow:auto;overscroll-behavior:contain;padding:16px;min-height:0}
+.fo-admin-controls .rw-editor footer{display:flex;justify-content:flex-end;gap:8px;padding-top:12px;border-top:1px solid var(--fo-border-subtle)}
+.fo-admin-controls .rw-fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;min-width:0}
+.fo-admin-controls .rw-editor label{display:grid;gap:5px;min-width:0}
+.fo-admin-controls .rw-editor .rw-code{min-height:160px;max-height:320px;overflow:auto;white-space:pre;font:12px/1.5 ui-monospace,monospace}
+.fo-admin-controls .rw-advanced{padding:10px 0;border-top:1px solid var(--fo-border-subtle)}
+.fo-admin-controls .rw-advanced>summary{min-height:28px;font-size:12px}
+.fo-admin-controls .rw-advanced>div,.fo-admin-controls .rw-advanced>textarea{margin-top:10px}
+.fo-admin-controls .rw-advanced>label{display:flex;align-items:center;gap:7px;margin-top:10px}
+@media(max-width:1100px){.fo-admin-workspace .rw-row{grid-template-columns:minmax(140px,1fr) minmax(100px,1fr) auto}.fo-admin-workspace .rw-usage{grid-column:2;grid-row:2}.fo-admin-workspace .rw-actions{grid-column:3;grid-row:1/3}.fo-admin-workspace .rw-row>.fo-status{grid-column:1;grid-row:2;justify-self:start;margin-left:39px}}
+@media(max-width:767px){
+ .fo-admin-workspace .rw-manager{padding:9px}
+ .fo-admin-workspace .rw-panelbar{gap:6px}
+ .fo-admin-workspace .rw-panelbar>label{flex:1 1 100%}
+ .fo-admin-workspace .rw-panelbar select{flex:1;max-width:100%}
+ .fo-admin-workspace .rw-toolbar .fo-input-group{flex-basis:100%}
+ .fo-admin-workspace .rw-row,.fo-admin-workspace .rw-manager:not([data-resource=nodes],[data-resource=hosts]) .rw-row{grid-template-columns:minmax(0,1fr) auto;gap:7px;padding:10px}
+ .fo-admin-workspace .rw-identity{grid-column:1;grid-row:1}
+ .fo-admin-workspace .rw-identity strong{font-size:12px}
+ .fo-admin-workspace .rw-address{grid-column:1;grid-row:2;margin-left:39px;font-size:11px}
+ .fo-admin-workspace .rw-usage{grid-column:1;grid-row:3;margin-left:39px;font-size:10px}
+ .fo-admin-workspace .rw-row>.fo-status{grid-column:1;grid-row:4}
+ .fo-admin-workspace .rw-actions{grid-column:2;grid-row:1/5;align-self:start}
+ .fo-admin-controls .rw-editor{max-height:calc(100dvh - 24px)}
+ .fo-admin-controls .rw-editor>form{padding:12px}
+ .fo-admin-controls .rw-fields{grid-template-columns:minmax(0,1fr)}
+ .fo-admin-controls .rw-editor .rw-code{font-size:16px;min-height:150px}
+}
+
+/* A contact row keeps identity on the left, service actions together on the right. */
+.fo-admin-workspace .crm-page :is(.crm-column-head,.crm-row){display:grid;grid-template-columns:20px minmax(170px,1.5fr) minmax(110px,1fr) 88px 76px 104px;align-items:center;gap:10px}
+.fo-admin-workspace .crm-page:not(.crm-selection-mode) :is(.crm-column-head,.crm-row){grid-template-columns:minmax(170px,1.5fr) minmax(110px,1fr) 88px 76px 104px}
+.fo-admin-workspace .crm-page .crm-column-head{min-height:30px;padding:7px 12px;border-block:1px solid var(--fo-border-subtle);background:var(--fo-admin-wash);font-size:10px;color:var(--fo-text-secondary)}
+.fo-admin-workspace .crm-page .crm-row{min-height:52px;padding:7px 12px;margin:0;border:0;border-bottom:1px solid var(--fo-border-subtle);border-radius:0;background:transparent;box-shadow:none}
+.fo-admin-workspace .crm-page .crm-row:last-child{border-bottom:0}.fo-admin-workspace .crm-page .crm-person{min-height:36px;display:flex;align-items:center;gap:9px;min-width:0;padding:0;margin:0;overflow:hidden;border:0;background:transparent;box-shadow:none;grid-column:auto;grid-row:auto}
+.fo-admin-workspace .crm-page .crm-person .fo-avatar{display:grid;place-items:center;width:30px;height:30px;min-width:30px;flex:0 0 30px;margin:0;border-radius:50%;font-size:11px;line-height:1;position:relative;overflow:hidden}
+.fo-avatar>.fo-avatar-initials{display:block;position:relative;z-index:0;min-width:0;margin:0;padding:0;font:500 11px/1 var(--fo-font-family);text-align:center;letter-spacing:0;align-self:center;justify-self:center}
+.fo-avatar>img{z-index:1}.fo-admin-workspace .crm-page .crm-identity{display:grid;align-items:center;gap:2px;min-width:0;width:auto;overflow:hidden}.fo-admin-workspace .crm-page .crm-identity strong{font-size:12px;line-height:16px;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%;width:auto}.fo-admin-workspace .crm-page .crm-freeman-id{font-size:10px;line-height:13px;color:var(--fo-text-secondary)}
+.fo-admin-workspace .crm-page .crm-contact-label{min-width:0;font-size:11px;line-height:16px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin:0;grid-column:auto;grid-row:auto;color:var(--fo-text-secondary)}
+.fo-admin-workspace .crm-page .crm-row-tools{display:flex;justify-content:end;align-items:center;gap:5px;min-width:0}.fo-admin-workspace .crm-page .crm-services{display:flex;gap:2px;align-items:center;justify-content:end;grid-column:auto;grid-row:auto;margin:0}.fo-admin-workspace .crm-page :is(.crm-key-count,.crm-proxy-count){display:flex;align-items:center;justify-content:center;gap:3px;min-width:28px;min-height:28px;margin:0;padding:3px;border:0;border-radius:7px;background:transparent;box-shadow:none;font-size:10px;line-height:16px}.fo-admin-workspace .crm-page :is(.crm-key-count,.crm-proxy-count)>:is(svg,img){width:13px;height:13px;flex:0 0 13px}.fo-admin-workspace .crm-page :is(.crm-key-count,.crm-proxy-count) b{font-size:10px;line-height:16px;font-weight:400}.fo-admin-workspace .crm-page .crm-actions{position:relative;display:block;grid-column:auto;grid-row:auto}.fo-admin-workspace .crm-page .crm-actions>.fo-icon-button{min-width:26px;width:26px;height:28px;min-height:28px;border:0;border-radius:7px;background:transparent;box-shadow:none;padding:4px;font-size:18px;line-height:16px}.fo-admin-workspace .crm-page .crm-state-label{justify-self:start;grid-column:auto;grid-row:auto;font-size:9px}.fo-admin-workspace .crm-page .crm-registration{font-size:10px;color:var(--fo-text-secondary)}
+@media(hover:hover)and(pointer:fine){.fo-admin-workspace .crm-page .crm-row:not(.selected):hover{background:var(--fo-hover-surface)}.fo-admin-workspace .crm-page .crm-actions>.fo-icon-button:hover{background:var(--fo-hover-surface)}}
+@media(max-width:1099px){.fo-admin-workspace .crm-page .crm-column-head{display:none}.fo-admin-workspace .crm-page .crm-row{grid-template-columns:18px minmax(0,1fr) 96px;gap:7px;min-height:52px;padding:7px 10px}.fo-admin-workspace .crm-page:not(.crm-selection-mode) .crm-row{grid-template-columns:minmax(0,1fr) 96px}.fo-admin-workspace .crm-page :is(.crm-contact-label,.crm-state-label,.crm-registration){display:none}.fo-admin-workspace .crm-page .crm-identity{gap:2px}.fo-admin-workspace .crm-page .crm-person{min-height:36px;gap:8px}.fo-admin-workspace .crm-page .crm-row-tools{gap:4px}.fo-admin-workspace .crm-page .crm-key-count,.fo-admin-workspace .crm-page .crm-proxy-count{min-width:28px}.fo-admin-workspace .crm-page .crm-actions{grid-column:auto;grid-row:auto}.fo-admin-workspace .crm-page .crm-check{grid-column:auto;grid-row:auto}}

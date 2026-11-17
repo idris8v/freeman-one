@@ -1,0 +1,44 @@
+/* PageMotion owns route/managed-overlay Web Animations. These CSS consumers
+   share the same B01 roles; specialized keyed message rendering stays local. */
+#assistant-app {
+  opacity: 0;
+}
+#assistant-app.fa-route-ready {
+  opacity: 1;
+}
+#assistant-app .fa-thinking {
+  animation: unified-message-in var(--fo-motion-message) var(--fo-motion-ease) both;
+}
+#assistant-app .fa-messages.switched {
+  animation: unified-panel-in var(--fo-motion-panel) var(--fo-motion-ease) both;
+}
+/* Gesture position/velocity are owned by PageMotion, never a second CSS tween. */
+#assistant-app button {
+  transition: transform var(--fo-motion-press) var(--fo-motion-ease),background-color var(--fo-motion-press) var(--fo-motion-ease),box-shadow var(--fo-motion-press) var(--fo-motion-ease);
+}
+@keyframes unified-panel-in {
+  from {opacity: 0;translate: 0 6px;}
+  to {opacity: 1;translate: 0 0;}
+}
+@keyframes unified-message-in {
+  from {opacity: 0;translate: 0 4px;}
+  to {opacity: 1;translate: 0 0;}
+}
+@media (prefers-reduced-motion:reduce) {
+  #assistant-app .fa-message,#assistant-app .fa-thinking,#assistant-app .fa-messages.switched,#assistant-app .fa-dialog[open],#assistant-app .fa-attach-menu,#assistant-app .fa-chat-options {
+    animation: none;
+  }
+  #assistant-app .fa-sidebar,#assistant-app .fa-shade,#assistant-app button {
+    transition: none;
+  }
+}
+
+/* A visual-only departure never captures input or delays the next operation. */
+.fo-motion-departure{position:fixed;pointer-events:none;contain:layout style;z-index:1100;overflow:hidden}
+@media(prefers-reduced-transparency:reduce),(prefers-contrast:more){
+  .fo-overlay,dialog.fo-dialog::backdrop{backdrop-filter:none}
+  .fo-dialog,.fo-popover,.fo-menu-surface,.fo-chat-sheet-content{background:var(--fo-bg-surface)}
+}
+@media(prefers-contrast:more){
+  .fo-dialog,.fo-popover,.fo-button,.fo-input,.fo-select{border-color:currentColor}
+}

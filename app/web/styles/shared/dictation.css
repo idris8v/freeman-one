@@ -1,0 +1,20 @@
+/* One dictation presentation: audio becomes an editable draft, never a message. */
+[data-dictation-form]>[data-dictation-rest][hidden],[data-dictation-form] .fa-voice-panel[hidden],[data-dictation-form] .fa-voice-actions button.fo-button[hidden]{display:none}
+[data-dictation-form] .fa-voice-panel{flex:1;display:grid;grid-template-columns:minmax(0,1fr) 36px 78px;align-items:center;gap:8px;min-width:0;min-height:36px;margin:0;padding:0;border:0;background:transparent;box-shadow:none}
+[data-dictation-form] .fa-voice-signal{position:relative;min-width:0;width:100%;height:36px;overflow:hidden;display:grid;align-items:center}
+[data-dictation-form] .fa-voice-signal canvas{position:absolute;inset:0;display:block;width:100%;max-width:100%;height:36px}
+[data-dictation-form] .fa-voice-sr,[data-dictation-form] [data-voice-status]{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);margin:0}
+[data-dictation-form] .fa-voice-panel:not([data-state=recording]) canvas{display:none}
+[data-dictation-form] .fa-voice-panel:not([data-state=recording]) [data-voice-status]{position:static;clip-path:none;width:auto;height:auto;font-size:12px;line-height:20px;white-space:nowrap;text-overflow:ellipsis;overflow:hidden}
+[data-dictation-form] .fa-voice-actions{display:grid;grid-template-columns:34px 34px;gap:10px;width:78px}
+[data-dictation-form] .fa-voice-actions button.fo-button{display:grid;place-items:center;width:34px;min-width:34px;height:34px;min-height:34px;padding:5px;margin:0;border:1px solid var(--fo-border-interactive);border-radius:var(--fo-radius-check);background:var(--fo-bg-surface);color:var(--fo-text-primary);box-shadow:none}
+[data-dictation-form] .fa-voice-actions [data-voice-cancel]{grid-column:1;grid-row:1}
+[data-dictation-form] .fa-voice-actions :is([data-voice-done],[data-voice-retry]){grid-column:2;grid-row:1}
+[data-dictation-form] .fa-voice-actions svg{width:18px;height:18px}
+[data-dictation-form] .fa-voice-panel [data-voice-time]{width:36px;text-align:right;font-size:11px;line-height:20px;color:var(--fo-text-secondary);font-variant-numeric:tabular-nums}
+[data-dictation-form] .fa-voice-panel[data-state=error] [data-voice-status]{color:var(--fo-danger-text)}
+[data-dictation-form] .fa-voice-panel[data-state=error] time{visibility:hidden}
+[data-dictation-form][data-voice-edit=true]{flex-wrap:wrap}
+[data-dictation-form][data-voice-edit=true]>.fa-voice-panel{order:10;flex-basis:100%}
+
+@media(pointer:coarse){[data-dictation-form] .fa-voice-actions button.fo-button::after{inset:-5px}}

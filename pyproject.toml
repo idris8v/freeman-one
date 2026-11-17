@@ -1,0 +1,9 @@
+[tool.ruff]
+target-version = "py312"
+line-length = 88
+exclude = ["docs/legacy", "artifacts", "node_modules", ".venv-test", ".venv-ai"]
+
+[tool.ruff.lint]
+# Correctness across the whole legacy tree; full lint applies to migrated code
+# through scripts/check_quality.py. Expand that scope with each refactoring.
+select = ["F821", "F822", "F823", "F811"]

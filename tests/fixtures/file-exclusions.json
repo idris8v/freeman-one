@@ -1,0 +1,39 @@
+{
+  "private": [
+    ".env", ".env.production", ".env.new", ".env.identity-backup", ".env.yookassa-backup",
+    ".bot-postgres.env", ".freeman-ai.env", "private.env", "private.env.bak",
+    "nested/.env", "nested/.env.example", "nested/.bot-postgres.env", "nested/private.env.old",
+    "compose.yaml", "compose.yml", "compose.production.yaml", "compose.override.yml",
+    "docker-compose.yaml", "docker-compose.override.yml",
+    "data/customer.json", "nested/data/customer.json", "uploads/customer.png", "logs/runtime.txt",
+    "backups/customer.sql", "nested/backups/customer.sql", "dumps/customer.sql",
+    "pgdata/PG_VERSION", ".pgdata/PG_VERSION", "postgres-data/PG_VERSION",
+    "freeman.db", "freeman.db-wal", "freeman.db-shm", "temporary.sqlite", "temporary.sqlite-journal",
+    "temporary.sqlite3", "temporary.sqlite3-wal", "nested/temporary.db",
+    "freeman.pgdump", "freeman.dump", "freeman.dump.gz", "customer.sql.gz", "customer.sql.bz2",
+    "customer.sql.xz", "customer.sql.zst", "dump-customers.sql", "freeman-20261014.sql",
+    "customer.backup", "customer.backup.gz", "customer.bak", "customer.bak.old", "customer.partial", "customer.pgdump.fernet",
+    "runtime.log", "runtime.pid", "runtime.sock", "runtime.tmp",
+    ".netrc", ".pgpass", ".pypirc", ".npmrc", "nested/.npmrc", ".git-credentials", "nested/.pgpass",
+    ".aws/credentials", ".ssh/id_ed25519", ".docker/config.json", ".kube/config",
+    "credentials/provider.json", "nested/secrets/provider.txt",
+    "provider.pem", "provider.key", "provider.p12", "provider.pfx", "provider.jks", "provider.keystore",
+    "artifacts/test.txt", "audit/test.txt", "nested/audit/test.txt", ".venv/lib/test.py", ".venv-test/lib/test.py",
+    "nested/.venv-ai/lib/test.py", "node_modules/package/index.js", "nested/node_modules/package/index.js",
+    "__pycache__/test.pyc", "nested/__pycache__/test.pyc", ".DS_Store", "nested/.DS_Store", "nested/._test",
+    ".pytest_cache/test", ".ruff_cache/test", ".mypy_cache/test", ".cache/test"
+  ],
+  "required": [
+    ".env.example", "compose.example.yaml", ".gitignore", ".dockerignore", "Dockerfile",
+    "requirements.txt", "requirements.lock.txt", "requirements-dev.txt", "package.json", "package-lock.json",
+    "app/main.py", "app/database/migrations.py", "app/database/vless_creation_migration.py",
+    "app/database/vless_renewal_migration.py", "app/database/vless_capacity_migration.py",
+    "app/database/vless_sync_migration.py", "app/database/vless_fallback_migration.py",
+    "app/database/tariff_identity_migration.py", "app/database/example-migration.sql",
+    "app/services/account_credentials.py", "app/services/offsite_backup.py", "app/utils/backup.py",
+    "scripts/freemanone-backup.service", "scripts/freemanone-backup.timer", "scripts/check_assets.py",
+    "tests/test_assets.py", "tests/regression/test_backup.py", "tests/fixtures/schema.sql",
+    "tests/fixtures/cabinet-api.json", "tests/fixtures/file-exclusions.json",
+    ".github/workflows/clean-build.yml", "docs/PROVISIONING-VALIDATION-20261014.md"
+  ]
+}

@@ -1,0 +1,569 @@
+/* Freeman ONE — motion. Authoritative source; edit this module, not a later override. */
+
+@keyframes pulse {
+  0%,to {
+    transform: translateY(0);
+    opacity: .35;
+  }
+  45% {
+    transform: translateY(-8px);
+    opacity: 1;
+  }
+}
+
+@keyframes rise {
+  0% {
+    opacity: 0;
+    transform: translateY(16px) scale(.985);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes bar-grow {
+  0% {
+    transform: scaleY(.08);
+    opacity: .3;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+@keyframes funnel-grow {
+  0% {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes bubble-in {
+  0% {
+    opacity: 0;
+    transform: translateY(5px) scale(.98);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes motion-rise {
+  0% {
+    opacity: 0;
+    transform: translate3d(0,14px,0);
+  }
+  to {
+    opacity: 1;
+    transform: translateZ(0);
+  }
+}
+
+@keyframes motion-meter {
+  0% {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes ref-shimmer {
+  0% {
+    background-position: 100% 0;
+  }
+  to {
+    background-position: -100% 0;
+  }
+}
+
+@keyframes auth-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes nav-panel-enter {
+  0% {
+    opacity: 0;
+    transform: scale(.985);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes chat-sheet-in {
+  0% {
+    opacity: 0;
+    transform: translateY(32px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes chat-fade {
+  0% {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes master-message-in {
+  0% {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes freeman-border-beam {
+  to {
+    offset-distance: 100%;
+  }
+}
+
+@property --dia-position {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: -20%;
+}
+
+@keyframes freeman-dia-reveal {
+  0% {
+    --dia-position: -20%;
+  }
+  to {
+    --dia-position: 120%;
+  }
+}
+
+@keyframes freeman-intro-exit {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes freeman-reminder-beam {
+  0% {
+    offset-distance: 0%;
+    opacity: 0;
+  }
+  3% {
+    opacity: .85;
+  }
+  35% {
+    offset-distance: 100%;
+    opacity: .85;
+  }
+  38%,to {
+    offset-distance: 100%;
+    opacity: 0;
+  }
+}
+
+@keyframes freeman-send-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes freeman-plane-off {
+  to {
+    transform: translate(30px,-22px) scale(.5);
+    opacity: 0;
+  }
+}
+
+@keyframes freeman-send-confirm {
+  0% {
+    opacity: 0;
+    transform: scale(.85);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes freeman-send-wave {
+  50% {
+    transform: translateY(-3px);
+    color: var(--send-accent);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes control-switch-pulse {
+  0% {
+    box-shadow: 0 0 0 0 hsl(var(--button-hue),var(--button-saturation),var(--button-lightness),0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 10px hsl(var(--button-hue),var(--button-saturation),var(--button-lightness),0);
+  }
+  to {
+    box-shadow: 0 0 0 0 hsl(var(--button-hue),var(--button-saturation),var(--button-lightness),0);
+  }
+}
+
+@keyframes freeman-loader-ripple {
+  0%,to {
+    transform: scale(1);
+    box-shadow: 0 8px 10px #0002;
+  }
+  50% {
+    transform: scale(1.18);
+    box-shadow: 0 18px 18px #0002;
+  }
+}
+
+@keyframes freeman-loader-glow {
+  0%,to {
+    opacity: .85;
+    filter: drop-shadow(0 0 0 transparent);
+  }
+  50% {
+    opacity: 1;
+    filter: drop-shadow(0 0 5px #ffffff80);
+  }
+}
+
+@keyframes freeman-morph-rotation {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes freeman-morph-roundness {
+  0%,60%,to {
+    filter: contrast(15);
+  }
+  20%,40% {
+    filter: contrast(3);
+  }
+}
+
+@keyframes freeman-morph-colorize {
+  0%,to {
+    filter: hue-rotate(0deg);
+  }
+  20% {
+    filter: hue-rotate(-30deg);
+  }
+  40% {
+    filter: hue-rotate(-60deg);
+  }
+  60% {
+    filter: hue-rotate(-90deg);
+  }
+  80% {
+    filter: hue-rotate(-45deg);
+  }
+}
+
+@keyframes freeman-notice-enter {
+  0% {
+    opacity: 0;
+    transform: translateY(12px) scale(.94);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes analytics-loading {
+  to {
+    opacity: .4;
+  }
+}
+
+@keyframes supportSheetIn {
+  0% {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes supportSheetOut {
+  to {
+    transform: translateY(100%);
+  }
+}
+
+@keyframes supportVeilIn {
+  0% {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes supportVeilOut {
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes support-panel-enter {
+  0% {
+    opacity: 0;
+    translate: 0 12px;
+  }
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+
+@keyframes support-overlay-enter {
+  0% {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes pub-panel-in {
+  0% {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pub-pulse {
+  to {
+    opacity: .5;
+  }
+}
+
+@keyframes interaction-panel-in {
+  0% {
+    opacity: 0;
+    translate: 0 8px;
+  }
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+
+@keyframes payIn {
+  0% {
+    opacity: 0;
+    transform: translateY(7px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes paySheet {
+  0% {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes payPulse {
+  to {
+    opacity: .5;
+  }
+}
+
+@keyframes offerSlide {
+  0% {
+    opacity: 0;
+    transform: translateX(24px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes offerFade {
+  0% {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes offerPulse {
+  to {
+    opacity: .4;
+  }
+}
+
+@keyframes keyDialogEnter {
+  0% {
+    opacity: 0;
+    transform: translateY(10px) scale(.985);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes crmDrawer {
+  0% {
+    opacity: 0;
+    transform: translateX(18px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes px-enter {
+  0% {
+    opacity: 0;
+    transform: translateY(7px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes px-slide {
+  0% {
+    opacity: 0;
+    transform: translateX(28px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes px-fade {
+  0% {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes px-pulse {
+  50% {
+    opacity: .6;
+  }
+}
+
+@keyframes cp-loading {
+  to {
+    opacity: .4;
+  }
+}
+
+@keyframes cp-dialog-in {
+  0% {
+    opacity: 0;
+    transform: translateY(8px) scale(.995);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes payment-wait-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes unified-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes unified-enter {
+  0% {
+    opacity: 0;
+    translate: 0 6px;
+  }
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+
+@keyframes identity-open {
+  0% {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@view-transition {
+  navigation: none;
+}
+
+@keyframes pp-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pp-enter {
+  0% {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes pp-check {
+  0% {
+    opacity: 0;
+    transform: scale(.92);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "name": "freeman-one-style-tools",
+  "private": true,
+  "description": "Build-time CSS tooling; Node is not required on the production server.",
+  "scripts": {
+    "styles:build": "node scripts/build_styles.cjs",
+    "styles:check": "node scripts/build_styles.cjs --check",
+    "styles:test": "node --test tests/style_policy.test.cjs"
+  },
+  "devDependencies": {
+    "cssnano": "9.6.0",
+    "playwright": "1.62.1",
+    "postcss": "8.5.29",
+    "postcss-selector-parser": "7.1.6"
+  },
+  "engines": {
+    "node": "^22.22.3 || ^24.15.0 || >=26.0"
+  }
+}

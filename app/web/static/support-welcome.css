@@ -1,0 +1,18 @@
+/* The welcome message remains in the scrollable history above the composer. */
+.native-history > .native-welcome { flex: 0 0 auto; min-width: 0; margin: 0; padding: 4px 0 12px; }
+.native-welcome > .native-bubble.fo-support-welcome { box-sizing: border-box; width: min(100%, 410px); max-width: 100%; min-width: 0; padding: 12px; overflow: visible; }
+.fo-support-welcome > p { margin: 0 0 7px; }
+.fo-support-welcome .fo-chat-welcome-options { grid-template-columns: minmax(0,1fr); margin: 10px 0 0; gap: 6px; }
+.fo-support-welcome .fo-chat-welcome-options > button.fo-button { display: grid; grid-template-columns: auto minmax(0,1fr) auto; align-items: center; gap: 8px; width: 100%; min-height: 42px; padding: 6px 9px; white-space: normal; border-radius: 10px; background: var(--fo-bg-elevated); }
+.fo-support-welcome [data-topic="whatsapp"] { color: var(--fo-text-primary); background: color-mix(in srgb,#23bf62 16%,var(--fo-bg-surface)) !important; }
+.fo-support-welcome [data-topic="youtube"] { color: var(--fo-text-primary); background: color-mix(in srgb,#f34b47 14%,var(--fo-bg-surface)) !important; }
+
+.fo-support-welcome .fo-chat-welcome-options { grid-template-columns: repeat(2,minmax(0,1fr)); }
+.fo-support-welcome .fo-chat-welcome-options > button.fo-button { grid-template-columns: auto minmax(0,1fr); line-height: 1.25; }
+.fo-support-welcome .fo-chat-welcome-options > button > svg:last-child { display:none; }
+.fo-support-welcome [data-support-issue] > span { overflow-wrap:anywhere; }
+
+.native-bubble .cm-rich a:is([href="https://t.me/FreemanOneBot"],[href="https://freemanone.pro/buy"]),
+.fo-support-agent-bubble .cm-rich a:is([href="https://t.me/FreemanOneBot"],[href="https://freemanone.pro/buy"]) {
+ display: inline-flex; align-items:center; min-height:36px; padding:4px 10px; border:1px solid currentColor; border-radius:9px; text-decoration:none;
+}

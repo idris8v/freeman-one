@@ -1,0 +1,169 @@
+/* Freeman ONE — foundation. Authoritative source; edit this module, not a later override. */
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+a {
+  font: inherit;
+}
+
+button:where(:not(.fo-scope, .fo-scope *)) {
+  -webkit-tap-highlight-color: transparent;
+}
+
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-synthesis: none;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  font-synthesis: none;
+  -webkit-font-smoothing: antialiased;
+}
+
+@media (prefers-reduced-motion:reduce) {
+  * {
+    animation-duration: var(--t-reduced) !important;
+    animation-delay: 0ms !important;
+    transition-duration: var(--t-reduced) !important;
+  }
+}
+
+a:focus-visible {
+  outline: 2px solid #0878ff;
+  outline-offset: 2px;
+}
+
+html[data-theme=dark] body :is(input,textarea):where(:not(.fo-scope, .fo-scope *))::placeholder {
+  color: var(--text-muted) !important;
+  opacity: 1;
+}
+
+html[data-theme=dark] body :is(input,textarea,select):focus-visible:where(:not(.fo-scope, .fo-scope *)) {
+  outline: none;
+  border-color: rgba(10,132,255,.55) !important;
+  box-shadow: 0 0 0 3px rgba(10,132,255,.12) !important;
+}
+
+html[data-theme=dark] body :is(input[type=checkbox],input[type=radio]):where(:not(.fo-scope, .fo-scope *)) {
+  accent-color: var(--accent);
+}
+
+body {
+  transition: background-color 280ms var(--ease-standard),border-color 280ms var(--ease-standard),color 220ms var(--ease-standard),box-shadow 280ms var(--ease-standard);
+}
+
+@media (prefers-reduced-motion:reduce) {
+  body {
+    transition: none !important;
+  }
+}
+
+html body {
+  min-height: 100dvh;
+}
+
+html body #app :is(button,a,input,select,textarea):focus-visible:where(:not(.fo-scope, .fo-scope *)) {
+  outline: 2px solid rgba(10,132,255,.6) !important;
+  outline-offset: 3px !important;
+}
+
+html body #app :is(input:not([type=checkbox]):not([type=radio]):not([type=file]),select,textarea):where(:not(.fo-scope, .fo-scope *)) {
+  border-radius: 16px;
+  color: var(--text-primary);
+  border-color: var(--border-subtle);
+}
+
+@media (max-width:1100px) {
+  html body #app :is(input:not([type=checkbox]):not([type=radio]):not([type=file]),select,textarea):where(:not(.fo-scope, .fo-scope *)) {
+    font-size: 16px !important;
+  }
+}
+
+@media (prefers-reduced-motion:reduce) {
+  html body #app * {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+  html body #app :before {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+  html body #app :after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+html[data-theme-reveal=active]::view-transition-group(root) {
+  animation-duration: var(--theme-reveal-duration,400ms);
+}
+
+html[data-theme-reveal=active]::view-transition-image-pair(root) {
+  isolation: auto;
+}
+
+html[data-theme-reveal=active]::view-transition-old(root) {
+  animation: none;
+  mix-blend-mode: normal;
+  z-index: 1;
+}
+
+html[data-theme-reveal=active]::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+  z-index: 2;
+  clip-path: var(--theme-reveal-from);
+}
+
+@media (prefers-reduced-motion:reduce) {
+  html[data-theme-reveal=active]::view-transition-group(root) {
+    animation-duration: 0s;
+  }
+}
+
+html body #app#app#app#app [data-pub-cover] {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+html body #app#app#app#app [data-pub-cover] img {
+  width: 58px;
+  height: 58px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+html body #app#app#app#app [data-pub-cover] button {
+  position: absolute;
+  top: -5px;
+  right: -7px;
+}
+
+html body #app#app#app#app [data-pub-cover] svg {
+  width: 12px;
+  height: 12px;
+}
+
+@media (prefers-reduced-motion:reduce) {
+  html body #overlay-root * {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}

@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<title>Подключение подписки — Freeman ONE</title>
+<link rel="icon" href="/assets/favicon-rounded-20261029.png">
+<link rel="stylesheet" href="/assets/connect-guide.css?v=537c21f305f0">
+<script defer src="/assets/connect-guide.js?v=35b30b3791db"></script>
+</head>
+<body>
+<header><a class="brand" href="/"><img src="/assets/freeman-mark-20261029.png" width="32" height="32" alt="">Freeman ONE</a><a class="account-button" href="/">Личный кабинет <span aria-hidden="true">↗</span></a></header>
+<main>
+  <h1>Подключите подписку</h1>
+  <p class="intro">Выберите устройство и приложение.</p>
+  <h2 id="device-picker-title">Какое у вас устройство?</h2>
+  <nav class="platforms" aria-labelledby="device-picker-title">
+<button class="device-card apple" type="button" data-os="apple" aria-pressed="true"><span class="device-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24">
+            <path d="M16.8 13.1c0 2.2 2 2.9 2 2.9s-1.5 4.1-3.6 4.1c-1 0-1.4-.6-2.6-.6s-1.6.6-2.7.6C7.8 20.1 5.6 16 5.6 13c0-2.9 1.9-4.4 3.7-4.4 1 0 1.9.7 2.6.7.7 0 1.8-.8 3.1-.8.5 0 2 .1 3 1.5-.1.1-1.8 1.1-1.8 3.1ZM14.8 5.8c.6-.8 1-1.9.9-3-1 .1-2.2.7-2.9 1.5-.6.7-1.1 1.8-.9 2.9 1.1.1 2.3-.6 2.9-1.4Z"/>
+          </svg></span><span class="device-label"><strong>Apple</strong><small>iPhone, iPad и Mac</small></span></button>
+<button class="device-card android" type="button" data-os="android" aria-pressed="false"><span class="device-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24">
+            <path d="M7.2 8.6 5.7 6.2a.7.7 0 1 1 1.2-.7l1.6 2.5a7 7 0 0 1 7 0l1.6-2.5a.7.7 0 1 1 1.2.7l-1.5 2.4c1.6 1.2 2.6 3 2.6 5v6.2c0 .9-.7 1.6-1.6 1.6h-1.2V14H7.2v9.2H6c-.9 0-1.6-.7-1.6-1.6V13.6c0-2 .9-3.8 2.8-5Zm2.3 3.4a.9.9 0 1 0 0-1.8.9.9 0 0 0 0 1.8Zm5 0a.9.9 0 1 0 0-1.8.9.9 0 0 0 0 1.8Z"/>
+          </svg></span><span class="device-label"><strong>Android</strong><small>Смартфон или планшет</small></span></button>
+<button class="device-card windows" type="button" data-os="windows" aria-pressed="false"><span class="device-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24">
+            <path d="M3 4.5 11 3.4v8.1H3V4.5Zm9 6.9V3.3l9-1.3v9.4h-9ZM3 12.5h8v8.1L3 19.5v-7Zm9 0h9v9.4l-9-1.3v-8.1Z"/>
+          </svg></span><span class="device-label"><strong>Windows</strong><small>ПК или ноутбук</small></span></button>
+<button class="device-card tv" type="button" data-os="tv" aria-pressed="false"><span class="device-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24">
+            <path d="M4.5 6.5A2.5 2.5 0 0 1 7 4h10a2.5 2.5 0 0 1 2.5 2.5v7A2.5 2.5 0 0 1 17 16H7a2.5 2.5 0 0 1-2.5-2.5v-7ZM9 20h6a1 1 0 0 0 0-2H9a1 1 0 0 0 0 2Z"/>
+          </svg></span><span class="device-label"><strong>Android TV</strong><small>Телевизор или приставка</small></span></button>
+  </nav>
+  <section class="app-picker" id="app-picker" aria-labelledby="app-picker-title" hidden>
+    <h2 id="app-picker-title">Выберите приложение</h2>
+    <div id="app-choices" class="app-choices" role="group" aria-label="Выбор приложения"></div>
+  </section>
+  <section class="guide-step" id="guide-download" aria-labelledby="download">
+    <span class="number">Шаг 1</span>
+    <div><h2 id="download">Скачайте приложение</h2>
+    <p id="download-info" hidden></p>
+    <div id="tv-start" hidden>
+      <div class="guide-store-grid" id="tv-phone-stores"></div>
+    </div>
+    <div id="platform-downloads"><div id="download-cards" class="guide-store-grid"></div></div>
+    <div class="download-help"><a id="region" href="https://happ.info/ru/apple-region/" target="_blank" rel="noopener noreferrer">App Store пишет, что приложение недоступно?</a></div></div>
+  </section>
+  <section class="guide-step guide-key-step" id="guide-key" aria-labelledby="key-title">
+    <span class="number">Шаг 2</span>
+    <div>
+      <h2 id="key-title">Скопируйте ссылку на подписку</h2>
+      <p id="key-hint">Ключ, или подписка, — это ссылка, которую вы получили после оплаты.</p>
+      <button class="primary guide-key-copy" type="button" id="copy" hidden>Скопировать мой ключ</button>
+      <div id="key-sources">
+        <p class="guide-key-question"><span aria-hidden="true">🔎</span> Где искать ключ?</p>
+        <dl class="guide-key-sources">
+          <div><dt><img src="/assets/service-whatsapp-20261115.svg" width="18" height="18" alt="">WhatsApp</dt><dd>В переписке с продавцом, где вам выдали подписку</dd></div>
+          <div><dt><img src="/assets/telegram-logo.webp" width="18" height="18" alt="">Telegram-бот</dt><dd>В разделе «Мои ключи»</dd></div>
+          <div><dt><img src="/assets/freeman-mark-20261029.png" width="18" height="18" alt="">Сайт</dt><dd>В личном кабинете, в разделе «Мои ключи»</dd></div>
+        </dl>
+        <div class="guide-key-example"><span id="example-label"><span aria-hidden="true">🔑</span> Как выглядит ключ? Например, вот так:</span><code id="example">https://sub.freemanone.top/пример</code></div>
+      </div>
+      <p id="key-status" role="status" hidden></p>
+      <div id="tv-phone-import" hidden>
+        <h3>Скопировали? Добавьте ссылку на телефоне</h3>
+        <ol class="guide-actions" id="tv-phone-steps"></ol>
+      </div>
+    </div>
+  </section>
+  <section class="guide-step" id="tv-install" aria-labelledby="tv-install-title" hidden>
+    <span class="number">Шаг 3</span>
+    <div><h2 id="tv-install-title">Установите приложение на телевизор</h2>
+    <p id="tv-install-info"></p>
+    <div id="tv-install-cards" class="guide-store-grid"></div></div>
+  </section>
+  <section class="guide-step" id="guide-import" aria-labelledby="import">
+    <span class="number">Шаг <span id="import-number">3</span></span>
+    <div><h2 id="import">Добавьте подписку</h2>
+    <div id="standard-import"><ol class="guide-actions" id="import-info"></ol>
+    <figure class="guide-diagram" id="import-figure"><div id="import-diagram" aria-hidden="true"></div><figcaption>Схема экрана. Названия могут отличаться в вашей версии.</figcaption></figure>
+    </div>
+    <div id="incy-tv-import" hidden>
+      <ol class="guide-actions" id="incy-tv-transfer-steps">
+        <li>В INCY на ТВ выделите <strong>«+ Добавить»</strong> и нажмите «ОК».<div id="incy-tv-add-diagram"></div></li>
+        <li>В INCY на телефоне: <strong>⋮</strong> рядом с Freeman ONE → <strong>«Отправить на ТВ»</strong>. Отсканируйте QR-код с ТВ и подтвердите.<div id="incy-phone-share-diagram"></div></li>
+      </ol>
+      <figure class="guide-diagram"><div id="incy-tv-diagram" aria-hidden="true"></div><figcaption>Схема экрана INCY на телевизоре</figcaption></figure>
+      <details class="tv-alternate"><summary>У меня не получается отсканировать</summary>
+        <ol class="guide-actions">
+          <li>Найдите код из 8 символов рядом с QR-кодом на ТВ.</li>
+          <li>В INCY на телефоне: «Отправить на ТВ» → ручной ввод. Введите код и отправьте Freeman ONE.</li>
+        </ol>
+      </details>
+      <p class="source">Код истёк? Снова откройте «+ Добавить» на ТВ.</p>
+    </div>
+    <div id="tv-import" hidden>
+      <ol class="guide-actions" id="happ-tv-transfer-steps">
+        <li>Подключите телефон и ТВ к одной сети Wi-Fi. Откройте QR-код в Happ на ТВ.</li>
+        <li>Сканером Happ на телефоне прочитайте QR-код и выберите Freeman ONE.<div id="happ-phone-share-diagram"></div></li>
+      </ol>
+      <figure class="guide-diagram"><div id="happ-tv-diagram" aria-hidden="true"></div><figcaption>Схема экрана Happ на телевизоре. Сканируйте код со своего ТВ.</figcaption></figure>
+      <details class="tv-alternate"><summary>У меня не получается отсканировать</summary>
+        <p>На телевизоре нажмите <strong>«Импорт через сайт»</strong> (Web Import). На телефоне откройте форму Happ по QR-коду или кнопке ниже. Введите код с ТВ, вставьте ссылку и отправьте. Оставьте экран импорта на ТВ открытым.</p>
+        <a class="secondary" href="https://tv.happ.su/" target="_blank" rel="noopener noreferrer">Открыть форму Happ ↗</a>
+        <figure class="tv-shot"><img src="/assets/happ-tv-web.png" width="1259" height="731" loading="lazy" alt="Экран импорта через сайт с адресом формы, кодом и QR-кодом"><figcaption>Используйте код со своего ТВ.</figcaption></figure>
+      </details>
+      <p class="source"><a href="https://www.happ.su/main/ru/faq/android-tv" target="_blank" rel="noopener noreferrer">Источник скриншотов — инструкция Happ</a></p>
+    </div></div>
+  </section>
+  <section class="guide-step" id="guide-connect" aria-labelledby="connect">
+    <span class="number">Шаг <span id="connect-number">4</span></span>
+    <div><h2 id="connect">Подключитесь</h2>
+    <ol class="guide-actions" id="connect-info"></ol>
+    <figure class="guide-diagram"><div id="connect-diagram" aria-hidden="true"></div><figcaption>Схема подключения</figcaption></figure>
+    <p id="permission">Если появится запрос системы, нажмите «Разрешить» или «ОК».</p>
+    </div>
+  </section>
+  <section class="guide-step guide-finish" aria-labelledby="guide-finish-title">
+    <div><h2 id="guide-finish-title">Всё готово!</h2>
+    <p>Появилось «Подключено»? Можно пользоваться.</p></div>
+  </section>
+</main>
+<button class="guide-help" id="open-step-help" type="button" aria-haspopup="dialog"><span class="guide-help-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 11.5a7.8 7.8 0 0 1-8 7.5 8.5 8.5 0 0 1-3-.6L5 20l.8-3.7A7.3 7.3 0 0 1 4 11.5 7.8 7.8 0 0 1 12 4a7.8 7.8 0 0 1 8 7.5Z"/><path d="M9 11.5h.01m3 0h.01m3 0h.01" stroke-width="2.2"/></svg></span><span>Спросить помощника</span><span id="step-help-badge" class="step-help-badge" aria-hidden="true" hidden></span></button>
+<dialog id="step-help" class="step-help" aria-labelledby="step-help-title">
+  <div class="step-help-header">
+    <div><h2 id="step-help-title">Помощник по настройке</h2><p>Спросите о любом приложении из инструкции.</p></div>
+    <form method="dialog"><button class="step-help-close" aria-label="Свернуть помощника" title="Свернуть">−</button></form>
+  </div>
+  <div class="step-help-body">
+    <div class="step-help-log" id="step-help-log" role="log" aria-label="Переписка с помощником"></div>
+    <p class="step-help-status" id="step-help-status" role="status"></p>
+    <form class="step-help-composer" id="step-help-form">
+      <textarea id="step-help-input" aria-label="Сообщение помощнику" placeholder="Что не получается?" rows="1" maxlength="1000" required></textarea>
+      <button id="step-help-send" class="primary" type="submit">Отправить</button>
+    </form>
+  </div>
+</dialog>
+</body>
+</html>

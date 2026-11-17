@@ -1,0 +1,9 @@
+[Unit]
+Description=F R E E M A N consistent database backup
+Requires=docker.service
+After=docker.service
+
+[Service]
+Type=oneshot
+WorkingDirectory=/opt/freemanone
+ExecStart=/usr/bin/docker compose exec -T bot python -m app.utils.backup

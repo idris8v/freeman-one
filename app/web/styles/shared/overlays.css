@@ -1,0 +1,128 @@
+/* B03: shared surfaces and geometry. ui-system.js owns the lifecycle. */
+.fo-overlay {
+  position: fixed;
+  top: var(--fo-overlay-top);
+  left: var(--fo-overlay-left);
+  width: var(--fo-overlay-width);
+  height: var(--fo-overlay-height);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: max(var(--fo-space-4),env(safe-area-inset-top)) max(var(--fo-space-4),env(safe-area-inset-right)) max(var(--fo-space-4),env(safe-area-inset-bottom)) max(var(--fo-space-4),env(safe-area-inset-left));
+  background: var(--fo-overlay-scrim);
+  backdrop-filter: blur(4px);
+  overscroll-behavior: contain;
+}
+.fo-dialog {
+  position: relative;
+  width: min(100%,var(--fo-layout-dialog-max));
+  min-width: 0;
+  max-height: 100%;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: var(--fo-space-5);
+  border: 1px solid var(--fo-border-interactive);
+  border-radius: var(--fo-radius-dialog);
+  background: var(--fo-bg-surface);
+  box-shadow: var(--fo-elevation-2);
+}
+.fo-dialog-header {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--fo-space-3);
+  margin-bottom: var(--fo-space-4);
+}
+.fo-dialog-header>h2,.fo-dialog-header>div {
+  min-width: 0;
+  flex: 1;
+}
+.fo-dialog-header h2 {
+  font-size: var(--fo-font-size-heading);
+  margin: 0;
+}
+.fo-dialog-header p,.fo-dialog-description {
+  color: var(--fo-text-secondary);
+  font-size: var(--fo-font-size-secondary);
+  line-height: var(--fo-line-body);
+}
+.fo-dialog-header .fo-button {
+  flex: none;
+}
+.fo-dialog-actions {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: var(--fo-space-2);
+  margin-top: var(--fo-space-4);
+}
+.fo-dialog-actions--stretch>.fo-button {
+  flex: 1;
+}
+.fo-popover-layer {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  pointer-events: none;
+}
+.fo-popover {
+  position: fixed;
+  pointer-events: auto;
+  width: min(var(--fo-popover-width),calc(100vw - var(--fo-space-4)));
+  overflow: auto;
+  overscroll-behavior: contain;
+  border: 1px solid var(--fo-border-interactive);
+  border-radius: var(--fo-radius-control);
+  background: var(--fo-bg-surface);
+  box-shadow: var(--fo-elevation-2);
+}
+.fo-popover[hidden] {
+  display: none;
+}
+.fo-popover--wide {
+  width: min(var(--fo-filter-width),calc(100vw - var(--fo-space-4)));
+}
+.fo-filter-grid {
+  display: grid;
+  grid-template-columns: repeat(2,minmax(0,1fr));
+  gap: var(--fo-space-3);
+  padding: var(--fo-space-4);
+}
+.fo-menu-field {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--fo-space-2);
+  font-size: var(--fo-font-size-secondary);
+  padding: var(--fo-space-2);
+}
+.fo-menu-field .fo-select {
+  width: auto;
+}
+@media (max-width:767px) {
+  .fo-overlay--sheet {
+    align-items: flex-end;
+    padding-bottom: 0;
+    padding-inline: 0;
+  }
+  .fo-overlay--sheet>.fo-dialog {
+    border-end-start-radius: 0;
+    border-end-end-radius: 0;
+    padding-bottom: max(var(--fo-space-5),env(safe-area-inset-bottom));
+  }
+}
+
+/* Native top-layer dialogs use the same surface without replacing their API. */
+dialog.fo-dialog {position:fixed;inset:0;margin:auto;height:fit-content;max-height:calc(100dvh - 2 * var(--fo-space-4));color:var(--fo-text-primary)}
+dialog.fo-dialog::backdrop {background:var(--fo-overlay-scrim);backdrop-filter:blur(4px)}
+
+.fo-menu-surface {padding:var(--fo-space-2);border:1px solid var(--fo-border-interactive);border-radius:var(--fo-radius-control);background:var(--fo-bg-surface);box-shadow:var(--fo-elevation-2);color:var(--fo-text-primary)}
+
+.fo-backdrop {appearance:none;border:0;padding:0;background:var(--fo-overlay-scrim);color:transparent;cursor:default}
+
+/* Chat photo viewer: explicit opt-in, shared by cabinet and customer-agent chat. */
+.fo-overlay.fo-chat-photo-overlay{z-index:1200;padding:max(8px,env(safe-area-inset-top)) max(8px,env(safe-area-inset-right)) max(8px,env(safe-area-inset-bottom)) max(8px,env(safe-area-inset-left))}
+.fo-dialog.fo-chat-photo-dialog{width:min(1100px,100%);height:min(840px,100%);padding:8px;display:flex;flex-direction:column;overflow:hidden;gap:6px}
+.fo-chat-photo-dialog>header{display:flex;align-items:center;gap:5px;flex:none}.fo-chat-photo-dialog>header>span{flex:1;min-width:0;font-size:13px;padding-left:5px}.fo-chat-photo-dialog>header .fo-button{margin:0;min-height:32px;padding:4px 8px}.fo-chat-photo-stage{flex:1;min-height:0;overflow:auto;overscroll-behavior:contain;touch-action:none;background:var(--fo-bg-elevated);border-radius:8px}.fo-chat-photo-stage>img{display:block;width:100%;height:100%;max-width:none;max-height:none;object-fit:contain;user-select:none;transition:none}.fo-chat-photo-dialog>[role=status]{flex:none;font-size:12px;color:var(--fo-text-secondary);margin:0}.fo-chat-photo-dialog>[role=status]:empty{display:none}
+
+dialog.fo-dialog::backdrop{background:var(--fo-overlay-scrim)}

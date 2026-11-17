@@ -1,0 +1,224 @@
+/* Shared form controls. Layout belongs to the caller. */
+.fo-field {
+  display: grid;
+  gap: var(--fo-space-2);
+  font-size: var(--fo-font-size-secondary);
+  font-weight: var(--fo-weight-emphasis);
+  color: var(--fo-text-primary);
+  min-width: 0;
+}
+
+.fo-input,.fo-select {
+  box-sizing: border-box;
+  min-width: 0;
+  width: 100%;
+  min-height: var(--fo-control-default);
+  padding: var(--fo-space-2) var(--fo-space-3);
+  border: 1px solid var(--fo-border-interactive);
+  border-radius: var(--fo-radius-control);
+  background: var(--fo-bg-surface);
+  color: var(--fo-text-primary);
+  font: var(--fo-weight-body) var(--fo-control-input-font)/var(--fo-line-body) var(--fo-font-family);
+  box-shadow: inset 0 1px 2px var(--fo-border-subtle);
+}
+
+.fo-input::placeholder {
+  color: var(--fo-text-secondary);
+  opacity: 1;
+}
+
+.fo-input[readonly] {
+  background: var(--fo-bg-elevated);
+  color: var(--fo-text-secondary);
+}
+
+.fo-input[aria-invalid=true],.fo-select[aria-invalid=true] {
+  border-color: var(--fo-danger-text);
+}
+
+.fo-select {
+  appearance: none;
+  background-image: var(--fo-select-chevron);
+  background-repeat: no-repeat;
+  background-position: right var(--fo-space-3) center;
+  background-size: 12px;
+  padding-inline-end: var(--fo-space-8);
+}
+
+/* Compact selects preserve a full text line instead of clipping native labels. */
+.fo-select.fo-select--compact {
+  height: var(--fo-control-compact);
+  min-height: var(--fo-control-compact);
+  padding-block: 0;
+}
+
+.fo-input-group {
+  display: flex;
+  align-items: center;
+  gap: var(--fo-space-2);
+  min-width: 0;
+  padding-inline: var(--fo-space-3);
+  border: 1px solid var(--fo-border-interactive);
+  border-radius: var(--fo-radius-control);
+  background: var(--fo-bg-surface);
+  box-shadow: var(--fo-elevation-1);
+  color: var(--fo-text-secondary);
+}
+
+.fo-input-group .fo-input {
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+  padding-inline: 0;
+}
+
+html:not([data-fo-modality=pointer]) .fo-input-group:focus-within {
+  outline: 2px solid var(--fo-focus);
+  outline-offset: 2px;
+}
+
+.fo-input-group .fo-input:focus-visible {
+  outline: none;
+}
+
+.fo-check-label {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--fo-space-2);
+  min-height: var(--fo-control-touch-target);
+  font-size: var(--fo-font-size-secondary);
+  cursor: pointer;
+}
+
+.fo-check,.fo-radio {
+  appearance: none;
+  box-sizing: border-box;
+  display: inline-grid;
+  place-content: center;
+  flex: none;
+  width: var(--fo-check-size);
+  height: var(--fo-check-size);
+  padding: 0;
+  margin: 0;
+  border: 1px solid var(--fo-text-muted);
+  background: var(--fo-bg-surface);
+  color: var(--fo-on-action);
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.fo-check {
+  border-radius: var(--fo-radius-check);
+}
+
+.fo-radio {
+  border-radius: var(--fo-radius-pill);
+}
+
+.fo-check:checked,.fo-radio:checked {
+  background: var(--fo-check-fill);
+  border-color: var(--fo-check-fill);
+}
+
+.fo-check:checked::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background: currentColor;
+  clip-path: polygon(12% 42%,40% 69%,88% 15%,100% 28%,41% 97%,0 55%);
+}
+
+.fo-radio:checked::after {
+  content: "";
+  width: 6px;
+  height: 6px;
+  background: currentColor;
+  border-radius: var(--fo-radius-pill);
+}
+
+.fo-check:disabled,.fo-radio:disabled {
+  opacity: .5;
+  cursor: not-allowed;
+}
+
+.fo-choice {
+  display: flex;
+  align-items: center;
+  gap: var(--fo-space-3);
+  min-height: var(--fo-control-default);
+  padding: var(--fo-space-3);
+  border: 1px solid var(--fo-border-interactive);
+  border-radius: var(--fo-radius-control);
+  text-align: start;
+  background: var(--fo-bg-surface);
+  color: var(--fo-text-primary);
+  box-shadow: var(--fo-elevation-0);
+  transition: border-color var(--fo-motion-press) var(--fo-motion-ease),background-color var(--fo-motion-press) var(--fo-motion-ease);
+}
+
+.fo-choice:is([aria-pressed=true],[aria-checked=true]) {
+  background: var(--fo-bg-surface);
+  border-color: var(--fo-border-selected);
+  box-shadow: var(--fo-elevation-1);
+}
+
+.fo-choice-mark {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: var(--fo-check-size);
+  height: var(--fo-check-size);
+  border: 1px solid var(--fo-text-muted);
+  border-radius: var(--fo-radius-pill);
+}
+
+.fo-choice:is([aria-pressed=true],[aria-checked=true]) .fo-choice-mark {
+  border-color: var(--fo-selection-accent);
+  background: var(--fo-selection-accent);
+}
+
+.fo-choice:is([aria-pressed=true],[aria-checked=true]) .fo-choice-mark::after {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: var(--fo-radius-pill);
+  background: var(--fo-bg-surface);
+}
+
+
+textarea.fo-input {height:auto;min-height:96px;resize:vertical}
+.fo-input[type=number] {font-variant-numeric:tabular-nums}
+.fo-switch-input {appearance:none;position:relative;display:inline-block;flex:none;width:36px;height:22px;min-width:36px;min-height:22px;margin:0;padding:2px;border:1px solid var(--fo-switch-border);border-radius:var(--fo-radius-pill);background:var(--fo-switch-off);opacity:1;cursor:pointer;vertical-align:middle;transition:background-color var(--fo-motion-press) var(--fo-motion-ease)}
+.fo-switch-input::after {content:"";display:block;width:16px;height:16px;border-radius:var(--fo-radius-pill);background:var(--fo-switch-thumb);box-shadow:var(--fo-switch-shadow);transition:transform var(--fo-motion-press) var(--fo-motion-ease)}
+.fo-switch-input:checked {background:var(--fo-switch-on)}
+.fo-switch-input:checked::after {transform:translateX(14px)}
+.fo-switch-input:focus-visible {outline:2px solid var(--fo-focus);outline-offset:3px}
+.fo-native-switch {display:inline-flex;align-items:center;gap:var(--fo-space-2);width:auto;height:auto}
+.fo-native-switch>i,.fo-native-switch>.control-slider {display:none}
+@media(prefers-reduced-motion:reduce){.fo-switch-input,.fo-switch-input::after{transition:none}}
+
+.fo-input-group textarea.fo-input {min-height:var(--fo-control-compact);max-height:150px;resize:none}
+
+/* Reusable dense tile group; individual tiles retain the fo-choice contract. */
+.fo-choice-grid {
+  display: grid;
+  grid-template-columns: repeat(2,minmax(0,1fr));
+  gap: var(--fo-space-2);
+}
+.fo-choice-grid>.fo-choice {
+  min-width: 0;
+  gap: var(--fo-space-2);
+  padding: var(--fo-space-2);
+  min-height: var(--fo-control-touch-target);
+}
+
+.fo-field-help,.fo-feedback{font-family:var(--fo-font-family)}
+
+/* Dense purchase choices keep the shared hit target and one-line price column. */
+.fo-choice--compact{padding:6px 10px;font-size:13px;line-height:18px}
+
+.fo-range,.fo-color{accent-color:var(--fo-control-primary-text);font-family:var(--fo-font-family)}
+.fo-range:focus-visible,.fo-color:focus-visible{outline:2px solid var(--fo-focus);outline-offset:3px}
+.fo-editor-toolbar{border-color:var(--fo-border-interactive);color:var(--fo-text-primary);font-family:var(--fo-font-family)}
+.fo-editor-tool{border-radius:var(--fo-radius-check)}
+.fo-editor-tool:focus-visible{outline:2px solid var(--fo-focus);outline-offset:2px}

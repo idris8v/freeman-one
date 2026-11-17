@@ -1,0 +1,8 @@
+[Unit]
+Description=F R E E M A N bot host health monitor
+Requires=docker.service
+After=docker.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/python3 /opt/freemanone/scripts/freeman-monitor.py

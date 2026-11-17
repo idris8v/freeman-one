@@ -1,0 +1,3505 @@
+{
+  "paths": {
+    "/api/web/admin/content": {
+      "get": {
+        "operationId": "admin_content_api_web_admin_content_get",
+        "parameters": [
+          {
+            "in": "cookie",
+            "name": "freeman_session",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Freeman Session"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Admin Content"
+      }
+    },
+    "/api/web/admin/links": {
+      "post": {
+        "operationId": "create_link_api_web_admin_links_post",
+        "parameters": [
+          {
+            "in": "cookie",
+            "name": "freeman_session",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Freeman Session"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LinkPayload"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Create Link"
+      }
+    },
+    "/api/web/admin/links/{item_id}": {
+      "delete": {
+        "operationId": "delete_link_api_web_admin_links__item_id__delete",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "item_id",
+            "required": true,
+            "schema": {
+              "title": "Item Id",
+              "type": "integer"
+            }
+          },
+          {
+            "in": "cookie",
+            "name": "freeman_session",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Freeman Session"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Delete Link"
+      },
+      "put": {
+        "operationId": "update_link_api_web_admin_links__item_id__put",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "item_id",
+            "required": true,
+            "schema": {
+              "title": "Item Id",
+              "type": "integer"
+            }
+          },
+          {
+            "in": "cookie",
+            "name": "freeman_session",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Freeman Session"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LinkPayload"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Update Link"
+      }
+    },
+    "/api/web/admin/news": {
+      "post": {
+        "operationId": "create_news_api_web_admin_news_post",
+        "parameters": [
+          {
+            "in": "cookie",
+            "name": "freeman_session",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Freeman Session"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewsPayload"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Create News"
+      }
+    },
+    "/api/web/admin/news/{item_id}": {
+      "delete": {
+        "operationId": "delete_news_api_web_admin_news__item_id__delete",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "item_id",
+            "required": true,
+            "schema": {
+              "title": "Item Id",
+              "type": "integer"
+            }
+          },
+          {
+            "in": "cookie",
+            "name": "freeman_session",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Freeman Session"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Delete News"
+      },
+      "put": {
+        "operationId": "update_news_api_web_admin_news__item_id__put",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "item_id",
+            "required": true,
+            "schema": {
+              "title": "Item Id",
+              "type": "integer"
+            }
+          },
+          {
+            "in": "cookie",
+            "name": "freeman_session",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Freeman Session"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewsPayload"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Update News"
+      }
+    },
+    "/api/web/admin/support/autoreply": {
+      "put": {
+        "operationId": "set_autoreply_api_web_admin_support_autoreply_put",
+        "parameters": [
+          {
+            "in": "cookie",
+            "name": "freeman_session",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Freeman Session"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AutoreplyPayload"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Set Autoreply"
+      }
+    },
+    "/api/web/admin/support/quick-replies": {
+      "post": {
+        "operationId": "create_quick_reply_api_web_admin_support_quick_replies_post",
+        "parameters": [
+          {
+            "in": "cookie",
+            "name": "freeman_session",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Freeman Session"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/QuickReplyPayload"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Create Quick Reply"
+      }
+    },
+    "/api/web/admin/support/quick-replies/{reply_id}": {
+      "delete": {
+        "operationId": "delete_quick_reply_api_web_admin_support_quick_replies__reply_id__delete",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "reply_id",
+            "required": true,
+            "schema": {
+              "title": "Reply Id",
+              "type": "integer"
+            }
+          },
+          {
+            "in": "cookie",
+            "name": "freeman_session",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Freeman Session"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Delete Quick Reply"
+      },
+      "put": {
+        "operationId": "update_quick_reply_api_web_admin_support_quick_replies__reply_id__put",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "reply_id",
+            "required": true,
+            "schema": {
+              "title": "Reply Id",
+              "type": "integer"
+            }
+          },
+          {
+            "in": "cookie",
+            "name": "freeman_session",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Freeman Session"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/QuickReplyPayload"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Update Quick Reply"
+      }
+    },
+    "/api/web/admin/support/settings": {
+      "get": {
+        "operationId": "support_settings_api_web_admin_support_settings_get",
+        "parameters": [
+          {
+            "in": "cookie",
+            "name": "freeman_session",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Freeman Session"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Support Settings"
+      }
+    },
+    "/api/web/avatar": {
+      "get": {
+        "operationId": "telegram_avatar_api_web_avatar_get",
+        "parameters": [
+          {
+            "in": "cookie",
+            "name": "freeman_session",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Freeman Session"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Telegram Avatar"
+      }
+    },
+    "/api/web/balance": {
+      "get": {
+        "operationId": "balance_details_api_web_balance_get",
+        "parameters": [
+          {
+            "in": "cookie",
+            "name": "freeman_session",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Freeman Session"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Balance Details"
+      }
+    },
+    "/api/web/checkout": {
+      "get": {
+        "operationId": "checkout_status_api_web_checkout_get",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "idempotency_key",
+            "required": true,
+            "schema": {
+              "maxLength": 80,
+              "minLength": 12,
+              "title": "Idempotency Key",
+              "type": "string"
+            }
+          },
+          {
+            "in": "cookie",
+            "name": "freeman_session",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Freeman Session"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Checkout Status"
+      },
+      "post": {
+        "operationId": "checkout_api_web_checkout_post",
+        "parameters": [
+          {
+            "in": "cookie",
+            "name": "freeman_session",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Freeman Session"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CheckoutPayload"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Checkout"
+      }
+    },
+    "/api/web/checkout/cancel": {
+      "post": {
+        "operationId": "cancel_unstarted_checkout_api_web_checkout_cancel_post",
+        "parameters": [
+          {
+            "in": "cookie",
+            "name": "freeman_session",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Freeman Session"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CheckoutPayload"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Cancel Unstarted Checkout"
+      }
+    },
+    "/api/web/config": {
+      "get": {
+        "operationId": "config_api_web_config_get",
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            },
+            "description": "Successful Response"
+          }
+        },
+        "summary": "Config"
+      }
+    },
+    "/api/web/faq": {
+      "get": {
+        "operationId": "faq_api_web_faq_get",
+        "parameters": [
+          {
+            "in": "cookie",
+            "name": "freeman_session",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Freeman Session"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Faq"
+      }
+    },
+    "/api/web/keys/{key_id}/autorenew": {
+      "post": {
+        "operationId": "key_autorenew_api_web_keys__key_id__autorenew_post",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "key_id",
+            "required": true,
+            "schema": {
+              "title": "Key Id",
+              "type": "integer"
+            }
+          },
+          {
+            "in": "cookie",
+            "name": "freeman_session",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Freeman Session"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AutoRenewPayload"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Key Autorenew"
+      }
+    },
+    "/api/web/keys/{key_id}/connection": {
+      "get": {
+        "operationId": "key_connection_api_web_keys__key_id__connection_get",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "key_id",
+            "required": true,
+            "schema": {
+              "title": "Key Id",
+              "type": "integer"
+            }
+          },
+          {
+            "in": "cookie",
+            "name": "freeman_session",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Freeman Session"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Key Connection"
+      }
+    },
+    "/api/web/keys/{key_id}/devices/{device_id}": {
+      "delete": {
+        "operationId": "disconnect_device_api_web_keys__key_id__devices__device_id__delete",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "key_id",
+            "required": true,
+            "schema": {
+              "title": "Key Id",
+              "type": "integer"
+            }
+          },
+          {
+            "in": "path",
+            "name": "device_id",
+            "required": true,
+            "schema": {
+              "title": "Device Id",
+              "type": "integer"
+            }
+          },
+          {
+            "in": "cookie",
+            "name": "freeman_session",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Freeman Session"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Disconnect Device"
+      }
+    },
+    "/api/web/keys/{key_id}/gift": {
+      "post": {
+        "operationId": "gift_key_api_web_keys__key_id__gift_post",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "key_id",
+            "required": true,
+            "schema": {
+              "title": "Key Id",
+              "type": "integer"
+            }
+          },
+          {
+            "in": "cookie",
+            "name": "freeman_session",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Freeman Session"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GiftPayload"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Gift Key"
+      }
+    },
+    "/api/web/keys/{key_id}/name": {
+      "put": {
+        "operationId": "rename_key_api_web_keys__key_id__name_put",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "key_id",
+            "required": true,
+            "schema": {
+              "title": "Key Id",
+              "type": "integer"
+            }
+          },
+          {
+            "in": "cookie",
+            "name": "freeman_session",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Freeman Session"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/KeyRenamePayload"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Rename Key"
+      }
+    },
+    "/api/web/keys/{key_id}/qr": {
+      "get": {
+        "operationId": "key_qr_api_web_keys__key_id__qr_get",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "key_id",
+            "required": true,
+            "schema": {
+              "title": "Key Id",
+              "type": "integer"
+            }
+          },
+          {
+            "in": "cookie",
+            "name": "freeman_session",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Freeman Session"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Key Qr"
+      }
+    },
+    "/api/web/logout": {
+      "post": {
+        "operationId": "logout_api_web_logout_post",
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            },
+            "description": "Successful Response"
+          }
+        },
+        "summary": "Logout"
+      }
+    },
+    "/api/web/me": {
+      "get": {
+        "operationId": "me_api_web_me_get",
+        "parameters": [
+          {
+            "in": "cookie",
+            "name": "freeman_session",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Freeman Session"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Me"
+      }
+    },
+    "/api/web/payments/{payment_id}": {
+      "get": {
+        "operationId": "payment_status_api_web_payments__payment_id__get",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "payment_id",
+            "required": true,
+            "schema": {
+              "title": "Payment Id",
+              "type": "integer"
+            }
+          },
+          {
+            "in": "cookie",
+            "name": "freeman_session",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Freeman Session"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Payment Status"
+      }
+    },
+    "/api/web/payout-details": {
+      "get": {
+        "operationId": "payout_details_api_web_payout_details_get",
+        "parameters": [
+          {
+            "in": "cookie",
+            "name": "freeman_session",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Freeman Session"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Payout Details"
+      },
+      "put": {
+        "operationId": "save_payout_details_api_web_payout_details_put",
+        "parameters": [
+          {
+            "in": "cookie",
+            "name": "freeman_session",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Freeman Session"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PayoutDetailsPayload"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Save Payout Details"
+      }
+    },
+    "/api/web/profile/email": {
+      "put": {
+        "operationId": "update_profile_email_api_web_profile_email_put",
+        "parameters": [
+          {
+            "in": "cookie",
+            "name": "freeman_session",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Freeman Session"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProfileEmailPayload"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Update Profile Email"
+      }
+    },
+    "/api/web/proxy": {
+      "get": {
+        "operationId": "proxy_details_api_web_proxy_get",
+        "parameters": [
+          {
+            "in": "cookie",
+            "name": "freeman_session",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Freeman Session"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Proxy Details"
+      }
+    },
+    "/api/web/proxy/access": {
+      "post": {
+        "operationId": "proxy_access_api_web_proxy_access_post",
+        "parameters": [
+          {
+            "in": "cookie",
+            "name": "freeman_session",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Freeman Session"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProxyCheckoutPayload"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Proxy Access"
+      }
+    },
+    "/api/web/proxy/checkout": {
+      "post": {
+        "operationId": "proxy_checkout_api_web_proxy_checkout_post",
+        "parameters": [
+          {
+            "in": "cookie",
+            "name": "freeman_session",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Freeman Session"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProxyCheckoutPayload"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Proxy Checkout"
+      }
+    },
+    "/api/web/referrals": {
+      "get": {
+        "operationId": "referrals_api_web_referrals_get",
+        "parameters": [
+          {
+            "in": "cookie",
+            "name": "freeman_session",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Freeman Session"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Referrals"
+      }
+    },
+    "/api/web/referrals/chart": {
+      "get": {
+        "operationId": "referral_chart_api_web_referrals_chart_get",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "period",
+            "required": false,
+            "schema": {
+              "default": "30d",
+              "title": "Period",
+              "type": "string"
+            }
+          },
+          {
+            "in": "cookie",
+            "name": "freeman_session",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Freeman Session"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Referral Chart"
+      }
+    },
+    "/api/web/support": {
+      "get": {
+        "operationId": "support_api_web_support_get",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "ticket_id",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "integer"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Ticket Id"
+            }
+          },
+          {
+            "in": "query",
+            "name": "client",
+            "required": false,
+            "schema": {
+              "default": false,
+              "title": "Client",
+              "type": "boolean"
+            }
+          },
+          {
+            "in": "query",
+            "name": "status",
+            "required": false,
+            "schema": {
+              "default": "all",
+              "title": "Status",
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "q",
+            "required": false,
+            "schema": {
+              "default": "",
+              "title": "Q",
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "page",
+            "required": false,
+            "schema": {
+              "default": 1,
+              "title": "Page",
+              "type": "integer"
+            }
+          },
+          {
+            "in": "query",
+            "name": "limit",
+            "required": false,
+            "schema": {
+              "default": 10,
+              "title": "Limit",
+              "type": "integer"
+            }
+          },
+          {
+            "in": "cookie",
+            "name": "freeman_session",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Freeman Session"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Support"
+      }
+    },
+    "/api/web/support/attachments/{attachment_id}": {
+      "get": {
+        "operationId": "support_attachment_api_web_support_attachments__attachment_id__get",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "attachment_id",
+            "required": true,
+            "schema": {
+              "title": "Attachment Id",
+              "type": "integer"
+            }
+          },
+          {
+            "in": "cookie",
+            "name": "freeman_session",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Freeman Session"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Support Attachment"
+      }
+    },
+    "/api/web/support/messages": {
+      "post": {
+        "operationId": "support_message_api_web_support_messages_post",
+        "parameters": [
+          {
+            "in": "cookie",
+            "name": "freeman_session",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Freeman Session"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SupportMessagePayload"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Support Message"
+      }
+    },
+    "/api/web/support/messages/{message_id}/media/{kind}": {
+      "get": {
+        "operationId": "telegram_support_media_api_web_support_messages__message_id__media__kind__get",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "message_id",
+            "required": true,
+            "schema": {
+              "title": "Message Id",
+              "type": "integer"
+            }
+          },
+          {
+            "in": "path",
+            "name": "kind",
+            "required": true,
+            "schema": {
+              "title": "Kind",
+              "type": "string"
+            }
+          },
+          {
+            "in": "cookie",
+            "name": "freeman_session",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Freeman Session"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Telegram Support Media"
+      }
+    },
+    "/api/web/support/tickets/{ticket_id}": {
+      "delete": {
+        "operationId": "delete_support_ticket_api_web_support_tickets__ticket_id__delete",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "ticket_id",
+            "required": true,
+            "schema": {
+              "title": "Ticket Id",
+              "type": "integer"
+            }
+          },
+          {
+            "in": "cookie",
+            "name": "freeman_session",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Freeman Session"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Delete Support Ticket"
+      }
+    },
+    "/api/web/support/tickets/{ticket_id}/close": {
+      "post": {
+        "operationId": "close_support_ticket_api_web_support_tickets__ticket_id__close_post",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "ticket_id",
+            "required": true,
+            "schema": {
+              "title": "Ticket Id",
+              "type": "integer"
+            }
+          },
+          {
+            "in": "query",
+            "name": "client",
+            "required": false,
+            "schema": {
+              "default": false,
+              "title": "Client",
+              "type": "boolean"
+            }
+          },
+          {
+            "in": "cookie",
+            "name": "freeman_session",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Freeman Session"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Close Support Ticket"
+      }
+    },
+    "/api/web/support/tickets/{ticket_id}/flags": {
+      "post": {
+        "operationId": "support_flags_api_web_support_tickets__ticket_id__flags_post",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "ticket_id",
+            "required": true,
+            "schema": {
+              "title": "Ticket Id",
+              "type": "integer"
+            }
+          },
+          {
+            "in": "cookie",
+            "name": "freeman_session",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Freeman Session"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SupportFlagsPayload"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Support Flags"
+      }
+    },
+    "/api/web/support/tickets/{ticket_id}/status": {
+      "post": {
+        "operationId": "support_status_api_web_support_tickets__ticket_id__status_post",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "ticket_id",
+            "required": true,
+            "schema": {
+              "title": "Ticket Id",
+              "type": "integer"
+            }
+          },
+          {
+            "in": "cookie",
+            "name": "freeman_session",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Freeman Session"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SupportStatusPayload"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Support Status"
+      }
+    },
+    "/api/web/topups": {
+      "post": {
+        "operationId": "create_topup_api_web_topups_post",
+        "parameters": [
+          {
+            "in": "cookie",
+            "name": "freeman_session",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Freeman Session"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TopupPayload"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Create Topup"
+      }
+    },
+    "/api/web/withdrawals": {
+      "post": {
+        "operationId": "create_withdrawal_api_web_withdrawals_post",
+        "parameters": [
+          {
+            "in": "cookie",
+            "name": "freeman_session",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Freeman Session"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/WithdrawalPayload"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Create Withdrawal"
+      }
+    }
+  },
+  "routes": [
+    {
+      "include_in_schema": false,
+      "methods": [
+        "GET"
+      ],
+      "name": "index",
+      "path": "/",
+      "status": null
+    },
+    {
+      "include_in_schema": true,
+      "methods": [
+        "GET"
+      ],
+      "name": "admin_content",
+      "path": "/api/web/admin/content",
+      "status": null
+    },
+    {
+      "include_in_schema": true,
+      "methods": [
+        "POST"
+      ],
+      "name": "create_link",
+      "path": "/api/web/admin/links",
+      "status": null
+    },
+    {
+      "include_in_schema": true,
+      "methods": [
+        "DELETE"
+      ],
+      "name": "delete_link",
+      "path": "/api/web/admin/links/{item_id}",
+      "status": 204
+    },
+    {
+      "include_in_schema": true,
+      "methods": [
+        "PUT"
+      ],
+      "name": "update_link",
+      "path": "/api/web/admin/links/{item_id}",
+      "status": null
+    },
+    {
+      "include_in_schema": true,
+      "methods": [
+        "POST"
+      ],
+      "name": "create_news",
+      "path": "/api/web/admin/news",
+      "status": null
+    },
+    {
+      "include_in_schema": true,
+      "methods": [
+        "DELETE"
+      ],
+      "name": "delete_news",
+      "path": "/api/web/admin/news/{item_id}",
+      "status": 204
+    },
+    {
+      "include_in_schema": true,
+      "methods": [
+        "PUT"
+      ],
+      "name": "update_news",
+      "path": "/api/web/admin/news/{item_id}",
+      "status": null
+    },
+    {
+      "include_in_schema": true,
+      "methods": [
+        "PUT"
+      ],
+      "name": "set_autoreply",
+      "path": "/api/web/admin/support/autoreply",
+      "status": null
+    },
+    {
+      "include_in_schema": true,
+      "methods": [
+        "POST"
+      ],
+      "name": "create_quick_reply",
+      "path": "/api/web/admin/support/quick-replies",
+      "status": null
+    },
+    {
+      "include_in_schema": true,
+      "methods": [
+        "DELETE"
+      ],
+      "name": "delete_quick_reply",
+      "path": "/api/web/admin/support/quick-replies/{reply_id}",
+      "status": 204
+    },
+    {
+      "include_in_schema": true,
+      "methods": [
+        "PUT"
+      ],
+      "name": "update_quick_reply",
+      "path": "/api/web/admin/support/quick-replies/{reply_id}",
+      "status": null
+    },
+    {
+      "include_in_schema": true,
+      "methods": [
+        "GET"
+      ],
+      "name": "support_settings",
+      "path": "/api/web/admin/support/settings",
+      "status": null
+    },
+    {
+      "include_in_schema": true,
+      "methods": [
+        "GET"
+      ],
+      "name": "telegram_avatar",
+      "path": "/api/web/avatar",
+      "status": null
+    },
+    {
+      "include_in_schema": true,
+      "methods": [
+        "GET"
+      ],
+      "name": "balance_details",
+      "path": "/api/web/balance",
+      "status": null
+    },
+    {
+      "include_in_schema": true,
+      "methods": [
+        "GET"
+      ],
+      "name": "checkout_status",
+      "path": "/api/web/checkout",
+      "status": null
+    },
+    {
+      "include_in_schema": true,
+      "methods": [
+        "POST"
+      ],
+      "name": "checkout",
+      "path": "/api/web/checkout",
+      "status": null
+    },
+    {
+      "include_in_schema": true,
+      "methods": [
+        "POST"
+      ],
+      "name": "cancel_unstarted_checkout",
+      "path": "/api/web/checkout/cancel",
+      "status": null
+    },
+    {
+      "include_in_schema": true,
+      "methods": [
+        "GET"
+      ],
+      "name": "config",
+      "path": "/api/web/config",
+      "status": null
+    },
+    {
+      "include_in_schema": true,
+      "methods": [
+        "GET"
+      ],
+      "name": "faq",
+      "path": "/api/web/faq",
+      "status": null
+    },
+    {
+      "include_in_schema": true,
+      "methods": [
+        "POST"
+      ],
+      "name": "key_autorenew",
+      "path": "/api/web/keys/{key_id}/autorenew",
+      "status": null
+    },
+    {
+      "include_in_schema": true,
+      "methods": [
+        "GET"
+      ],
+      "name": "key_connection",
+      "path": "/api/web/keys/{key_id}/connection",
+      "status": null
+    },
+    {
+      "include_in_schema": true,
+      "methods": [
+        "DELETE"
+      ],
+      "name": "disconnect_device",
+      "path": "/api/web/keys/{key_id}/devices/{device_id}",
+      "status": null
+    },
+    {
+      "include_in_schema": true,
+      "methods": [
+        "POST"
+      ],
+      "name": "gift_key",
+      "path": "/api/web/keys/{key_id}/gift",
+      "status": null
+    },
+    {
+      "include_in_schema": true,
+      "methods": [
+        "PUT"
+      ],
+      "name": "rename_key",
+      "path": "/api/web/keys/{key_id}/name",
+      "status": null
+    },
+    {
+      "include_in_schema": true,
+      "methods": [
+        "GET"
+      ],
+      "name": "key_qr",
+      "path": "/api/web/keys/{key_id}/qr",
+      "status": null
+    },
+    {
+      "include_in_schema": true,
+      "methods": [
+        "POST"
+      ],
+      "name": "logout",
+      "path": "/api/web/logout",
+      "status": null
+    },
+    {
+      "include_in_schema": true,
+      "methods": [
+        "GET"
+      ],
+      "name": "me",
+      "path": "/api/web/me",
+      "status": null
+    },
+    {
+      "include_in_schema": true,
+      "methods": [
+        "GET"
+      ],
+      "name": "payment_status",
+      "path": "/api/web/payments/{payment_id}",
+      "status": null
+    },
+    {
+      "include_in_schema": true,
+      "methods": [
+        "GET"
+      ],
+      "name": "payout_details",
+      "path": "/api/web/payout-details",
+      "status": null
+    },
+    {
+      "include_in_schema": true,
+      "methods": [
+        "PUT"
+      ],
+      "name": "save_payout_details",
+      "path": "/api/web/payout-details",
+      "status": null
+    },
+    {
+      "include_in_schema": true,
+      "methods": [
+        "PUT"
+      ],
+      "name": "update_profile_email",
+      "path": "/api/web/profile/email",
+      "status": null
+    },
+    {
+      "include_in_schema": true,
+      "methods": [
+        "GET"
+      ],
+      "name": "proxy_details",
+      "path": "/api/web/proxy",
+      "status": null
+    },
+    {
+      "include_in_schema": true,
+      "methods": [
+        "POST"
+      ],
+      "name": "proxy_access",
+      "path": "/api/web/proxy/access",
+      "status": null
+    },
+    {
+      "include_in_schema": true,
+      "methods": [
+        "POST"
+      ],
+      "name": "proxy_checkout",
+      "path": "/api/web/proxy/checkout",
+      "status": null
+    },
+    {
+      "include_in_schema": true,
+      "methods": [
+        "GET"
+      ],
+      "name": "referrals",
+      "path": "/api/web/referrals",
+      "status": null
+    },
+    {
+      "include_in_schema": true,
+      "methods": [
+        "GET"
+      ],
+      "name": "referral_chart",
+      "path": "/api/web/referrals/chart",
+      "status": null
+    },
+    {
+      "include_in_schema": true,
+      "methods": [
+        "GET"
+      ],
+      "name": "support",
+      "path": "/api/web/support",
+      "status": null
+    },
+    {
+      "include_in_schema": true,
+      "methods": [
+        "GET"
+      ],
+      "name": "support_attachment",
+      "path": "/api/web/support/attachments/{attachment_id}",
+      "status": null
+    },
+    {
+      "include_in_schema": true,
+      "methods": [
+        "POST"
+      ],
+      "name": "support_message",
+      "path": "/api/web/support/messages",
+      "status": null
+    },
+    {
+      "include_in_schema": true,
+      "methods": [
+        "GET"
+      ],
+      "name": "telegram_support_media",
+      "path": "/api/web/support/messages/{message_id}/media/{kind}",
+      "status": null
+    },
+    {
+      "include_in_schema": true,
+      "methods": [
+        "DELETE"
+      ],
+      "name": "delete_support_ticket",
+      "path": "/api/web/support/tickets/{ticket_id}",
+      "status": null
+    },
+    {
+      "include_in_schema": true,
+      "methods": [
+        "POST"
+      ],
+      "name": "close_support_ticket",
+      "path": "/api/web/support/tickets/{ticket_id}/close",
+      "status": null
+    },
+    {
+      "include_in_schema": true,
+      "methods": [
+        "POST"
+      ],
+      "name": "support_flags",
+      "path": "/api/web/support/tickets/{ticket_id}/flags",
+      "status": null
+    },
+    {
+      "include_in_schema": true,
+      "methods": [
+        "POST"
+      ],
+      "name": "support_status",
+      "path": "/api/web/support/tickets/{ticket_id}/status",
+      "status": null
+    },
+    {
+      "include_in_schema": true,
+      "methods": [
+        "POST"
+      ],
+      "name": "create_topup",
+      "path": "/api/web/topups",
+      "status": null
+    },
+    {
+      "include_in_schema": true,
+      "methods": [
+        "POST"
+      ],
+      "name": "create_withdrawal",
+      "path": "/api/web/withdrawals",
+      "status": null
+    },
+    {
+      "include_in_schema": false,
+      "methods": [
+        "GET"
+      ],
+      "name": "bot_login_link",
+      "path": "/auth/bot",
+      "status": null
+    },
+    {
+      "include_in_schema": false,
+      "methods": [
+        "GET"
+      ],
+      "name": "bot_chat_link",
+      "path": "/auth/bot/chat",
+      "status": null
+    },
+    {
+      "include_in_schema": false,
+      "methods": [
+        "POST"
+      ],
+      "name": "bot_login_form",
+      "path": "/auth/bot/code",
+      "status": null
+    },
+    {
+      "include_in_schema": false,
+      "methods": [
+        "GET"
+      ],
+      "name": "bot_support_link",
+      "path": "/auth/bot/support",
+      "status": null
+    },
+    {
+      "include_in_schema": false,
+      "methods": [
+        "GET"
+      ],
+      "name": "telegram_callback",
+      "path": "/auth/telegram/callback",
+      "status": null
+    },
+    {
+      "include_in_schema": false,
+      "methods": [
+        "GET"
+      ],
+      "name": "public_documents",
+      "path": "/documents",
+      "status": null
+    },
+    {
+      "include_in_schema": false,
+      "methods": [
+        "GET"
+      ],
+      "name": "public_documents",
+      "path": "/documents/{index}",
+      "status": null
+    }
+  ],
+  "schemas": {
+    "AttachmentPayload": {
+      "properties": {
+        "data": {
+          "maxLength": 30000000,
+          "minLength": 1,
+          "title": "Data",
+          "type": "string"
+        },
+        "mime_type": {
+          "maxLength": 100,
+          "minLength": 1,
+          "title": "Mime Type",
+          "type": "string"
+        },
+        "name": {
+          "maxLength": 255,
+          "minLength": 1,
+          "title": "Name",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "mime_type",
+        "data"
+      ],
+      "title": "AttachmentPayload",
+      "type": "object"
+    },
+    "AutoRenewPayload": {
+      "properties": {
+        "enabled": {
+          "title": "Enabled",
+          "type": "boolean"
+        },
+        "months": {
+          "default": 1,
+          "title": "Months",
+          "type": "integer"
+        },
+        "tariff_id": {
+          "anyOf": [
+            {
+              "minimum": 1.0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Tariff Id"
+        }
+      },
+      "required": [
+        "enabled"
+      ],
+      "title": "AutoRenewPayload",
+      "type": "object"
+    },
+    "AutoreplyPayload": {
+      "properties": {
+        "enabled": {
+          "title": "Enabled",
+          "type": "boolean"
+        },
+        "text": {
+          "default": "",
+          "maxLength": 3500,
+          "title": "Text",
+          "type": "string"
+        }
+      },
+      "required": [
+        "enabled"
+      ],
+      "title": "AutoreplyPayload",
+      "type": "object"
+    },
+    "CheckoutPayload": {
+      "properties": {
+        "idempotency_key": {
+          "maxLength": 80,
+          "minLength": 12,
+          "title": "Idempotency Key",
+          "type": "string"
+        },
+        "method": {
+          "pattern": "^(yookassa|balance)$",
+          "title": "Method",
+          "type": "string"
+        },
+        "months": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Months"
+        },
+        "subscription_id": {
+          "anyOf": [
+            {
+              "minimum": 1.0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Subscription Id"
+        },
+        "tariff_id": {
+          "anyOf": [
+            {
+              "minimum": 1.0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Tariff Id"
+        },
+        "use_balance": {
+          "default": false,
+          "title": "Use Balance",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "method",
+        "idempotency_key"
+      ],
+      "title": "CheckoutPayload",
+      "type": "object"
+    },
+    "GiftPayload": {
+      "properties": {
+        "recipient": {
+          "maxLength": 64,
+          "minLength": 1,
+          "title": "Recipient",
+          "type": "string"
+        }
+      },
+      "required": [
+        "recipient"
+      ],
+      "title": "GiftPayload",
+      "type": "object"
+    },
+    "HTTPValidationError": {
+      "properties": {
+        "detail": {
+          "items": {
+            "$ref": "#/components/schemas/ValidationError"
+          },
+          "title": "Detail",
+          "type": "array"
+        }
+      },
+      "title": "HTTPValidationError",
+      "type": "object"
+    },
+    "KeyRenamePayload": {
+      "properties": {
+        "name": {
+          "maxLength": 60,
+          "minLength": 1,
+          "title": "Name",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "title": "KeyRenamePayload",
+      "type": "object"
+    },
+    "LinkPayload": {
+      "properties": {
+        "enabled": {
+          "default": true,
+          "title": "Enabled",
+          "type": "boolean"
+        },
+        "icon": {
+          "default": "link",
+          "maxLength": 32,
+          "title": "Icon",
+          "type": "string"
+        },
+        "label": {
+          "maxLength": 100,
+          "minLength": 1,
+          "title": "Label",
+          "type": "string"
+        },
+        "position": {
+          "default": 100,
+          "maximum": 9999.0,
+          "minimum": 0.0,
+          "title": "Position",
+          "type": "integer"
+        },
+        "target": {
+          "maxLength": 512,
+          "minLength": 1,
+          "title": "Target",
+          "type": "string"
+        }
+      },
+      "required": [
+        "label",
+        "target"
+      ],
+      "title": "LinkPayload",
+      "type": "object"
+    },
+    "NewsPayload": {
+      "properties": {
+        "category": {
+          "default": "Обновление",
+          "maxLength": 50,
+          "minLength": 1,
+          "title": "Category",
+          "type": "string"
+        },
+        "published": {
+          "default": true,
+          "title": "Published",
+          "type": "boolean"
+        },
+        "target": {
+          "default": "",
+          "maxLength": 512,
+          "title": "Target",
+          "type": "string"
+        },
+        "text": {
+          "default": "",
+          "maxLength": 2000,
+          "title": "Text",
+          "type": "string"
+        },
+        "title": {
+          "maxLength": 180,
+          "minLength": 1,
+          "title": "Title",
+          "type": "string"
+        }
+      },
+      "required": [
+        "title"
+      ],
+      "title": "NewsPayload",
+      "type": "object"
+    },
+    "PayoutDetailsPayload": {
+      "properties": {
+        "account": {
+          "maxLength": 32,
+          "minLength": 10,
+          "title": "Account",
+          "type": "string"
+        },
+        "bank": {
+          "maxLength": 100,
+          "minLength": 2,
+          "title": "Bank",
+          "type": "string"
+        },
+        "method": {
+          "pattern": "^(phone|card)$",
+          "title": "Method",
+          "type": "string"
+        },
+        "owner_name": {
+          "maxLength": 120,
+          "minLength": 3,
+          "title": "Owner Name",
+          "type": "string"
+        }
+      },
+      "required": [
+        "owner_name",
+        "bank",
+        "method",
+        "account"
+      ],
+      "title": "PayoutDetailsPayload",
+      "type": "object"
+    },
+    "ProfileEmailPayload": {
+      "properties": {
+        "email": {
+          "maxLength": 254,
+          "minLength": 5,
+          "title": "Email",
+          "type": "string"
+        }
+      },
+      "required": [
+        "email"
+      ],
+      "title": "ProfileEmailPayload",
+      "type": "object"
+    },
+    "ProxyCheckoutPayload": {
+      "properties": {
+        "idempotency_key": {
+          "maxLength": 80,
+          "minLength": 12,
+          "title": "Idempotency Key",
+          "type": "string"
+        },
+        "method": {
+          "pattern": "^(yookassa|balance)$",
+          "title": "Method",
+          "type": "string"
+        }
+      },
+      "required": [
+        "method",
+        "idempotency_key"
+      ],
+      "title": "ProxyCheckoutPayload",
+      "type": "object"
+    },
+    "QuickReplyPayload": {
+      "properties": {
+        "attachments": {
+          "items": {
+            "$ref": "#/components/schemas/AttachmentPayload"
+          },
+          "maxItems": 6,
+          "title": "Attachments",
+          "type": "array"
+        },
+        "enabled": {
+          "default": true,
+          "title": "Enabled",
+          "type": "boolean"
+        },
+        "position": {
+          "default": 100,
+          "maximum": 9999.0,
+          "minimum": 0.0,
+          "title": "Position",
+          "type": "integer"
+        },
+        "text": {
+          "default": "",
+          "maxLength": 3500,
+          "title": "Text",
+          "type": "string"
+        },
+        "title": {
+          "maxLength": 100,
+          "minLength": 1,
+          "title": "Title",
+          "type": "string"
+        }
+      },
+      "required": [
+        "title"
+      ],
+      "title": "QuickReplyPayload",
+      "type": "object"
+    },
+    "SupportFlagsPayload": {
+      "properties": {
+        "important": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Important"
+        },
+        "pinned": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Pinned"
+        }
+      },
+      "title": "SupportFlagsPayload",
+      "type": "object"
+    },
+    "SupportMessagePayload": {
+      "properties": {
+        "attachments": {
+          "items": {
+            "$ref": "#/components/schemas/AttachmentPayload"
+          },
+          "maxItems": 6,
+          "title": "Attachments",
+          "type": "array"
+        },
+        "client_mode": {
+          "default": false,
+          "title": "Client Mode",
+          "type": "boolean"
+        },
+        "quick_reply_id": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Quick Reply Id"
+        },
+        "request_id": {
+          "default": "",
+          "maxLength": 64,
+          "pattern": "^[a-zA-Z0-9-]*$",
+          "title": "Request Id",
+          "type": "string"
+        },
+        "response_status": {
+          "default": "waiting_client",
+          "maxLength": 32,
+          "title": "Response Status",
+          "type": "string"
+        },
+        "text": {
+          "default": "",
+          "maxLength": 3500,
+          "title": "Text",
+          "type": "string"
+        },
+        "ticket_id": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Ticket Id"
+        }
+      },
+      "title": "SupportMessagePayload",
+      "type": "object"
+    },
+    "SupportStatusPayload": {
+      "properties": {
+        "status": {
+          "maxLength": 32,
+          "title": "Status",
+          "type": "string"
+        }
+      },
+      "required": [
+        "status"
+      ],
+      "title": "SupportStatusPayload",
+      "type": "object"
+    },
+    "TopupPayload": {
+      "properties": {
+        "amount": {
+          "maximum": 10000000.0,
+          "minimum": 100000.0,
+          "title": "Amount",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "amount"
+      ],
+      "title": "TopupPayload",
+      "type": "object"
+    },
+    "ValidationError": {
+      "properties": {
+        "ctx": {
+          "title": "Context",
+          "type": "object"
+        },
+        "input": {
+          "title": "Input"
+        },
+        "loc": {
+          "items": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "integer"
+              }
+            ]
+          },
+          "title": "Location",
+          "type": "array"
+        },
+        "msg": {
+          "title": "Message",
+          "type": "string"
+        },
+        "type": {
+          "title": "Error Type",
+          "type": "string"
+        }
+      },
+      "required": [
+        "loc",
+        "msg",
+        "type"
+      ],
+      "title": "ValidationError",
+      "type": "object"
+    },
+    "WithdrawalPayload": {
+      "properties": {
+        "account": {
+          "maxLength": 32,
+          "minLength": 10,
+          "title": "Account",
+          "type": "string"
+        },
+        "amount": {
+          "exclusiveMinimum": 0.0,
+          "maximum": 100000000.0,
+          "title": "Amount",
+          "type": "integer"
+        },
+        "bank": {
+          "maxLength": 100,
+          "minLength": 2,
+          "title": "Bank",
+          "type": "string"
+        },
+        "method": {
+          "pattern": "^(phone|card)$",
+          "title": "Method",
+          "type": "string"
+        },
+        "owner_name": {
+          "maxLength": 120,
+          "minLength": 3,
+          "title": "Owner Name",
+          "type": "string"
+        }
+      },
+      "required": [
+        "bank",
+        "owner_name",
+        "method",
+        "account",
+        "amount"
+      ],
+      "title": "WithdrawalPayload",
+      "type": "object"
+    }
+  }
+}

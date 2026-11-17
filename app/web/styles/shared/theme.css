@@ -1,0 +1,538 @@
+/* Inter: SIL OFL 1.1, self-hosted; Apple platforms keep their system font. */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/assets/fonts/inter-cyrillic-ext-v20.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/assets/fonts/inter-cyrillic-v20.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/assets/fonts/inter-latin-ext-v20.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/assets/fonts/inter-latin-v20.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* B01: sole semantic token owner for all five bundles.
+   Canonical --fo-* roles are shared. Legacy aliases preserve RC appearance
+   until their approved domain batch; they do not style new components. */
+
+:root {
+  /* QR scanning needs a constant light surface in both themes. */
+  --fo-qr-surface: #fff;
+  --fo-qr-ink: #36363b;
+  /* B03 shared overlay roles; runtime viewport observations are per-root only. */
+  --fo-overlay-scrim: rgba(17,24,39,.32);
+  --fo-overlay-top: 0px;
+  --fo-overlay-left: 0px;
+  --fo-overlay-width: 100vw;
+  --fo-overlay-height: 100dvh;
+  --fo-dialog-compact: 390px;
+  --fo-popover-width: 320px;
+  --fo-filter-width: 640px;
+
+  /* Shared controls: pastel actions; selection marks retain filled contrast. */
+  --fo-control-sheen: linear-gradient(180deg,rgba(255,255,255,.10),rgba(255,255,255,0));
+  --fo-control-primary-solid: #0071e3;
+  --fo-control-primary-solid-border: #0065cc;
+  --fo-control-primary: #edf5ff;
+  --fo-control-primary-text: #0757b8;
+  --fo-control-primary-border: #cddff5;
+  --fo-control-success: #eaf8f0;
+  --fo-control-success-text: #17683e;
+  --fo-control-success-border: #c9e7d5;
+  --fo-control-success-solid: #08783e;
+  --fo-control-success-solid-border: #086934;
+  --fo-control-danger: #fff0f0;
+  --fo-control-danger-text: #ad2525;
+  --fo-control-danger-border: #f0d1d1;
+  --fo-check-fill: #0866d5;
+  --fo-check-size: 16px;
+  --fo-radius-check: 5px;
+  --fo-select-chevron: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='m1 1 5 5 5-5' fill='none' stroke='%23667085' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E");
+
+  color-scheme: light;
+  --fo-ease-out: cubic-bezier(.22,1,.36,1);
+  --fo-t-cascade: 460ms;
+  --fo-t-pill: 460ms;
+  --fo-t-meter: 900ms;
+  --fo-t-header: 260ms;
+  --fo-t-toast: 280ms;
+  --fo-t-tab-color: 300ms;
+  --fo-t-reduced: 1ms;
+  --fo-stagger-1: 20ms;
+  --fo-stagger-2: 55ms;
+  --fo-stagger-3: 90ms;
+  --fo-stagger-4: 120ms;
+  --fo-stagger-5: 145ms;
+  --fo-stagger-6: 165ms;
+  --fo-system-button: #007aff;
+  --fo-system-button-hover: #006ee6;
+  --fo-accent-deep: #0062f8;
+  --fo-telegram: #229ed9;
+  --fo-ok: #168f5a;
+  --fo-danger: #ff3b30;
+  --fo-accent: #0a84ff;
+  --fo-accent-soft: #eff6ff;
+  --fo-radius: 18px;
+  --fo-nav-border: rgba(17,24,39,.08);
+  --fo-nav-muted: #747985;
+  --fo-nav-label: #70747d;
+  --fo-nav-active-border: rgba(17,24,39,.035);
+  --fo-nav-shadow: 0 2px 6px rgba(15,23,42,.025),0 8px 24px rgba(15,23,42,.045);
+  --fo-t-tap: 160ms;
+  --fo-t-hover: 180ms;
+  --fo-bottom-content-space: calc(112px + env(safe-area-inset-bottom,0px));
+  --fo-bg-page: #fff;
+  --fo-bg-surface: #fff;
+  --fo-bg-secondary: #fff;
+  --fo-bg-elevated: #fff;
+  --fo-text-primary: #121826;
+  --fo-text-secondary: #667085;
+  --fo-text-muted: #8a94a6;
+  --fo-border-subtle: rgba(17,24,39,.06);
+  --fo-border-interactive: rgba(17,24,39,.09);
+  --fo-surface-shadow: 0 2px 6px rgba(17,24,39,.035),0 6px 16px rgba(17,24,39,.045);
+  --fo-surface-shadow-small: 0 1px 3px rgba(17,24,39,.035),0 3px 8px rgba(17,24,39,.025);
+  --fo-button-hover-shadow: 0 2px 4px rgba(17,24,39,.04),0 8px 22px rgba(17,24,39,.09);
+  --fo-inner-highlight: inset 0 1px 0 hsla(0,0%,100%,.75);
+  --fo-nav-bg: #fff;
+  --fo-nav-active-bg: #f4f5f7;
+  --fo-nav-active-fg: #121826;
+  --fo-nav-active-shadow: 0 1px 2px rgba(17,24,39,.03),0 6px 14px rgba(17,24,39,.08);
+  --fo-selection-accent: #f59e0b;
+  --fo-payment-accent: #22c55e;
+  --fo-chat-blue: #0a84ff;
+  --fo-chat-shadow: 0 6px 18px rgba(17,24,39,.1),0 12px 32px rgba(17,24,39,.06);
+  --fo-composer-shadow: 0 6px 20px rgba(17,24,39,.1),0 14px 32px rgba(17,24,39,.08);
+  --fo-ease-standard: cubic-bezier(.22,1,.36,1);
+  --fo-motion-fast: 150ms;
+  --fo-motion-base: 200ms;
+  --fo-motion-nav: 300ms;
+  --fo-action-surface: linear-gradient(180deg,rgba(244,245,247,.96),rgba(232,234,237,.88));
+  --fo-action-border: hsla(216,6%,50%,.2);
+  --fo-action-highlight: hsla(0,0%,100%,.8);
+  --fo-motion-page: 280ms;
+  --fo-motion-exit: 140ms;
+  --fo-motion-panel: 220ms;
+  --fo-motion-drawer: 280ms;
+  /* Spring response, not a fixed animation duration; damping is critical. */
+  --fo-motion-response: 320ms;
+  --fo-motion-message: 220ms;
+  --fo-motion-press: 140ms;
+  --fo-motion-ease: cubic-bezier(.22,1,.36,1);
+  --fo-t-screen: var(--fo-motion-page);
+  --fo-t-expand: 220ms;
+  --fo-t-content: 220ms;
+  --fo-font-family: -apple-system,BlinkMacSystemFont,"Inter","Segoe UI Variable","Segoe UI",sans-serif;
+  --fo-font-mono: ui-monospace,SFMono-Regular,Consolas,monospace;
+  --fo-hover-surface: #f0f7ff;
+  --fo-hover-radius: 10px;
+  --fo-hover-filter: brightness(.98);
+  --fo-font-size-body: 1rem;
+  --fo-font-size-secondary: .875rem;
+  --fo-font-size-caption: .75rem;
+  --fo-font-size-title: clamp(1.5rem,1.1rem + 1.2vw,1.75rem);
+  --fo-font-size-heading: 1.1875rem;
+  --fo-line-body: 1.5;
+  --fo-line-heading: 1.25;
+  --fo-tracking-title: -.025em;
+  --fo-tracking-heading: -.015em;
+  --fo-tracking-caption: .01em;
+  --fo-space-section: clamp(1rem,.75rem + 1vw,1.5rem);
+  --fo-space-card: clamp(1rem,.85rem + .5vw,1.25rem);
+  --fo-reading-measure: 70ch;
+  --fo-weight-body: 400;
+  --fo-weight-emphasis: 600;
+  --fo-weight-heading: 700;
+  --fo-space-1: .25rem;
+  --fo-space-2: .5rem;
+  --fo-space-3: .75rem;
+  --fo-space-4: 1rem;
+  --fo-space-5: 1.25rem;
+  --fo-space-6: 1.5rem;
+  --fo-space-8: 2rem;
+  --fo-radius-control: 12px;
+  --fo-radius-surface: 18px;
+  --fo-radius-dialog: 20px;
+  --fo-radius-pill: 999px;
+  --fo-control-compact: 36px;
+  --fo-button-size:36px;
+  --fo-button-dense-size:32px;
+  --fo-button-icon-small-size:28px;
+  --fo-button-font-size:13px;
+  --fo-button-line-height:18px;
+  --fo-control-default: 44px;
+  --fo-control-touch-target: 44px;
+  --fo-control-input-font: 16px;
+  --fo-icon-size: 20px;
+  --fo-text-disabled: var(--fo-text-muted);
+  --fo-surface-selected: var(--fo-bg-elevated);
+  --fo-border-selected: var(--fo-selection-accent);
+  --fo-action-primary: var(--fo-accent);
+  --fo-action-success: var(--fo-payment-accent);
+  --fo-action-danger: var(--fo-danger);
+  --fo-elevation-0: none;
+  --fo-elevation-1: var(--fo-surface-shadow-small);
+  --fo-elevation-2: var(--fo-surface-shadow);
+  --fo-nav-columns: 4;
+  --fo-layout-header: 56px;
+  --fo-layout-sidebar: 244px;
+  --fo-layout-content-max: 1280px;
+  --fo-layout-gutter: 16px;
+  --fo-layout-dialog-max: 580px;
+  --fo-layout-bottom-nav: 72px;
+  --fo-brand: #ff8a00;
+  --fo-on-action: #fff;
+  --fo-focus: rgba(10,132,255,.6);
+  --fo-success-text: #117746;
+  --fo-success-bg: #ecf9f1;
+  --fo-success-border: #bfe7ce;
+  --fo-warning-text: #75520b;
+  --fo-warning-bg: #fff4d6;
+  --fo-warning-border: #ecd28e;
+  --fo-danger-text: #c9342b;
+  --fo-danger-bg: #fff0ef;
+  --fo-danger-border: #f4c6c2;
+  --fo-info-text: #0062c7;
+  --fo-info-bg: #eff6ff;
+  --fo-info-border: #c6ddfb;
+  --fo-legacy-font-cabinet: var(--fo-font-family);
+  --fo-legacy-font-public: var(--fo-font-family);
+  --fo-legacy-font-public-control: var(--fo-font-family);
+  --fo-legacy-font-chat: var(--fo-font-family);
+  --fo-legacy-font-ai: var(--fo-font-family);
+  --fo-legacy-chat-bg-page: #f7f8fa;
+  --fo-legacy-chat-bg-surface: #fff;
+  --fo-legacy-chat-bg-secondary: #f7f8fa;
+  --fo-legacy-chat-bg-elevated: #f4f4f5;
+  --fo-legacy-chat-border-subtle: rgba(17,24,39,.08);
+  --fo-legacy-chat-border-interactive: rgba(17,24,39,.12);
+  --fo-legacy-chat-text-primary: #111318;
+  --fo-legacy-chat-text-secondary: #667085;
+  --fo-legacy-chat-text-muted: #8a9099;
+  --fo-legacy-chat-surface-shadow: 0 4px 16px rgba(15,23,42,.035);
+  --fo-legacy-chat-surface-shadow-small: 0 2px 8px rgba(15,23,42,.025);
+  --fo-legacy-chat-bottom-content-space: calc(112px + env(safe-area-inset-bottom,0px));
+  --fo-legacy-public-bg: #f5f5f7;
+  --fo-legacy-public-surface: #fff;
+  --fo-legacy-public-ink: #10121b;
+  --fo-legacy-public-muted: #81889b;
+  --fo-legacy-public-line: #e5e5ea;
+  --fo-legacy-public-blue: #007aff;
+  --fo-legacy-public-shadow: 0 5px 16px rgba(25,36,58,.045);
+  --fo-legacy-account-dark-bg: #151619;
+  --fo-legacy-account-dark-ink: #f4f4f7;
+  --fo-legacy-account-dark-muted: #a1a7b5;
+  --fo-legacy-account-dark-line: #373a42;
+  --fo-legacy-ai-accent: #007aff;
+  --fo-legacy-ai-accent-soft: rgba(0,122,255,.08);
+  --fo-legacy-ai-radius: 20px;
+  --fo-legacy-ai-button: linear-gradient(180deg,#fff,#f5f6f8);
+  --fo-legacy-ai-button-shadow: 0 3px 8px rgba(20,30,45,.045),inset 0 1px 0 #fff;
+  --fo-legacy-ai-glass: rgba(255,255,255,.82);
+  --fo-legacy-receipt-bg: #fff;
+  --fo-legacy-receipt-ink: #131722;
+  --fo-legacy-receipt-muted: #7b849a;
+  --fo-legacy-receipt-line: #e2e6ed;
+  --fo-legacy-receipt-dark-bg: #181b20;
+  --fo-legacy-receipt-dark-ink: #f2f3f5;
+  --fo-legacy-receipt-dark-muted: #a1a8b7;
+  --fo-legacy-receipt-dark-line: #343942;
+  --ease-out: var(--fo-ease-out);
+  --t-cascade: var(--fo-t-cascade);
+  --t-pill: var(--fo-t-pill);
+  --t-meter: var(--fo-t-meter);
+  --t-header: var(--fo-t-header);
+  --t-toast: var(--fo-t-toast);
+  --t-tab-color: var(--fo-t-tab-color);
+  --t-reduced: var(--fo-t-reduced);
+  --stagger-1: var(--fo-stagger-1);
+  --stagger-2: var(--fo-stagger-2);
+  --stagger-3: var(--fo-stagger-3);
+  --stagger-4: var(--fo-stagger-4);
+  --stagger-5: var(--fo-stagger-5);
+  --stagger-6: var(--fo-stagger-6);
+  --system-button: var(--fo-system-button);
+  --system-button-hover: var(--fo-system-button-hover);
+  --accent-deep: var(--fo-accent-deep);
+  --telegram: var(--fo-telegram);
+  --ok: var(--fo-ok);
+  --danger: var(--fo-danger);
+  --accent: var(--fo-accent);
+  --accent-soft: var(--fo-accent-soft);
+  --radius: var(--fo-radius);
+  --nav-border: var(--fo-nav-border);
+  --nav-muted: var(--fo-nav-muted);
+  --nav-label: var(--fo-nav-label);
+  --nav-active-border: var(--fo-nav-active-border);
+  --nav-shadow: var(--fo-nav-shadow);
+  --t-tap: var(--fo-t-tap);
+  --t-hover: var(--fo-t-hover);
+  --spring: var(--ease-standard);
+  --bottom-content-space: var(--fo-bottom-content-space);
+  --bg-page: var(--fo-bg-page);
+  --bg-surface: var(--fo-bg-surface);
+  --bg-secondary: var(--fo-bg-secondary);
+  --bg-elevated: var(--fo-bg-elevated);
+  --text-primary: var(--fo-text-primary);
+  --text-secondary: var(--fo-text-secondary);
+  --text-muted: var(--fo-text-muted);
+  --border-subtle: var(--fo-border-subtle);
+  --border-interactive: var(--fo-border-interactive);
+  --surface-shadow: var(--fo-surface-shadow);
+  --surface-shadow-small: var(--fo-surface-shadow-small);
+  --button-hover-shadow: var(--fo-button-hover-shadow);
+  --inner-highlight: var(--fo-inner-highlight);
+  --nav-bg: var(--fo-nav-bg);
+  --nav-active-bg: var(--fo-nav-active-bg);
+  --nav-active-fg: var(--fo-nav-active-fg);
+  --nav-active-shadow: var(--fo-nav-active-shadow);
+  --selection-accent: var(--fo-selection-accent);
+  --payment-accent: var(--fo-payment-accent);
+  --chat-blue: var(--fo-chat-blue);
+  --chat-shadow: var(--fo-chat-shadow);
+  --composer-shadow: var(--fo-composer-shadow);
+  --ease-standard: var(--fo-ease-standard);
+  --motion-fast: var(--fo-motion-fast);
+  --motion-base: var(--fo-motion-base);
+  --motion-nav: var(--fo-motion-nav);
+  --bg: var(--bg-page);
+  --paper: var(--bg-surface);
+  --paper-solid: var(--bg-surface);
+  --ink: var(--text-primary);
+  --muted: var(--text-secondary);
+  --icon: var(--text-secondary);
+  --line: var(--border-subtle);
+  --shadow: var(--surface-shadow);
+  --shadow-small: var(--surface-shadow-small);
+  --action-surface: var(--fo-action-surface);
+  --action-border: var(--fo-action-border);
+  --action-highlight: var(--fo-action-highlight);
+  --motion-page: var(--fo-motion-page);
+  --motion-exit: var(--fo-motion-exit);
+  --motion-panel: var(--fo-motion-panel);
+  --motion-drawer: var(--fo-motion-drawer);
+  --motion-message: var(--fo-motion-message);
+  --motion-press: var(--fo-motion-press);
+  --motion-ease: var(--fo-motion-ease);
+  --t-screen: var(--fo-t-screen);
+  --t-expand: var(--fo-t-expand);
+  --t-content: var(--fo-t-content);
+  --ai-accent: var(--fo-legacy-ai-accent);
+  --ai-accent-soft: var(--fo-legacy-ai-accent-soft);
+  --ai-radius: var(--fo-legacy-ai-radius);
+  --ai-button: var(--fo-legacy-ai-button);
+  --ai-button-shadow: var(--fo-legacy-ai-button-shadow);
+  --ai-glass: var(--fo-legacy-ai-glass);
+  --fa-panel: var(--bg-surface);
+  --fa-chat: var(--bg-page);
+  --fa-line: var(--border-subtle);
+  --fa-muted: var(--text-muted);
+  --fa-ink: var(--text-primary);
+  --fa-blue: var(--accent,#0a84ff);
+  --fa-shadow: var(--surface-shadow-small);
+  --fo-segment-track: #eceef1;
+  --fo-segment-selected: #fff;
+  --fo-segment-stroke: rgba(16,24,40,.07);
+  --fo-segment-shadow: 0 1px 3px rgba(16,24,40,.12);
+  --fo-segment-radius: 9px;
+}
+
+html[data-theme=dark] {
+  color-scheme: dark;
+  --fo-hover-surface: rgba(255,255,255,.06);
+  --fo-control-primary: #18314b;
+  --fo-control-primary-text: #a9d2ff;
+  --fo-control-primary-border: #294968;
+  --fo-control-success: #14372a;
+  --fo-control-success-text: #98e0b5;
+  --fo-control-success-border: #285440;
+  --fo-control-danger: #402225;
+  --fo-control-danger-text: #ffb6b6;
+  --fo-control-danger-border: #63363b;
+  --fo-system-button: #0a84ff;
+  --fo-system-button-hover: #3198ff;
+  --fo-accent-deep: #0a84ff;
+  --fo-accent-soft: rgba(10,132,255,.12);
+  --fo-telegram: #45b8e7;
+  --fo-nav-border: hsla(0,0%,100%,.07);
+  --fo-nav-muted: #8b909a;
+  --fo-nav-label: #898e98;
+  --fo-nav-active-bg: #272b31;
+  --fo-nav-active-border: hsla(0,0%,100%,.055);
+  --fo-nav-shadow: 0 4px 12px rgba(0,0,0,.18),0 10px 24px rgba(0,0,0,.22);
+  --fo-nav-active-shadow: 0 1px 2px rgba(0,0,0,.16),0 6px 14px rgba(0,0,0,.22);
+  --fo-accent: #0a84ff;
+  --fo-selection-accent: #ff9f0a;
+  --fo-payment-accent: #16834b;
+  --fo-chat-blue: #0874df;
+  --fo-bg-page: #0d0e11;
+  --fo-bg-surface: #17191d;
+  --fo-bg-secondary: #1d2025;
+  --fo-bg-elevated: #252930;
+  --fo-text-primary: #f5f6f8;
+  --fo-text-secondary: #a1a8b3;
+  --fo-text-muted: #747c88;
+  --fo-border-subtle: hsla(0,0%,100%,.07);
+  --fo-border-interactive: hsla(0,0%,100%,.1);
+  --fo-surface-shadow: 0 1px 2px rgba(0,0,0,.16),0 12px 24px rgba(0,0,0,.22);
+  --fo-surface-shadow-small: 0 1px 2px rgba(0,0,0,.18),0 8px 18px rgba(0,0,0,.22);
+  --fo-button-hover-shadow: 0 2px 4px rgba(0,0,0,.2),0 10px 22px rgba(0,0,0,.28);
+  --fo-inner-highlight: inset 0 1px 0 hsla(0,0%,100%,.045);
+  --fo-nav-bg: #181a1e;
+  --fo-nav-active-fg: #f5f6f8;
+  --fo-chat-shadow: 0 6px 18px rgba(0,0,0,.22),0 12px 32px rgba(0,0,0,.16);
+  --fo-composer-shadow: 0 6px 20px rgba(0,0,0,.24),0 14px 32px rgba(0,0,0,.18);
+  --fo-action-surface: linear-gradient(180deg,rgba(96,101,111,.28),rgba(70,76,86,.24));
+  --fo-action-border: rgba(195,200,210,.17);
+  --fo-action-highlight: hsla(0,0%,100%,.12);
+  --fo-success-text: #65d99a;
+  --fo-success-bg: #142b20;
+  --fo-success-border: #25543b;
+  --fo-warning-text: #f0d68a;
+  --fo-warning-bg: #382f1c;
+  --fo-warning-border: #655327;
+  --fo-danger-text: #ff817b;
+  --fo-danger-bg: #402727;
+  --fo-danger-border: #693b37;
+  --fo-info-text: #8fc7ff;
+  --fo-info-bg: #172b42;
+  --fo-info-border: #304d6d;
+  --fo-legacy-chat-bg-page: #0d0e11;
+  --fo-legacy-chat-bg-surface: #17191d;
+  --fo-legacy-chat-bg-secondary: #1d1f24;
+  --fo-legacy-chat-bg-elevated: #25272c;
+  --fo-legacy-chat-border-subtle: rgba(255,255,255,.07);
+  --fo-legacy-chat-border-interactive: rgba(255,255,255,.10);
+  --fo-legacy-chat-text-primary: #f5f6f8;
+  --fo-legacy-chat-text-secondary: #9da3ad;
+  --fo-legacy-chat-text-muted: #747a84;
+  --fo-legacy-chat-surface-shadow: 0 4px 16px rgba(0,0,0,.18);
+  --fo-legacy-chat-surface-shadow-small: 0 2px 8px rgba(0,0,0,.12);
+  --fo-legacy-ai-accent: #409cff;
+  --fo-legacy-ai-accent-soft: rgba(64,156,255,.12);
+  --fo-legacy-ai-button: linear-gradient(180deg,#292c32,#22252a);
+  --fo-legacy-ai-button-shadow: 0 3px 8px #0002,inset 0 1px 0 #ffffff09;
+  --fo-legacy-ai-glass: rgba(29,31,36,.88);
+  --fo-segment-track: #1b1e23;
+  --fo-segment-selected: #353a43;
+  --fo-segment-stroke: rgba(255,255,255,.06);
+  --fo-segment-shadow: 0 1px 4px rgba(0,0,0,.28);
+}
+
+/* Compatibility profiles: no domain geometry or control selectors. */
+:root[data-ui-bundle=assistant],:root[data-ui-bundle=ai] {
+  --bg-page: var(--fo-legacy-chat-bg-page);
+  --bg-surface: var(--fo-legacy-chat-bg-surface);
+  --bg-secondary: var(--fo-legacy-chat-bg-secondary);
+  --bg-elevated: var(--fo-legacy-chat-bg-elevated);
+  --border-subtle: var(--fo-legacy-chat-border-subtle);
+  --border-interactive: var(--fo-legacy-chat-border-interactive);
+  --text-primary: var(--fo-legacy-chat-text-primary);
+  --text-secondary: var(--fo-legacy-chat-text-secondary);
+  --text-muted: var(--fo-legacy-chat-text-muted);
+  --surface-shadow: var(--fo-legacy-chat-surface-shadow);
+  --surface-shadow-small: var(--fo-legacy-chat-surface-shadow-small);
+  --bottom-content-space: var(--fo-legacy-chat-bottom-content-space);
+}
+
+:root[data-ui-bundle=guest],:root[data-ui-bundle=account] {
+  --bg: var(--fo-legacy-public-bg);
+  --surface: var(--fo-legacy-public-surface);
+  --ink: var(--fo-legacy-public-ink);
+  --muted: var(--fo-legacy-public-muted);
+  --line: var(--fo-legacy-public-line);
+  --blue: var(--fo-legacy-public-blue);
+  --shadow: var(--fo-legacy-public-shadow);
+}
+
+html[data-theme=dark][data-ui-bundle=account] {
+  --bg: var(--fo-legacy-account-dark-bg);
+  --ink: var(--fo-legacy-account-dark-ink);
+  --muted: var(--fo-legacy-account-dark-muted);
+  --line: var(--fo-legacy-account-dark-line);
+}
+
+.pp-flow,.pp-qr-modal {
+  --pp-bg: var(--fo-legacy-receipt-bg);
+  --pp-ink: var(--fo-legacy-receipt-ink);
+  --pp-muted: var(--fo-legacy-receipt-muted);
+  --pp-line: var(--fo-legacy-receipt-line);
+}
+
+[data-theme=dark] .pp-flow,[data-theme=dark] .pp-qr-modal {
+  --pp-bg: var(--fo-legacy-receipt-dark-bg);
+  --pp-ink: var(--fo-legacy-receipt-dark-ink);
+  --pp-muted: var(--fo-legacy-receipt-dark-muted);
+  --pp-line: var(--fo-legacy-receipt-dark-line);
+}
+
+html[data-theme=dark] {
+  --fo-overlay-scrim: rgba(0,0,0,.58);
+}
+
+/* Mobile density is semantic, not a document scale. Text-entry remains 16px
+   to preserve iOS focus behavior; touch targets are independent of button faces. */
+@media (max-width:767px) {
+  :root {
+    --fo-font-size-body: .90625rem;
+    --fo-font-size-secondary: .8125rem;
+    --fo-font-size-title: 1.375rem;
+    --fo-font-size-heading: 1.125rem;
+    --fo-space-2: .375rem;
+    --fo-space-3: .625rem;
+    --fo-space-4: .75rem;
+    --fo-space-5: 1rem;
+    --fo-space-6: 1.125rem;
+    --fo-space-8: 1.5rem;
+    --fo-radius-control: 10px;
+    --fo-radius-surface: 16px;
+    --fo-radius-dialog: 18px;
+    --fo-control-default: 40px;
+    --fo-icon-size: 18px;
+    --fo-layout-gutter: 12px;
+  }
+}
+
+/* Shared messenger roles; functional colors are independent of the host app. */
+:root{--fo-chat-composer-radius:22px;--fo-chat-bubble-radius:16px;--fo-chat-bubble-padding:7px 9px;--fo-chat-bubble-margin:3px 0;--fo-chat-bubble-shadow:0 1px 2px rgba(0,0,0,.06);--fo-chat-outgoing-shadow:0 1px 2px rgba(0,70,150,.10);--fo-chat-row-active:#eaf5ff;--fo-chat-outgoing:#0071e3;--fo-chat-on-outgoing:#fff;--fo-chat-incoming:#fff;--fo-chat-canvas:#f6f9ff;--fo-chat-gradient:#f7f9fc;--fo-chat-send:#0071e3;--fo-chat-on-send:#fff;}
+html[data-theme=dark]{--fo-chat-bubble-shadow:0 1px 2px rgba(0,0,0,.06);--fo-chat-outgoing-shadow:none;--fo-chat-row-active:#21394c;--fo-chat-outgoing:#0071e3;--fo-chat-on-outgoing:#fff;--fo-chat-incoming:#171719;--fo-chat-canvas:#131b29;--fo-chat-gradient:#171c24;--fo-chat-send:#0071e3;--fo-chat-on-send:#fff;}
+
+:root{--fo-chat-bubble-sheen:none;--fo-chat-bubble-border:rgba(120,160,190,.12);--fo-chat-info-shadow:0 -5px 18px rgba(30,73,111,.04);--fo-status-pending:#e9b33b;--fo-status-working:#35ad72;--fo-status-needs-info:#5ba9eb;--fo-status-resolved:#e76c6c}
+
+/* Profile service accents remain independent of messenger roles. */
+:root{--fo-service-hover:#fff6ed;--fo-service-icon-bg:#fff1e2;--fo-service-icon-fg:#a84a00}
+html[data-theme=dark]{--fo-service-hover:#30251d;--fo-service-icon-bg:#352719;--fo-service-icon-fg:#ffb166}
+
+/* A static, low-contrast messenger canvas, served locally under the existing CSP. */
+:root{--fo-chat-wallpaper:url("/assets/chat-pattern.svg?v=20261022")}
+
+/* Shared dense action geometry; component variants consume these tokens. */
+.fo-button--compact{--fo-button-size:var(--fo-button-dense-size)}
+.fo-icon-button--small{--fo-button-size:var(--fo-button-icon-small-size)}
+
+/* A medium-weight content role for tariff selection and administration. */
+.fo-type-medium{--fo-weight-heading:500;--fo-weight-emphasis:500}
+
+/* Switches retain a visible off track and a solid on state in both themes. */
+:root {--fo-switch-off:#c8cbd0;--fo-switch-border:#b5b9c1;--fo-switch-on:#278c52;--fo-switch-thumb:#fff;--fo-switch-shadow:0 1px 3px rgba(0,0,0,.24)}
+html[data-theme=dark] {--fo-switch-off:#45464c;--fo-switch-border:#62636a;--fo-switch-on:#30a866;--fo-switch-thumb:#fff;--fo-switch-shadow:0 1px 3px rgba(0,0,0,.42)}

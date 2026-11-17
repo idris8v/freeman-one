@@ -1,0 +1,1031 @@
+{
+  "baseline": "d5a803588695d66a8d7b6a85d8dd90f188125ae4",
+  "fixture_time": "2026-10-15T09:00:00Z",
+  "coverage": "Real HTML/CSS/JS with synthetic API responses; no backend/provider E2E or physical devices",
+  "artifact_directory": "artifacts/ui-b00",
+  "gallery": "artifacts/ui-b00/index.html",
+  "matrix": {
+    "engines": [
+      "chromium",
+      "webkit"
+    ],
+    "viewport_widths": [
+      390,
+      1440
+    ],
+    "height": 900,
+    "themes": [
+      "light",
+      "dark"
+    ],
+    "mobile": "isMobile + hasTouch at 390; deviceScaleFactor default 1; not a physical iPhone",
+    "locale": "ru-RU",
+    "timezone": "Europe/Moscow",
+    "motion": "reduce for screenshots; normal motion in existing regression scripts",
+    "host": "Darwin arm64"
+  },
+  "cases": [
+    "chromium-390-light-keys",
+    "chromium-390-light-plans",
+    "chromium-390-light-clients",
+    "chromium-390-light-catalog",
+    "chromium-390-light-smokes-otp-receipt-chat",
+    "chromium-390-dark-keys",
+    "chromium-390-dark-plans",
+    "chromium-390-dark-clients",
+    "chromium-390-dark-catalog",
+    "chromium-390-dark-smokes-otp-receipt-chat",
+    "chromium-1440-light-keys",
+    "chromium-1440-light-plans",
+    "chromium-1440-light-clients",
+    "chromium-1440-light-catalog",
+    "chromium-1440-light-smokes-otp-receipt-chat",
+    "chromium-1440-dark-keys",
+    "chromium-1440-dark-plans",
+    "chromium-1440-dark-clients",
+    "chromium-1440-dark-catalog",
+    "chromium-1440-dark-smokes-otp-receipt-chat",
+    "webkit-390-light-keys",
+    "webkit-390-light-plans",
+    "webkit-390-light-clients",
+    "webkit-390-light-catalog",
+    "webkit-390-light-smokes-otp-receipt-chat",
+    "webkit-390-dark-keys",
+    "webkit-390-dark-plans",
+    "webkit-390-dark-clients",
+    "webkit-390-dark-catalog",
+    "webkit-390-dark-smokes-otp-receipt-chat",
+    "webkit-1440-light-keys",
+    "webkit-1440-light-plans",
+    "webkit-1440-light-clients",
+    "webkit-1440-light-catalog",
+    "webkit-1440-light-smokes-otp-receipt-chat",
+    "webkit-1440-dark-keys",
+    "webkit-1440-dark-plans",
+    "webkit-1440-dark-clients",
+    "webkit-1440-dark-catalog",
+    "webkit-1440-dark-smokes-otp-receipt-chat"
+  ],
+  "pairs": [
+    {
+      "name": "chromium-390-light-keys-collapsed",
+      "screenshot_sha256": "5c27dac1ee5c3c67cb6cbb92e05c266e421f835b193ebe13a5bdc22ad365318e",
+      "styles_sha256": "476055d23c8d7197402a26c52de046dd8d915363334bbfddfcbfa88b38cece03"
+    },
+    {
+      "name": "chromium-390-light-keys-expanded-focus",
+      "screenshot_sha256": "1d7d7734d2fb9a157861d5fd4ea68372ac7b8b53380c79a8e584938474e6e26a",
+      "styles_sha256": "4ddb7d6c66933d89062abca82a9aec5243273d0a2940e2e97e7b763fe114747f"
+    },
+    {
+      "name": "chromium-390-light-keys-devices",
+      "screenshot_sha256": "cb8398d7f1a3fa5b2466c5bd458d808290e289e1f4af5b54594f7181ed7e9953",
+      "styles_sha256": "84381456cdd132204e96229830925a126a59306bfa171e804310553d11a6fed0"
+    },
+    {
+      "name": "chromium-390-light-keys-rename-invalid",
+      "screenshot_sha256": "9306bbbdc13e8843289b7b00f09213adb6d47e7ddb47ba393babf076408f4eb3",
+      "styles_sha256": "9bb6360ecb8689de10c29f43611236942cb3873317143c1af393405cdbe7b6d1"
+    },
+    {
+      "name": "chromium-390-light-plans-initial",
+      "screenshot_sha256": "00616617e5fb8c3bbf3b1c6bb104a41384e9581aee82f1b73b48f5e3e8221ea3",
+      "styles_sha256": "9fc8a3902c29a901b3550e4d73261049a4cdcd80963b6db3090108cd80a22fe4"
+    },
+    {
+      "name": "chromium-390-light-plans-selected",
+      "screenshot_sha256": "305f18735000a14734c026fa4aef3a9809a55921cd3a20c73267653a8eecfbb2",
+      "styles_sha256": "ac375192f61b1ac8b3c4c3eef5516463e6c9c9c12fcb651fcf89e13743945403"
+    },
+    {
+      "name": "chromium-390-light-plans-confirmation",
+      "screenshot_sha256": "71587865ab53dcc440620c863a8484c966cc2b59001d2091a15cb3c044e730a0",
+      "styles_sha256": "eb485f4d5f584cb1eaaa35dff81163d2e85b34805b3cc53f6f977a298072247d"
+    },
+    {
+      "name": "chromium-390-light-plans-disabled-card",
+      "screenshot_sha256": "990aee87b9e73f5e19c9a28ca7e769c850fbf0b7163361f7facafe84d63c8958",
+      "styles_sha256": "3d1452573600ba44be9c4363438e675b5dc0be25edc99a029f132706f65dfd58"
+    },
+    {
+      "name": "chromium-390-light-clients-list",
+      "screenshot_sha256": "fb9d9b81cae1fafdc6e043fbc6716767a93f6b0eafcae4b961d37879d1f7b9eb",
+      "styles_sha256": "19723663fdf586968177d607405b5acf1ba30b77ecd08c3acf9e2b0c953f893b"
+    },
+    {
+      "name": "chromium-390-light-clients-selected-menu",
+      "screenshot_sha256": "c584927d25fb8b56daf208b6be1dcfd5a5d0a323fe7a8a9209f93f326bec51cd",
+      "styles_sha256": "6d39ddff3cd80133bdc06427964d94fc71f08366bc843b31ea98ec8e4cd224fb"
+    },
+    {
+      "name": "chromium-390-light-clients-filters",
+      "screenshot_sha256": "7dfa63639e9b48fdc25e01346a6a088d5664b29fc6fad138eef2fa230dd77c4a",
+      "styles_sha256": "c7a54f64317031a876c4fcf1850288b54879bdd18e6ca0c35315dacc5313724d"
+    },
+    {
+      "name": "chromium-390-light-catalog-list",
+      "screenshot_sha256": "5df758e18fe41c28f6c4e4549b90118fc039b8a4a3ea861b6252e4775947cd45",
+      "styles_sha256": "8b6d675fc2fd0fb6d72f43fc094f42e0ec05ae0f140a120a0022f563dd01ff4c"
+    },
+    {
+      "name": "chromium-390-light-catalog-editor-invalid",
+      "screenshot_sha256": "1c6c3155c3255491153a1ff062f1910d1ae9cd59f96539d0d2f3fe9913ceacff",
+      "styles_sha256": "063c3ac95bfbb7c1dddb030f60914af8aec35084b0a21ca21db4b938368dfb44"
+    },
+    {
+      "name": "chromium-390-light-catalog-editor-busy",
+      "screenshot_sha256": "2c9c55acce522e61817345c721ac14c9c8bbfc83562d0e52b4ed9a1fcc5d0b12",
+      "styles_sha256": "f98ed51566f022052f1d4d573a0e13bbd91435a4fd1abf4022f3e417c75329d1"
+    },
+    {
+      "name": "chromium-390-light-catalog-editor-error",
+      "screenshot_sha256": "2a5c313b6f649ce1d4f22af0dd0899525ec66fb37bcd5552eaf752404bf8f551",
+      "styles_sha256": "7d756457bfa4eb62c61c454b02acc52883fe7b2590c7caa225cd307de18e3a1f"
+    },
+    {
+      "name": "chromium-390-light-smokes-otp-wait",
+      "screenshot_sha256": "ce09fcf38b3560c280de605d2e8052d734652ee7e68f983aac876a7c6100bde8",
+      "styles_sha256": "8f7abb3749bb8f715b6168d3365dfd4d475a4237809bb865b0de51e356f38bcc"
+    },
+    {
+      "name": "chromium-390-light-smokes-otp-resend",
+      "screenshot_sha256": "2c05b7d4fb5e20b7f878acc63734bcbf534b71516d44462ca0aae42226c67008",
+      "styles_sha256": "60d7037b0d4d9666409a08d6454866b1332abbf0140bfc58a0d5eb3e2738efed"
+    },
+    {
+      "name": "chromium-390-light-smokes-support-sent",
+      "screenshot_sha256": "d6ede2cb66a6b0ae79c5a950428078a1a40042f2be978d66568559d90c80fbdf",
+      "styles_sha256": "841cdb57bb833fa34ed0e68b37a453c9e47e69f117322116a3028487c0c10982"
+    },
+    {
+      "name": "chromium-390-light-smokes-receipt-pending",
+      "screenshot_sha256": "e84cc647b4ae5065fb0f371ee89b90d9c0cc27d09ad87fedd5b6b133a3c69dae",
+      "styles_sha256": "c531311e77bcfd730d820d8bcbe63e9f6008b2960b9e10863ffdc12c496e8b0f"
+    },
+    {
+      "name": "chromium-390-light-smokes-receipt-uncertain",
+      "screenshot_sha256": "e84cc647b4ae5065fb0f371ee89b90d9c0cc27d09ad87fedd5b6b133a3c69dae",
+      "styles_sha256": "c531311e77bcfd730d820d8bcbe63e9f6008b2960b9e10863ffdc12c496e8b0f"
+    },
+    {
+      "name": "chromium-390-light-smokes-receipt-failed",
+      "screenshot_sha256": "5b0b2ad0a5f77bd735f59867d5f100b12c48cc94132fafc8f9e9d2ab667338de",
+      "styles_sha256": "7e8e0620ac4ceb0200f944007117cb47598923d53ec333dbef5205f4782a728b"
+    },
+    {
+      "name": "chromium-390-light-smokes-receipt-provisioning",
+      "screenshot_sha256": "b81d9784341fca14edaeebadae2dc6f08c7f62210023077936ef9cc96d51e469",
+      "styles_sha256": "3cf32fb0cd93ea2d990c66226f775204928825b5fe0ea64a63bd650a786b7285"
+    },
+    {
+      "name": "chromium-390-light-smokes-receipt-success",
+      "screenshot_sha256": "5a6cfa95fd5f2c255c0da58f98f4cac69596e8d4f17b0a850dbc839d2258021b",
+      "styles_sha256": "d35855e376745a3e3dba260433765b9cd6bfee9cc3bb60b564ec6ded609566c9"
+    },
+    {
+      "name": "chromium-390-light-smokes-chat-sent",
+      "screenshot_sha256": "360c87d43b4bae51fbb7f2907b56bbbaeb2e2c9500204d26b73babe3ab5a46f8",
+      "styles_sha256": "be09efe09d8a18cb98aee0069f07a2cd54500c524795eb2c29ea02546a4eaa68"
+    },
+    {
+      "name": "chromium-390-dark-keys-collapsed",
+      "screenshot_sha256": "b88b2b46785438ca6521b430f59b6f33ca539f132b89c5626348c5456d4d89d7",
+      "styles_sha256": "74089d770a3d400c4be16fc27ea0475bd4f9479458054fd37081cdf91392052a"
+    },
+    {
+      "name": "chromium-390-dark-keys-expanded-focus",
+      "screenshot_sha256": "419037e8f2692740f50af82cb8ae4313b24cec2c63a7fa37c1b4d43ae21c4a2e",
+      "styles_sha256": "ef46aacec4b6faddff316c306104616b72b0b9976a930b406457eaa152ac8364"
+    },
+    {
+      "name": "chromium-390-dark-keys-devices",
+      "screenshot_sha256": "d717f68154a388987e350ac985d6288b65436ace5445c5e66c45a4015b93ecc5",
+      "styles_sha256": "2bf24cf06dd7eeb83c957f2f60fe418be8b1db0862eee0b820a099d879a6511e"
+    },
+    {
+      "name": "chromium-390-dark-keys-rename-invalid",
+      "screenshot_sha256": "65efede87e126be1888dbee3c7ca2c78c49a7822e9ae1c61022673804a9438b2",
+      "styles_sha256": "c625e661ee5f09c04be886ee7e76137dc844b3262f32214fc9a7c695eb388981"
+    },
+    {
+      "name": "chromium-390-dark-plans-initial",
+      "screenshot_sha256": "ded2abb4726d7bafdd65d36769e8247e9a01bc2fa5a38d1bd9ae4796a06f4635",
+      "styles_sha256": "c104c88b55a018895a769566b78726d3f4458ae5478a7efef267f6da43d46a3e"
+    },
+    {
+      "name": "chromium-390-dark-plans-selected",
+      "screenshot_sha256": "739bac06cfbf39106e03d2b7f47da17017f87a436bf93064a7ec6bb170faea3f",
+      "styles_sha256": "70da7457c15785bd0d2947c77c70072eab3eb110447d5b9bf91b1ef1ef51137d"
+    },
+    {
+      "name": "chromium-390-dark-plans-confirmation",
+      "screenshot_sha256": "dc8cde9e0252fab0165291dd1ca8a90daf80f7c38d805725201952d39ecad711",
+      "styles_sha256": "3562a96cd139401140ac511d4bec1aa4dff9ec1f8b619661388b741afe47a192"
+    },
+    {
+      "name": "chromium-390-dark-plans-disabled-card",
+      "screenshot_sha256": "a851e620c5e4812bea6bebecf4b736b126bf26a5be73d2d3d520588b1796bd1f",
+      "styles_sha256": "37dcbb3025da728b83189d14aa693baef29ebd67b900259b31117ccf93aa00aa"
+    },
+    {
+      "name": "chromium-390-dark-clients-list",
+      "screenshot_sha256": "3e9982129e2615383a58a0cffd694a746e2705037c861a2e3a2d3a3507853e6b",
+      "styles_sha256": "3b559578fd5820c198a73bef11268b5e01a3ca4e0b840228511946e10b77fce5"
+    },
+    {
+      "name": "chromium-390-dark-clients-selected-menu",
+      "screenshot_sha256": "8179d59c72745def9910601d14b16dfc868e2a1c34c24296ca4a5029353a8c75",
+      "styles_sha256": "db395a8bd5b275c6d39d4b1c2f6e19b4c51ad93b03f403a5d94456d0096b516e"
+    },
+    {
+      "name": "chromium-390-dark-clients-filters",
+      "screenshot_sha256": "dd96918103120ca846dd85b3ed93c3eab8d42bae409f549a460a7bc550019c47",
+      "styles_sha256": "5928adba656f939d3fa5763561c6c3103eed1165d69887b6c71510f29dab0d96"
+    },
+    {
+      "name": "chromium-390-dark-catalog-list",
+      "screenshot_sha256": "c34d424e41f0a4ad039eb31a8ba336d7819b925d18d601af5b8a8e6bb9b30e35",
+      "styles_sha256": "f1206c87e2662635bcc16b126aecc0bf13c50ed0ce5bca19eb21c4144cdddaf4"
+    },
+    {
+      "name": "chromium-390-dark-catalog-editor-invalid",
+      "screenshot_sha256": "56ac4b7feeaea383b6d4a3a64e1d6c1af20e8b5c3d2821307e45feab3324ead6",
+      "styles_sha256": "061e56c5c3384017dadeb98ac97d1500b7cbca6c144948fd62ee4b19642c8660"
+    },
+    {
+      "name": "chromium-390-dark-catalog-editor-busy",
+      "screenshot_sha256": "a0124e303e09fd71da27f940968d7bab1f09a3a5d008221777c077e0f29f7862",
+      "styles_sha256": "ac4aadcb0ea557dd5bb0167fbfdbf4c4a29c9cbba6b34d4a3fa689a262df6bc3"
+    },
+    {
+      "name": "chromium-390-dark-catalog-editor-error",
+      "screenshot_sha256": "c1ab994ba9049e294a3c6b0aacd4fd3819539250cd51a1a102d394e55bf495b0",
+      "styles_sha256": "e8d621bf65c9c333861b068dd234567e23c8cb6ea8c3cdaf5109485656806607"
+    },
+    {
+      "name": "chromium-390-dark-smokes-otp-wait",
+      "screenshot_sha256": "f7dddaa1177d14e4270fd358d20630ef20dc4880ee1d7abb4bf93237924c7841",
+      "styles_sha256": "26b1e860054e1e02362428e6d5ba2a2e0d948d302b30356d0cc0fa617182154f"
+    },
+    {
+      "name": "chromium-390-dark-smokes-otp-resend",
+      "screenshot_sha256": "af81d9190ec0eddd8d564367aa144d237acb4aa0f31e6ae844490e4419dba7fa",
+      "styles_sha256": "ac4551bb183f48fed0ca5616f6fb539f2104fe0653010070205e589594cd8e9c"
+    },
+    {
+      "name": "chromium-390-dark-smokes-support-sent",
+      "screenshot_sha256": "9d2a4d2c71eca2ccc52f8deb967ebc7d7734c3fb16b8b593c3b97dc5daeeb2c2",
+      "styles_sha256": "a58bfdb50eaa340a8a64b62dbafe016903256fbd8904180e7761ee1d5459bf69"
+    },
+    {
+      "name": "chromium-390-dark-smokes-receipt-pending",
+      "screenshot_sha256": "800e1ae604b871fe43f9cd6fb4b600c46f714822a3bed4e2d7fd16ae19e4d324",
+      "styles_sha256": "233df470fb25a15d33b33c598daac2349e5eeb318ea8c4db9ec43dae3567e5e1"
+    },
+    {
+      "name": "chromium-390-dark-smokes-receipt-uncertain",
+      "screenshot_sha256": "800e1ae604b871fe43f9cd6fb4b600c46f714822a3bed4e2d7fd16ae19e4d324",
+      "styles_sha256": "233df470fb25a15d33b33c598daac2349e5eeb318ea8c4db9ec43dae3567e5e1"
+    },
+    {
+      "name": "chromium-390-dark-smokes-receipt-failed",
+      "screenshot_sha256": "c4a03d71918d431f52e71e01971fd0c75f362ce4bbf517613540a70a7897205f",
+      "styles_sha256": "a4598fd765f79b9517410317a70cf7abe68619ab5d06b449c93561f7189e175c"
+    },
+    {
+      "name": "chromium-390-dark-smokes-receipt-provisioning",
+      "screenshot_sha256": "3c158046ae7cdd535a25c610356806129d03366e28be475edc58b758eef92230",
+      "styles_sha256": "99374662ff8988547edca99e1e09b873d9ee6e107150aa32517305235b8a469a"
+    },
+    {
+      "name": "chromium-390-dark-smokes-receipt-success",
+      "screenshot_sha256": "4aa2e3d172c3fc2bad6e73793f1497ce19b660420dd4ed4ab397fe3ae772635c",
+      "styles_sha256": "1564e325ae7beacc48a14e5411d52ed4108d8d5d85baf83977902c4fac3f347b"
+    },
+    {
+      "name": "chromium-390-dark-smokes-chat-sent",
+      "screenshot_sha256": "a2fa15e89e16e915084eec642ad6a9300b26155fc308c89f52c67d41053668c9",
+      "styles_sha256": "68f52e3e61c9f9d173f3555109a1d55a8a84c3cfd0b9ab71cd8639f3879abbe6"
+    },
+    {
+      "name": "chromium-1440-light-keys-collapsed",
+      "screenshot_sha256": "7984d0cf56d968a67ff451ccc83b548b420e715dbb133cd58f75fa8f49193842",
+      "styles_sha256": "32d871b05826f96b38ea63574f0880676314358bb854b623bd633acb6e78bdbc"
+    },
+    {
+      "name": "chromium-1440-light-keys-expanded-focus",
+      "screenshot_sha256": "7c5cd2323da3732d5b5012bea5400176b1658ff02c475266726cf18d61349291",
+      "styles_sha256": "01a904bde59c30add56f1459400b19a54243c8e938d0acc36b3ad3a5e22ad893"
+    },
+    {
+      "name": "chromium-1440-light-keys-devices",
+      "screenshot_sha256": "227dccd206eba7cbe8bb1e480d4a9c69ede3f79fd6a01c9678eafe2df96421ac",
+      "styles_sha256": "815f28ff5b14433b405a6e969b059df7cadc1680a28dfd3e33866203eb3d4302"
+    },
+    {
+      "name": "chromium-1440-light-keys-rename-invalid",
+      "screenshot_sha256": "732c6f5ea341a134f5fe2dc716ba77f40f1d2b052b3690fc42345064bd527dce",
+      "styles_sha256": "0e5c53d007cf5eb5251add31ac97722023fae81dbfe96e7194a072a2fcf1b7d0"
+    },
+    {
+      "name": "chromium-1440-light-plans-initial",
+      "screenshot_sha256": "f55326156087546c008e26ac532350d7d548f1751055940971f0916f4fedf285",
+      "styles_sha256": "2d4ddcf491731293674be2a53386c5106f408c4e6bcc53184530e01e1877b369"
+    },
+    {
+      "name": "chromium-1440-light-plans-selected",
+      "screenshot_sha256": "2e5d57eae8f96f03cec00ab45457eb2707a363f40ea87d8110df905597e44533",
+      "styles_sha256": "e2b262a4617efd0161a951f31ab122e445fa4330a52986eae81b84ab8a6b0bcb"
+    },
+    {
+      "name": "chromium-1440-light-plans-confirmation",
+      "screenshot_sha256": "412c399d3ee8e14a7e268d545fb365e1f9c2beae11432686ba4864bf6eaac0a5",
+      "styles_sha256": "dc2a663d1209050050acbbd9710e58f0f0dd2502d1ab3e3623f6f341f2e5bb59"
+    },
+    {
+      "name": "chromium-1440-light-plans-disabled-card",
+      "screenshot_sha256": "dff7ebfba4fe21e638701246fa7c047244ba6f2b9b126aeb8a32f9b85a135ee7",
+      "styles_sha256": "0c87359571175e11ef076f0a9143cfa03dfc5d08d076c2a76b8836ba5f618532"
+    },
+    {
+      "name": "chromium-1440-light-clients-list",
+      "screenshot_sha256": "747198b876b21ede64e05793d61fb91ca3efe0a9fcd56c6760fa96d64fa1a757",
+      "styles_sha256": "288067b2d1e85a3bffb11705c55081fda2b244ec11dc50c2d9cc9b1521dd44ec"
+    },
+    {
+      "name": "chromium-1440-light-clients-selected-menu",
+      "screenshot_sha256": "51d053bf53f581621597b6716de5cc989d52c9b7541ab035983cacee06d02e09",
+      "styles_sha256": "4d3342e7314576639524ef8e034a05dca04fdd47b537456645b66568fc9a8912"
+    },
+    {
+      "name": "chromium-1440-light-clients-filters",
+      "screenshot_sha256": "0353f2ab9b53964fc25d0a105d4fb2119b463c071201d18026c0f7255a731bbb",
+      "styles_sha256": "bd0f06cac9f94660eafb42425783fb33120c7e01027002d094b41bf5e93d5184"
+    },
+    {
+      "name": "chromium-1440-light-catalog-list",
+      "screenshot_sha256": "e8fa203314ede9bbb7606649c02c4134a0dc425bd1e51f8e5f22a9829b74269f",
+      "styles_sha256": "ae7292157d2b14a5a38436e28ece4abce4ca41ea1be1e6577f298faa408737c7"
+    },
+    {
+      "name": "chromium-1440-light-catalog-editor-invalid",
+      "screenshot_sha256": "5b709bcd6fb600a7e0cfd22a63780fb01e2c36c9a83aa05deaf9bb410907192f",
+      "styles_sha256": "c08680dc0a08f6360d1e1b4deb0cc6e296dbf53102b469645888a248f5eb17d3"
+    },
+    {
+      "name": "chromium-1440-light-catalog-editor-busy",
+      "screenshot_sha256": "a4c5233fbc555f65b1b7fc90fd7b3ec257400db66a2a52f6675a0d00b1d29e52",
+      "styles_sha256": "d736b99a9d4b39f27cfb03485fb6c9dd93aa3a0fdcad7bbd5399e9e55f2e31e3"
+    },
+    {
+      "name": "chromium-1440-light-catalog-editor-error",
+      "screenshot_sha256": "d86da1218d75c5e16b23b81378b54a3881e34a382de747123eed06ba07882257",
+      "styles_sha256": "8fc06d7a4aa1a6b503a92bf5f23b22d82d2b2ce1cf5ebaefa5e5c98e8769e7c5"
+    },
+    {
+      "name": "chromium-1440-light-smokes-otp-wait",
+      "screenshot_sha256": "cec7a7ab062bfbe5579bc3a08d4803bba668fed6fa76d5e6ffc58ffb260f72af",
+      "styles_sha256": "a275ffa4c2eec933e33e81b410a36f6d858069060797e37a52362a39993c3ded"
+    },
+    {
+      "name": "chromium-1440-light-smokes-otp-resend",
+      "screenshot_sha256": "8b996de7ea6434207ad8ccf8d90f3d8e96d23bf83552c648be227eea15cac9c5",
+      "styles_sha256": "9682b88733495e4a04e5feae96cb59deb2a9abec5f68ec8f5d5e44b6d711b3c6"
+    },
+    {
+      "name": "chromium-1440-light-smokes-support-sent",
+      "screenshot_sha256": "7e47b02fbbdcaae4b9d2e809b0ea513723844ee5bd1baa98db4a98d719699de6",
+      "styles_sha256": "27e6808cf47670317545f63cfb096342a5913271576e23741ba00a69f9014ba7"
+    },
+    {
+      "name": "chromium-1440-light-smokes-receipt-pending",
+      "screenshot_sha256": "8e14b550506ef4bb1c1663eeff3e412911eab0480cdd633181eebf2a717648df",
+      "styles_sha256": "670e774ace9d4d14e156591a749cac0e3082ac455a4f3d982530ccf62278c8a6"
+    },
+    {
+      "name": "chromium-1440-light-smokes-receipt-uncertain",
+      "screenshot_sha256": "8e14b550506ef4bb1c1663eeff3e412911eab0480cdd633181eebf2a717648df",
+      "styles_sha256": "670e774ace9d4d14e156591a749cac0e3082ac455a4f3d982530ccf62278c8a6"
+    },
+    {
+      "name": "chromium-1440-light-smokes-receipt-failed",
+      "screenshot_sha256": "8e8cf0a7abbf045a463a12bb2ba9101bff6a30553c536f1de8a7e61308572ae7",
+      "styles_sha256": "22642721a9746358870bdc6299c8b4fe95f97d480c5e70778e71a52247ba8f45"
+    },
+    {
+      "name": "chromium-1440-light-smokes-receipt-provisioning",
+      "screenshot_sha256": "4b9b262489ade2b54661e052d6c4c65a2cfbe4013d0016e5e247de62100d37be",
+      "styles_sha256": "93712c24b38f3d70774f9c3fccc19f89f93569cc2a4275c326d506c24a107a7f"
+    },
+    {
+      "name": "chromium-1440-light-smokes-receipt-success",
+      "screenshot_sha256": "d47511056f5ac62a16132ae310d64b61fa92ef29f612055650c296190a61e1d7",
+      "styles_sha256": "7abd7d820ff1e5e5e21648fe01a2c370082e85c3b68e11c6c69362a9f8b7d11b"
+    },
+    {
+      "name": "chromium-1440-light-smokes-chat-sent",
+      "screenshot_sha256": "abba3cc8db77c802055fa1f9a0635ff3ccd9e64f2df978ed686b109c87b08b80",
+      "styles_sha256": "4ece0dfea43b4a2be5adc20d967a7b7a5571104cf8a42c375498358ce3bee8b7"
+    },
+    {
+      "name": "chromium-1440-dark-keys-collapsed",
+      "screenshot_sha256": "1e3c2b09fdb72e3bc895a98e1002a6c74c618090faafc66be74ccf5b4ed09ddf",
+      "styles_sha256": "286bdeb3a474d4d45526693e097c9db1b7b52eba0b03c2e4d196c4504596856a"
+    },
+    {
+      "name": "chromium-1440-dark-keys-expanded-focus",
+      "screenshot_sha256": "ebd00f6831537181724102062917603ba43726ce0d178bfbcf5cc11d34acda31",
+      "styles_sha256": "e9d0baf2e13fe0248dcab22ff8323d2cb3b5ff4aa1c66d4837ab5daed9e6a9df"
+    },
+    {
+      "name": "chromium-1440-dark-keys-devices",
+      "screenshot_sha256": "20cf6aa5dc93b7a82454500cbf6776d4c3b262fc1b3380736189378669b4a213",
+      "styles_sha256": "04941d11a48898e3083c894681243aedfbedc7ad6015780866b305ae271927f4"
+    },
+    {
+      "name": "chromium-1440-dark-keys-rename-invalid",
+      "screenshot_sha256": "f938034b737e4e5d72083020f526b727a01725d11251d4e803003d104fd64e74",
+      "styles_sha256": "afb4a305411948b4e6f8bd734f802cc312db46f306794ba15ecf8abdf36fda78"
+    },
+    {
+      "name": "chromium-1440-dark-plans-initial",
+      "screenshot_sha256": "a3a39196acf05df42fb4d37db069cfd58d166009321a834f47b22c626d4f7b58",
+      "styles_sha256": "f1ac8ebf12dbea7e86cef8198053f7e2002c76ccef5e9c8969bd25401d04ded6"
+    },
+    {
+      "name": "chromium-1440-dark-plans-selected",
+      "screenshot_sha256": "c0885336d5b3a9a6865c028c6b412596a0b22d33f4e1f3320ade33c09c5b1b44",
+      "styles_sha256": "130d988758b548a90d782922e5f12a3e6335689e3cd65867c5ee3de4e8fec460"
+    },
+    {
+      "name": "chromium-1440-dark-plans-confirmation",
+      "screenshot_sha256": "8c341a4c8ec5175597cd6884f77d6e890456ee7766bd26bd544f358517fb4006",
+      "styles_sha256": "e15d3f3fd9c8bbeabaef6a33c3bd50d9927772e51941d0932c9dc7374c86dbac"
+    },
+    {
+      "name": "chromium-1440-dark-plans-disabled-card",
+      "screenshot_sha256": "48ceef6b51552546095ac0c874e4b357e9dfb4db8ab3b739ee396e429999294a",
+      "styles_sha256": "1f26cfe140f3b2c086cadde17bd5f96edfd4ebe23fc6e3839ecd38563c9fde37"
+    },
+    {
+      "name": "chromium-1440-dark-clients-list",
+      "screenshot_sha256": "df481c2a55113898ef73085d75cb7e1d165ae039398b7fdb2408dd1415bb4d24",
+      "styles_sha256": "6a68b8d9f076a2e7e30af1bdbd2043c4a08ac7d6f34fd5c6465b83d7134d6afc"
+    },
+    {
+      "name": "chromium-1440-dark-clients-selected-menu",
+      "screenshot_sha256": "ac4e224c3b0718ee010cd7597bea4d12ffed958f12a531fd3639e26bf3d3514f",
+      "styles_sha256": "f9b39bc3aab7a962ada0ed81e55ee535a8f1e27a3163ebc2cbb5ffcb88e80b16"
+    },
+    {
+      "name": "chromium-1440-dark-clients-filters",
+      "screenshot_sha256": "48347774cdb8a2389c8b9162195656bb7cfd990936351bcba42bcde86d438fba",
+      "styles_sha256": "3b74161fce6a9b8a8dc5bd803e58f3a68f76a3843fe18962f541cd3a4e43af98"
+    },
+    {
+      "name": "chromium-1440-dark-catalog-list",
+      "screenshot_sha256": "98e0836db8ffad055eab3d600c1f64d0d4aa5dc6b8c90845a4dbb3e04006fac4",
+      "styles_sha256": "093739188cf60cd44cb099f046be975e788b3623ddd2be9f85195fbea2489c5e"
+    },
+    {
+      "name": "chromium-1440-dark-catalog-editor-invalid",
+      "screenshot_sha256": "6a854dbdef4524a41467fbc3a319dce7b527bce38625db5ef1cf213f99254c7b",
+      "styles_sha256": "0866e7b3c4ee3107917ee460455864885f48c4bcf9598db9d84a5a40847882d5"
+    },
+    {
+      "name": "chromium-1440-dark-catalog-editor-busy",
+      "screenshot_sha256": "38e6bd4d1dd3c4f1f605b432e4195f011a1ebfd22653168044683556fb3b9df6",
+      "styles_sha256": "1dbbc927a3c69e865f1853a0c4dd78540ecdcf3e5fd66ab6920b8ae2054ff9fd"
+    },
+    {
+      "name": "chromium-1440-dark-catalog-editor-error",
+      "screenshot_sha256": "da7794473ae1875b7c27332ba5159edf1572711c0cb6a40abd73cf1b86e0ee92",
+      "styles_sha256": "9ba6024e3451eceb8954a7b5ef790c70788874c4d35f5d98d8a048a16523f0d2"
+    },
+    {
+      "name": "chromium-1440-dark-smokes-otp-wait",
+      "screenshot_sha256": "0564d92510c9c59c2b2d8bf87626f5e40b73ff7613da59f3e28d60a2c65385da",
+      "styles_sha256": "e5e30ae8f107e5cd110331010843d1c2176ae4932fee120bb95074b489f148a2"
+    },
+    {
+      "name": "chromium-1440-dark-smokes-otp-resend",
+      "screenshot_sha256": "8181d614b56ad0898200dd38fb1164c62ea68e432efc0bb2ab83fe90a010c9a4",
+      "styles_sha256": "00df03c43d725621f737804e51cabbb9e5897bfda9f2cfde5d7e4f5ad4fc8570"
+    },
+    {
+      "name": "chromium-1440-dark-smokes-support-sent",
+      "screenshot_sha256": "2f00fd83f14cdab7e7e4ac89ba35333521870bf3541122aa0b09591f72f3e459",
+      "styles_sha256": "38aa03cfb15f584ca925846c92585c737f7e25aa6de26eb4110d397c4d0faba1"
+    },
+    {
+      "name": "chromium-1440-dark-smokes-receipt-pending",
+      "screenshot_sha256": "4cbbb13ea049906a3033e37373ced3fe4738e54a762dfc4d56fbaa4abf1d6882",
+      "styles_sha256": "230ed726a16170794cd35af2f82963be988204dd0e34a8c6c38779a63e81854d"
+    },
+    {
+      "name": "chromium-1440-dark-smokes-receipt-uncertain",
+      "screenshot_sha256": "4cbbb13ea049906a3033e37373ced3fe4738e54a762dfc4d56fbaa4abf1d6882",
+      "styles_sha256": "230ed726a16170794cd35af2f82963be988204dd0e34a8c6c38779a63e81854d"
+    },
+    {
+      "name": "chromium-1440-dark-smokes-receipt-failed",
+      "screenshot_sha256": "3ad8179cb708efc156b2d3c0ff4c59f3a78603169e89e716a871a422ca8978b2",
+      "styles_sha256": "1e498629522c3ea90b2e35ac1356b0fd1959cfaa6d74d390bf53a38f6409d4df"
+    },
+    {
+      "name": "chromium-1440-dark-smokes-receipt-provisioning",
+      "screenshot_sha256": "33f2f53bae53a0d9c038c30c6526b8aed723ffc378990683c7940366b2860979",
+      "styles_sha256": "7a072ecbe58a82e67452bfc488590d07fb57548c057415f4bc8c978b32350988"
+    },
+    {
+      "name": "chromium-1440-dark-smokes-receipt-success",
+      "screenshot_sha256": "08b7f2eb387ccaf15e70fab444a33803b69fb219aa5f260539b72f2426461bf3",
+      "styles_sha256": "44d8053b30b6507db4457b86a8a10d1a9eb9e81459f8cf88bb908a0fe3db1135"
+    },
+    {
+      "name": "chromium-1440-dark-smokes-chat-sent",
+      "screenshot_sha256": "5251ffb887618bda4c6860583232cf4dfad4662923aee4e115d1c042a031cfe6",
+      "styles_sha256": "667afe418597db205364f98cb8599dde2957a6854b78871ffcf432d2fb402927"
+    },
+    {
+      "name": "webkit-390-light-keys-collapsed",
+      "screenshot_sha256": "d324bd8481aa58f2d052d7ee69e8b451e67bf0f0f1a945b870ce557f010c5f79",
+      "styles_sha256": "bb6641ec93a46fde80ddf7f522728925eef629d98115898422ac94b2b2f21101"
+    },
+    {
+      "name": "webkit-390-light-keys-expanded-focus",
+      "screenshot_sha256": "837ec55ab5d14c24cdcf6971efd422fc4aed4668301ec0bf03f8425efb56b46a",
+      "styles_sha256": "560dbabe55fa5e8fcfb0981605c3aa703f31d43556a16997d57febb20fb9b77d"
+    },
+    {
+      "name": "webkit-390-light-keys-devices",
+      "screenshot_sha256": "cffb71dc897b6ed03f0079bec30b4480bc49311671a23ed168b3bb144159c03d",
+      "styles_sha256": "36922897c41b29080f88cd0e69563b2ae5afb3960a03a249e61cd9a61c8ca719"
+    },
+    {
+      "name": "webkit-390-light-keys-rename-invalid",
+      "screenshot_sha256": "72b077f47177a82e1e44ae57cc92312aa1e964376b52aac6f8876980cbda9bdd",
+      "styles_sha256": "26140435815379540301375306523674b761cdfe33fa86de3c4b904ab214aa3f"
+    },
+    {
+      "name": "webkit-390-light-plans-initial",
+      "screenshot_sha256": "f909065f8862b9baada2e02a4db40959e4db28586de783286dc31f7e000b9f4c",
+      "styles_sha256": "85e3f93203d22703dd5bb81326dfa82f5b85daa7cfe26b38008e7245eb195fb9"
+    },
+    {
+      "name": "webkit-390-light-plans-selected",
+      "screenshot_sha256": "f6bd33f4411768d4b9b4e43d66d835fb7d860199edb8e501da42656a269d7ae0",
+      "styles_sha256": "ecb54853e09197973a03ee3fe7ce6f6cc670f0f4703a167a03d29f9a909e5542"
+    },
+    {
+      "name": "webkit-390-light-plans-confirmation",
+      "screenshot_sha256": "cc5d4cfe65c795ad34107e4ffcad923441087dbfa387acb4d9e008b712df9513",
+      "styles_sha256": "8516e0dcbe425520bece8b77043b7f2f3ae533d1ea4ab3b0ed8ec6f8b1cc6c66"
+    },
+    {
+      "name": "webkit-390-light-plans-disabled-card",
+      "screenshot_sha256": "42fe3af23b8e302b073ea8eb46e4d92a9e1e792d4466b14868fcf59736a8bb99",
+      "styles_sha256": "f6adae2befdddadb9eca9e4f080958d1a6b2f6ca901159ad44c9ff327530b87f"
+    },
+    {
+      "name": "webkit-390-light-clients-list",
+      "screenshot_sha256": "b1d3b868e6778d89300c71ac27242804cd788b5421543a86ad89affbc9b0a35d",
+      "styles_sha256": "8dbec07da29bd54905d0e8ba1c42c2d6ed1a86e063925cc1e5272f1406c1fdd0"
+    },
+    {
+      "name": "webkit-390-light-clients-selected-menu",
+      "screenshot_sha256": "d4bc0f1dca8bbf6b8ba8264e5c15e22b5d11fa3bb5110ea46f732cddbd6f9531",
+      "styles_sha256": "257978eab313d8b1e6882a856187ede021589d029df644c9e15bc8327a765ad0"
+    },
+    {
+      "name": "webkit-390-light-clients-filters",
+      "screenshot_sha256": "7b7ad20feb23c08ce3d6d262c0d6aaef53256e72bab4b84e9e3e44f1d3fd87a0",
+      "styles_sha256": "581c455cf1b9bb6ae25ef4b15117ae9514754c9efdab4f711a9ae89cb282dd3e"
+    },
+    {
+      "name": "webkit-390-light-catalog-list",
+      "screenshot_sha256": "d8afbdefc6c610738b4c6c3dd92320213e02213a4221eace86e86df0b1ce10ad",
+      "styles_sha256": "90548421fdc226e25abacbf1c66d0685e42beb4569efa8175321543e9b4cffaf"
+    },
+    {
+      "name": "webkit-390-light-catalog-editor-invalid",
+      "screenshot_sha256": "7d499fcc4322583b7683a61f6f16c5442d960d7d1ede3d4e458d2585982f4ef5",
+      "styles_sha256": "fd9b6f77b919d625187586c22aa49ce89305ec995bed7f9b81899c1f448f56f6"
+    },
+    {
+      "name": "webkit-390-light-catalog-editor-busy",
+      "screenshot_sha256": "037c48632fe27d976b7f91adfe495b596eaadc85a1f0f91bcf724be98c3689fd",
+      "styles_sha256": "8cdc0b36d68ae17f680c67739181044b8457c347569aac94fe042c71dbf0fb72"
+    },
+    {
+      "name": "webkit-390-light-catalog-editor-error",
+      "screenshot_sha256": "d313413b9dd342f0917b92d21b988ec8259e31dc5be3da4e47f7f33604dfaa5b",
+      "styles_sha256": "13b8e9c59d86eb9a7e1408e4088ea339ce59abc8a2213672817c3b912f912f36"
+    },
+    {
+      "name": "webkit-390-light-smokes-otp-wait",
+      "screenshot_sha256": "d6328d2db7597710c44cea1745da5f55308c82877570d9f9171e029a952a0ae3",
+      "styles_sha256": "1af3d10038948cc6b41d085b5d0de34ebc656c75df0b96bad4510dd8df786953"
+    },
+    {
+      "name": "webkit-390-light-smokes-otp-resend",
+      "screenshot_sha256": "a149e757713d41fdef3e8515d6bb5abbb4d32fdda1bb9e2f20bfa4d3f46a75c2",
+      "styles_sha256": "01c82630cbb630d4319924599deca84508c8cac9de265e43ebd4c9f51d42f4b9"
+    },
+    {
+      "name": "webkit-390-light-smokes-support-sent",
+      "screenshot_sha256": "71a542d4beec82ae9e03e0cb53f5a519e5355cf7cf9b9902b40fcb246dfc2859",
+      "styles_sha256": "23a76b9bd4450c6a50db618510c0b131969e342c6ac312cef03c7a52fcd01b6c"
+    },
+    {
+      "name": "webkit-390-light-smokes-receipt-pending",
+      "screenshot_sha256": "abc19e97dc689f011d3bb6770770de5a09c8834461e75ec3eca6f4f2b8abc000",
+      "styles_sha256": "25c6bcdd4b27b6dde0b45392e29919bfc387afc96800f4c362f22f8668fa8798"
+    },
+    {
+      "name": "webkit-390-light-smokes-receipt-uncertain",
+      "screenshot_sha256": "abc19e97dc689f011d3bb6770770de5a09c8834461e75ec3eca6f4f2b8abc000",
+      "styles_sha256": "25c6bcdd4b27b6dde0b45392e29919bfc387afc96800f4c362f22f8668fa8798"
+    },
+    {
+      "name": "webkit-390-light-smokes-receipt-failed",
+      "screenshot_sha256": "77a218bcde0560b41074f91fa651a6f8a8d1a2a7038a7705940c6abb7632be22",
+      "styles_sha256": "41f4f76605174d1d8badf80485e8fcdf6a2f983c1765d3be939527ba06abd5da"
+    },
+    {
+      "name": "webkit-390-light-smokes-receipt-provisioning",
+      "screenshot_sha256": "ad5598b5cef42502d832078aea7f6fccaf37659b6ee5d0b6d95b29ee503d2b36",
+      "styles_sha256": "8411006a26853feeae51da3ce2bf850ff67051a44edd9bb046c9c35f0239f463"
+    },
+    {
+      "name": "webkit-390-light-smokes-receipt-success",
+      "screenshot_sha256": "d36072d33888c19fb971dc6906700efdc61cd8911c2ae8f1434094e63d6efc1f",
+      "styles_sha256": "6fb6e57edb0049eccd30d0cb5d20dfaf46fd0fe94b695057dd7e15fb80f3a8b0"
+    },
+    {
+      "name": "webkit-390-light-smokes-chat-sent",
+      "screenshot_sha256": "43bc53108c77b22b2ea35110ae8095e0b783e171fc9f7597f371bb9f5902ea81",
+      "styles_sha256": "c2bd12f457aad6ef2ea4be0d1f485b7c8d7fde8d69cb47c7dafb39acc2aa3dab"
+    },
+    {
+      "name": "webkit-390-dark-keys-collapsed",
+      "screenshot_sha256": "77f6b92e1c0e4e67ef905784d48e9a0a880cde4e69dba9b0c95c342633d0e649",
+      "styles_sha256": "2f44696802fd39b1d1a639092b7b07b417650827a6bbf67cef112632e3ef56b9"
+    },
+    {
+      "name": "webkit-390-dark-keys-expanded-focus",
+      "screenshot_sha256": "4dc518d1bcd5f380c5ab20671adf078df1ed88acaee34cbfa9964a4f7af0984b",
+      "styles_sha256": "7a9be162873f479c7102ebc38fe7c9ec93b857e1dc79700262ed07de2209f1a9"
+    },
+    {
+      "name": "webkit-390-dark-keys-devices",
+      "screenshot_sha256": "75a8cceeb6617690beadea24a226bb8f56ddfd52131159140e8ad509fe8941d9",
+      "styles_sha256": "c41e61fc32db0c998b3e2fc4c7e54152ba8603f9211a53bfc0b14914afc54bde"
+    },
+    {
+      "name": "webkit-390-dark-keys-rename-invalid",
+      "screenshot_sha256": "1dede14f654e4ed985f5ae034b17698a6861d551ccded12f3ce6abc086fea600",
+      "styles_sha256": "0f974b11d92a5eff9f61fd68bca8361c402546181417b59808a5b69f2c3a0e5e"
+    },
+    {
+      "name": "webkit-390-dark-plans-initial",
+      "screenshot_sha256": "b602a6ab63e399557b1da99c259c68dfe3363aee19d635840d42ed30d0901ddd",
+      "styles_sha256": "24b0301903129aa445f7b4de9d4a7b9a072a1f707acec228bcd61d688c7b9ae2"
+    },
+    {
+      "name": "webkit-390-dark-plans-selected",
+      "screenshot_sha256": "f073accb8ef66f88ccc1fdc4b4ff51b3510d946bdb87622f2bc9eff762188b43",
+      "styles_sha256": "bfcd06e5cbd5e34f2bd2d30f4f06972aa6dff0709f33448c5d22a227d8a34a09"
+    },
+    {
+      "name": "webkit-390-dark-plans-confirmation",
+      "screenshot_sha256": "9e992904a4f8b5214b35ad4fa41a05b1c1aafa0de989e4841141b0d44ec588bd",
+      "styles_sha256": "e2b5b8d00c192f4467585aa959dbf3b56e9725cd56f87e5ee2fe19324dbda4df"
+    },
+    {
+      "name": "webkit-390-dark-plans-disabled-card",
+      "screenshot_sha256": "48d85069d91bc058b61fdab8f9e25f0c332c750e145c45e147111a40552caa88",
+      "styles_sha256": "632211d32ac109e5ea182a7d7af82b42aee6e3662aec6f39d89e9b6013ecefd1"
+    },
+    {
+      "name": "webkit-390-dark-clients-list",
+      "screenshot_sha256": "c4f39b7ab103604d394c17357d7c1cb31d6322009fb836eba47e8a301075ac9c",
+      "styles_sha256": "1d9abe014f9c05b8c9685ef312ea957b424200b4bace8e6295a2a2855e920b7e"
+    },
+    {
+      "name": "webkit-390-dark-clients-selected-menu",
+      "screenshot_sha256": "d56741dbb32d793dc64060e8a0995eb3de6e7f8efa44d73e2c63a0fa52c2f03e",
+      "styles_sha256": "8bab8fca824f97c31b8415c4514cb914eb01db0c61ee0093cc549b1970733496"
+    },
+    {
+      "name": "webkit-390-dark-clients-filters",
+      "screenshot_sha256": "f205fd4f64711189ae299969724a855ab1edd9e50c2ed4aecbcdbc27c5706932",
+      "styles_sha256": "ee2d7748eb58089af9b250724cdd230b54c1daec3d6ff22c2a44761f209e66ec"
+    },
+    {
+      "name": "webkit-390-dark-catalog-list",
+      "screenshot_sha256": "527ea46ebcd1c46f891c91edd41abd0fd7e6d73bf6b2011f713d2d2fc9a3a325",
+      "styles_sha256": "f6d4c1c689de47d50aabe69f3fb9475151020d1874c1a8a46adc3a258378e829"
+    },
+    {
+      "name": "webkit-390-dark-catalog-editor-invalid",
+      "screenshot_sha256": "b288bab0565f4dbbd2a97299344819ad0cfc578ab5f746af6ea28532f8090b53",
+      "styles_sha256": "c19b9c429957c4f2ca1cdbf0d355c6f6bf7ade87718291f98a9f0f88364a6ad0"
+    },
+    {
+      "name": "webkit-390-dark-catalog-editor-busy",
+      "screenshot_sha256": "6bbcae854a8d9f3a01fa53506f34381265196932bada15ed242a6b158e7676ad",
+      "styles_sha256": "79469778b96cf6990ad55c62e2daf6d85289cd0716539fb8846e61453cfb4e02"
+    },
+    {
+      "name": "webkit-390-dark-catalog-editor-error",
+      "screenshot_sha256": "f74e1d8fa30c176be6fc74d88a87d6c51c9d0b2d12b2e482407949cb05483431",
+      "styles_sha256": "3695ed9b51866d6611776c07a659903eb3872ce14952f59918722ead88e8f284"
+    },
+    {
+      "name": "webkit-390-dark-smokes-otp-wait",
+      "screenshot_sha256": "e4185387a325a695a6458fe40c4e13ae731f4da60a08cf6306f2f927a1cfd55c",
+      "styles_sha256": "ead5bea62e85fc2920eb71de0f75cf58fe2d572d6794f82d51b1ce6ca8511681"
+    },
+    {
+      "name": "webkit-390-dark-smokes-otp-resend",
+      "screenshot_sha256": "713590eb7879e4b8bda5e531e44144a0b16a420aa74bd14f66e5e416e0560bce",
+      "styles_sha256": "70a89e5b4dd849e0205a770837cfbc3eee8ccede3a5c6ff6978f9cc1a8807697"
+    },
+    {
+      "name": "webkit-390-dark-smokes-support-sent",
+      "screenshot_sha256": "32060b391534f0caba29c3e556946f016c43c0f2d1592ab4147e7c5974fb7df9",
+      "styles_sha256": "dfc73573c407cb616cf862a387b91f38ed27bca40747ee6c41466f66c0249a3e"
+    },
+    {
+      "name": "webkit-390-dark-smokes-receipt-pending",
+      "screenshot_sha256": "0cf324b4ed3f37623b6a73eb21a953a0c6d1d882366c10a8ae6846964b3d83e3",
+      "styles_sha256": "d648f1185cfc03acb3fa6669d04cbe41c2f0ed2f0247a88fbae138b4e8b8c0c5"
+    },
+    {
+      "name": "webkit-390-dark-smokes-receipt-uncertain",
+      "screenshot_sha256": "0cf324b4ed3f37623b6a73eb21a953a0c6d1d882366c10a8ae6846964b3d83e3",
+      "styles_sha256": "d648f1185cfc03acb3fa6669d04cbe41c2f0ed2f0247a88fbae138b4e8b8c0c5"
+    },
+    {
+      "name": "webkit-390-dark-smokes-receipt-failed",
+      "screenshot_sha256": "410e1d183a9a042c8332327639175467600d21e07954630d33523a4bec826564",
+      "styles_sha256": "44cd12f9aa163bd7f665eb3c473768e23f3dc4b3811a7d0b71104c032ecd72bc"
+    },
+    {
+      "name": "webkit-390-dark-smokes-receipt-provisioning",
+      "screenshot_sha256": "acab776ecc85dce3b4f9424e8f7a205311aad24c3f30803a3519e32e4f26d2c2",
+      "styles_sha256": "c8b567be5e73a4bd668d891405bdb45450d8228fd3de78c618514ac7fc4c68ab"
+    },
+    {
+      "name": "webkit-390-dark-smokes-receipt-success",
+      "screenshot_sha256": "19c511ca0d533000d0f53d26e7bb257e75cd8270dd52a0304edeed590c157589",
+      "styles_sha256": "21c848b910166802c4c7b0330d4e190cd71da9bf8a7454ba211906047cfad2d9"
+    },
+    {
+      "name": "webkit-390-dark-smokes-chat-sent",
+      "screenshot_sha256": "88273a61ffc1b3c937058a03f145334d850c914bbef208402d7c3961c0e392d1",
+      "styles_sha256": "fbe23fc01d9bb9f8b190a5d2b8f7b0d0deb6689aed2f1f4465360dd70690bd88"
+    },
+    {
+      "name": "webkit-1440-light-keys-collapsed",
+      "screenshot_sha256": "f0a34e99e5a1dd67973582de3e7db680b889e471f73be74ab21e626b683fe25a",
+      "styles_sha256": "d3f966dc4fbe2b810b41c83f7d6a450e7a9d2c3ae4e0396481ef367653f2de26"
+    },
+    {
+      "name": "webkit-1440-light-keys-expanded-focus",
+      "screenshot_sha256": "defe532cc18e1083504f1c08613de5e04841fcd491f8a67d2aff8b4d5ab6c70c",
+      "styles_sha256": "abf15cd935f5dbefad8ae96a2a18ae82c8cfa0b4e1bce029fd4cb1cb6a8c0393"
+    },
+    {
+      "name": "webkit-1440-light-keys-devices",
+      "screenshot_sha256": "a31ee13264ba3e9cebe79a889a991b11b799ae7478c413413eba8b4fed8d2c2c",
+      "styles_sha256": "9d13fd0fe2b1776e4420c1cff8d0c8fbd4d1c655e8c61ff7ecd857bf187b1d27"
+    },
+    {
+      "name": "webkit-1440-light-keys-rename-invalid",
+      "screenshot_sha256": "55850d875953af542ccd8eeaea854ea4b1e31ac50b0e9117a9e3048ae333199c",
+      "styles_sha256": "d6dfa0f69bd945988602bf2f5820f2317b387f796c0465a07eff732369726c9b"
+    },
+    {
+      "name": "webkit-1440-light-plans-initial",
+      "screenshot_sha256": "c5d03df8f2a2baca0a8d848aec1f2af74c978ed55e594fa0084deaed8ddfddf0",
+      "styles_sha256": "9114d26007e8876a2f435a306a62ee7aae536fbebb2585aa3a16dc5e28a253aa"
+    },
+    {
+      "name": "webkit-1440-light-plans-selected",
+      "screenshot_sha256": "f784cc415db9afb685b042a9726c502c6984a6e2e4ab8de9897e8f890434779e",
+      "styles_sha256": "a551a71b540376ff26001d27317c5caf058f62b27422624479fe3a6f6aa7e4e2"
+    },
+    {
+      "name": "webkit-1440-light-plans-confirmation",
+      "screenshot_sha256": "a0f783f671eb7ff6263ceb696df8e94eb202bf971ad5381b1522398325fb0fae",
+      "styles_sha256": "1b70473e7a5402f53164a08e7f483eae7300bd5fedcf048127342d03e8414ab4"
+    },
+    {
+      "name": "webkit-1440-light-plans-disabled-card",
+      "screenshot_sha256": "4c972431d6dca4e7121617104e0a6dc450f4bf2a28abae455f5ecaa44e828dc7",
+      "styles_sha256": "a2ff40fdef8b68d33866fe20dd82975fce77462dfec8ccbdb4598bfc35061ed9"
+    },
+    {
+      "name": "webkit-1440-light-clients-list",
+      "screenshot_sha256": "3c4958c8cfbfd7534f7a96dfeda763b2c47c14866e76543c45e900a4601cb319",
+      "styles_sha256": "4468e2adc818a895feea66791f73026c060a23fef187933d5bed966f12cb0894"
+    },
+    {
+      "name": "webkit-1440-light-clients-selected-menu",
+      "screenshot_sha256": "9cd1dfffb38b473120a30a1c3c263e9d4c1577878a8c0fe6aeee1d4e9cc4a0c7",
+      "styles_sha256": "a81c08ce086132ebd8905f4fd60a51723683f1721e9dec872f247831376fc201"
+    },
+    {
+      "name": "webkit-1440-light-clients-filters",
+      "screenshot_sha256": "3ffbd0939f73a98c27f468f473da01dbf5e6a4a6514e5c137a05d149cbd4206c",
+      "styles_sha256": "f361e9ef92aa6e445bafa5b49f924d62570615f466ce92c2d48d132c81e04170"
+    },
+    {
+      "name": "webkit-1440-light-catalog-list",
+      "screenshot_sha256": "08652435aa94dfe0a91569c7c85e496c32f0c0b3ac89068a34edd92bc4c2d1cc",
+      "styles_sha256": "4177edea2002e1ae61dcb5b9f0a972f5b7bb5cddd22d5480208b1193f512f665"
+    },
+    {
+      "name": "webkit-1440-light-catalog-editor-invalid",
+      "screenshot_sha256": "023d862e1b921cdb31c530fac1b06407c1c720ed1d6742fadc58fab46555de6e",
+      "styles_sha256": "4b90649786f0d2e44a4d44f63c3a931b4a1441586e70725d7beeb5ca3970f8b2"
+    },
+    {
+      "name": "webkit-1440-light-catalog-editor-busy",
+      "screenshot_sha256": "1b0ae51c8d6df9df747bae0f4b7e925632b4edf211a231ba44bca8d3cca656be",
+      "styles_sha256": "fddac4b7ccac8a56ad1ca1c641f08c57a0112f295c5df6d6fb02e63bc6e340dc"
+    },
+    {
+      "name": "webkit-1440-light-catalog-editor-error",
+      "screenshot_sha256": "d58c7ab305a0209dc050c812ed950311e7fbdae4670c21a2f14bd55d391958b4",
+      "styles_sha256": "73fa1a49c6287b44659f8a020bfd885d6a725060a7b50257d3ad75fb0ba974e6"
+    },
+    {
+      "name": "webkit-1440-light-smokes-otp-wait",
+      "screenshot_sha256": "7bbe216e4ad2360f3eb179f9ae112de98e5acad437fe19889bf29fb3489f7b59",
+      "styles_sha256": "17cfdc2fa9e5e24f53423c151023397e33bde148491dd26a30e928098dc4d2e7"
+    },
+    {
+      "name": "webkit-1440-light-smokes-otp-resend",
+      "screenshot_sha256": "029e34415ff17b7fe43ef2ad53a3098ee01c7b1591b6c1df5a1f671a4d3aabe3",
+      "styles_sha256": "8def7e2b6233f5b32c5c6a81357f5fde7d452fbec1b43cde750448465d139238"
+    },
+    {
+      "name": "webkit-1440-light-smokes-support-sent",
+      "screenshot_sha256": "53ddd7842801566b8951fe0b38b362fe22a130e2154c993357745aa6f9986eb1",
+      "styles_sha256": "4b746db5b01496abfcf0311ccca7f28140ef182801b6c14f81cf69059ebd27c2"
+    },
+    {
+      "name": "webkit-1440-light-smokes-receipt-pending",
+      "screenshot_sha256": "45e8c6e7571309817111d632aa21823b5401b136df3f33ef8e11794512cebee1",
+      "styles_sha256": "0994af60d52441315daf448347d6f2d712ec9876fa0f440f003d677862149cbc"
+    },
+    {
+      "name": "webkit-1440-light-smokes-receipt-uncertain",
+      "screenshot_sha256": "45e8c6e7571309817111d632aa21823b5401b136df3f33ef8e11794512cebee1",
+      "styles_sha256": "0994af60d52441315daf448347d6f2d712ec9876fa0f440f003d677862149cbc"
+    },
+    {
+      "name": "webkit-1440-light-smokes-receipt-failed",
+      "screenshot_sha256": "8c70b95b8773faca874cc00c6ac2acd960849d2328f39e62c1b64a698c88e204",
+      "styles_sha256": "473919c4b458e3cfcd5962f955137d26bbb1d876af2b805ecbe989a622315737"
+    },
+    {
+      "name": "webkit-1440-light-smokes-receipt-provisioning",
+      "screenshot_sha256": "33fac44d6620e68b5ca4f0649abcb21cc0c946b3271705c809bb419cabb284e9",
+      "styles_sha256": "2b943b0a998477b9d8784de9c59976fd2bd621f0b668c95659f0b7f8567298b0"
+    },
+    {
+      "name": "webkit-1440-light-smokes-receipt-success",
+      "screenshot_sha256": "df82153a1979d183554312a91385a12c528ad0a3b895b76a2cce9ce775f08634",
+      "styles_sha256": "a5fb148434c5d0224a729f786e1f6434588e740c0709b54bb867098dd962be61"
+    },
+    {
+      "name": "webkit-1440-light-smokes-chat-sent",
+      "screenshot_sha256": "c900bf622c66925eaeac037b96f3b9842ff8a3b2e247750bd4000065119e3197",
+      "styles_sha256": "7619e9cd71ac4b11234a2ea9ffed44cff40133377fb0d788073ac5efd851a7cd"
+    },
+    {
+      "name": "webkit-1440-dark-keys-collapsed",
+      "screenshot_sha256": "280b1db356eb8ac9ac162e47718d5032e746b7df4753abe61d61a9a089021516",
+      "styles_sha256": "fee0bf84c30286a3b1850338135d058dc0935a5e873d9c885271820d91ee7fb7"
+    },
+    {
+      "name": "webkit-1440-dark-keys-expanded-focus",
+      "screenshot_sha256": "21c653cac2a64f070a28fa007732d95a3908bb27c6ad387641f95292cd32e5d9",
+      "styles_sha256": "e8ea3fec9d4cf8c74220cd459d0822005d639c66fa6329f2dd51b2c82fd1731a"
+    },
+    {
+      "name": "webkit-1440-dark-keys-devices",
+      "screenshot_sha256": "cce294dd0e326238cd243037e078603a44240191e373057d877a12dcf45029fb",
+      "styles_sha256": "297c42b2b3317fdc235e6b53181982952637dfbd04b16aea686520496a669852"
+    },
+    {
+      "name": "webkit-1440-dark-keys-rename-invalid",
+      "screenshot_sha256": "ef73c8d5164b582528057095a0e83e2d5696ec88fa150f5aae1224232d3940ef",
+      "styles_sha256": "69a985f8530d1d12c43a43e2245e011c74e36ad74a4af3f7ce7e58c0bee7e28c"
+    },
+    {
+      "name": "webkit-1440-dark-plans-initial",
+      "screenshot_sha256": "f456145f4414748c5dde3dd5c77594f00fe2265b75d9a52b4af37dab1340440e",
+      "styles_sha256": "b56ce069ed0a765f645db6783e53d32a601707b6f3bc4991995cfb009bf06bcb"
+    },
+    {
+      "name": "webkit-1440-dark-plans-selected",
+      "screenshot_sha256": "b0fc800ade5bca07ffb97d198f5c8e135fea19269f7e69bc00b318717fa68df6",
+      "styles_sha256": "0b6946ccaced0cb785092b522a9b457fef66d7bf20b4a8a7384f6a8b56a4b64f"
+    },
+    {
+      "name": "webkit-1440-dark-plans-confirmation",
+      "screenshot_sha256": "56a51f845bf6e52002f1544dc7cbc84f99dc0f4f505b7a6d99527f2da7b9d8d8",
+      "styles_sha256": "002e7777458b9b725b7156604b18125ede8d6eb7a9b986d5ded88b489b01a346"
+    },
+    {
+      "name": "webkit-1440-dark-plans-disabled-card",
+      "screenshot_sha256": "02288529488cd5ff55a323799c4eabcd43687ae992505f5b0df11894425b4bfd",
+      "styles_sha256": "c24f550b1f4522fc36ee289aca1710304f8e8136c91939a4862b8762bad1280b"
+    },
+    {
+      "name": "webkit-1440-dark-clients-list",
+      "screenshot_sha256": "ffb1b8299ba99d39e2b4880334ab2c336a42f6da9d025445315acd2d83eafeaa",
+      "styles_sha256": "577126bd912c92f04ec95df94bc234c4de3684b95d7131b4ea1bc4042f9e8dbc"
+    },
+    {
+      "name": "webkit-1440-dark-clients-selected-menu",
+      "screenshot_sha256": "0b06b311840efa356a276edc8e403263bb0a9a96589625e628c8d0be445799d8",
+      "styles_sha256": "cb01552d994f7a1d672fcd75aa7006b2d0f4c8ffd90b374eb43bf80ee8263741"
+    },
+    {
+      "name": "webkit-1440-dark-clients-filters",
+      "screenshot_sha256": "0a09a92e346e06926d9d3465b3d8ae34971f63bf5429390cb991718f99773258",
+      "styles_sha256": "6a67f2461b2fa42d0501a232e8b737b8e47b6d5b56c5d39ea8978fbc615cb196"
+    },
+    {
+      "name": "webkit-1440-dark-catalog-list",
+      "screenshot_sha256": "4b7b12d491af8cfefa9a9a7912a7100aa171ebc5038f6bb961e36fe9c1da722d",
+      "styles_sha256": "d1f59ae4bda0ee61c35caa7b7720dc308a20fe87a0fbae6ad01f2feba3fd451c"
+    },
+    {
+      "name": "webkit-1440-dark-catalog-editor-invalid",
+      "screenshot_sha256": "64c72c6e2145ec144f379dd50c55088d9d812d75da0dba1c63ee7eda3550a0fb",
+      "styles_sha256": "e28f858e26f94e436d858ba90baf9c8b3f9365543cfad9b1573b8f5892bf290f"
+    },
+    {
+      "name": "webkit-1440-dark-catalog-editor-busy",
+      "screenshot_sha256": "9dbc6d5b07454ff9152af0235417be28d643c9e26c29bb37fc8cedf158ba8de1",
+      "styles_sha256": "b4f5d61146efbb1200d0d5425bbc9fc0f3a7f2853e732c0ec2f5d0bd04ef7935"
+    },
+    {
+      "name": "webkit-1440-dark-catalog-editor-error",
+      "screenshot_sha256": "359c288609aad602c0a2343ec4f4fb9d75f1500141ad3433cee7107f741842e3",
+      "styles_sha256": "71b4def3ba851bb2a99086866291155c88a0e309a3902f251cef8a94b803a606"
+    },
+    {
+      "name": "webkit-1440-dark-smokes-otp-wait",
+      "screenshot_sha256": "baa29d7dcc7d342cbec0efa984d3ebdce350ec3629972b9579bb221fd9409f4e",
+      "styles_sha256": "8563aec429e94a06aac9df9938bebbd3c2c2c0c22c24d653dec714043626a05e"
+    },
+    {
+      "name": "webkit-1440-dark-smokes-otp-resend",
+      "screenshot_sha256": "1624ea5a8938e007705f8125b0fb22281716dd62a0a10f61842275101a4f2a5e",
+      "styles_sha256": "df72dd172859ff3f5a65267f2d7cb9c89e3d6b9cb31e5ea23edb16e6db120a74"
+    },
+    {
+      "name": "webkit-1440-dark-smokes-support-sent",
+      "screenshot_sha256": "02294e90ee30550000d214ead9589a5ab5a53d42559960fe46111902d265e0f6",
+      "styles_sha256": "31f3287ef8466716a53ae17d00232fb0f8975d6f163ebe277765bfc62cc17a92"
+    },
+    {
+      "name": "webkit-1440-dark-smokes-receipt-pending",
+      "screenshot_sha256": "be236d48011fe7c94c862ba662bc90a92207636137ce928554ad0e63688e0683",
+      "styles_sha256": "1b2b3285110a7beca4b7d093b54717c759b8a2b51b2ea1f947368c25f49eb720"
+    },
+    {
+      "name": "webkit-1440-dark-smokes-receipt-uncertain",
+      "screenshot_sha256": "be236d48011fe7c94c862ba662bc90a92207636137ce928554ad0e63688e0683",
+      "styles_sha256": "1b2b3285110a7beca4b7d093b54717c759b8a2b51b2ea1f947368c25f49eb720"
+    },
+    {
+      "name": "webkit-1440-dark-smokes-receipt-failed",
+      "screenshot_sha256": "cd2f0970636fe8db070ffae0bd4c8c5372a93eb4f2795495a715bd0597bbd4b7",
+      "styles_sha256": "1ceeb98b1a834d6be4827a08fef0c691a1babe58670b665e88da22fdf23fb424"
+    },
+    {
+      "name": "webkit-1440-dark-smokes-receipt-provisioning",
+      "screenshot_sha256": "54da5fc3ca6d5ae666ed439190f7508c46ce7dfa7ae9b1b9f6653f96413599c5",
+      "styles_sha256": "bad66409b3c405778ab03583bf524412b14573f50b038a8d89a9ceadc76e996f"
+    },
+    {
+      "name": "webkit-1440-dark-smokes-receipt-success",
+      "screenshot_sha256": "a20728173dfc540c52196dfbaa3af6060267441de8cb8b617a235c0a743af1d6",
+      "styles_sha256": "da36467340e24290fcdcd21d4463967dc3d8f0a534faee45d0d3ca4446d2c60e"
+    },
+    {
+      "name": "webkit-1440-dark-smokes-chat-sent",
+      "screenshot_sha256": "32f03bf5b33895fefa638d7f54d3c08975a60b0ea5ef2ac5a88aefe9291e4744",
+      "styles_sha256": "d625d428ea7e6202222ce9e73a229a3e968832f326924e061a819ea582d72dd5"
+    }
+  ]
+}

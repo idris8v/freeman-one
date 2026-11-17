@@ -1,0 +1,10 @@
+[Unit]
+Description=Daily F R E E M A N database backup
+
+[Timer]
+OnCalendar=*-*-* 03:00:00 UTC
+RandomizedDelaySec=600
+Persistent=true
+
+[Install]
+WantedBy=timers.target

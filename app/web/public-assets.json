@@ -1,0 +1,62 @@
+{
+  "version": 1,
+  "provenance": "Existing project assets present before the 2026-10-12 release-readiness audit; restored byte-for-byte, no replacements generated.",
+  "required_images": {
+    "app/web/static/favicon.png": {
+      "bytes": 36798,
+      "sha256": "6bdc5b012c29b82fd8660b0c795a90eed68a8cc78d962f41df1b17b58d624d4e"
+    },
+    "app/web/static/freeman-logo-dark.png": {
+      "bytes": 141366,
+      "sha256": "5a12cea79282c0c78b0ca10f9cd321fb210824cd72d1b1dd5d586a2bc81813a6"
+    },
+    "app/web/static/freeman-logo.png": {
+      "bytes": 229480,
+      "sha256": "b4bf14f17f43f50717e30bfbe3dd72a15f253b64a842796501282fb7ee215ff7"
+    },
+    "app/web/static/freeman-logo.webp": {
+      "bytes": 14330,
+      "sha256": "0c8261e3c4a8c86dfd942e209fe8277c6ff8569e7a107006d8900042341c2f73"
+    },
+    "app/web/static/referral-character.png": {
+      "bytes": 1085735,
+      "sha256": "60ec9a2cbd9d0a2df0ae439eeacc58dd2a5a8421464881835ee099645d5f868e"
+    },
+    "app/web/static/telegram-logo.webp": {
+      "bytes": 27058,
+      "sha256": "670bab34d927aa46407dba54dff4ed75b445bb49ed65ba6ee173842cecb0e6bc"
+    },
+    "app/web/static/chat-network-background.png": {
+      "bytes": 1080069,
+      "sha256": "61ade51a3fc4b4ad425a6ae96fabd68f743837a26993d9a5ef4b7a6a922bc645",
+      "provenance": "User-provided chat wallpaper, copied byte-for-byte on 2026-10-21."
+    },
+    "app/web/static/chat-pattern.svg": {
+      "bytes": 545,
+      "sha256": "a2eeb574bf128bcdd70b1dbd292cadf2d2add1637ee7f2d82c79a06efc0e26ed",
+      "provenance": "Original code-drawn low-contrast messenger pattern added on 2026-10-22; no external artwork or tracking."
+    },
+    "app/web/static/freeman-mark-20261029.png": {
+      "bytes": 61955,
+      "sha256": "92309b7503fd500efdff95aadbe2f58221f67058f0a1adfb5304606035f81dd6",
+      "provenance": "User supplied Freeman_One_logo_4K(5).png on 2026-10-29; proportional PNG downsample to 256x256; original artwork and alpha preserved."
+    },
+    "app/web/static/freeman-icon-20261029.png": {
+      "bytes": 61955,
+      "sha256": "92309b7503fd500efdff95aadbe2f58221f67058f0a1adfb5304606035f81dd6",
+      "provenance": "User supplied Freeman_One_logo_4K(5).png on 2026-10-29; proportional PNG downsample to 256x256; original artwork and alpha preserved."
+    },
+    "app/web/static/favicon-rounded-20261029.png": {
+      "bytes": 4422,
+      "sha256": "a030dbcc9aef32fda4f2ec1639cc79057ef402f56ffac74ea2247a725674616f"
+    }
+  },
+  "entrypoints": [
+    "index.html",
+    "guest-purchase.html",
+    "account-management.html",
+    "freeman-assistant.html",
+    "freeman-ai.html",
+    "connection-check.html"
+  ]
+}

@@ -1,0 +1,3658 @@
+{
+  "cabinet/account.css|.login-form-error": {
+    "important": 3,
+    "repeated": false
+  },
+  "cabinet/account.css|.auth-page .login-shell": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/account.css|.auth-page .bot-code-form .auth-primary": {
+    "important": 2,
+    "repeated": false
+  },
+  "cabinet/account.css|.auth-page .bot-code-form .auth-primary:hover": {
+    "important": 2,
+    "repeated": false
+  },
+  "cabinet/account.css|.auth-page .login-card .bot-login-link:hover": {
+    "important": 3,
+    "repeated": false
+  },
+  "cabinet/account.css|.auth-page .login-form-error": {
+    "important": 2,
+    "repeated": false
+  },
+  "cabinet/account.css|.auth-page .login-card .bot-login-link": {
+    "important": 9,
+    "repeated": false
+  },
+  "cabinet/account.css|html[data-theme=dark] body .login-shell": {
+    "important": 3,
+    "repeated": false
+  },
+  "cabinet/account.css|html[data-theme=dark] body :is(input:not([type=checkbox]):not([type=radio]):not([type=file]),select,textarea,.auth-page .bot-code-form .auth-identity input,.otp-boxes span,.bot-code-form input):where(:not(.fo-scope,.fo-scope *))": {
+    "important": 4,
+    "repeated": false
+  },
+  "cabinet/account.css|html[data-theme=dark] body.auth-page .login-card .bot-login-link": {
+    "important": 4,
+    "repeated": false
+  },
+  "cabinet/account.css|html[data-theme=dark] body :is(.auth-error,.login-form-error)": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/account.css|html body.auth-unified #app": {
+    "important": 5,
+    "repeated": false
+  },
+  "cabinet/account.css|html body.auth-unified #app .unified-brand img": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/account.css|html body.auth-unified #app h1": {
+    "important": 2,
+    "repeated": false
+  },
+  "cabinet/account.css|html body.auth-unified #app .unified-alternatives :is(svg,img)": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/account.css|html body.auth-unified #app [hidden]": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/account.css|html body.auth-unified #app *": {
+    "important": 3,
+    "repeated": false
+  },
+  "cabinet/catalog.css|.offer-panel input[hidden]": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/catalog.css|.offer-panel [hidden]": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/catalog.css|.offer-check": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/clients.css|.admin-clients-page>.admin-periods": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/clients.css|.admin-clients-page>.admin-stats": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/clients.css|.admin-clients-page>.admin-metric-note": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/clients.css|.admin-client-records .admin-list-avatar": {
+    "important": 2,
+    "repeated": false
+  },
+  "cabinet/clients.css|html body #app#app#app#app .admin-client-records .admin-avatar-circle": {
+    "important": 3,
+    "repeated": true
+  },
+  "cabinet/clients.css|html body #app#app#app#app .admin-client-records .admin-avatar-circle .admin-list-avatar": {
+    "important": 2,
+    "repeated": true
+  },
+  "cabinet/clients.css|html body #app#app#app#app .admin-client-records .admin-avatar-circle b": {
+    "important": 2,
+    "repeated": true
+  },
+  "cabinet/clients.css|html body #app#app#app#app .admin-client-records td": {
+    "important": 2,
+    "repeated": true
+  },
+  "cabinet/clients.css|html body #app#app#app#app .customer-profile-backdrop": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/clients.css|html body #app#app#app#app .customer-profile": {
+    "important": 12,
+    "repeated": true
+  },
+  "cabinet/clients.css|html body #app#app#app#app .customer-profile button": {
+    "important": 1,
+    "repeated": true
+  },
+  "cabinet/clients.css|html body #app#app#app#app .customer-profile button:before": {
+    "important": 1,
+    "repeated": true
+  },
+  "cabinet/clients.css|html body #app#app#app#app .customer-profile button:after": {
+    "important": 1,
+    "repeated": true
+  },
+  "cabinet/clients.css|html body #app#app#app#app .customer-profile button:disabled": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/clients.css|html body #app#app#app#app .customer-profile svg": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/clients.css|html body #app#app#app#app .customer-profile .customer-device-row button": {
+    "important": 5,
+    "repeated": true
+  },
+  "cabinet/clients.css|html body #app#app#app#app .customer-profile .customer-unlink-all": {
+    "important": 1,
+    "repeated": true
+  },
+  "cabinet/clients.css|html body #app#app#app#app .customer-profile .customer-key-actions button": {
+    "important": 4,
+    "repeated": true
+  },
+  "cabinet/clients.css|html body #app#app#app#app .customer-profile .customer-device-list": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/clients.css|html body #app#app#app#app .customer-profile .customer-device-row": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/clients.css|html body #app#app#app#app .customer-profile .customer-subscription": {
+    "important": 7,
+    "repeated": true
+  },
+  "cabinet/clients.css|html body #app#app#app#app .customer-profile .customer-subscription-detail": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/clients.css|html body #app#app#app#app .customer-profile .customer-devices-toggle": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/clients.css|html body #app#app#app#app .customer-profile .customer-proxy-title img": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/clients.css|html body #app#app#app#app .customer-profile .customer-telegram-icon": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/clients.css|html body #app#app#app#app .customer-profile .customer-head": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/clients.css|html body #app#app#app#app .customer-profile .customer-name-status strong": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/clients.css|html body #app#app#app#app .customer-profile :is(.customer-info-surface,.customer-history-surface)": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/clients.css|html body #app#app#app#app .customer-profile .customer-info-surface dl>div": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/clients.css|html body #app#app#app#app .customer-profile .customer-content h3": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/clients.css|html body #app#app#app#app .customer-profile .customer-history-surface": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/clients.css|html body #app#app#app#app .customer-profile .customer-proxy-row": {
+    "important": 3,
+    "repeated": true
+  },
+  "cabinet/clients.css|html body #app#app#app#app .customer-profile :is(h3,.customer-subscription-toggle,.customer-subscription-name strong)": {
+    "important": 1,
+    "repeated": true
+  },
+  "cabinet/clients.css|html[data-theme=dark] body #app#app#app#app#app#app#app#app .customer-profile-backdrop": {
+    "important": 1,
+    "repeated": true
+  },
+  "cabinet/clients.css|html[data-theme=dark] body #app#app#app#app#app#app#app#app .customer-profile": {
+    "important": 4,
+    "repeated": true
+  },
+  "cabinet/clients.css|html[data-theme=dark] body #app#app#app#app#app#app#app#app .customer-profile :is(h3,strong,dd,.customer-subscription-toggle,.customer-subscription-name strong,.customer-history-ticket,.customer-proxy-row)": {
+    "important": 1,
+    "repeated": true
+  },
+  "cabinet/clients.css|html[data-theme=dark] body #app#app#app#app#app#app#app#app .customer-profile :is(dt,small,p,.customer-confirm p)": {
+    "important": 1,
+    "repeated": true
+  },
+  "cabinet/clients.css|html[data-theme=dark] body #app#app#app#app#app#app#app#app .customer-profile :is(.customer-info-surface,.customer-history-surface,.customer-subscription,.customer-confirm,.customer-proxy-management)": {
+    "important": 3,
+    "repeated": true
+  },
+  "cabinet/clients.css|html[data-theme=dark] body #app#app#app#app#app#app#app#app .customer-profile .customer-key-actions :is([data-customer-key-action=renew],[data-customer-key-action=unblock])": {
+    "important": 3,
+    "repeated": true
+  },
+  "cabinet/clients.css|html[data-theme=dark] body #app#app#app#app#app#app#app#app .customer-profile .customer-confirm .destructive": {
+    "important": 3,
+    "repeated": true
+  },
+  "cabinet/clients.css|html body #app#app#app#app#app#app#app#app#app#app .customer-profile :is(h2,h3,strong,dd)": {
+    "important": 1,
+    "repeated": true
+  },
+  "cabinet/clients.css|html body #app#app#app#app#app#app#app#app#app#app .customer-profile :is(dt,small,.customer-profile-id)": {
+    "important": 1,
+    "repeated": true
+  },
+  "cabinet/clients.css|.crm-drawer .crm-checkbox input": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/clients.css|.crm-drawer [hidden]": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/clients.css|#crm-campaign-root#crm-campaign-root#crm-campaign-root#crm-campaign-root#crm-campaign-root#crm-campaign-root#crm-campaign-root#crm-campaign-root#crm-campaign-root#crm-campaign-root#crm-campaign-root#crm-campaign-root .crm-drawer button": {
+    "important": 6,
+    "repeated": true
+  },
+  "cabinet/clients.css|#crm-campaign-root#crm-campaign-root#crm-campaign-root#crm-campaign-root#crm-campaign-root#crm-campaign-root#crm-campaign-root#crm-campaign-root#crm-campaign-root#crm-campaign-root#crm-campaign-root#crm-campaign-root .crm-drawer :is(input:not([type=checkbox]),select,textarea)": {
+    "important": 2,
+    "repeated": true
+  },
+  "cabinet/clients.css|#crm-campaign-root#crm-campaign-root#crm-campaign-root#crm-campaign-root#crm-campaign-root#crm-campaign-root#crm-campaign-root#crm-campaign-root#crm-campaign-root#crm-campaign-root#crm-campaign-root#crm-campaign-root .crm-drawer [type=checkbox]": {
+    "important": 8,
+    "repeated": true
+  },
+  "cabinet/clients.css|#crm-campaign-root#crm-campaign-root#crm-campaign-root#crm-campaign-root#crm-campaign-root#crm-campaign-root#crm-campaign-root#crm-campaign-root#crm-campaign-root#crm-campaign-root#crm-campaign-root#crm-campaign-root .crm-drawer footer button": {
+    "important": 1,
+    "repeated": true
+  },
+  "cabinet/clients.css|html body #app .cp-telegram": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/clients.css|html body #app .cp-id": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/clients.css|html body #app .cp-contacts": {
+    "important": 3,
+    "repeated": false
+  },
+  "cabinet/clients.css|html body #app .cp-balance": {
+    "important": 3,
+    "repeated": false
+  },
+  "cabinet/clients.css|html body #app .cp-payout": {
+    "important": 3,
+    "repeated": false
+  },
+  "cabinet/clients.css|html body #app .cp-service-facts>span": {
+    "important": 3,
+    "repeated": false
+  },
+  "cabinet/clients.css|html body #app .cp-workspace .cp-record": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/clients.css|html body #app .cp-dialog .cp-record": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/clients.css|html body #app .cp-record:first-child": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/clients.css|html body #app .cp-workspace *": {
+    "important": 2,
+    "repeated": false
+  },
+  "cabinet/clients.css|html body #app .cp-dialog *": {
+    "important": 2,
+    "repeated": false
+  },
+  "cabinet/clients.css|html body #app .cp-dialog": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/clients.css|html body #app .cp-enter": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/clients.css|.crm-expiry": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/clients.css|html body #overlay-root :is(.form-modal,.customer-profile):where(:not(.fo-scope,.fo-scope *)):where(:not(.fo-scope,.fo-scope *))": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/components.css|.new-ticket>span": {
+    "important": 6,
+    "repeated": false
+  },
+  "cabinet/components.css|.file-preview": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/components.css|.accordion-list details": {
+    "important": 2,
+    "repeated": false
+  },
+  "cabinet/components.css|.modal-backdrop>section:where(:not(.fo-scope,.fo-scope *))": {
+    "important": 2,
+    "repeated": false
+  },
+  "cabinet/components.css|.link-list": {
+    "important": 5,
+    "repeated": false
+  },
+  "cabinet/components.css|.link-list .list-row:hover": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/components.css|html[data-theme=dark] .link-list .list-row": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/components.css|.aegis-svg *:where(:not(.fo-scope,.fo-scope *))": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/components.css|.aegis-animated *:where(:not(.fo-scope,.fo-scope *))": {
+    "important": 2,
+    "repeated": false
+  },
+  "cabinet/components.css|button:hover .aegis-animated *:where(:not(.fo-scope,.fo-scope *))": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/components.css|button:focus-visible .aegis-animated *:where(:not(.fo-scope,.fo-scope *))": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/components.css|button.pending .aegis-animated *": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/components.css|.pressable:active:where(:not(.fo-scope,.fo-scope *))": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/components.css|.compact-primary:hover": {
+    "important": 2,
+    "repeated": false
+  },
+  "cabinet/components.css|.bot-login-link:hover": {
+    "important": 2,
+    "repeated": false
+  },
+  "cabinet/components.css|:before": {
+    "important": 3,
+    "repeated": false
+  },
+  "cabinet/components.css|:after": {
+    "important": 3,
+    "repeated": false
+  },
+  "cabinet/components.css|.screen :is(.simple-header>button,.keys-header>button:first-child,.head-theme,.support-chat-back,.ref-header button,.proxy-header button):where(:not(.fo-scope,.fo-scope *))": {
+    "important": 3,
+    "repeated": false
+  },
+  "cabinet/components.css|.screen :is(.contact-row>span:not(.telegram),.row-icon,.news-icon,.service-card>span,.ref-link-icon,.ref-step-icon,.ref-history-icon,.support-shortcuts button>span,.support-new-card>span,.ticket-type-icon,.access-key-icon,.keys-buy-row>span,.key-art):where(:not(.fo-scope,.fo-scope *))": {
+    "important": 3,
+    "repeated": false
+  },
+  "cabinet/components.css|.screen .news-icon": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/components.css|.screen .service-card>span": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/components.css|.screen :is(.contact-row>span:not(.telegram),.row-icon,.news-icon,.service-card>span,.ref-link-icon,.ref-step-icon,.ref-history-icon,.support-shortcuts button>span,.support-new-card>span,.ticket-type-icon,.access-key-icon,.keys-buy-row>span,.key-art,.plan-overview>span,.purchase-title>span,.new-ticket>span,.device-row>span,.key-card>span):where(:not(.fo-scope,.fo-scope *))": {
+    "important": 4,
+    "repeated": false
+  },
+  "cabinet/components.css|.compact-primary": {
+    "important": 4,
+    "repeated": false
+  },
+  "cabinet/components.css|.bot-login-link": {
+    "important": 4,
+    "repeated": false
+  },
+  "cabinet/components.css|html[data-theme=dark] :is(.key-search,.keys-buy-row.buy-key,.simple-header>button,.keys-header>button:first-child,.proxy-page .proxy-icon-button,.proxy-page .proxy-icon-tile):where(:not(.fo-scope,.fo-scope *))": {
+    "important": 3,
+    "repeated": false
+  },
+  "cabinet/components.css|.block-title": {
+    "important": 2,
+    "repeated": false
+  },
+  "cabinet/components.css|.list-row": {
+    "important": 2,
+    "repeated": false
+  },
+  "cabinet/components.css|.screen .purchase-card:where(:not(.fo-scope,.fo-scope *))": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/components.css|.screen .tariff-choice:where(:not(.fo-scope,.fo-scope *))": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/components.css|.screen .tariff-name:where(:not(.fo-scope,.fo-scope *))": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/components.css|.screen .tariff-price strong:where(:not(.fo-scope,.fo-scope *))": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/components.css|.screen .tariff-price small:where(:not(.fo-scope,.fo-scope *))": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/components.css|.screen .payment-method:where(:not(.fo-scope,.fo-scope *))": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/components.css|.screen .checkout-button:where(:not(.fo-scope,.fo-scope *))": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/components.css|.screen .key-search:where(:not(.fo-scope,.fo-scope *))": {
+    "important": 3,
+    "repeated": false
+  },
+  "cabinet/components.css|.modal-backdrop .form-modal:where(:not(.fo-scope,.fo-scope *))": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/components.css|.profile-page .news-item": {
+    "important": 5,
+    "repeated": false
+  },
+  "cabinet/components.css|.profile-page .news-icon": {
+    "important": 3,
+    "repeated": false
+  },
+  "cabinet/components.css|.profile-page .news-item strong": {
+    "important": 3,
+    "repeated": false
+  },
+  "cabinet/components.css|.profile-page .news-item time": {
+    "important": 2,
+    "repeated": false
+  },
+  "cabinet/components.css|html[data-theme=dark] body :is(.profile-page .service-card,.profile-page .contact-row,.profile-page .link-list .list-row,.profile-page .news-item,.profile-card:not(.link-list):not(.contact-card),.access-card,.purchase-card,.support-new-card,.support-shortcuts button,.ticket-row,.conversation-card,.faq,.referral-card,.proxy-connection,.proxy-entry,.proxy-hero,.proxy-instructions,.balance-card,.money-hero,.data-card,.admin-card,.placeholder,.form-modal,.account-form,.install-modal,.qr-modal,.shortfall-modal,.login-card,.auth-card,.motion-toast):where(:not(.fo-scope,.fo-scope *))": {
+    "important": 7,
+    "repeated": false
+  },
+  "cabinet/components.css|html[data-theme=dark] body :is(.subscription-access,.subscription-devices-panel,.subscription-setting,.subscription-device,.subscription-qr,.subscription-key-field,.key-search,.device-row,.payment-method,.tariff-choice,.device-choice,.quick-strip button,.support-admin-tools,.ledger-row,.ref-link-body code,.ref-step,.ref-history-row,.proxy-connection-detail,.proxy-link-field,.proxy-server,.proxy-guide,.proxy-guide-row,.attachment-preview):where(:not(.fo-scope,.fo-scope *))": {
+    "important": 5,
+    "repeated": false
+  },
+  "cabinet/components.css|html[data-theme=dark] body :is(.screen .subscription-summary.access-summary .access-key-icon,.subscription-device-icon,.proxy-connection .proxy-icon-tile,.proxy-icon-tile,.profile-page .row-icon,.profile-page .service-card>span:first-child,.profile-page .contact-row>span,.news-icon,.ticket-type-icon,.support-new-card>span,.support-shortcuts button>span,.ref-link-icon,.ref-step-icon,.ref-history-icon,.ref-stat-icon,.plan-overview>span):where(:not(.fo-scope,.fo-scope *))": {
+    "important": 5,
+    "repeated": false
+  },
+  "cabinet/components.css|html[data-theme=dark] body :is(h1,h2,h3,.wordmark,.login-card h1,.login-card .wordmark,.tariff-name,.tariff-price strong,.ref-header h1,.subscription-title strong):where(:not(.fo-scope,.fo-scope *))": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/components.css|html[data-theme=dark] body :is(.auth-subtitle,.auth-explanation,.privacy-note,.telegram-auth-status,.payment-note,.payment-calc,.empty,.support-loading,.support-intro p,.news-item time):where(:not(.fo-scope,.fo-scope *))": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/components.css|html[data-theme=dark] body :is(.message-media,.ref-chart-tooltip,.proxy-device-list,.proxy-device-row,.owner-free,.proxy-demo-label)": {
+    "important": 3,
+    "repeated": false
+  },
+  "cabinet/components.css|html[data-theme=dark] body :is(.subscription-primary-actions .install,.checkout-button,.auth-primary,.btn-primary,.compact-primary):where(:not(.fo-scope,.fo-scope *))": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/components.css|html[data-theme=dark] body :is(th,td,.admin-row,.ledger-row,.invitee-row)": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/components.css|html[data-theme=dark] body :is(.subscription-qr>span,.plan-overview>span,.proxy-guide-card,.proxy-empty):where(:not(.fo-scope,.fo-scope *))": {
+    "important": 2,
+    "repeated": false
+  },
+  "cabinet/components.css|html[data-theme=dark] body :is(.subscription-setting,.subscription-qr,.subscription-device-icon,.payment-method,.plan-overview,.proxy-guide-card) .aegis-svg:where(:not(.fo-scope,.fo-scope *))": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/components.css|html[data-theme=dark] body :is(.ticket-status.waiting,.invitee-row em.waiting,.proxy-entry em.paid)": {
+    "important": 2,
+    "repeated": false
+  },
+  "cabinet/components.css|.form-modal:where(:not(.fo-scope,.fo-scope *))": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/components.css|html[data-theme=dark] body :is(.checkout-button,.subscription-install,.subscription-renew,.proxy-action.primary,.auth-primary,.compact-primary) .aegis-svg:where(:not(.fo-scope,.fo-scope *))": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/components.css|html body .screen .tariff-choice:where(:not(.fo-scope,.fo-scope *))": {
+    "important": 3,
+    "repeated": false
+  },
+  "cabinet/components.css|html body .screen .tariff-name:where(:not(.fo-scope,.fo-scope *))": {
+    "important": 2,
+    "repeated": false
+  },
+  "cabinet/components.css|html body .screen .tariff-price strong:where(:not(.fo-scope,.fo-scope *))": {
+    "important": 2,
+    "repeated": false
+  },
+  "cabinet/components.css|html body .screen .tariff-price small:where(:not(.fo-scope,.fo-scope *))": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/components.css|html body .screen .tariff-name>b:where(:not(.fo-scope,.fo-scope *))": {
+    "important": 2,
+    "repeated": false
+  },
+  "cabinet/components.css|html body .screen .tariff-list:where(:not(.fo-scope,.fo-scope *))": {
+    "important": 2,
+    "repeated": false
+  },
+  "cabinet/components.css|html body #app :is(.screen,.screen__inner,.profile-page,.profile-content)": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/components.css|html body #app :is(.service-card,.contact-row,.news-item,.purchase-card,.access-card,.referral-card,.proxy-connection,.proxy-hero,.proxy-instructions,.balance-card,.money-hero,.data-card,.form-modal,.install-modal,.qr-modal,.shortfall-modal,.login-card,.notification-item,.ticket-row):where(:not(.fo-scope,.fo-scope *))": {
+    "important": 2,
+    "repeated": false
+  },
+  "cabinet/components.css|html body #app :is(a.btn,a.bot-login-link,a.ref-balance-link,.install-modal a):where(:not(.fo-scope,.fo-scope *))": {
+    "important": 4,
+    "repeated": false
+  },
+  "cabinet/components.css|html body #app :is(a.btn,a.bot-login-link,a.ref-balance-link,.install-modal a):hover:where(:not(.fo-scope,.fo-scope *))": {
+    "important": 2,
+    "repeated": false
+  },
+  "cabinet/components.css|html body #app :is(a.btn,a.bot-login-link,a.ref-balance-link,.install-modal a):active:where(:not(.fo-scope,.fo-scope *))": {
+    "important": 2,
+    "repeated": false
+  },
+  "cabinet/components.css|html body #app :is(.checkout-button,.auth-primary,.compact-primary,.subscription-install,.subscription-renew,.proxy-action.primary):where(:not(.fo-scope,.fo-scope *))": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/components.css|html body #app :is(.row-icon,.news-icon,.ref-link-icon,.ref-step-icon,.ref-history-icon,.ref-stat-icon,.proxy-icon-tile,.subscription-device-icon,.access-key-icon,.ticket-type-icon,.purchase-title>span,.plan-overview>span,.service-card>span:first-child,.contact-row>span,.support-new-card>span,.support-shortcuts button>span):where(:not(.fo-scope,.fo-scope *))": {
+    "important": 13,
+    "repeated": false
+  },
+  "cabinet/components.css|html body #app :is(.row-icon,.news-icon,.ref-link-icon,.ref-step-icon,.ref-history-icon,.ref-stat-icon,.proxy-icon-tile,.subscription-device-icon,.access-key-icon,.ticket-type-icon,.purchase-title>span,.plan-overview>span,.service-card>span:first-child,.contact-row>span,.support-new-card>span,.support-shortcuts button>span) svg:where(:not(.fo-scope,.fo-scope *))": {
+    "important": 2,
+    "repeated": false
+  },
+  "cabinet/components.css|html body #app :is(.block-title,.support-list-heading,.purchase-card h2,.ref-section-title):where(:not(.fo-scope,.fo-scope *))": {
+    "important": 2,
+    "repeated": false
+  },
+  "cabinet/components.css|html body #app .profile-page .news-item": {
+    "important": 4,
+    "repeated": false
+  },
+  "cabinet/components.css|html body #app .profile-page .news-icon": {
+    "important": 4,
+    "repeated": false
+  },
+  "cabinet/components.css|html body #app .profile-page .news-item strong": {
+    "important": 2,
+    "repeated": false
+  },
+  "cabinet/components.css|html body #app .profile-page .news-item time": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/components.css|html body #app :is(.row-icon,.news-icon,.access-key-icon,.service-card>span:first-child,.contact-row>span):where(:not(.fo-scope,.fo-scope *))": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/components.css|html body #app :is(.subscription-primary-actions button,.subscription-setting,.proxy-action,.ref-link-input,.ref-copy,.ref-share):where(:not(.fo-scope,.fo-scope *))": {
+    "important": 4,
+    "repeated": false
+  },
+  "cabinet/components.css|html body #app :is(.subscription-primary-actions button,.subscription-setting,.proxy-action,.ref-copy,.ref-share) svg:where(:not(.fo-scope,.fo-scope *))": {
+    "important": 2,
+    "repeated": false
+  },
+  "cabinet/components.css|html body #app :is(.referral-card,.proxy-connection,.proxy-instructions,.data-card,.balance-card)": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/components.css|html body #app :is(.key-copy-action,.purchase-delivery-key [data-copy-key]):where(:not(.fo-scope,.fo-scope *))": {
+    "important": 2,
+    "repeated": false
+  },
+  "cabinet/components.css|html body #app :is(.profile-page .service-card>span:first-child,.profile-page .contact-row>span,.access-key-icon,.row-icon,.proxy-icon-tile,.subscription-device-icon):where(:not(.fo-scope,.fo-scope *))": {
+    "important": 4,
+    "repeated": false
+  },
+  "cabinet/components.css|html body #app :is(.service-card>span:first-child,.contact-row>span,.access-key-icon,.row-icon) :is(svg,img):where(:not(.fo-scope,.fo-scope *))": {
+    "important": 3,
+    "repeated": false
+  },
+  "cabinet/components.css|html body #app#app :is(.service-card>span:first-child,.row-icon,.news-icon,.access-key-icon,.subscription-device-icon,.proxy-icon-tile,.ref-link-icon,.ref-step-icon,.ref-stat-icon,.contact-row>span:not(.telegram),.plan-overview>span,.purchase-title>span):where(:not(.fo-scope,.fo-scope *))": {
+    "important": 4,
+    "repeated": true
+  },
+  "cabinet/components.css|html body #app#app :is(.service-card>span:first-child,.row-icon,.news-icon,.access-key-icon,.subscription-device-icon,.proxy-icon-tile,.ref-link-icon,.ref-step-icon,.ref-stat-icon,.contact-row>span:not(.telegram),.plan-overview>span,.purchase-title>span):has([data-icon=keys]):where(:not(.fo-scope,.fo-scope *))": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/components.css|html body #app#app :is(.service-card>span:first-child,.row-icon,.news-icon,.access-key-icon,.subscription-device-icon,.proxy-icon-tile,.ref-link-icon,.ref-step-icon,.ref-stat-icon,.contact-row>span:not(.telegram),.plan-overview>span,.purchase-title>span):has([data-icon=key]):where(:not(.fo-scope,.fo-scope *))": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/components.css|html body #app#app :is(.service-card>span:first-child,.row-icon,.news-icon,.access-key-icon,.subscription-device-icon,.proxy-icon-tile,.ref-link-icon,.ref-step-icon,.ref-stat-icon,.contact-row>span:not(.telegram),.plan-overview>span,.purchase-title>span):has([data-icon=wallet]):where(:not(.fo-scope,.fo-scope *))": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/components.css|html body #app#app :is(.service-card>span:first-child,.row-icon,.news-icon,.access-key-icon,.subscription-device-icon,.proxy-icon-tile,.ref-link-icon,.ref-step-icon,.ref-stat-icon,.contact-row>span:not(.telegram),.plan-overview>span,.purchase-title>span):has([data-icon=status]):where(:not(.fo-scope,.fo-scope *))": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/components.css|html body #app#app :is(.service-card>span:first-child,.row-icon,.news-icon,.access-key-icon,.subscription-device-icon,.proxy-icon-tile,.ref-link-icon,.ref-step-icon,.ref-stat-icon,.contact-row>span:not(.telegram),.plan-overview>span,.purchase-title>span):has([data-icon=check]):where(:not(.fo-scope,.fo-scope *))": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/components.css|html body #app#app :is(.service-card>span:first-child,.row-icon,.news-icon,.access-key-icon,.subscription-device-icon,.proxy-icon-tile,.ref-link-icon,.ref-step-icon,.ref-stat-icon,.contact-row>span:not(.telegram),.plan-overview>span,.purchase-title>span):has([data-icon=users]):where(:not(.fo-scope,.fo-scope *))": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/components.css|html body #app#app :is(.service-card>span:first-child,.row-icon,.news-icon,.access-key-icon,.subscription-device-icon,.proxy-icon-tile,.ref-link-icon,.ref-step-icon,.ref-stat-icon,.contact-row>span:not(.telegram),.plan-overview>span,.purchase-title>span):has([data-icon=share]):where(:not(.fo-scope,.fo-scope *))": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/components.css|html body #app#app :is(.service-card>span:first-child,.row-icon,.news-icon,.access-key-icon,.subscription-device-icon,.proxy-icon-tile,.ref-link-icon,.ref-step-icon,.ref-stat-icon,.contact-row>span:not(.telegram),.plan-overview>span,.purchase-title>span):has([data-icon=gift]):where(:not(.fo-scope,.fo-scope *))": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/components.css|html body #app#app :is(.service-card>span:first-child,.row-icon,.news-icon,.access-key-icon,.subscription-device-icon,.proxy-icon-tile,.ref-link-icon,.ref-step-icon,.ref-stat-icon,.contact-row>span:not(.telegram),.plan-overview>span,.purchase-title>span):has([data-icon=book]):where(:not(.fo-scope,.fo-scope *))": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/components.css|html body #app#app :is(.service-card>span:first-child,.row-icon,.news-icon,.access-key-icon,.subscription-device-icon,.proxy-icon-tile,.ref-link-icon,.ref-step-icon,.ref-stat-icon,.contact-row>span:not(.telegram),.plan-overview>span,.purchase-title>span):has([data-icon=news]):where(:not(.fo-scope,.fo-scope *))": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/components.css|html body #app#app :is(.service-card>span:first-child,.row-icon,.news-icon,.access-key-icon,.subscription-device-icon,.proxy-icon-tile,.ref-link-icon,.ref-step-icon,.ref-stat-icon,.contact-row>span:not(.telegram),.plan-overview>span,.purchase-title>span):has([data-icon=plans]):where(:not(.fo-scope,.fo-scope *))": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/components.css|html body #app#app :is(.service-card>span:first-child,.row-icon,.news-icon,.access-key-icon,.subscription-device-icon,.proxy-icon-tile,.ref-link-icon,.ref-step-icon,.ref-stat-icon,.contact-row>span:not(.telegram),.plan-overview>span,.purchase-title>span):has([data-icon=receipt]):where(:not(.fo-scope,.fo-scope *))": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/components.css|html body #app#app :is(.service-card>span:first-child,.row-icon,.news-icon,.access-key-icon,.subscription-device-icon,.proxy-icon-tile,.ref-link-icon,.ref-step-icon,.ref-stat-icon,.contact-row>span:not(.telegram),.plan-overview>span,.purchase-title>span):has([data-icon=help]):where(:not(.fo-scope,.fo-scope *))": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/components.css|html body #app#app :is(.service-card>span:first-child,.row-icon,.news-icon,.access-key-icon,.subscription-device-icon,.proxy-icon-tile,.ref-link-icon,.ref-step-icon,.ref-stat-icon,.contact-row>span:not(.telegram),.plan-overview>span,.purchase-title>span):has([data-icon=support]):where(:not(.fo-scope,.fo-scope *))": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/components.css|html body #app#app :is(.service-card>span:first-child,.row-icon,.news-icon,.access-key-icon,.subscription-device-icon,.proxy-icon-tile,.ref-link-icon,.ref-step-icon,.ref-stat-icon,.contact-row>span:not(.telegram),.plan-overview>span,.purchase-title>span):has([data-icon=headset]):where(:not(.fo-scope,.fo-scope *))": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/components.css|html body #app#app :is(.service-card>span:first-child,.row-icon,.news-icon,.access-key-icon,.subscription-device-icon,.proxy-icon-tile,.ref-link-icon,.ref-step-icon,.ref-stat-icon,.contact-row>span:not(.telegram),.plan-overview>span,.purchase-title>span):has([data-icon=bell]):where(:not(.fo-scope,.fo-scope *))": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/components.css|html body #app#app :is(.service-card>span:first-child,.row-icon,.news-icon,.access-key-icon,.subscription-device-icon,.proxy-icon-tile,.ref-link-icon,.ref-step-icon,.ref-stat-icon,.contact-row>span:not(.telegram),.plan-overview>span,.purchase-title>span):has([data-icon=mail]):where(:not(.fo-scope,.fo-scope *))": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/components.css|html body #app#app :is(.service-card>span:first-child,.row-icon,.news-icon,.access-key-icon,.subscription-device-icon,.proxy-icon-tile,.ref-link-icon,.ref-step-icon,.ref-stat-icon,.contact-row>span:not(.telegram),.plan-overview>span,.purchase-title>span):has([data-icon=link]):where(:not(.fo-scope,.fo-scope *))": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/components.css|html body #app#app :is(.service-card>span:first-child,.row-icon,.news-icon,.access-key-icon,.subscription-device-icon,.proxy-icon-tile,.ref-link-icon,.ref-step-icon,.ref-stat-icon,.contact-row>span:not(.telegram),.plan-overview>span,.purchase-title>span) svg:where(:not(.fo-scope,.fo-scope *))": {
+    "important": 1,
+    "repeated": true
+  },
+  "cabinet/components.css|html[data-theme=dark] body #app#app :is(.service-card>span:first-child,.row-icon,.news-icon,.access-key-icon,.subscription-device-icon,.proxy-icon-tile,.ref-link-icon,.ref-step-icon,.ref-stat-icon,.contact-row>span:not(.telegram),.plan-overview>span,.purchase-title>span):where(:not(.fo-scope,.fo-scope *))": {
+    "important": 2,
+    "repeated": true
+  },
+  "cabinet/components.css|html body #app#app :is(.row-icon.telegram,.profile-page .proxy-service>span:first-child,.contact-row>span.telegram)": {
+    "important": 5,
+    "repeated": true
+  },
+  "cabinet/components.css|.border-beam": {
+    "important": 2,
+    "repeated": false
+  },
+  "cabinet/components.css|.border-beam>i": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/components.css|.dia-brand-text": {
+    "important": 4,
+    "repeated": false
+  },
+  "cabinet/components.css|html[data-brand-reveal=done] .dia-brand-text": {
+    "important": 3,
+    "repeated": false
+  },
+  "cabinet/components.css|html body #app#app .has-border-beam>.border-beam": {
+    "important": 8,
+    "repeated": true
+  },
+  "cabinet/components.css|.beam-periodic>.border-beam>i": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/components.css|html body #app#app [data-bind-email]>.border-beam": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/components.css|html body #app#app [data-bind-telegram]>.border-beam": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/components.css|.freeman-morph-color": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/components.css|#freeman-loader-clipping g": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/components.css|#freeman-loader-clipping": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/components.css|#freeman-loader-clipping polygon": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/components.css|html body #app#app#app button.theme-toggle-basic": {
+    "important": 1,
+    "repeated": true
+  },
+  "cabinet/components.css|html body #app#app#app button.theme-toggle-basic svg": {
+    "important": 8,
+    "repeated": true
+  },
+  "cabinet/components.css|html body #app#app#app .screen :is(.row-icon,.news-icon,.access-key-icon,.subscription-device-icon,.proxy-icon-tile,.ref-link-icon,.ref-step-icon,.ref-stat-icon,.contact-row>span:not(.telegram),.plan-overview>span,.purchase-title>span):not(.telegram):has(svg):where(:not(.fo-scope,.fo-scope *))": {
+    "important": 5,
+    "repeated": true
+  },
+  "cabinet/components.css|html body #app#app#app .screen :is(.row-icon,.news-icon,.access-key-icon,.subscription-device-icon,.proxy-icon-tile,.ref-link-icon,.ref-step-icon,.ref-stat-icon,.contact-row>span:not(.telegram),.plan-overview>span,.purchase-title>span):not(.telegram):has(svg):before:where(:not(.fo-scope,.fo-scope *))": {
+    "important": 1,
+    "repeated": true
+  },
+  "cabinet/components.css|html body #app#app#app .screen :is(.row-icon,.news-icon,.access-key-icon,.subscription-device-icon,.proxy-icon-tile,.ref-link-icon,.ref-step-icon,.ref-stat-icon,.contact-row>span:not(.telegram),.plan-overview>span,.purchase-title>span):not(.telegram):has(svg):after:where(:not(.fo-scope,.fo-scope *))": {
+    "important": 1,
+    "repeated": true
+  },
+  "cabinet/components.css|html body #app#app#app .screen :is(.row-icon,.news-icon,.access-key-icon,.subscription-device-icon,.proxy-icon-tile,.ref-link-icon,.ref-step-icon,.ref-stat-icon,.contact-row>span:not(.telegram),.plan-overview>span,.purchase-title>span):not(.telegram):has(svg) svg:where(:not(.fo-scope,.fo-scope *))": {
+    "important": 4,
+    "repeated": true
+  },
+  "cabinet/components.css|html body #app#app#app .screen :is(.row-icon,.news-icon,.access-key-icon,.subscription-device-icon,.proxy-icon-tile,.ref-link-icon,.ref-step-icon,.ref-stat-icon,.contact-row>span:not(.telegram),.plan-overview>span,.purchase-title>span):not(.telegram):has(svg):hover:before:where(:not(.fo-scope,.fo-scope *))": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/components.css|html body #app#app#app .screen :is(.row-icon,.news-icon,.access-key-icon,.subscription-device-icon,.proxy-icon-tile,.ref-link-icon,.ref-step-icon,.ref-stat-icon,.contact-row>span:not(.telegram),.plan-overview>span,.purchase-title>span):not(.telegram):has(svg):hover:after:where(:not(.fo-scope,.fo-scope *))": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/components.css|html body #app#app .admin-small-action": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/components.css|html body #app#app .admin-global-results>button": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/components.css|html body #app#app .admin-global-results>button svg": {
+    "important": 2,
+    "repeated": true
+  },
+  "cabinet/components.css|.admin-list-avatar:where(:not(.fo-scope,.fo-scope *))": {
+    "important": 2,
+    "repeated": false
+  },
+  "cabinet/components.css|.admin-client-records .proxy-client-name": {
+    "important": 2,
+    "repeated": false
+  },
+  "cabinet/components.css|.admin-avatar-circle img:where(:not(.fo-scope,.fo-scope *))": {
+    "important": 2,
+    "repeated": false
+  },
+  "cabinet/components.css|.admin-search-table :is(td,th)": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/components.css|html body #app#app#app#app .proxy-management .admin-client-records .proxy-client-name": {
+    "important": 4,
+    "repeated": true
+  },
+  "cabinet/components.css|html body #app#app#app#app .admin-client-records .proxy-client-name>span:not(.admin-avatar-circle)": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/components.css|.admin-search-telegram svg": {
+    "important": 2,
+    "repeated": false
+  },
+  "cabinet/components.css|.admin-search-key svg": {
+    "important": 2,
+    "repeated": false
+  },
+  "cabinet/components.css|.admin-search-entry small": {
+    "important": 2,
+    "repeated": false
+  },
+  "cabinet/components.css|.admin-search-entry .admin-avatar-circle .admin-list-avatar": {
+    "important": 2,
+    "repeated": false
+  },
+  "cabinet/components.css|html body #app#app#app#app#app .proxy-management .admin-client-records :is(th,td):first-child": {
+    "important": 1,
+    "repeated": true
+  },
+  "cabinet/components.css|html body #app#app#app#app#app .proxy-management .admin-client-records :is(th,td):nth-child(5)": {
+    "important": 1,
+    "repeated": true
+  },
+  "cabinet/components.css|.admin-search-entry .admin-avatar-circle": {
+    "important": 3,
+    "repeated": false
+  },
+  "cabinet/components.css|.admin-search-telegram": {
+    "important": 3,
+    "repeated": false
+  },
+  "cabinet/components.css|.admin-search-key": {
+    "important": 3,
+    "repeated": false
+  },
+  "cabinet/components.css|html body #app#app#app .screen :is(.key-copy-action,.subscription-install,.subscription-renew,.subscription-setting,.subscription-delete,.buy-key,.checkout-button,.compact-primary,.btn,.btn-soft,.ref-glass-button,.notice-read-button,.device-option,.payment-method,.tariff-choice,.support-send-sculpted,[data-withdraw],[data-payout-edit],[data-admin-vpn-grant],[data-reset-blocked-devices],[data-admin-key-operation],[data-copy-proxy],[data-proxy-invite-copy]):where(:not(.fo-scope,.fo-scope *))": {
+    "important": 19,
+    "repeated": true
+  },
+  "cabinet/components.css|html body #app#app#app .screen :is(.admin-proxy-actions,.tg-proxy-actions,.admin-keys-toolbar,.key-mobile-actions,.proxy-guide-connect) :is(button,a)": {
+    "important": 3,
+    "repeated": true
+  },
+  "cabinet/components.css|html body #app#app#app .screen button.proxy-guide-connect": {
+    "important": 3,
+    "repeated": true
+  },
+  "cabinet/components.css|html body #app#app#app #overlay-root :is(.checkout-button,.btn,.btn-soft,.ref-glass-button,[type=submit]):where(:not(.fo-scope,.fo-scope *))": {
+    "important": 19,
+    "repeated": true
+  },
+  "cabinet/components.css|html body #app#app#app .screen :is(.subscription-renew,.key-renew,.customer-vpn-action,[data-admin-vpn-grant]):where(:not(.fo-scope,.fo-scope *))": {
+    "important": 2,
+    "repeated": true
+  },
+  "cabinet/components.css|html body #app#app#app .screen :is(.subscription-install,.customer-proxy-action,.proxy-admin-primary,.proxy-admin-grant):where(:not(.fo-scope,.fo-scope *))": {
+    "important": 2,
+    "repeated": true
+  },
+  "cabinet/components.css|html body #app#app#app .screen :is(.subscription-delete,.proxy-action-danger,.key-reset-button,[data-admin-key-operation=delete],[data-admin-key-operation=block]):where(:not(.fo-scope,.fo-scope *))": {
+    "important": 2,
+    "repeated": true
+  },
+  "cabinet/components.css|html body #app#app#app .screen :is(.admin-proxy-actions,.tg-proxy-actions,.key-expanded-primary,.key-mobile-actions,.checkout-confirm-actions)": {
+    "important": 5,
+    "repeated": true
+  },
+  "cabinet/components.css|html body #app#app#app .screen :is(.admin-proxy-actions,.tg-proxy-actions,.key-expanded-primary,.key-mobile-actions,.checkout-confirm-actions)>:is(button,a)": {
+    "important": 7,
+    "repeated": true
+  },
+  "cabinet/components.css|html body #app#app#app .screen :is(.admin-proxy-actions,.tg-proxy-actions,.key-expanded-primary,.key-mobile-actions)>:last-child:nth-child(odd)": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/components.css|html body #app#app#app .screen .admin-key-actions:not(.is-compact)": {
+    "important": 3,
+    "repeated": true
+  },
+  "cabinet/components.css|html body #app#app#app .screen .admin-key-actions:not(.is-compact)>button": {
+    "important": 1,
+    "repeated": true
+  },
+  "cabinet/components.css|html body #app#app#app .screen :is(.key-copy-action,.subscription-install,.subscription-renew,.subscription-setting)>svg:where(:not(.fo-scope,.fo-scope *))": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/components.css|.admin-month-wallet>strong": {
+    "important": 3,
+    "repeated": false
+  },
+  "cabinet/components.css|html body #app#app#app .screen :is(.device-option,.payment-method,.tariff-choice).selected:where(:not(.fo-scope,.fo-scope *))": {
+    "important": 2,
+    "repeated": true
+  },
+  "cabinet/components.css|html body #app#app#app .screen .subscription-setting[data-autorenew]:where(:not(.fo-scope,.fo-scope *))": {
+    "important": 3,
+    "repeated": true
+  },
+  "cabinet/components.css|html body #app#app#app .screen .subscription-setting[data-autorenew]>svg:where(:not(.fo-scope,.fo-scope *))": {
+    "important": 1,
+    "repeated": true
+  },
+  "cabinet/components.css|html body #app#app#app .screen[data-screen=support] :is(.support-view,.ticket-list,.support-settings-page,.support-reply-library)": {
+    "important": 6,
+    "repeated": true
+  },
+  "cabinet/components.css|html body #app#app#app .screen[data-screen=support] :is(.support-view,.ticket-list)": {
+    "important": 1,
+    "repeated": true
+  },
+  "cabinet/components.css|body.support-chat-open .ambient": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/components.css|html body.support-chat-open #app#app#app#app :is(.stage,.screen[data-screen=support])": {
+    "important": 11,
+    "repeated": true
+  },
+  "cabinet/components.css|html body.support-chat-open #app#app#app#app :is(.stage,.screen[data-screen=support],.screen[data-screen=support]>.screen__inner)": {
+    "important": 7,
+    "repeated": true
+  },
+  "cabinet/components.css|body.support-inbox-open .ambient": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/components.css|html body #app#app#app#app .customer-head": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/components.css|html body #app#app#app#app .customer-heading": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/components.css|html body #app#app#app#app .customer-heading>div": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/components.css|html body #app#app#app#app .customer-name-status": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/components.css|html body #app#app#app#app .customer-name-status strong": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/components.css|html body #app#app#app#app .customer-heading small": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/components.css|html body #app#app#app#app .customer-head>button": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/components.css|html body #app#app#app#app .customer-content": {
+    "important": 5,
+    "repeated": true
+  },
+  "cabinet/components.css|html body #app#app#app#app .customer-content h3": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/components.css|html body #app#app#app#app :is(.customer-info-surface,.customer-history-surface)": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/components.css|html body #app#app#app#app .customer-history-surface": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/components.css|html body #app#app#app#app .customer-info-surface dl": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/components.css|html body #app#app#app#app .customer-info-surface dl>div": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/components.css|html body #app#app#app#app .customer-info-surface dt": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/components.css|html body #app#app#app#app .customer-info-surface dd": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/components.css|html body #app#app#app#app .customer-info-surface dd>button": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/components.css|html body #app#app#app#app .customer-info-surface dd>button svg": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/components.css|html body #app#app#app#app .customer-history-ticket": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/components.css|html body #app#app#app#app .customer-history-ticket>span:first-child": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/components.css|html body #app#app#app#app .customer-history-ticket small": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/components.css|html body #app#app#app#app .customer-history-ticket svg": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/components.css|html body #app#app#app#app .customer-info-surface table": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/components.css|html body #app#app#app#app .customer-info-surface :is(th,td)": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/components.css|html body #app#app#app#app .customer-info-surface th": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/components.css|html body #app#app#app#app .customer-subscription": {
+    "important": 5,
+    "repeated": true
+  },
+  "cabinet/components.css|html body #app#app#app#app .customer-subscription-toggle": {
+    "important": 2,
+    "repeated": true
+  },
+  "cabinet/components.css|html body #app#app#app#app .customer-subscription-toggle>span": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/components.css|html body #app#app#app#app .customer-subscription-name": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/components.css|html body #app#app#app#app .customer-subscription-name strong": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/components.css|html body #app#app#app#app .customer-subscription-name em": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/components.css|html body #app#app#app#app .customer-subscription-name em:is([data-status=blocked],[data-status=expired])": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/components.css|html body #app#app#app#app .customer-subscription-name em[data-status=expiring]": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/components.css|html body #app#app#app#app .customer-subscription-toggle small": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/components.css|html body #app#app#app#app .customer-subscription-toggle>svg": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/components.css|html body #app#app#app#app .customer-subscription-detail": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/components.css|html body #app#app#app#app .customer-key-facts": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/components.css|html body #app#app#app#app .customer-key-facts>div": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/components.css|html body #app#app#app#app .customer-key-facts dt": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/components.css|html body #app#app#app#app .customer-key-facts dd": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/components.css|html body #app#app#app#app .customer-key-actions": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/components.css|html body #app#app#app#app .customer-devices-toggle": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/components.css|html body #app#app#app#app .customer-devices-toggle small": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/components.css|html body #app#app#app#app .customer-devices-toggle svg": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/components.css|html body #app#app#app#app .customer-device-list": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/components.css|html body #app#app#app#app .customer-device-row": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/components.css|html body #app#app#app#app .customer-device-row>span:nth-child(2)": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/components.css|html body #app#app#app#app .customer-device-row strong": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/components.css|html body #app#app#app#app .customer-device-row small": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/components.css|html body #app#app#app#app .customer-device-icon": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/components.css|html body #app#app#app#app .customer-unlink-all": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/components.css|html body #app#app#app#app .customer-device-list>p": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/components.css|html body #app#app#app#app .customer-content>p": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/components.css|html body #app#app#app#app .customer-proxy-title": {
+    "important": 1,
+    "repeated": true
+  },
+  "cabinet/components.css|html body #app#app#app#app .customer-proxy-title svg": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/components.css|html body #app#app#app#app .customer-proxy-row": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/components.css|html body #app#app#app#app .customer-proxy-row strong": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/components.css|html body #app#app#app#app .customer-proxy-row small": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/components.css|html body #app#app#app#app .customer-confirm-backdrop": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/components.css|html body #app#app#app#app .customer-confirm": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/components.css|html body #app#app#app#app .customer-confirm h3": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/components.css|html body #app#app#app#app .customer-confirm p": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/components.css|html body #app#app#app#app .customer-confirm footer": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/components.css|html body #app#app#app#app .customer-confirm .destructive": {
+    "important": 3,
+    "repeated": true
+  },
+  "cabinet/components.css|html body #app#app#app#app .customer-renew-options": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/components.css|html body #app#app#app#app .customer-renew-options button": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/components.css|html body #app#app#app#app .customer-renew-options strong": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/components.css|html body #app#app#app#app .customer-renew-options small": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/components.css|html body #app#app#app#app .customer-info-surface dt svg": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/components.css|html body #app#app#app#app .customer-profile .customer-heading>.support-person-avatar": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/components.css|html body #app#app#app#app .customer-proxy-management": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/components.css|html body #app#app#app#app .customer-key-actions button svg": {
+    "important": 2,
+    "repeated": true
+  },
+  "cabinet/components.css|html[data-theme=dark] body #app#app#app#app#app#app#app#app .customer-profile :is(.customer-info-surface dl>div,.customer-info-surface td,.customer-info-surface th,.customer-subscription-detail,.customer-proxy-row,.proxy-facts>div)": {
+    "important": 1,
+    "repeated": true
+  },
+  "cabinet/components.css|html[data-theme=dark] body #app#app#app#app#app#app#app#app .customer-profile .support-person-avatar": {
+    "important": 2,
+    "repeated": true
+  },
+  "cabinet/components.css|html body #app#app#app#app .section-news": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/components.css|html body #app#app#app#app .section-links": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/components.css|html body #app#app#app#app .posts-list": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/components.css|html body.admin-account #app#app#app#app :is(.admin-profile-tools,.admin-profile-publications)": {
+    "important": 1,
+    "repeated": true
+  },
+  "cabinet/components.css|html body #app#app#app#app .infrastructure-page .btn": {
+    "important": 5,
+    "repeated": true
+  },
+  "cabinet/components.css|html body #app#app#app#app .infrastructure-page .btn svg": {
+    "important": 2,
+    "repeated": true
+  },
+  "cabinet/components.css|#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root .compact-device-row:where(:not(.fo-scope,.fo-scope *))": {
+    "important": 4,
+    "repeated": true
+  },
+  "cabinet/components.css|#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root .compact-device-row details:where(:not(.fo-scope,.fo-scope *))": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/components.css|#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root .compact-device-row summary:where(:not(.fo-scope,.fo-scope *))": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/components.css|#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root .compact-device-row summary:where(:not(.fo-scope,.fo-scope *))::-webkit-details-marker": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/components.css|#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root .compact-device-row summary>svg:where(:not(.fo-scope,.fo-scope *))": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/components.css|#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root .compact-device-row details[open] dl:where(:not(.fo-scope,.fo-scope *))": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/components.css|html body .email-spam-note": {
+    "important": 3,
+    "repeated": false
+  },
+  "cabinet/components.css|html body #verification .email-spam-note": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/components.css|html body.auth-unified :is(.brand-intro,.ambient)": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/components.css|html body #app .stagger>*:where(:not(.fo-scope,.fo-scope *))": {
+    "important": 3,
+    "repeated": false
+  },
+  "cabinet/components.css|html body #app :is(h1,.section-heading h1,.simple-header h1,.ref-header h1):where(:not(.fo-scope,.fo-scope *))": {
+    "important": 4,
+    "repeated": false
+  },
+  "cabinet/foundation.css|*": {
+    "important": 3,
+    "repeated": false
+  },
+  "cabinet/foundation.css|html[data-theme=dark] body :is(input,textarea):where(:not(.fo-scope,.fo-scope *))::placeholder": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/foundation.css|html[data-theme=dark] body :is(input,textarea,select):focus-visible:where(:not(.fo-scope,.fo-scope *))": {
+    "important": 2,
+    "repeated": false
+  },
+  "cabinet/foundation.css|body": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/foundation.css|html body #app :is(button,a,input,select,textarea):focus-visible:where(:not(.fo-scope,.fo-scope *))": {
+    "important": 2,
+    "repeated": false
+  },
+  "cabinet/foundation.css|html body #app :is(input:not([type=checkbox]):not([type=radio]):not([type=file]),select,textarea):where(:not(.fo-scope,.fo-scope *))": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/foundation.css|html body #app *": {
+    "important": 3,
+    "repeated": false
+  },
+  "cabinet/foundation.css|html body #app :before": {
+    "important": 3,
+    "repeated": false
+  },
+  "cabinet/foundation.css|html body #app :after": {
+    "important": 3,
+    "repeated": false
+  },
+  "cabinet/foundation.css|html body #app#app#app#app [data-pub-cover]": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/foundation.css|html body #app#app#app#app [data-pub-cover] img": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/foundation.css|html body #app#app#app#app [data-pub-cover] button": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/foundation.css|html body #app#app#app#app [data-pub-cover] svg": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/foundation.css|html body #overlay-root *": {
+    "important": 3,
+    "repeated": false
+  },
+  "cabinet/keys.css|.key-card>span": {
+    "important": 6,
+    "repeated": false
+  },
+  "cabinet/keys.css|.access-list:where(:not(.fo-scope,.fo-scope *))": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/keys.css|.access-card:where(:not(.fo-scope,.fo-scope *))": {
+    "important": 2,
+    "repeated": false
+  },
+  "cabinet/keys.css|.key-actions button.key-install svg": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/keys.css|.subscription-summary.access-summary:where(:not(.fo-scope,.fo-scope *))": {
+    "important": 4,
+    "repeated": false
+  },
+  "cabinet/keys.css|.subscription-title small:where(:not(.fo-scope,.fo-scope *))": {
+    "important": 4,
+    "repeated": false
+  },
+  "cabinet/keys.css|.subscription-summary em:where(:not(.fo-scope,.fo-scope *))": {
+    "important": 7,
+    "repeated": false
+  },
+  "cabinet/keys.css|.subscription-body:where(:not(.fo-scope,.fo-scope *))": {
+    "important": 2,
+    "repeated": false
+  },
+  "cabinet/keys.css|.subscription-access-grid:where(:not(.fo-scope,.fo-scope *))": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/keys.css|.subscription-primary-actions:where(:not(.fo-scope,.fo-scope *))": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/keys.css|.subscription-device-icon:where(:not(.fo-scope,.fo-scope *))": {
+    "important": 2,
+    "repeated": false
+  },
+  "cabinet/keys.css|html[data-theme=dark] .subscription-title small:where(:not(.fo-scope,.fo-scope *))": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/keys.css|html[data-theme=dark] .subscription-access h3:where(:not(.fo-scope,.fo-scope *))": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/keys.css|html[data-theme=dark] .subscription-devices-panel>p:where(:not(.fo-scope,.fo-scope *))": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/keys.css|html[data-theme=dark] .subscription-device-copy small:where(:not(.fo-scope,.fo-scope *))": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/keys.css|html[data-theme=dark] .subscription-status.is-active:where(:not(.fo-scope,.fo-scope *))": {
+    "important": 2,
+    "repeated": false
+  },
+  "cabinet/keys.css|html[data-theme=dark] .subscription-summary em:where(:not(.fo-scope,.fo-scope *))": {
+    "important": 2,
+    "repeated": false
+  },
+  "cabinet/keys.css|.subscription-card.access-card:where(:not(.fo-scope,.fo-scope *))": {
+    "important": 2,
+    "repeated": false
+  },
+  "cabinet/keys.css|.subscription-summary .subscription-title:where(:not(.fo-scope,.fo-scope *))": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/keys.css|.subscription-summary .subscription-title strong:where(:not(.fo-scope,.fo-scope *))": {
+    "important": 2,
+    "repeated": false
+  },
+  "cabinet/keys.css|.subscription-summary .subscription-title small:where(:not(.fo-scope,.fo-scope *))": {
+    "important": 2,
+    "repeated": false
+  },
+  "cabinet/keys.css|.subscription-summary .subscription-title small.is-active:where(:not(.fo-scope,.fo-scope *))": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/keys.css|.subscription-access:where(:not(.fo-scope,.fo-scope *))": {
+    "important": 3,
+    "repeated": false
+  },
+  "cabinet/keys.css|.subscription-devices-panel:where(:not(.fo-scope,.fo-scope *))": {
+    "important": 3,
+    "repeated": false
+  },
+  "cabinet/keys.css|.subscription-access h3:where(:not(.fo-scope,.fo-scope *))": {
+    "important": 2,
+    "repeated": false
+  },
+  "cabinet/keys.css|.subscription-devices-panel h3:where(:not(.fo-scope,.fo-scope *))": {
+    "important": 2,
+    "repeated": false
+  },
+  "cabinet/keys.css|.subscription-access-grid button:where(:not(.fo-scope,.fo-scope *))": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/keys.css|.subscription-key-field:where(:not(.fo-scope,.fo-scope *))": {
+    "important": 3,
+    "repeated": false
+  },
+  "cabinet/keys.css|.subscription-primary-actions button:where(:not(.fo-scope,.fo-scope *))": {
+    "important": 5,
+    "repeated": false
+  },
+  "cabinet/keys.css|.subscription-primary-actions svg:where(:not(.fo-scope,.fo-scope *))": {
+    "important": 2,
+    "repeated": false
+  },
+  "cabinet/keys.css|.subscription-setting:where(:not(.fo-scope,.fo-scope *))": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/keys.css|.subscription-setting>svg:where(:not(.fo-scope,.fo-scope *))": {
+    "important": 2,
+    "repeated": false
+  },
+  "cabinet/keys.css|.subscription-device:where(:not(.fo-scope,.fo-scope *))": {
+    "important": 3,
+    "repeated": false
+  },
+  "cabinet/keys.css|.subscription-device-copy strong:where(:not(.fo-scope,.fo-scope *))": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/keys.css|.subscription-qr:where(:not(.fo-scope,.fo-scope *))": {
+    "important": 4,
+    "repeated": false
+  },
+  "cabinet/keys.css|.subscription-qr>span:where(:not(.fo-scope,.fo-scope *))": {
+    "important": 2,
+    "repeated": false
+  },
+  "cabinet/keys.css|.subscription-qr>span svg:where(:not(.fo-scope,.fo-scope *))": {
+    "important": 2,
+    "repeated": false
+  },
+  "cabinet/keys.css|.subscription-qr b:where(:not(.fo-scope,.fo-scope *))": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/keys.css|.subscription-key-field button:where(:not(.fo-scope,.fo-scope *))": {
+    "important": 2,
+    "repeated": false
+  },
+  "cabinet/keys.css|.subscription-key-field code:where(:not(.fo-scope,.fo-scope *))": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/keys.css|.modal-backdrop .qr-modal:where(:not(.fo-scope,.fo-scope *))": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/keys.css|html[data-theme=dark] body :is(.danger,.subscription-delete,.subscription-device button.danger):where(:not(.fo-scope,.fo-scope *))": {
+    "important": 2,
+    "repeated": false
+  },
+  "cabinet/keys.css|html[data-theme=dark] body .subscription-setting[aria-checked=false] .subscription-switch:where(:not(.fo-scope,.fo-scope *))": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/keys.css|html[data-theme=dark] body :is(.danger,.subscription-delete) .aegis-svg:where(:not(.fo-scope,.fo-scope *))": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/keys.css|html body #app .subscription-summary:where(:not(.fo-scope,.fo-scope *))": {
+    "important": 3,
+    "repeated": false
+  },
+  "cabinet/keys.css|html body #app .subscription-title strong:where(:not(.fo-scope,.fo-scope *))": {
+    "important": 3,
+    "repeated": false
+  },
+  "cabinet/keys.css|html body #app .subscription-title small:where(:not(.fo-scope,.fo-scope *))": {
+    "important": 2,
+    "repeated": false
+  },
+  "cabinet/keys.css|html body #app .subscription-title .key-date:where(:not(.fo-scope,.fo-scope *))": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/keys.css|html body #app .subscription-summary.access-summary:where(:not(.fo-scope,.fo-scope *))": {
+    "important": 12,
+    "repeated": false
+  },
+  "cabinet/keys.css|html body #app .subscription-summary .subscription-title:where(:not(.fo-scope,.fo-scope *))": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/keys.css|html body #app .subscription-time-left:where(:not(.fo-scope,.fo-scope *))": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/keys.css|html[data-theme=dark] body #app .subscription-time-left:where(:not(.fo-scope,.fo-scope *))": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/keys.css|html body #app .subscription-card.open:where(:not(.fo-scope,.fo-scope *))": {
+    "important": 3,
+    "repeated": false
+  },
+  "cabinet/keys.css|html body #app .subscription-card .subscription-body:where(:not(.fo-scope,.fo-scope *))": {
+    "important": 4,
+    "repeated": false
+  },
+  "cabinet/keys.css|html body #app .subscription-card .subscription-access:where(:not(.fo-scope,.fo-scope *))": {
+    "important": 6,
+    "repeated": false
+  },
+  "cabinet/keys.css|html body #app .subscription-card .subscription-access h3:where(:not(.fo-scope,.fo-scope *))": {
+    "important": 4,
+    "repeated": false
+  },
+  "cabinet/keys.css|html body #app .subscription-summary>i:where(:not(.fo-scope,.fo-scope *))": {
+    "important": 7,
+    "repeated": false
+  },
+  "cabinet/keys.css|html body #app .subscription-summary>i svg:where(:not(.fo-scope,.fo-scope *))": {
+    "important": 2,
+    "repeated": false
+  },
+  "cabinet/keys.css|html body #app .key-expanded-primary button": {
+    "important": 3,
+    "repeated": false
+  },
+  "cabinet/keys.css|html body #app .subscription-connection-date:where(:not(.fo-scope,.fo-scope *))": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/keys.css|html body #app .subscription-plan-line .subscription-time-left:where(:not(.fo-scope,.fo-scope *))": {
+    "important": 2,
+    "repeated": false
+  },
+  "cabinet/keys.css|html body #app .subscription-summary>.subscription-summary-meta:where(:not(.fo-scope,.fo-scope *))": {
+    "important": 9,
+    "repeated": false
+  },
+  "cabinet/keys.css|html body #app .subscription-summary .subscription-connection-date:where(:not(.fo-scope,.fo-scope *))": {
+    "important": 4,
+    "repeated": false
+  },
+  "cabinet/keys.css|html body #app .subscription-summary>.subscription-title:where(:not(.fo-scope,.fo-scope *))": {
+    "important": 2,
+    "repeated": false
+  },
+  "cabinet/keys.css|html body #app .subscription-summary .subscription-plan-line:where(:not(.fo-scope,.fo-scope *))": {
+    "important": 4,
+    "repeated": false
+  },
+  "cabinet/keys.css|html body #app .subscription-summary .subscription-plan-line .subscription-time-left:where(:not(.fo-scope,.fo-scope *))": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/keys.css|html body #app .key-expanded-primary": {
+    "important": 2,
+    "repeated": false
+  },
+  "cabinet/keys.css|html body #app#app .subscription-card .subscription-body:where(:not(.fo-scope,.fo-scope *))": {
+    "important": 2,
+    "repeated": true
+  },
+  "cabinet/keys.css|html body #app#app .subscription-card .subscription-access h3:where(:not(.fo-scope,.fo-scope *))": {
+    "important": 2,
+    "repeated": true
+  },
+  "cabinet/keys.css|html body #app#app .subscription-card .subscription-devices-toggle:where(:not(.fo-scope,.fo-scope *))": {
+    "important": 2,
+    "repeated": true
+  },
+  "cabinet/keys.css|html body #app#app .qr-modal img:where(:not(.fo-scope,.fo-scope *))": {
+    "important": 2,
+    "repeated": true
+  },
+  "cabinet/keys.css|html body #app .subscription-switch:where(:not(.fo-scope,.fo-scope *))": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/keys.css|html body #app .subscription-switch:after:where(:not(.fo-scope,.fo-scope *))": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/keys.css|html body #app#app .admin-key-actions>button": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/keys.css|.admin-vpn-grant .grant-manual-field input": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/keys.css|.admin-vpn-grant [hidden]": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/keys.css|.keys-danger": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/keys.css|html body #overlay-root .keys-reset-modal": {
+    "important": 6,
+    "repeated": false
+  },
+  "cabinet/keys.css|.keys-reset-choices label": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/keys.css|.keys-reset-choices input": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/keys.css|html body #overlay-root .keys-reset-modal footer button": {
+    "important": 4,
+    "repeated": false
+  },
+  "cabinet/keys.css|html[data-theme=dark] body #overlay-root .keys-reset-modal": {
+    "important": 3,
+    "repeated": false
+  },
+  "cabinet/keys.css|html body #overlay-root#overlay-root#overlay-root#overlay-root .keys-reset-modal footer button": {
+    "important": 6,
+    "repeated": true
+  },
+  "cabinet/keys.css|html body #overlay-root#overlay-root .keys-reset-modal": {
+    "important": 3,
+    "repeated": true
+  },
+  "cabinet/keys.css|html body #overlay-root#overlay-root .keys-reset-modal :is(p,small)": {
+    "important": 1,
+    "repeated": true
+  },
+  "cabinet/keys.css|html body #overlay-root#overlay-root .keys-reset-choices label:has(input:checked)": {
+    "important": 2,
+    "repeated": true
+  },
+  "cabinet/keys.css|#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root :is(.key-renew-dialog,.keys-device-v186):where(:not(.fo-scope,.fo-scope *))": {
+    "important": 11,
+    "repeated": true
+  },
+  "cabinet/keys.css|#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root .key-dialog-heading>button:where(:not(.fo-scope,.fo-scope *))": {
+    "important": 8,
+    "repeated": true
+  },
+  "cabinet/keys.css|#overlay-root .key-renew-dialog [hidden]": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/keys.css|#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root :is(.key-renew-dialog,.keys-device-v186)>footer:where(:not(.fo-scope,.fo-scope *))": {
+    "important": 9,
+    "repeated": true
+  },
+  "cabinet/keys.css|#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root :is(.key-renew-dialog,.keys-device-v186)>footer button:where(:not(.fo-scope,.fo-scope *))": {
+    "important": 7,
+    "repeated": true
+  },
+  "cabinet/keys.css|#overlay-root .key-dialog-heading:where(:not(.fo-scope,.fo-scope *))": {
+    "important": 2,
+    "repeated": false
+  },
+  "cabinet/keys.css|#overlay-root :is(.key-renew-dialog,.keys-device-v186):where(:not(.fo-scope,.fo-scope *))": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/keys.css|#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root .key-renew-paid-confirm input[type=checkbox]": {
+    "important": 2,
+    "repeated": true
+  },
+  "cabinet/keys.css|#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root .device-row-title:where(:not(.fo-scope,.fo-scope *))": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/keys.css|#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root .device-row-title strong:where(:not(.fo-scope,.fo-scope *))": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/keys.css|#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root .device-row-title small:where(:not(.fo-scope,.fo-scope *))": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/keys.css|#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root .compact-device-row .key-device-symbol:where(:not(.fo-scope,.fo-scope *))": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/keys.css|#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root .compact-device-row .key-device-unlink:where(:not(.fo-scope,.fo-scope *))": {
+    "important": 2,
+    "repeated": true
+  },
+  "cabinet/keys.css|#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root .compact-device-row .key-device-unlink svg:where(:not(.fo-scope,.fo-scope *))": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/keys.css|#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root .key-device-summary:where(:not(.fo-scope,.fo-scope *))": {
+    "important": 2,
+    "repeated": true
+  },
+  "cabinet/keys.css|#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root .key-device-summary>span:where(:not(.fo-scope,.fo-scope *))": {
+    "important": 1,
+    "repeated": true
+  },
+  "cabinet/keys.css|#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root#overlay-root .key-device-summary strong:where(:not(.fo-scope,.fo-scope *))": {
+    "important": 2,
+    "repeated": true
+  },
+  "cabinet/payments.css|html body #app#app .payout-details-card [data-payout-edit]": {
+    "important": 11,
+    "repeated": true
+  },
+  "cabinet/payments.css|html body #app#app .money-hero [data-withdraw]": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/payments.css|html body #app#app .money-hero>div": {
+    "important": 2,
+    "repeated": true
+  },
+  "cabinet/payments.css|html body #app#app .money-hero>div>button": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/payments.css|html body #app#app .money-hero [data-withdraw]:disabled": {
+    "important": 1,
+    "repeated": true
+  },
+  "cabinet/payments.css|html body #app#app :is(.payout-details-card [data-payout-edit],.money-hero [data-withdraw]):not(:disabled):hover": {
+    "important": 1,
+    "repeated": true
+  },
+  "cabinet/payments.css|html body #app#app :is(.payout-details-card [data-payout-edit],.money-hero [data-withdraw]):focus-visible": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/payments.css|html[data-theme=dark] body #app#app :is(.payout-details-card [data-payout-edit],.money-hero [data-withdraw])": {
+    "important": 1,
+    "repeated": true
+  },
+  "cabinet/payments.css|html body #app#app .money-hero [data-topup]": {
+    "important": 4,
+    "repeated": true
+  },
+  "cabinet/payments.css|html body #app#app#app .payout-details-card": {
+    "important": 5,
+    "repeated": true
+  },
+  "cabinet/payments.css|html body #app#app#app .payout-details-card .section-line": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/payments.css|html body #app#app#app .payout-details-card h2": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/payments.css|html body #app#app#app .payout-details-card [data-payout-edit]": {
+    "important": 8,
+    "repeated": true
+  },
+  "cabinet/payments.css|html body #app#app#app .payout-details-card .payout-empty": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/payments.css|html body #app#app#app .payout-details-list": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/payments.css|html body #app#app#app .payout-details-list>div": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/payments.css|html body #app#app#app .payout-details-list>div:last-child": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/payments.css|html body #app#app#app .payout-details-list dt": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/payments.css|html body #app#app#app .payout-details-list dd": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/payments.css|.pp-account": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/payments.css|.pp-close": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/payments.css|.pp-flow *": {
+    "important": 2,
+    "repeated": false
+  },
+  "cabinet/payments.css|.pp-qr-modal": {
+    "important": 2,
+    "repeated": false
+  },
+  "cabinet/plans.css|html[data-theme=dark] .device-choice.selected": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/plans.css|.device-choice": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/plans.css|.purchase-card:where(:not(.fo-scope,.fo-scope *))": {
+    "important": 3,
+    "repeated": false
+  },
+  "cabinet/plans.css|.plan-overview>span:where(:not(.fo-scope,.fo-scope *))": {
+    "important": 5,
+    "repeated": false
+  },
+  "cabinet/plans.css|.device-choice.selected": {
+    "important": 2,
+    "repeated": false
+  },
+  "cabinet/plans.css|.selected>.radio-dot:where(:not(.fo-scope,.fo-scope *))": {
+    "important": 2,
+    "repeated": false
+  },
+  "cabinet/plans.css|.payment-method.selected>.radio-dot:where(:not(.fo-scope,.fo-scope *))": {
+    "important": 2,
+    "repeated": false
+  },
+  "cabinet/plans.css|html[data-theme=dark] :is(.device-choice.selected,.tariff-choice.selected,.payment-method.selected):where(:not(.fo-scope,.fo-scope *))": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/plans.css|html[data-theme=dark] body :is(.tariff-choice.selected,.device-choice.selected,.payment-method.selected):where(:not(.fo-scope,.fo-scope *))": {
+    "important": 3,
+    "repeated": false
+  },
+  "cabinet/plans.css|html[data-theme=dark] body :is(.radio-dot):where(:not(.fo-scope,.fo-scope *))": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/plans.css|html[data-theme=dark] body .selected .radio-dot:where(:not(.fo-scope,.fo-scope *))": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/plans.css|body .payment-method .radio-dot:where(:not(.fo-scope,.fo-scope *))": {
+    "important": 5,
+    "repeated": false
+  },
+  "cabinet/plans.css|body :is(.tariff-choice,.device-option,.payment-method).selected .radio-dot:where(:not(.fo-scope,.fo-scope *))": {
+    "important": 3,
+    "repeated": false
+  },
+  "cabinet/plans.css|html body #app .payment-icon svg:where(:not(.fo-scope,.fo-scope *))": {
+    "important": 3,
+    "repeated": false
+  },
+  "cabinet/plans.css|.checkout-confirm-actions .checkout-button:where(:not(.fo-scope,.fo-scope *))": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/plans.css|.checkout-confirm-actions .modal-secondary:where(:not(.fo-scope,.fo-scope *))": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/profile.css|.service-card>span": {
+    "important": 6,
+    "repeated": false
+  },
+  "cabinet/profile.css|.contact-row span.telegram": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/profile.css|.contact-card": {
+    "important": 5,
+    "repeated": false
+  },
+  "cabinet/profile.css|.profile-stack": {
+    "important": 4,
+    "repeated": false
+  },
+  "cabinet/profile.css|.profile-stack:before": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/profile.css|.profile-stack:after": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/profile.css|.profile-head": {
+    "important": 2,
+    "repeated": false
+  },
+  "cabinet/profile.css|.profile-avatar": {
+    "important": 3,
+    "repeated": false
+  },
+  "cabinet/profile.css|.profile-head p": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/profile.css|.service-card": {
+    "important": 6,
+    "repeated": false
+  },
+  "cabinet/profile.css|.service-card>span:first-child": {
+    "important": 5,
+    "repeated": false
+  },
+  "cabinet/profile.css|.service-card svg": {
+    "important": 2,
+    "repeated": false
+  },
+  "cabinet/profile.css|.service-card strong": {
+    "important": 6,
+    "repeated": false
+  },
+  "cabinet/profile.css|.service-card b": {
+    "important": 6,
+    "repeated": false
+  },
+  "cabinet/profile.css|.service-card small": {
+    "important": 3,
+    "repeated": false
+  },
+  "cabinet/profile.css|.service-card em": {
+    "important": 3,
+    "repeated": false
+  },
+  "cabinet/profile.css|.service-card>i": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/profile.css|.profile-page .profile-head": {
+    "important": 3,
+    "repeated": false
+  },
+  "cabinet/profile.css|.profile-page .profile-avatar": {
+    "important": 4,
+    "repeated": false
+  },
+  "cabinet/profile.css|.profile-page .profile-head h1": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/profile.css|.profile-page .profile-head p": {
+    "important": 3,
+    "repeated": false
+  },
+  "cabinet/profile.css|.profile-page .contact-card": {
+    "important": 6,
+    "repeated": false
+  },
+  "cabinet/profile.css|.profile-page .contact-row>span": {
+    "important": 3,
+    "repeated": false
+  },
+  "cabinet/profile.css|.profile-page .row-icon": {
+    "important": 3,
+    "repeated": false
+  },
+  "cabinet/profile.css|.profile-page .contact-row b": {
+    "important": 3,
+    "repeated": false
+  },
+  "cabinet/profile.css|.profile-page .contact-row svg": {
+    "important": 2,
+    "repeated": false
+  },
+  "cabinet/profile.css|.profile-page .service-card": {
+    "important": 6,
+    "repeated": false
+  },
+  "cabinet/profile.css|.profile-page .service-card>span:first-child": {
+    "important": 8,
+    "repeated": false
+  },
+  "cabinet/profile.css|.profile-page .service-card svg": {
+    "important": 2,
+    "repeated": false
+  },
+  "cabinet/profile.css|.profile-page .service-card strong": {
+    "important": 6,
+    "repeated": false
+  },
+  "cabinet/profile.css|.profile-page .service-card b": {
+    "important": 5,
+    "repeated": false
+  },
+  "cabinet/profile.css|.profile-page .service-card>i": {
+    "important": 3,
+    "repeated": false
+  },
+  "cabinet/profile.css|.profile-page .service-card>i svg": {
+    "important": 2,
+    "repeated": false
+  },
+  "cabinet/profile.css|.profile-page .block-title": {
+    "important": 4,
+    "repeated": false
+  },
+  "cabinet/profile.css|.profile-page .link-list": {
+    "important": 4,
+    "repeated": false
+  },
+  "cabinet/profile.css|.profile-page .link-list .list-row": {
+    "important": 10,
+    "repeated": false
+  },
+  "cabinet/profile.css|html body #app .service-card strong": {
+    "important": 3,
+    "repeated": false
+  },
+  "cabinet/profile.css|html body #app .service-card small": {
+    "important": 2,
+    "repeated": false
+  },
+  "cabinet/profile.css|html body #app .profile-page .profile-head": {
+    "important": 9,
+    "repeated": false
+  },
+  "cabinet/profile.css|html body #app .profile-page .contact-row": {
+    "important": 3,
+    "repeated": false
+  },
+  "cabinet/profile.css|html body #app .profile-page .contact-row>span": {
+    "important": 5,
+    "repeated": false
+  },
+  "cabinet/profile.css|html body #app .profile-page .contact-row b": {
+    "important": 2,
+    "repeated": false
+  },
+  "cabinet/profile.css|html body #app .profile-page .contact-row>i": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/profile.css|html body #app .profile-page .contact-row>span svg": {
+    "important": 2,
+    "repeated": false
+  },
+  "cabinet/profile.css|html body #app .profile-page .contact-row>i svg": {
+    "important": 2,
+    "repeated": false
+  },
+  "cabinet/profile.css|html body #app .profile-page .service-card>span:first-child": {
+    "important": 4,
+    "repeated": false
+  },
+  "cabinet/profile.css|html body #app .profile-page .service-card>span svg": {
+    "important": 2,
+    "repeated": false
+  },
+  "cabinet/profile.css|html body #app .profile-page .service-card strong": {
+    "important": 5,
+    "repeated": false
+  },
+  "cabinet/profile.css|html body #app .profile-page .service-card b": {
+    "important": 4,
+    "repeated": false
+  },
+  "cabinet/profile.css|html body #app .profile-page .service-card small": {
+    "important": 4,
+    "repeated": false
+  },
+  "cabinet/profile.css|html body #app .profile-page .service-card>i": {
+    "important": 3,
+    "repeated": false
+  },
+  "cabinet/profile.css|html body #app .profile-page .service-card>i svg": {
+    "important": 3,
+    "repeated": false
+  },
+  "cabinet/profile.css|html body #app .profile-page .block-title": {
+    "important": 3,
+    "repeated": false
+  },
+  "cabinet/profile.css|html body #app .profile-page .link-list .list-row": {
+    "important": 7,
+    "repeated": false
+  },
+  "cabinet/profile.css|html body #app .profile-page .link-list .row-icon": {
+    "important": 4,
+    "repeated": false
+  },
+  "cabinet/profile.css|html body #app .profile-page .link-list .row-icon svg": {
+    "important": 2,
+    "repeated": false
+  },
+  "cabinet/profile.css|html body #app .profile-page .link-list .list-row>b svg": {
+    "important": 2,
+    "repeated": false
+  },
+  "cabinet/profile.css|html body #app .profile-page .service-card": {
+    "important": 6,
+    "repeated": false
+  },
+  "cabinet/profile.css|html body #app .profile-avatar img[data-profile-avatar][hidden]": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/profile.css|html body #app .profile-page .contact-card": {
+    "important": 4,
+    "repeated": false
+  },
+  "cabinet/profile.css|html body #app .profile-page .contact-card .contact-row": {
+    "important": 4,
+    "repeated": false
+  },
+  "cabinet/profile.css|html body #app .profile-page .contact-card .contact-row>span": {
+    "important": 5,
+    "repeated": false
+  },
+  "cabinet/profile.css|html body #app .profile-page .contact-card .contact-row b": {
+    "important": 5,
+    "repeated": false
+  },
+  "cabinet/profile.css|html body #app .profile-page .contact-card .contact-row>i": {
+    "important": 2,
+    "repeated": false
+  },
+  "cabinet/profile.css|html body #app .profile-group .contact-card": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/profile.css|html body #app .profile-page .profile-avatar": {
+    "important": 2,
+    "repeated": false
+  },
+  "cabinet/profile.css|.profile-head-identity p": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/profile.css|html body #app .profile-page .profile-head .profile-avatar": {
+    "important": 9,
+    "repeated": false
+  },
+  "cabinet/profile.css|html body #app .profile-head-identity": {
+    "important": 4,
+    "repeated": false
+  },
+  "cabinet/profile.css|html body #app .profile-head-identity h1": {
+    "important": 3,
+    "repeated": false
+  },
+  "cabinet/profile.css|html body #app .profile-head-identity p": {
+    "important": 4,
+    "repeated": false
+  },
+  "cabinet/profile.css|html body #app .profile-page .contact-card .contact-row>span.telegram": {
+    "important": 5,
+    "repeated": false
+  },
+  "cabinet/profile.css|html body #app .profile-head-person": {
+    "important": 4,
+    "repeated": false
+  },
+  "cabinet/profile.css|html body #app .profile-group": {
+    "important": 2,
+    "repeated": false
+  },
+  "cabinet/profile.css|html body #app .profile-group-title": {
+    "important": 2,
+    "repeated": false
+  },
+  "cabinet/profile.css|html body #app .profile-page .email-bind-button b": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/profile.css|html body #app .profile-page .email-bind-button svg": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/profile.css|html body #app .profile-page .email-bind-button>span": {
+    "important": 4,
+    "repeated": false
+  },
+  "cabinet/profile.css|html body #app#app .profile-page .email-bind-button>span": {
+    "important": 1,
+    "repeated": true
+  },
+  "cabinet/profile.css|html body #app#app .profile-page .email-bind-button>span svg": {
+    "important": 1,
+    "repeated": true
+  },
+  "cabinet/profile.css|html body #app#app .profile-page .email-bind-button :is(b,svg,span)": {
+    "important": 1,
+    "repeated": true
+  },
+  "cabinet/profile.css|html[data-theme=dark] body #app#app .profile-page .email-bind-button>span": {
+    "important": 1,
+    "repeated": true
+  },
+  "cabinet/profile.css|html[data-theme=dark] body #app#app .profile-page .email-bind-button :is(b,svg,span)": {
+    "important": 1,
+    "repeated": true
+  },
+  "cabinet/profile.css|html[data-theme=dark] body #app#app .profile-page .email-bind-button>span svg": {
+    "important": 1,
+    "repeated": true
+  },
+  "cabinet/profile.css|html body #app#app#app .profile-head .profile-wallet-card": {
+    "important": 16,
+    "repeated": true
+  },
+  "cabinet/profile.css|.profile-wallet-title": {
+    "important": 2,
+    "repeated": false
+  },
+  "cabinet/profile.css|html body #app#app#app .profile-wallet-title>i svg": {
+    "important": 6,
+    "repeated": true
+  },
+  "cabinet/profile.css|.profile-wallet-title>small": {
+    "important": 4,
+    "repeated": false
+  },
+  "cabinet/profile.css|.profile-wallet-title>svg": {
+    "important": 2,
+    "repeated": false
+  },
+  "cabinet/profile.css|html body #app#app#app .profile-wallet-card>strong": {
+    "important": 9,
+    "repeated": true
+  },
+  "cabinet/profile.css|html body #app#app#app .profile-wallet-card>.profile-wallet-title": {
+    "important": 5,
+    "repeated": true
+  },
+  "cabinet/profile.css|html body #app#app#app .profile-wallet-title>small": {
+    "important": 4,
+    "repeated": true
+  },
+  "cabinet/profile.css|html body #app#app#app .profile-wallet-title>svg": {
+    "important": 4,
+    "repeated": true
+  },
+  "cabinet/profile.css|html body #app#app#app .profile-wallet-title>i": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/profile.css|html body #app#app#app#app#app .profile-page .email-bind-button>span": {
+    "important": 8,
+    "repeated": true
+  },
+  "cabinet/profile.css|html body #app#app#app#app#app .profile-page .email-bind-button>span svg": {
+    "important": 2,
+    "repeated": true
+  },
+  "cabinet/profile.css|html body #app#app#app#app#app .profile-wallet-title>i": {
+    "important": 7,
+    "repeated": true
+  },
+  "cabinet/profile.css|.admin-month-wallet .profile-wallet-title small": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/profile.css|html body.admin-account #app .profile-page :is(.service-glass-proxy,.service-glass-keys)": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/profile.css|html body.admin-account #app .ma-page": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/profile.css|html body.admin-account #app .ma-copy strong": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/profile.css|html body.admin-account #app .ma-copy small": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/profile.css|html body.admin-account #app .ma-page-title h1": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/profile.css|html body #app .ma-page": {
+    "important": 4,
+    "repeated": false
+  },
+  "cabinet/profile.css|.profile-settings-panel [data-support-settings]": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/proxy.css|.proxy-link": {
+    "important": 2,
+    "repeated": false
+  },
+  "cabinet/proxy.css|.proxy-form-error": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/proxy.css|.admin-profile-tools .admin-proxy-section": {
+    "important": 4,
+    "repeated": false
+  },
+  "cabinet/proxy.css|.proxy-table-heading h2": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/proxy.css|html body #app#app#app .proxy-management .admin-proxy-section": {
+    "important": 2,
+    "repeated": true
+  },
+  "cabinet/proxy.css|.proxy-management .admin-proxy-section": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/proxy.css|html body #app#app#app .proxy-management :is(.proxy-server-name,.proxy-client-name)": {
+    "important": 16,
+    "repeated": true
+  },
+  "cabinet/proxy.css|html body #app#app#app .proxy-management :is(.proxy-server-name,.proxy-client-name) strong": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/proxy.css|.proxy-clients-heading h2": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/proxy.css|.proxy-server-detail .admin-proxy-actions": {
+    "important": 2,
+    "repeated": false
+  },
+  "cabinet/proxy.css|.proxy-action-danger": {
+    "important": 3,
+    "repeated": false
+  },
+  "cabinet/proxy.css|.proxy-guide-step h2": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/proxy.css|.proxy-code-window button svg": {
+    "important": 2,
+    "repeated": false
+  },
+  "cabinet/proxy.css|.proxy-management .admin-server-table td": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/proxy.css|.proxy-management .admin-server-table td:first-child": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/proxy.css|.proxy-list-search": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/proxy.css|.proxy-server-open": {
+    "important": 4,
+    "repeated": false
+  },
+  "cabinet/proxy.css|.proxy-server-open svg": {
+    "important": 2,
+    "repeated": false
+  },
+  "cabinet/proxy.css|.proxy-server-rename svg": {
+    "important": 2,
+    "repeated": false
+  },
+  "cabinet/proxy.css|.proxy-server-detail .admin-proxy-actions :is(button,a)": {
+    "important": 5,
+    "repeated": false
+  },
+  "cabinet/proxy.css|.proxy-records-table": {
+    "important": 5,
+    "repeated": false
+  },
+  "cabinet/proxy.css|.proxy-records-table td": {
+    "important": 6,
+    "repeated": false
+  },
+  "cabinet/proxy.css|.proxy-records-table tbody": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/proxy.css|.proxy-records-table tr": {
+    "important": 2,
+    "repeated": false
+  },
+  "cabinet/proxy.css|.proxy-records-table td:first-child": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/proxy.css|.proxy-records-table td:before": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/proxy.css|.proxy-records-table .proxy-desktop-cell": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/proxy.css|.proxy-records-table td:nth-child(4)": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/proxy.css|.proxy-client-search": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/proxy.css|html body #app#app#app .proxy-server-list .proxy-server-line": {
+    "important": 8,
+    "repeated": true
+  },
+  "cabinet/proxy.css|html body #app#app#app .proxy-server-list .proxy-server-open": {
+    "important": 4,
+    "repeated": true
+  },
+  "cabinet/proxy.css|.proxy-limit-control": {
+    "important": 2,
+    "repeated": false
+  },
+  "cabinet/proxy.css|.proxy-limit-control select": {
+    "important": 2,
+    "repeated": false
+  },
+  "cabinet/proxy.css|.proxy-customer-identity h2": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/proxy.css|.proxy-customer-actions": {
+    "important": 6,
+    "repeated": false
+  },
+  "cabinet/proxy.css|.proxy-admin-metric": {
+    "important": 2,
+    "repeated": false
+  },
+  "cabinet/proxy.css|.proxy-table-viewport": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/proxy.css|.proxy-records-table thead": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/proxy.css|.proxy-grant-help": {
+    "important": 2,
+    "repeated": false
+  },
+  "cabinet/proxy.css|html body #app#app .proxy-customer-actions>:is(button,a)": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/proxy.css|.admin-proxy-heading svg": {
+    "important": 2,
+    "repeated": false
+  },
+  "cabinet/proxy.css|.admin-search-table .proxy-client-name strong": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/proxy.css|html body #app#app#app#app .proxy-management .admin-server-table": {
+    "important": 3,
+    "repeated": true
+  },
+  "cabinet/proxy.css|html body #app#app#app#app .proxy-management .admin-server-table th": {
+    "important": 4,
+    "repeated": true
+  },
+  "cabinet/proxy.css|html body #app#app#app#app .proxy-management .admin-server-table td": {
+    "important": 3,
+    "repeated": true
+  },
+  "cabinet/proxy.css|html body #app#app#app#app .proxy-management .admin-server-table tbody tr:last-child td": {
+    "important": 1,
+    "repeated": true
+  },
+  "cabinet/proxy.css|.admin-server-table .proxy-client-name strong": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/proxy.css|html body #app#app#app#app .proxy-management .admin-search-entry": {
+    "important": 3,
+    "repeated": true
+  },
+  "cabinet/proxy.css|html body #app#app#app#app#app .proxy-management .admin-table-scroll": {
+    "important": 5,
+    "repeated": true
+  },
+  "cabinet/proxy.css|html body #app#app#app#app#app .proxy-management .admin-server-table": {
+    "important": 4,
+    "repeated": true
+  },
+  "cabinet/proxy.css|html body #app#app#app#app#app .proxy-management .admin-server-table :is(th,td)": {
+    "important": 6,
+    "repeated": true
+  },
+  "cabinet/proxy.css|html body #app#app#app#app#app .proxy-management .proxy-records-table :is(th,td):first-child": {
+    "important": 3,
+    "repeated": true
+  },
+  "cabinet/proxy.css|html body #app#app#app#app#app .proxy-management .proxy-records-table :is(th,td):nth-child(4)": {
+    "important": 1,
+    "repeated": true
+  },
+  "cabinet/proxy.css|html body #app#app#app#app#app .proxy-management .admin-search-table :is(th,td):first-child": {
+    "important": 1,
+    "repeated": true
+  },
+  "cabinet/proxy.css|html body #app#app#app#app#app .proxy-management .admin-search-table :is(th,td):nth-child(3)": {
+    "important": 1,
+    "repeated": true
+  },
+  "cabinet/proxy.css|.proxy-key-facts .proxy-facts": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/proxy.css|html body #app#app#app#app#app .proxy-customer-actions>.customer-proxy-action": {
+    "important": 1,
+    "repeated": true
+  },
+  "cabinet/proxy.css|html body #app#app#app#app#app .proxy-customer-actions>.customer-proxy-action svg": {
+    "important": 2,
+    "repeated": true
+  },
+  "cabinet/proxy.css|html body #app#app#app#app#app .proxy-customer-actions>.customer-contact-action": {
+    "important": 3,
+    "repeated": true
+  },
+  "cabinet/proxy.css|html[data-theme=dark] body #app#app#app#app#app .proxy-customer-actions>.customer-contact-action": {
+    "important": 1,
+    "repeated": true
+  },
+  "cabinet/proxy.css|.proxy-key-facts .proxy-facts>div": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/proxy.css|.proxy-key-facts .proxy-facts dt": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/proxy.css|.proxy-key-facts .proxy-facts dd": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/proxy.css|html body #app#app#app#app .customer-proxy-management .proxy-facts": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/proxy.css|.px-server-head": {
+    "important": 3,
+    "repeated": false
+  },
+  "cabinet/proxy.css|.px-server-row": {
+    "important": 2,
+    "repeated": false
+  },
+  "cabinet/proxy.css|.px-check": {
+    "important": 3,
+    "repeated": false
+  },
+  "cabinet/proxy.css|.px-drawer-row": {
+    "important": 3,
+    "repeated": false
+  },
+  "cabinet/proxy.css|.px-plan-choice": {
+    "important": 4,
+    "repeated": false
+  },
+  "cabinet/proxy.css|.px-access-head": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/proxy.css|.px-console .px-server-row": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/proxy.css|.px-scrim": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/proxy.css|.px-skeleton": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/proxy.css|.px-owner-name": {
+    "important": 2,
+    "repeated": false
+  },
+  "cabinet/proxy.css|.px-guide pre": {
+    "important": 5,
+    "repeated": false
+  },
+  "cabinet/proxy.css|.px-guide code": {
+    "important": 3,
+    "repeated": false
+  },
+  "cabinet/proxy.css|.px-detail-heading .px-detail-title": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/proxy.css|.px-detail-heading .px-detail-title>button[data-px-page-back]": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/publications.css|.news-icon": {
+    "important": 6,
+    "repeated": false
+  },
+  "cabinet/publications.css|.news-item": {
+    "important": 3,
+    "repeated": false
+  },
+  "cabinet/publications.css|html[data-theme=dark] body #app#app#app#app .post-color-success": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/publications.css|html[data-theme=dark] body #app#app#app#app .post-color-warning": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/publications.css|html[data-theme=dark] body #app#app#app#app .post-color-danger": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/publications.css|html body :is(.post-rich,.ql-editor) .post-cta": {
+    "important": 2,
+    "repeated": false
+  },
+  "cabinet/referrals.css|.ref-copy": {
+    "important": 3,
+    "repeated": false
+  },
+  "cabinet/referrals.css|.referral-page .ref-copy": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/referrals.css|html[data-theme=dark] body .referral-card:before": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/referrals.css|.referral-card": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/referrals.css|html body #app#app .ref-redesign": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/referrals.css|html body #app#app .ref-redesign .referral-card": {
+    "important": 6,
+    "repeated": true
+  },
+  "cabinet/referrals.css|html body #app#app .ref-wallet": {
+    "important": 1,
+    "repeated": true
+  },
+  "cabinet/referrals.css|.ref-wallet strong": {
+    "important": 3,
+    "repeated": false
+  },
+  "cabinet/referrals.css|html body #app#app .ref-redesign .ref-glass-button": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/referrals.css|.ref-level.is-current": {
+    "important": 2,
+    "repeated": false
+  },
+  "cabinet/referrals.css|html body #app#app .ref-results": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/referrals.css|.ref-redesign .ref-history-row": {
+    "important": 2,
+    "repeated": false
+  },
+  "cabinet/referrals.css|html body #app#app .ref-redesign .ref-wallet": {
+    "important": 5,
+    "repeated": true
+  },
+  "cabinet/referrals.css|.ref-wallet small": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/referrals.css|html[data-theme=dark] body #app#app .ref-wallet-icon": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/referrals.css|html body #app#app .ref-v46 .referral-card": {
+    "important": 4,
+    "repeated": true
+  },
+  "cabinet/referrals.css|html body #app#app .ref-v46 .ref-wallet": {
+    "important": 2,
+    "repeated": true
+  },
+  "cabinet/referrals.css|html body #app#app .ref-v46 .ref-results": {
+    "important": 2,
+    "repeated": true
+  },
+  "cabinet/referrals.css|html body #app#app .ref-v46 .ref-invite-panel": {
+    "important": 1,
+    "repeated": true
+  },
+  "cabinet/referrals.css|html[data-theme=dark] body #app#app .ref-v46 :is(.ref-wallet-button,.ref-copy-button,.ref-share-button)": {
+    "important": 1,
+    "repeated": true
+  },
+  "cabinet/shell.css|.screen h1:where(:not(.fo-scope,.fo-scope *))": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/shell.css|.screen h2:where(:not(.fo-scope,.fo-scope *,.profile-section-title))": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/shell.css|html[data-theme=dark] body :is(.screen .aegis-svg,.form-modal .aegis-svg):where(:not(.fo-scope,.fo-scope *))": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/shell.css|html body .ambient": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/shell.css|.brand-intro": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/shell.css|.freeman-loader-ring": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/shell.css|.freeman-loader-logo img": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/shell.css|html body #app#app#app .screen .admin-month-wallet": {
+    "important": 4,
+    "repeated": true
+  },
+  "cabinet/shell.css|html body #app .screen :is(input,textarea,select):where(:not(.fo-scope,.fo-scope *))": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/support.css|.support-chat-back": {
+    "important": 8,
+    "repeated": false
+  },
+  "cabinet/support.css|.support-admin-tools": {
+    "important": 2,
+    "repeated": false
+  },
+  "cabinet/support.css|.composer-attach": {
+    "important": 3,
+    "repeated": false
+  },
+  "cabinet/support.css|.support-chat-back:hover": {
+    "important": 2,
+    "repeated": false
+  },
+  "cabinet/support.css|.ticket-row": {
+    "important": 3,
+    "repeated": false
+  },
+  "cabinet/support.css|.ticket-row:hover": {
+    "important": 2,
+    "repeated": false
+  },
+  "cabinet/support.css|html[data-theme=dark] .ticket-row": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/support.css|html[data-theme=dark] body .support-message.client": {
+    "important": 2,
+    "repeated": false
+  },
+  "cabinet/support.css|html[data-theme=dark] body .support-message.admin": {
+    "important": 2,
+    "repeated": false
+  },
+  "cabinet/support.css|html[data-theme=dark] body .support-message :is(strong,time)": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/support.css|body .ticket-row": {
+    "important": 3,
+    "repeated": false
+  },
+  "cabinet/support.css|body .ticket-status": {
+    "important": 4,
+    "repeated": false
+  },
+  "cabinet/support.css|body .chat-tool": {
+    "important": 11,
+    "repeated": false
+  },
+  "cabinet/support.css|html body.has-cabinet.support-chat-open .message-list": {
+    "important": 5,
+    "repeated": false
+  },
+  "cabinet/support.css|html body.has-cabinet.support-chat-open .chat-page .support-message": {
+    "important": 12,
+    "repeated": false
+  },
+  "cabinet/support.css|html body.has-cabinet.support-chat-open .chat-page .support-message.client": {
+    "important": 3,
+    "repeated": false
+  },
+  "cabinet/support.css|html body.has-cabinet.support-chat-open .chat-page .support-message.admin": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/support.css|body .chat-page .support-message p": {
+    "important": 3,
+    "repeated": false
+  },
+  "cabinet/support.css|body .chat-page .support-message time": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/support.css|body .chat-page .support-message.client time": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/support.css|body .chat-page .chat-tool": {
+    "important": 2,
+    "repeated": false
+  },
+  "cabinet/support.css|html body #app .ticket-status": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/support.css|html body #app .ticket-status.waiting": {
+    "important": 2,
+    "repeated": false
+  },
+  "cabinet/support.css|html[data-theme=dark] body #app .ticket-status.waiting": {
+    "important": 2,
+    "repeated": false
+  },
+  "cabinet/support.css|html body #app .chat-page .chat-tool": {
+    "important": 10,
+    "repeated": false
+  },
+  "cabinet/support.css|html body #app .chat-page .support-message": {
+    "important": 7,
+    "repeated": false
+  },
+  "cabinet/support.css|html body #app .chat-page .support-message.client": {
+    "important": 4,
+    "repeated": false
+  },
+  "cabinet/support.css|html body #app .chat-page .support-message.admin": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/support.css|html body #app .chat-page .support-message p": {
+    "important": 2,
+    "repeated": false
+  },
+  "cabinet/support.css|html body #app .chat-page .support-message time": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/support.css|html body #app#app#app .chat-page": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/support.css|html body #app#app#app .chat-page>.message-list": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/support.css|.support-message.system": {
+    "important": 4,
+    "repeated": false
+  },
+  "cabinet/support.css|html body #app#app#app .chat-page .support-message.system": {
+    "important": 4,
+    "repeated": true
+  },
+  "cabinet/support.css|html body #app#app#app .chat-page .support-message.system time": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/support.css|html body #app#app#app .support-view button": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/support.css|html body #app#app#app .chat-page button": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/support.css|html body #app#app#app .support-send-glass": {
+    "important": 1,
+    "repeated": true
+  },
+  "cabinet/support.css|html body #app#app#app .support-send-glass svg": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/support.css|html body #app#app#app .support-send-glass:before": {
+    "important": 1,
+    "repeated": true
+  },
+  "cabinet/support.css|html body #app#app#app .support-send-glass:after": {
+    "important": 1,
+    "repeated": true
+  },
+  "cabinet/support.css|.support-media-upload": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/support.css|html body .support-customer-panel .support-subscription": {
+    "important": 6,
+    "repeated": false
+  },
+  "cabinet/support.css|html body #app#app#app .chat-page .support-send-glass svg": {
+    "important": 2,
+    "repeated": true
+  },
+  "cabinet/support.css|html body #app#app#app .chat-page .support-send-glass svg path": {
+    "important": 2,
+    "repeated": true
+  },
+  "cabinet/support.css|html body #app#app#app .chat-page .chat-tool:not([data-support-menu]) svg circle": {
+    "important": 2,
+    "repeated": true
+  },
+  "cabinet/support.css|html body #app#app#app .support-view .ticket-row": {
+    "important": 13,
+    "repeated": true
+  },
+  "cabinet/support.css|html body .support-bottom-sheet .support-sheet-content": {
+    "important": 6,
+    "repeated": false
+  },
+  "cabinet/support.css|body.support-chat-open": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/support.css|html body.support-chat-open #app#app#app#app": {
+    "important": 4,
+    "repeated": true
+  },
+  "cabinet/support.css|html body #app#app#app#app .native-chat": {
+    "important": 21,
+    "repeated": true
+  },
+  "cabinet/support.css|html body #app#app#app#app .native-chat button": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/support.css|html body #app#app#app#app .native-chat .native-header": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/support.css|html body #app#app#app#app .native-chat .native-control": {
+    "important": 1,
+    "repeated": true
+  },
+  "cabinet/support.css|html body #app#app#app#app .native-chat .native-control svg": {
+    "important": 3,
+    "repeated": true
+  },
+  "cabinet/support.css|html body #app#app#app#app .native-chat .native-control svg path": {
+    "important": 2,
+    "repeated": true
+  },
+  "cabinet/support.css|html body #app#app#app#app .native-chat .native-control svg circle": {
+    "important": 2,
+    "repeated": true
+  },
+  "cabinet/support.css|html body #app#app#app#app .native-chat .native-header>.native-control": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/support.css|html body #app#app#app#app .native-chat .native-person": {
+    "important": 8,
+    "repeated": true
+  },
+  "cabinet/support.css|html body #app#app#app#app .native-chat .support-person-avatar": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/support.css|html body #app#app#app#app .native-chat .support-person-avatar img": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/support.css|html body #app#app#app#app .native-chat .native-identity": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/support.css|html body #app#app#app#app .native-chat .native-name-line": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/support.css|html body #app#app#app#app .native-chat .native-name-line strong": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/support.css|html body #app#app#app#app .native-chat .native-status": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/support.css|html body #app#app#app#app .native-chat .native-status i": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/support.css|html body #app#app#app#app .native-chat .native-status[data-status=waiting_admin]": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/support.css|html body #app#app#app#app .native-chat .native-status[data-status=waiting_admin] i": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/support.css|html body #app#app#app#app .native-chat .native-status:is([data-status=in_progress],[data-status=needs_info])": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/support.css|html body #app#app#app#app .native-chat .native-status:is([data-status=in_progress],[data-status=needs_info]) i": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/support.css|html body #app#app#app#app .native-chat .native-identity small": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/support.css|html body #app#app#app#app .native-chat .native-history": {
+    "important": 13,
+    "repeated": true
+  },
+  "cabinet/support.css|html body #app#app#app#app .native-chat .native-date": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/support.css|html body #app#app#app#app .native-chat .native-message": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/support.css|html body #app#app#app#app .native-chat .native-message.is-grouped": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/support.css|html body #app#app#app#app .native-chat .native-message.is-outgoing": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/support.css|html body #app#app#app#app .native-chat .native-message-avatar": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/support.css|html body #app#app#app#app .native-chat .native-message-avatar .support-person-avatar": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/support.css|html body #app#app#app#app .native-chat .native-message-avatar>img": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/support.css|html body #app#app#app#app .native-chat .native-message-avatar.is-continuation": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/support.css|html body #app#app#app#app .native-chat .native-bubble": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/support.css|html body #app#app#app#app .native-chat .native-bubble p": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/support.css|html body #app#app#app#app .native-chat .native-bubble time": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/support.css|html body #app#app#app#app .native-chat .is-outgoing time": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/support.css|html body #app#app#app#app .native-chat .is-system": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/support.css|html body #app#app#app#app .native-chat .is-system .native-bubble": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/support.css|html body #app#app#app#app .native-chat .is-system p": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/support.css|html body #app#app#app#app .native-chat .is-system time": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/support.css|html body #app#app#app#app .native-chat .native-attachment-title": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/support.css|html body #app#app#app#app .native-chat .native-attachment-title svg": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/support.css|html body #app#app#app#app .native-chat .native-media img": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/support.css|html body #app#app#app#app .native-chat .native-composer": {
+    "important": 2,
+    "repeated": true
+  },
+  "cabinet/support.css|html body #app#app#app#app .native-chat .native-composer textarea": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/support.css|html body #app#app#app#app .native-chat .native-send:disabled": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/support.css|html body #app#app#app#app .native-chat .native-composer :is([data-file-count],.chat-error):not(:empty)": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/support.css|html body #app#app#app#app .native-chat :is(.native-empty,.native-older)": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/support.css|html body #app#app#app#app .native-chat .native-closed": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/support.css|html body #app#app#app#app .native-chat .native-closed button": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/support.css|html body #app#app#app#app .native-chat .native-send :is(svg,svg path)": {
+    "important": 1,
+    "repeated": true
+  },
+  "cabinet/support.css|html.support-viewport-locked": {
+    "important": 5,
+    "repeated": false
+  },
+  "cabinet/support.css|html.support-viewport-locked body": {
+    "important": 5,
+    "repeated": false
+  },
+  "cabinet/support.css|html[data-theme=dark] body #app#app#app#app#app#app#app#app .native-chat": {
+    "important": 3,
+    "repeated": true
+  },
+  "cabinet/support.css|html[data-theme=dark] body #app#app#app#app#app#app#app#app .native-chat .native-header": {
+    "important": 3,
+    "repeated": true
+  },
+  "cabinet/support.css|html[data-theme=dark] body #app#app#app#app#app#app#app#app .native-chat .native-name-line strong": {
+    "important": 1,
+    "repeated": true
+  },
+  "cabinet/support.css|html[data-theme=dark] body #app#app#app#app#app#app#app#app .native-chat .support-person-avatar": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/support.css|html[data-theme=dark] body #app#app#app#app#app#app#app#app .native-chat :is(.native-older,.native-closed,.chat-error,[data-file-count]:not(:empty))": {
+    "important": 3,
+    "repeated": true
+  },
+  "cabinet/support.css|html[data-theme=dark] body #app#app#app#app#app#app#app#app :is(.support-bottom-sheet,.support-sheet-reply)": {
+    "important": 3,
+    "repeated": true
+  },
+  "cabinet/support.css|html[data-theme=dark] body #app#app#app#app#app#app#app#app .support-sheet-content": {
+    "important": 2,
+    "repeated": true
+  },
+  "cabinet/support.css|body.dark #app#app#app#app#app#app#app#app .native-welcome small": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/support.css|html body #app#app#app#app#app#app#app#app .native-chat .native-header": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/support.css|html body #app#app#app#app#app#app#app#app .native-chat .native-control": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/support.css|html body #app#app#app#app#app#app#app#app .native-chat .native-person": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/support.css|html body #app#app#app#app#app#app#app#app .native-chat .native-header .support-person-avatar": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/support.css|html body #app#app#app#app#app#app#app#app .native-chat .native-name-line strong": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/support.css|html body #app#app#app#app#app#app#app#app .native-chat .native-status": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/support.css|html body #app#app#app#app#app#app#app#app .native-chat .native-history": {
+    "important": 1,
+    "repeated": true
+  },
+  "cabinet/support.css|html body #app#app#app#app#app#app#app#app .native-chat .native-date": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/support.css|html body #app#app#app#app#app#app#app#app .native-chat .native-message": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/support.css|html body #app#app#app#app#app#app#app#app .native-chat .native-message.is-grouped": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/support.css|html body #app#app#app#app#app#app#app#app .native-chat .native-message-avatar": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/support.css|html body #app#app#app#app#app#app#app#app .native-chat .native-message-avatar .support-person-avatar": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/support.css|html body #app#app#app#app#app#app#app#app .native-chat .native-message-avatar>img": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/support.css|html body #app#app#app#app#app#app#app#app .native-chat .native-composer": {
+    "important": 1,
+    "repeated": true
+  },
+  "cabinet/support.css|html body #app#app#app#app#app#app#app#app .native-chat .native-issue-options": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/support.css|html body #app#app#app#app#app#app#app#app .native-chat .native-welcome small": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/support.css|.support-sheet": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/support.css|.support-sheet-backdrop": {
+    "important": 1,
+    "repeated": false
+  },
+  "cabinet/support.css|html body.support-inbox-open #app#app#app#app": {
+    "important": 3,
+    "repeated": true
+  },
+  "cabinet/support.css|html body #app#app#app#app .native-status-mobile": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/support.css|html body #app#app#app#app .native-status-full": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/support.css|.native-client-ticket": {
+    "important": 3,
+    "repeated": false
+  },
+  "cabinet/support.css|html body #app#app#app#app .native-client-ticket": {
+    "important": 5,
+    "repeated": true
+  },
+  "cabinet/support.css|html body #app#app#app#app .native-client-ticket .support-person-avatar": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/support.css|html body #app#app#app#app .customer-heading>.support-person-avatar": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/support.css|html body #app#app#app#app .customer-heading>.support-person-avatar img": {
+    "important": 0,
+    "repeated": true
+  },
+  "cabinet/support.css|html body.admin-account.support-inbox-open #app#app#app#app": {
+    "important": 3,
+    "repeated": true
+  },
+  "cabinet/support.css|.native-chat": {
+    "important": 2,
+    "repeated": false
+  },
+  "cabinet/support.css|html body #app#app#app#app#app#app#app#app#app#app#app#app#app#app .support-person-avatar": {
+    "important": 6,
+    "repeated": true
+  },
+  "cabinet/support.css|html body #app#app#app#app#app#app#app#app#app#app#app#app#app#app .support-person-avatar img": {
+    "important": 3,
+    "repeated": true
+  },
+  "cabinet/support.css|html body #app#app#app#app#app#app#app#app#app#app#app#app#app#app .native-chat": {
+    "important": 3,
+    "repeated": true
+  },
+  "cabinet/support.css|html body #app#app#app#app#app#app#app#app#app#app#app#app#app#app .native-chat .native-header": {
+    "important": 10,
+    "repeated": true
+  },
+  "cabinet/support.css|html body #app#app#app#app#app#app#app#app#app#app#app#app#app#app .native-chat .native-control": {
+    "important": 1,
+    "repeated": true
+  },
+  "cabinet/support.css|html body #app#app#app#app#app#app#app#app#app#app#app#app#app#app .native-chat .native-name-line strong": {
+    "important": 1,
+    "repeated": true
+  },
+  "cabinet/support.css|html body #app#app#app#app#app#app#app#app#app#app#app#app#app#app .native-chat .native-identity small": {
+    "important": 2,
+    "repeated": true
+  },
+  "cabinet/support.css|html body #app#app#app#app#app#app#app#app#app#app#app#app#app#app .native-chat .native-history": {
+    "important": 3,
+    "repeated": true
+  },
+  "cabinet/support.css|html body #app#app#app#app#app#app#app#app#app#app#app#app#app#app .native-chat .native-composer": {
+    "important": 4,
+    "repeated": true
+  },
+  "pages/ai-console.css|*": {
+    "important": 3,
+    "repeated": false
+  },
+  "pages/ai-console.css|*::before": {
+    "important": 3,
+    "repeated": false
+  },
+  "pages/ai-console.css|*::after": {
+    "important": 3,
+    "repeated": false
+  },
+  "pages/assistant.css|*": {
+    "important": 5,
+    "repeated": false
+  },
+  "pages/assistant.css|*::before": {
+    "important": 5,
+    "repeated": false
+  },
+  "pages/assistant.css|*::after": {
+    "important": 5,
+    "repeated": false
+  },
+  "pages/auth-payment.css|html body.auth-page #app .auth-links :is([data-auth-resend],[data-auth-back])": {
+    "important": 7,
+    "repeated": false
+  },
+  "pages/auth-payment.css|html body.auth-page #app .auth-links [data-auth-resend]:disabled": {
+    "important": 1,
+    "repeated": false
+  },
+  "pages/auth-payment.css|html body .email-spam-note": {
+    "important": 3,
+    "repeated": false
+  },
+  "pages/auth-payment.css|html body .payment-delay-note": {
+    "important": 3,
+    "repeated": false
+  },
+  "pages/auth-payment.css|html body #verification .email-spam-note": {
+    "important": 1,
+    "repeated": false
+  },
+  "pages/guest-purchase.css|[hidden]": {
+    "important": 1,
+    "repeated": false
+  },
+  "pages/guest-purchase.css|*": {
+    "important": 2,
+    "repeated": false
+  },
+  "pages/guest-purchase.css|*:after": {
+    "important": 2,
+    "repeated": false
+  },
+  "pages/post-payment.css|.pp-account": {
+    "important": 1,
+    "repeated": false
+  },
+  "pages/post-payment.css|.pp-close": {
+    "important": 1,
+    "repeated": false
+  },
+  "pages/post-payment.css|.pp-flow *": {
+    "important": 2,
+    "repeated": false
+  },
+  "pages/post-payment.css|.pp-qr-modal": {
+    "important": 2,
+    "repeated": false
+  },
+  "shared/legacy-standalone.css|html body.has-cabinet .profile-content": {
+    "important": 2,
+    "repeated": false
+  },
+  "shared/legacy-standalone.css|html body.has-cabinet .screen__inner": {
+    "important": 2,
+    "repeated": false
+  },
+  "shared/legacy-standalone.css|html body.has-cabinet .app-shell": {
+    "important": 1,
+    "repeated": false
+  },
+  "shared/legacy-standalone.css|html body .profile-content::before": {
+    "important": 1,
+    "repeated": false
+  },
+  "shared/legacy-standalone.css|html body .profile-content::after": {
+    "important": 1,
+    "repeated": false
+  },
+  "shared/legacy-standalone.css|html body .app-shell::before": {
+    "important": 1,
+    "repeated": false
+  },
+  "shared/legacy-standalone.css|html body .app-shell::after": {
+    "important": 1,
+    "repeated": false
+  },
+  "shared/legacy-standalone.css|html body .app-shell>nav.mobile-nav": {
+    "important": 1,
+    "repeated": false
+  },
+  "shared/legacy-standalone.css|html[data-theme=dark] body .login-shell": {
+    "important": 3,
+    "repeated": false
+  },
+  "shared/legacy-standalone.css|html[data-theme=dark] body :is(.app-shell,.stage,.screen,.screen__inner,.profile-page,.profile-content,.profile-stack,.support-index,.support-layout,.new-ticket-form,.ticket-list,.referral-page,.proxy-page,.accordion-list,.news-list,.link-list,.contact-card)": {
+    "important": 2,
+    "repeated": false
+  },
+  "shared/legacy-standalone.css|html[data-theme=dark] body :is(.profile-page .service-card,.profile-page .contact-row,.profile-page .link-list .list-row,.profile-page .news-item,.profile-card:not(.link-list):not(.contact-card),.access-card,.purchase-card,.support-new-card,.support-shortcuts button,.ticket-row,.conversation-card,.faq,.referral-card,.proxy-connection,.proxy-entry,.proxy-hero,.proxy-instructions,.balance-card,.money-hero,.data-card,.admin-card,.placeholder,.form-modal,.account-form,.install-modal,.qr-modal,.shortfall-modal,.login-card,.auth-card,.motion-toast)": {
+    "important": 2,
+    "repeated": false
+  },
+  "shared/legacy-standalone.css|html[data-theme=dark] body :is(.tariff-choice.selected,.device-choice.selected,.payment-method.selected)": {
+    "important": 3,
+    "repeated": false
+  },
+  "shared/legacy-standalone.css|html[data-theme=dark] body :is(.conversation-card>header,.support-composer,.scroll-topbar)": {
+    "important": 2,
+    "repeated": false
+  },
+  "shared/legacy-standalone.css|html[data-theme=dark] body .support-message.client": {
+    "important": 2,
+    "repeated": false
+  },
+  "shared/legacy-standalone.css|html[data-theme=dark] body .support-message.admin": {
+    "important": 2,
+    "repeated": false
+  },
+  "shared/legacy-standalone.css|html[data-theme=dark] body .support-message :is(strong,time)": {
+    "important": 1,
+    "repeated": false
+  },
+  "shared/legacy-standalone.css|html[data-theme=dark] body :is(h1,h2,h3,.wordmark,.login-card h1,.login-card .wordmark,.tariff-name,.tariff-price strong,.ref-header h1,.subscription-title strong)": {
+    "important": 1,
+    "repeated": false
+  },
+  "shared/legacy-standalone.css|html[data-theme=dark] body :is(.auth-subtitle,.auth-explanation,.privacy-note,.telegram-auth-status,.payment-note,.payment-calc,.empty,.support-loading,.support-intro p,.news-item time)": {
+    "important": 1,
+    "repeated": false
+  },
+  "shared/legacy-standalone.css|html[data-theme=dark] body.auth-page .login-card .bot-login-link": {
+    "important": 4,
+    "repeated": false
+  },
+  "shared/legacy-standalone.css|html[data-theme=dark] body.auth-page .login-divider::before": {
+    "important": 1,
+    "repeated": false
+  },
+  "shared/legacy-standalone.css|html[data-theme=dark] body.auth-page .login-divider::after": {
+    "important": 1,
+    "repeated": false
+  },
+  "shared/legacy-standalone.css|html[data-theme=dark] body .referral-card::before": {
+    "important": 1,
+    "repeated": false
+  },
+  "shared/legacy-standalone.css|html[data-theme=dark] body .ref-hero::after": {
+    "important": 1,
+    "repeated": false
+  },
+  "shared/legacy-standalone.css|html[data-theme=dark] body :is(.message-media,.ref-chart-tooltip,.proxy-device-list,.proxy-device-row,.owner-free,.proxy-demo-label)": {
+    "important": 3,
+    "repeated": false
+  },
+  "shared/legacy-standalone.css|html[data-theme=dark] body :is(.subscription-primary-actions .install,.checkout-button,.auth-primary,.btn-primary,.compact-primary)": {
+    "important": 1,
+    "repeated": false
+  },
+  "shared/legacy-standalone.css|html[data-theme=dark] body :is(.auth-error,.login-form-error)": {
+    "important": 1,
+    "repeated": false
+  },
+  "shared/legacy-standalone.css|html[data-theme=dark] body :is(.profile-page .keys-service>span,.profile-page .referral-service>span)": {
+    "important": 1,
+    "repeated": false
+  },
+  "shared/legacy-standalone.css|html[data-theme=dark] body :is(th,td,.admin-row,.ledger-row,.invitee-row)": {
+    "important": 1,
+    "repeated": false
+  },
+  "shared/legacy-standalone.css|html[data-theme=dark] body :is(.radio-dot)": {
+    "important": 1,
+    "repeated": false
+  },
+  "shared/legacy-standalone.css|html[data-theme=dark] body .selected .radio-dot": {
+    "important": 1,
+    "repeated": false
+  },
+  "shared/legacy-standalone.css|html[data-theme=dark] body :is(.subscription-qr>span,.plan-overview>span,.proxy-guide-card,.proxy-empty)": {
+    "important": 2,
+    "repeated": false
+  },
+  "shared/legacy-standalone.css|html[data-theme=dark] body :is(.subscription-setting,.subscription-qr,.subscription-device-icon,.payment-method,.plan-overview,.proxy-guide-card) .aegis-svg": {
+    "important": 1,
+    "repeated": false
+  },
+  "shared/legacy-standalone.css|html[data-theme=dark] body .subscription-setting[aria-checked=false] .subscription-switch": {
+    "important": 1,
+    "repeated": false
+  },
+  "shared/legacy-standalone.css|html[data-theme=dark] body .profile-brand img": {
+    "important": 1,
+    "repeated": false
+  },
+  "shared/legacy-standalone.css|html[data-theme=dark] body :is(.ticket-status.waiting,.invitee-row em.waiting,.proxy-entry em.paid)": {
+    "important": 2,
+    "repeated": false
+  },
+  "shared/legacy-standalone.css|body": {
+    "important": 1,
+    "repeated": false
+  },
+  "shared/legacy-standalone.css|.news-item": {
+    "important": 1,
+    "repeated": false
+  },
+  "shared/legacy-standalone.css|.purchase-card": {
+    "important": 1,
+    "repeated": false
+  },
+  "shared/legacy-standalone.css|.conversation-card": {
+    "important": 1,
+    "repeated": false
+  },
+  "shared/legacy-standalone.css|.referral-card": {
+    "important": 1,
+    "repeated": false
+  },
+  "shared/legacy-standalone.css|.proxy-connection": {
+    "important": 1,
+    "repeated": false
+  }
+}

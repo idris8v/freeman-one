@@ -1,0 +1,114 @@
+<!doctype html><html lang="ru"><head><meta charset="utf-8"><style>
+*{box-sizing:border-box}
+body{margin:0;background:#f7f7fa;color:#1c1c1e;font:14px system-ui;--card:white;--line:#e9e9ef;--option:#fafafc}
+.sheet{max-width:420px;margin:auto;padding:10px}
+.brand,.row,.between,.pay{display:flex;align-items:center;gap:6px}
+.brand{margin-bottom:12px}.appicon{color:inherit}
+h1,h2,p{margin:0}h1{font-size:20px}h2{font-size:16px;margin-bottom:8px}
+.card,#progress{padding:10px;margin-bottom:6px;background:var(--card);border:1px solid var(--line);border-radius:14px}
+button{appearance:none;font:inherit;color:inherit;cursor:pointer}
+button:active{transform:scale(.98)}button:disabled{opacity:.45}
+.choice,.pay{border:1px solid var(--line);border-radius:10px;min-height:42px;background:var(--option)}
+.choice{width:calc(50% - 3px);display:flex;align-items:center;gap:5px;padding:5px 7px;text-align:left;min-width:0}
+.choice b{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:13px;font-weight:500}
+.choice small{margin-left:auto;white-space:nowrap}
+.choices{flex-wrap:wrap}.between{justify-content:space-between}
+.choice:before{content:'';width:10px;height:10px;border:1px solid #999;border-radius:50%;flex:none}
+.choice.on{border-color:#ff9500}.on:before{border:3px solid #ff9500}
+.touch{border:0;background:none;min-height:42px}.track,.knob{display:block;border-radius:20px}
+.track{width:38px;padding:2px;background:#b4b4ba}.knob{width:18px;height:18px;background:white}
+.on .track{background:#34c759}.on .knob{transform:translateX(16px)}
+.bill,#checkout{padding:3px}.amount{text-align:right}.amount strong{font-size:24px}
+.hint,.status{font-size:12px}.status{margin-top:6px}
+.pay{width:100%;justify-content:center;margin-top:8px;background:#31ae61;color:white;text-decoration:none;font-weight:600}
+.wallet{background:var(--card);color:inherit}.hidden,.status:empty,#kind:empty{display:none!important}
+#progress{margin-top:8px}.wait-icon{float:left;width:13px;height:13px;margin:3px 7px 0 0;border:2px solid;border-right-color:transparent;border-radius:50%;animation:spin .8s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+@media(prefers-reduced-motion:reduce){.wait-icon{animation:none}}
+@media(prefers-color-scheme:dark){body{background:#000;color:#f5f5f7;--card:#1c1c1e;--line:#38383a;--option:#29292c}.track{background:#555}}
+</style></head><body><main class="sheet"><header class="brand"><span class="appicon"><svg width="28" height="28" viewBox="0 0 1100 1080"><path fill="currentColor" d="M230 0h520l-40 75q-35 77-127 77H232q-80 0-80 80v86h428l-33 68q-39 79-127 79H232q-80 0-80 80v409L49 861Q0 820 0 761V236Q0 0 230 0Z"/><path fill="#ff8a00" d="M646 194a429 429 0 1 1-420 370h147a283 283 0 1 0 273-224Z"/></svg></span><h1 id="title">Выберите подписку</h1></header><div id="config"><section class="card"><h2>Устройства</h2><div class="row choices" id="devices"></div></section><section class="card"><h2>Срок подписки</h2><div class="row choices" id="months"></div></section><section class="card" id="antig"><h2>Нужна ли антиглушилка?</h2><div class="between"><div class="add">＋ Добавить антиглушилку · <span class="fee" id="fee"></span></div><button class="touch" id="extra" aria-label="Антиглушилка" aria-pressed="false"><span class="track"><span class="knob"></span></span></button></div></section></div><section class="bill"><div class="between"><div><p class="hint">Вы выбрали</p><strong id="summary"></strong><p class="hint" id="kind"></p></div><div class="amount"><p class="hint">К оплате</p><strong id="price"></strong></div></div><button class="pay" id="pay"><span id="paytext"></span></button></section><div id="checkout" class="hidden"><div id="progress" role="status" class="hidden"><span id="spinner" class="wait-icon" aria-hidden="true"></span><strong id="phase"></strong></div><a class="pay"  id="bank" href="#">Оплатить</a><button class="pay wallet" id="wallet">Оплатить с баланса</button><button class="pay wallet" id="verify"></button></div><p class="status" id="status" role="status"></p></main><script>
+const widget=window.TelegramWidget,data=__DEMO_DATA__,plans=data.plans;
+const el=id=>document.getElementById(id), hide=(id,hidden)=>el(id).classList.toggle('hidden',hidden);
+const prices=n=>(n/100).toFixed(n%100?2:0).replace('.',',')+' ₽';
+const device={1:'1 устройство',3:'3 устройства',5:'5 устройств'};
+const term={1:'1 месяц',3:'3 месяца',6:'6 месяцев',12:'1 год'};
+let [devices,months]=plans[0],extra=false,chosen,stage=false,busy=false,url='',phase='',locked=false,balance=0,revision=0,timer,checks=0;
+const find=(d,m)=>plans.find(p=>p[0]===d&&p[1]===m);
+function choice(parent,label,price,selected,enabled,click){
+ const b=document.createElement('button');
+ b.className='choice'+(selected?' on':'');
+ b.disabled=!enabled||busy;b.setAttribute('aria-pressed',selected);
+ const name=document.createElement('b');name.textContent=label;b.append(name);
+ if(price){const amount=document.createElement('small');amount.textContent=price;b.append(amount)}
+ b.onclick=click;el(parent).append(b);
+}
+function draw(){
+ const ready=phase==='ready',waiting=phase==='waiting',confirmed=phase==='confirmed';
+ hide('config',stage);hide('pay',stage);hide('checkout',!stage);hide('antig',!data.antig);
+ el('title').textContent=stage?'Оплата подписки':'Выберите подписку';
+ if(!stage){
+  el('devices').textContent=el('months').textContent='';
+  for(const n of [1,3,5])choice('devices',device[n],'',n===devices,plans.some(p=>p[0]===n),()=>{devices=n;draw()});
+  if(!find(devices,months))months=plans.find(p=>p[0]===devices)[1];
+  for(const n of [1,3,6,12]){
+   const plan=find(devices,n);choice('months',term[n],plan?prices(plan[2]):'—',n===months,!!plan,()=>{months=n;draw()});
+  }
+ }
+ chosen=find(devices,months);
+ const fee=chosen[4]??data.extra*months,total=chosen[2]+(extra?fee:0);
+ el('fee').textContent='+'+prices(fee);
+ el('extra').classList.toggle('on',extra);el('extra').setAttribute('aria-pressed',extra);el('extra').disabled=busy;
+ el('summary').textContent=device[devices]+' · '+term[months];
+ el('kind').textContent=extra?'+ антиглушилка':'';
+ el('price').textContent=prices(total);
+ el('paytext').textContent=busy?'Готовим счёт…':'Оплатить · '+prices(total);
+ el('pay').disabled=busy||!data.pay;
+ el('bank').textContent=ready?'Получить ключ':waiting?'Открыть тот же счёт':'Оплатить · '+prices(total);
+ hide('bank',confirmed);
+ hide('wallet',balance<total||locked||ready);el('wallet').disabled=busy||!url;
+ el('wallet').textContent='Оплатить с баланса · '+prices(balance);
+ hide('verify',ready||phase==='canceled');el('verify').disabled=busy;
+ el('verify').textContent=busy?'Проверяем…':'Проверить сейчас';
+ hide('progress',!phase);hide('spinner',!waiting&&!confirmed);
+ el('phase').textContent={waiting:'Ждём ответа банка',confirmed:'Оплата подтверждена · готовим ключ',ready:'Ключ готов',canceled:'Платёж отменён'}[phase]||'';
+}
+async function request(action){
+ if(busy||!data.pay)return;
+ const version=revision;
+ busy=true;el('status').textContent='';draw();
+ try{
+  if(!widget?.request)throw Error('Обновите Telegram');
+  const response=await widget.request(action+':'+chosen[3]+':'+Number(extra));
+  if(version!==revision)return;
+  const result=JSON.parse(response.result||'{}');
+  if(result.error)throw Error(result.error);
+  balance=result.balance??balance;locked=result.locked??locked;
+  if(result.url){url=result.url;stage=true;phase=locked?'waiting':''}
+  if(result.phase)phase=result.phase;
+  if(result.canceled){url='';phase='canceled'}
+  if(result.paid){phase='ready';stage=true}
+ }catch(error){if(version===revision)el('status').textContent=error.message||'Попробуйте ещё раз.'}
+ finally{if(version===revision){busy=false;draw()}}
+}
+function poll(){
+ if(!checks||!stage||!['waiting','confirmed'].includes(phase)){clearInterval(timer);return}
+ if(!busy&&!document.hidden){checks--;request('status')}
+}
+el('extra').onclick=()=>{extra=!extra;draw()};
+el('pay').onclick=()=>request('pay');
+el('verify').onclick=()=>request('status');
+el('wallet').onclick=()=>request('wallet');
+el('bank').onclick=event=>{
+ event.preventDefault();if(busy)return;
+ if(phase==='ready'){request('receipt');return}
+ if(!url){request('pay');return}
+ phase='waiting';locked=true;checks=10;draw();
+ clearInterval(timer);timer=setInterval(poll,7000);widget.openLink(url);
+};
+widget?.onEvent?.('chatDataChanged',()=>{
+ if(JSON.parse(widget.chatData||'{}').selection){
+  revision++;clearInterval(timer);checks=0;busy=stage=locked=false;url=phase='';el('status').textContent='';draw()
+ }
+});
+draw();
+</script></body></html>

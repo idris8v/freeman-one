@@ -1,0 +1,246 @@
+/* Existing RC standalone presentation, extracted unchanged from theme.css.
+   Loaded only before Assistant/AI page styles, at the original cascade position.
+   No new overrides. Retire with the corresponding domain batches. */
+/* Semantic surfaces shared by the cabinet, authentication and overlays. */
+
+/* The page scrollport reaches the bottom. Only invisible content padding reserves space. */
+
+@media (max-width:1100px) {
+  html body.has-cabinet .profile-content {
+    padding: 0 16px !important;
+    background: transparent !important;
+  }
+  html body.has-cabinet .screen__inner {
+    padding-bottom: var(--bottom-content-space) !important;
+  }
+  html body.has-cabinet .app-shell {
+    background: transparent !important;
+  }
+}
+
+html body .profile-content::before {
+  content: none !important;
+}
+
+html body .profile-content::after {
+  content: none !important;
+}
+
+
+html body .app-shell::before {
+  content: none !important;
+}
+
+html body .app-shell::after {
+  content: none !important;
+}
+
+html body .app-shell > nav.mobile-nav {
+  bottom: calc(12px + env(safe-area-inset-bottom,0px)) !important;
+  pointer-events: auto;
+}
+
+/* There is no positioning shell: the nav itself is fixed, so its empty surroundings never intercept taps. */
+
+
+html[data-theme=dark] body .login-shell {
+  background: var(--bg-page) !important;
+  color: var(--text-primary) !important;
+  background-image: none !important;
+}
+
+html[data-theme=dark] body .ambient {
+  display: none;
+}
+
+html[data-theme=dark] body :is(.app-shell,.stage,.screen,.screen__inner,.profile-page,.profile-content,.profile-stack,.support-index,.support-layout,.new-ticket-form,.ticket-list,.referral-page,.proxy-page,.accordion-list,.news-list,.link-list,.contact-card) {
+  background: transparent !important;
+  background-image: none !important;
+}
+
+html[data-theme=dark] body :is(.profile-page .service-card,.profile-page .contact-row,.profile-page .link-list .list-row,.profile-page .news-item,
+  .profile-card:not(.link-list):not(.contact-card),.access-card,.purchase-card,.support-new-card,.support-shortcuts button,.ticket-row,
+  .conversation-card,.faq,.referral-card,.proxy-connection,.proxy-entry,.proxy-hero,.proxy-instructions,.balance-card,.money-hero,.data-card,
+  .admin-card,.placeholder,.form-modal,.account-form,.install-modal,.qr-modal,.shortfall-modal,.login-card,.auth-card,.motion-toast) {
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+html[data-theme=dark] body :is(.tariff-choice.selected,.device-choice.selected,.payment-method.selected) {
+  background: var(--bg-elevated) !important;
+  border-color: rgba(10,132,255,.35) !important;
+  box-shadow: inset 0 0 0 1px rgba(10,132,255,.35),var(--surface-shadow-small) !important;
+}
+
+html[data-theme=dark] body :is(.conversation-card>header,.support-composer,.scroll-topbar) {
+  background: var(--bg-surface) !important;
+  border-color: var(--border-subtle) !important;
+}
+
+html[data-theme=dark] body .support-message.client {
+  background: var(--bg-elevated) !important;
+  color: var(--text-primary) !important;
+}
+
+html[data-theme=dark] body .support-message.admin {
+  background: var(--bg-secondary) !important;
+  color: var(--text-primary) !important;
+  border: 1px solid var(--border-subtle);
+}
+
+html[data-theme=dark] body .support-message :is(strong,time) {
+  color: var(--text-secondary) !important;
+}
+
+html[data-theme=dark] body :is(input[type=checkbox],input[type=radio]) {
+  accent-color: var(--accent);
+}
+
+html[data-theme=dark] body :is(h1,h2,h3,.wordmark,.login-card h1,.login-card .wordmark,.tariff-name,.tariff-price strong,.ref-header h1,.subscription-title strong) {
+  color: var(--text-primary) !important;
+}
+
+html[data-theme=dark] body :is(.auth-subtitle,.auth-explanation,.privacy-note,.telegram-auth-status,.payment-note,.payment-calc,.empty,.support-loading,.support-intro p,.news-item time) {
+  color: var(--text-secondary) !important;
+}
+
+html[data-theme=dark] body.auth-page .login-card .bot-login-link {
+  background: var(--bg-secondary) !important;
+  color: var(--text-primary) !important;
+  border-color: var(--border-subtle) !important;
+  box-shadow: var(--surface-shadow-small) !important;
+}
+
+html[data-theme=dark] body.auth-page .login-divider::before {
+  background: var(--border-subtle) !important;
+}
+
+html[data-theme=dark] body.auth-page .login-divider::after {
+  background: var(--border-subtle) !important;
+}
+
+html[data-theme=dark] body .referral-page {
+  --ref-surface: var(--bg-surface);
+  --ref-text: var(--text-primary);
+  --ref-muted: var(--text-secondary);
+  --ref-border: var(--border-subtle);
+  --ref-shadow: var(--surface-shadow);
+  --ref-accent: #0a84ff;
+  --ref-accent-hover: #3198ff;
+}
+
+html[data-theme=dark] body .referral-card::before {
+  box-shadow: inset 0 1px rgba(255,255,255,.025) !important;
+}
+
+html[data-theme=dark] body .ref-hero::after {
+  background: none !important;
+}
+
+html[data-theme=dark] body .modal-backdrop {
+  background: rgba(0,0,0,.6);
+  backdrop-filter: blur(6px);
+}
+
+html[data-theme=dark] body :is(.message-media,.ref-chart-tooltip,.proxy-device-list,.proxy-device-row,.owner-free,.proxy-demo-label) {
+  background: var(--bg-secondary) !important;
+  color: var(--text-secondary) !important;
+  border-color: var(--border-subtle) !important;
+}
+
+html[data-theme=dark] body :is(.subscription-primary-actions .install,.checkout-button,.auth-primary,.btn-primary,.compact-primary) {
+  color: #fff !important;
+}
+
+html[data-theme=dark] body :is(.auth-error,.login-form-error) {
+  color: #ff817b !important;
+}
+
+html[data-theme=dark] body :is(.profile-page .keys-service>span,.profile-page .referral-service>span) {
+  color: var(--text-secondary) !important;
+}
+
+html[data-theme=dark] body :is(th,td,.admin-row,.ledger-row,.invitee-row) {
+  border-color: var(--border-subtle) !important;
+}
+
+html[data-theme=dark] body :is(.radio-dot) {
+  border-color: var(--text-muted) !important;
+}
+
+html[data-theme=dark] body .selected .radio-dot {
+  border-color: var(--accent) !important;
+}
+
+html[data-theme=dark] body :is(.subscription-qr>span,.plan-overview>span,.proxy-guide-card,.proxy-empty) {
+  background: var(--bg-secondary) !important;
+  border-color: var(--border-subtle) !important;
+}
+
+html[data-theme=dark] body :is(.subscription-setting,.subscription-qr,.subscription-device-icon,.payment-method,.plan-overview,.proxy-guide-card) .aegis-svg {
+  color: var(--text-secondary) !important;
+}
+
+html[data-theme=dark] body .subscription-setting[aria-checked=false] .subscription-switch {
+  background: #393c43 !important;
+}
+
+
+
+html[data-theme=dark] body :is(.ticket-status.waiting,.invitee-row em.waiting,.proxy-entry em.paid) {
+  background: var(--bg-elevated) !important;
+  color: var(--text-secondary) !important;
+}
+
+/* Color transitions never crossfade the root; moving components retain their transform transitions. */
+
+body {
+  transition: background-color 280ms var(--ease-standard),border-color 280ms var(--ease-standard),color 220ms var(--ease-standard),box-shadow 280ms var(--ease-standard);
+}
+
+.news-item {
+  transition: background-color 280ms var(--ease-standard),border-color 280ms var(--ease-standard),color 220ms var(--ease-standard),box-shadow 280ms var(--ease-standard);
+}
+
+.purchase-card {
+  transition: background-color 280ms var(--ease-standard),border-color 280ms var(--ease-standard),color 220ms var(--ease-standard),box-shadow 280ms var(--ease-standard);
+}
+
+.conversation-card {
+  transition: background-color 280ms var(--ease-standard),border-color 280ms var(--ease-standard),color 220ms var(--ease-standard),box-shadow 280ms var(--ease-standard);
+}
+
+.referral-card {
+  transition: background-color 280ms var(--ease-standard),border-color 280ms var(--ease-standard),color 220ms var(--ease-standard),box-shadow 280ms var(--ease-standard);
+}
+
+.proxy-connection {
+  transition: background-color 280ms var(--ease-standard),border-color 280ms var(--ease-standard),color 220ms var(--ease-standard),box-shadow 280ms var(--ease-standard);
+}
+
+@media (min-width:1101px) {
+  html body.has-cabinet .screen__inner {
+    padding-bottom: 32px !important;
+  }
+}
+
+@media (prefers-reduced-motion:reduce) {
+  body {
+    transition: none !important;
+  }
+  .news-item {
+    transition: none !important;
+  }
+  .purchase-card {
+    transition: none !important;
+  }
+  .conversation-card {
+    transition: none !important;
+  }
+  .referral-card {
+    transition: none !important;
+  }
+  .proxy-connection {
+    transition: none !important;
+  }
+}

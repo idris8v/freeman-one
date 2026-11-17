@@ -1,0 +1,157 @@
+html body.auth-page #app .auth-links:has([data-auth-resend]) {
+  display: grid;
+  grid-template-columns: minmax(0,1fr);
+  justify-content: stretch;
+  width: 100%;
+  gap: 12px;
+  margin: 18px 0 0;
+}
+
+html body.auth-page #app .auth-links :is([data-auth-resend],[data-auth-back]) {
+  width: 100%;
+  height: 56px;
+  min-height: 56px;
+  padding: 10px 14px !important;
+  box-sizing: border-box;
+  border: 1px solid var(--line) !important;
+  border-radius: 13px !important;
+  background: var(--paper) !important;
+  color: var(--ink) !important;
+  font-size: 12px;
+  line-height: 1.4;
+  white-space: normal;
+  box-shadow: inset 0 1px 0 #ffffff30,0 3px 10px #00000008 !important;
+  transform: none !important;
+  transition: opacity .15s ease;
+}
+
+html body.auth-page #app .auth-links [data-auth-resend]:disabled {
+  color: var(--muted) !important;
+  opacity: .7;
+  cursor: default;
+}
+
+html body .email-spam-note {
+  background: #fff4d6;
+  color: #75520b;
+  border: 1px solid #ecd28e;
+  border-radius: 12px;
+  padding: 12px 14px !important;
+  font-size: 13px !important;
+  line-height: 1.5;
+  margin: 14px 0 18px !important;
+  text-align: left;
+}
+
+html body .payment-delay-note {
+  background: #fff4d6;
+  color: #75520b;
+  border: 1px solid #ecd28e;
+  border-radius: 12px;
+  padding: 12px 14px !important;
+  font-size: 13px !important;
+  line-height: 1.5;
+  margin: 14px 0 18px !important;
+  text-align: left;
+}
+
+html[data-theme=dark] body :is(.email-spam-note,.payment-delay-note) {
+  background: #382f1c;
+  color: #f0d68a;
+  border-color: #655327;
+}
+
+html body #app .payment-wait-card {
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: var(--paper);
+  color: var(--ink);
+  max-width: 650px;
+  margin: 16px auto;
+  box-shadow: 0 8px 25px #00000008;
+}
+
+html body #app .payment-wait-heading {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+html body #app .payment-wait-heading h2 {
+  margin: 0;
+}
+
+html body #app .payment-wait-card p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+html body .payment-wait-spinner {
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  box-sizing: border-box;
+  border: 3px solid #1686f830;
+  border-top-color: #1686f8;
+  border-radius: 50%;
+  animation: payment-wait-spin 1s linear infinite;
+  flex-shrink: 0;
+}
+
+html body #app .payment-wait-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+html body #app .payment-wait-actions :is(a,button) {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  text-decoration: none;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+html body #app .payment-wait-actions svg {
+  width: 18px;
+  height: 18px;
+}
+
+@keyframes payment-wait-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width:600px) {
+  html body #app .payment-wait-card {
+    padding: 18px;
+    margin: 12px 0;
+  }
+  html body #app .payment-wait-actions :is(a,button) {
+    flex: 1 1 100%;
+  }
+}
+
+@media (prefers-reduced-motion:reduce) {
+  html body .payment-wait-spinner {
+    animation: none;
+  }
+}
+
+.payment-guest-reopen {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  margin: 12px 0;
+  box-sizing: border-box;
+}
+
+html body #verification .email-spam-note {
+  margin: 12px 0 !important;
+}

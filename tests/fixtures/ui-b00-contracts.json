@@ -1,0 +1,3444 @@
+{
+  "baseline": "d5a803588695d66a8d7b6a85d8dd90f188125ae4",
+  "inventory": [
+    {
+      "id": "P01",
+      "screen": "`/` signed-out authentication",
+      "scope": "Identity/email/FO ID/subscription-link entry; new email registration; OTP request and verify; spam note; resend countdown/enabled; password alternative for accounts without email; busy, validation, expired code, wrong code, throttling",
+      "owner_and_future_batch": "`index.html`, `auth-unified.js`, `cabinet/account.css`; B06",
+      "b00": "smoke"
+    },
+    {
+      "id": "P02",
+      "screen": "Telegram authentication handoff",
+      "scope": "Popup reserved/blocked, pending confirmation, reopen Telegram, expiration, back/cancel, successful redirect; callback/direct-link failures",
+      "owner_and_future_batch": "`auth-unified.js`, `cabinet/auth.py`, `accounts.py`; B06",
+      "b00": "future batch; source inventory only"
+    },
+    {
+      "id": "P03",
+      "screen": "`/buy` guest checkout",
+      "scope": "Recognized customer / “not my account”; devices; tariff ID/duration; optional email; without-email warning; promo; summary; unavailable catalogue/provider/panel; invalid inputs",
+      "owner_and_future_batch": "`guest-purchase.html/.js`; B07",
+      "b00": "future batch; source inventory only"
+    },
+    {
+      "id": "P04",
+      "screen": "`/buy/renew`",
+      "scope": "Subscription-link lookup; not found/invalid/ineligible; known subscription/limit; tariff selection; retain key and FO identity",
+      "owner_and_future_batch": "`guest-purchase.js`, `guest_purchase.py`; B07",
+      "b00": "future batch; source inventory only"
+    },
+    {
+      "id": "P05",
+      "screen": "Guest purchase receipt `?receipt=…` and provider return",
+      "scope": "Waiting, canceled, unknown, payment accepted/provisioning pending, verified activation; credentials shown only when eligible; key, expiry, QR, copy/download/share, account entry",
+      "owner_and_future_batch": "`guest-purchase.js`, `post-payment.js`, `pages/post-payment.css`; B07",
+      "b00": "smoke"
+    },
+    {
+      "id": "P06",
+      "screen": "`/buy/security`",
+      "scope": "Current/new password form; account identity and keys retained; validation, expired session, error and saved state",
+      "owner_and_future_batch": "`guest-purchase.js`; B06",
+      "b00": "future batch; source inventory only"
+    },
+    {
+      "id": "P07",
+      "screen": "`/account`",
+      "scope": "Master auto-renew switch; saved-card list/bind/remove; per-subscription tariff/source/card form; trial; automatic payment attempts; notifications; staff renewal-control summary when permitted",
+      "owner_and_future_batch": "`account-management.html/.js`; B07",
+      "b00": "future batch; source inventory only"
+    },
+    {
+      "id": "P08",
+      "screen": "`/account?setup=…`",
+      "scope": "One-use password setup; repeat mismatch; invalid/expired token; success and re-login",
+      "owner_and_future_batch": "`account-management.js`, `account_management.py`; B06",
+      "b00": "future batch; source inventory only"
+    },
+    {
+      "id": "P09",
+      "screen": "`/account/card-link`",
+      "scope": "One-use Telegram card-bind entry: authenticate token, start/recover binding payment, set session and redirect to provider; expired/invalid/error outcomes. It is a handoff, not an independently rendered payment-success page",
+      "owner_and_future_batch": "`account_management.py`; B07",
+      "b00": "future batch; source inventory only"
+    },
+    {
+      "id": "P10",
+      "screen": "`/documents`",
+      "scope": "Legal index with all three configured titles",
+      "owner_and_future_batch": "`cabinet/content.py`; B14",
+      "b00": "future batch; source inventory only"
+    },
+    {
+      "id": "P11",
+      "screen": "`/documents/0`, `/1`, `/2`",
+      "scope": "User agreement, privacy policy, payment/refund rules; configured text, long content, invalid index/404",
+      "owner_and_future_batch": "`app/config/content.py`, `cabinet/content.py`; B14",
+      "b00": "future batch; source inventory only"
+    },
+    {
+      "id": "P12",
+      "screen": "Public publication `/?post={id}`",
+      "scope": "Article view opened through cabinet/auth startup as currently implemented; news/useful-link/instruction content; media, gallery, video, CTA links, unavailable/deleted post",
+      "owner_and_future_batch": "`posts.js`, `publication-buttons.js`, `app.js` startup; B14",
+      "b00": "future batch; source inventory only"
+    },
+    {
+      "id": "P13",
+      "screen": "`/broadcast-post/{token}`",
+      "scope": "Escaped campaign article, long body/title, unavailable token; currently independent inline presentation",
+      "owner_and_future_batch": "`campaign_post.py`; B14",
+      "b00": "future batch; source inventory only"
+    },
+    {
+      "id": "P14",
+      "screen": "`/r/{referrer}`",
+      "scope": "Referral entry and redirect into existing onboarding, valid/invalid reference outcomes",
+      "owner_and_future_batch": "`accounts.py`; B06/B07",
+      "b00": "future batch; source inventory only"
+    },
+    {
+      "id": "P15",
+      "screen": "Bot direct entries",
+      "scope": "`/auth/bot`, `/auth/bot/code`, `/auth/bot/support?mode=new/list/staff`, `/auth/bot/chat?ticket=…`; existing session or token, expired/denied HTML/redirects; `miniapp=1` destination",
+      "owner_and_future_batch": "`cabinet/auth.py`, `app.js`; B06/B11",
+      "b00": "future batch; source inventory only"
+    },
+    {
+      "id": "P16",
+      "screen": "Compatibility-only AI routes",
+      "scope": "`/ai` redirects `/`; `/ai/checkout/{token}` is 410; do not restore an obsolete public assistant",
+      "owner_and_future_batch": "`freeman_ai.py`; B18",
+      "b00": "future batch; source inventory only"
+    },
+    {
+      "id": "P17",
+      "screen": "Connection/startup diagnostics",
+      "scope": "`/assets/connection-check.html`; `?startup_debug` panel; individual resource pending/success/timeout, copy report, retry",
+      "owner_and_future_batch": "`connection-check.html`, inline `index.html` diagnostics; B20",
+      "b00": "future batch; source inventory only"
+    },
+    {
+      "id": "P18",
+      "screen": "Unhandled HTML/API route errors",
+      "scope": "Current 401/403/404/410/422/503 outcomes are not a unified branded error-page system; classify document navigation vs API failures; style safe existing outcomes without masking response status",
+      "owner_and_future_batch": "Route owners, shared feedback; B06/B14/B20",
+      "b00": "future batch; source inventory only"
+    },
+    {
+      "id": "C01",
+      "screen": "`profile` (`home` alias)",
+      "scope": "Avatar/fallback, identity, balance link, email bind/verify, Telegram link/bind, service cards, useful links, news, notification previews, trusted-browser entry",
+      "owner_and_future_batch": "`app.js`, `customer-identity.js`, profile/account CSS; B08",
+      "b00": "future batch; source inventory only"
+    },
+    {
+      "id": "C02",
+      "screen": "`keys`",
+      "scope": "Search, no keys/no results, buy subscription, collapsed/expanded rows, active/expiring/expired/blocked state, remaining term, device count unknown/known/zero, subscription URL hydration",
+      "owner_and_future_batch": "`app.js`, `keys.css`; B05",
+      "b00": "pilot"
+    },
+    {
+      "id": "C03",
+      "screen": "Expanded key controls",
+      "scope": "Copy, QR, install instructions/application handoff, rename, renew, auto-renew setting, connected devices list/removal/reset, key-specific feedback",
+      "owner_and_future_batch": "`app.js`, `keys-controls.js`, identity/device helpers; B05",
+      "b00": "pilot"
+    },
+    {
+      "id": "C04",
+      "screen": "`plans`",
+      "scope": "Trial eligibility/busy/result; device group; tariff duration/price; list/card presentation; personal-offer pricing; payment method; balance contribution; new vs renewal selection",
+      "owner_and_future_batch": "`app.js`, `offers.js`, `plans.css`; B05/B07",
+      "b00": "pilot"
+    },
+    {
+      "id": "C05",
+      "screen": "`purchase`",
+      "scope": "Confirmation → submitting → pending/unknown → payment accepted awaiting provisioning → confirmed success or canceled/error; check/reopen provider/support; same intent after reload and cross-tab return",
+      "owner_and_future_batch": "`checkout-recovery.js`, `payment-window.js`, `purchase-flow.js`, `post-payment.js`; B07",
+      "b00": "future batch; source inventory only"
+    },
+    {
+      "id": "C06",
+      "screen": "`support` list",
+      "scope": "Existing/open/closed conversations, empty/new conversation entry, subject/preview/time/status, pagination where supplied",
+      "owner_and_future_batch": "`app.js`, support CSS/presenter; B11",
+      "b00": "future batch; source inventory only"
+    },
+    {
+      "id": "C07",
+      "screen": "`support` conversation",
+      "scope": "New/existing/closed/reopened; older messages; own/staff/system messages, timestamps, dates, attachments, quick-help sheet, composer/upload previews, sending/retry; close confirmation",
+      "owner_and_future_batch": "`app.js`, `support-motion.js`; B11",
+      "b00": "future batch; source inventory only"
+    },
+    {
+      "id": "C08",
+      "screen": "`balance`",
+      "scope": "Balance, top-up, history filters, transaction types/statuses, withdrawals and eligibility/minimum/disabled state, payout details/edit; empty/loading/error",
+      "owner_and_future_batch": "`app.js`, `payments.css`; B08",
+      "b00": "future batch; source inventory only"
+    },
+    {
+      "id": "C09",
+      "screen": "`referrals`",
+      "scope": "Copy/share referral link, terms, period chart, chart tooltip/loading/retry, invitations/rewards/history pagination, zero/unknown metrics",
+      "owner_and_future_batch": "`app.js`, `referrals.css`; B08",
+      "b00": "future batch; source inventory only"
+    },
+    {
+      "id": "C10",
+      "screen": "`proxy`",
+      "scope": "Included vs standalone vs administrative access; eligibility, no access, connections list/expanded details, connect/copy/QR/help, purchase and renewal, connected IP details/reset",
+      "owner_and_future_batch": "`proxy-control.js`, `app.js`, proxy CSS; B16",
+      "b00": "future batch; source inventory only"
+    },
+    {
+      "id": "C11",
+      "screen": "`instructions`",
+      "scope": "Device/platform guides from configured content, instruction publications, article/CTA/media display, long command examples, no content/error",
+      "owner_and_future_batch": "`app.js`, `posts.js`, content routes; B14",
+      "b00": "future batch; source inventory only"
+    },
+    {
+      "id": "C12",
+      "screen": "`faq`",
+      "scope": "Question/answer accordions, configured body text, empty/error, links to support",
+      "owner_and_future_batch": "`app.js`, `cabinet/content.py`; B14",
+      "b00": "future batch; source inventory only"
+    },
+    {
+      "id": "C13",
+      "screen": "`status`",
+      "scope": "Existing explicit “public monitoring not connected” placeholder",
+      "owner_and_future_batch": "`viewContent`, `placeholder`; B14, presentation only",
+      "b00": "future batch; source inventory only"
+    },
+    {
+      "id": "C14",
+      "screen": "Notifications and profile settings",
+      "scope": "List/detail, unread/read, expiry actions, publication links, email/Telegram binding, active session revocation, appearance and trusted browsers",
+      "owner_and_future_batch": "`app.js`, `customer-identity.js`; B08",
+      "b00": "future batch; source inventory only"
+    },
+    {
+      "id": "C15",
+      "screen": "Personal offer entry/result",
+      "scope": "Offer from notifications/key/profile; pricing/expiry/eligible/ineligible/redeemed/canceled states as supplied by backend",
+      "owner_and_future_batch": "`offers.js`, checkout modules; B10",
+      "b00": "future batch; source inventory only"
+    },
+    {
+      "id": "C16",
+      "screen": "Generic fallback",
+      "scope": "Unknown cabinet view → existing placeholder; no invented working function",
+      "owner_and_future_batch": "`viewContent`; B04/B20",
+      "b00": "future batch; source inventory only"
+    },
+    {
+      "id": "C17",
+      "screen": "`posts` customer publication list",
+      "scope": "News/useful-link category tabs, list/excerpt, empty/error and article opening; instructions also have their separate C11 entry",
+      "owner_and_future_batch": "`posts.js`, `loadPosts(false)`; B14",
+      "b00": "future batch; source inventory only"
+    },
+    {
+      "id": "A01",
+      "screen": "`admin-dashboard` / profile",
+      "scope": "Desktop owner summary and shortcuts; mobile home grouped Management/Services/AI tools; account/balance/identity links; permissions-based visibility",
+      "owner_and_future_batch": "`app.js`, `mobile-admin-profile.js`, `freeman-ai-entry.js`; B04/B08",
+      "b00": "future batch; source inventory only"
+    },
+    {
+      "id": "A02",
+      "screen": "Mobile profile panels",
+      "scope": "Home, settings, personal data, security, sessions, trusted browsers, appearance, AI tools grouping; `language` renderer exists but is not linked in current settings",
+      "owner_and_future_batch": "`mobile-admin-profile.js`; B04/B08; keep unlinked language outside active navigation",
+      "b00": "future batch; source inventory only"
+    },
+    {
+      "id": "A03",
+      "screen": "`admin-clients` registry",
+      "scope": "Search; status/service/device/activity/contact/origin filters; sorting; segments; paging/limit; checkboxes/page/all-results selection; compact row, avatar fallback, FO ID, keys/Proxy counts, registration, row menu; export; mobile sheets/“More” menu; bulk action strip",
+      "owner_and_future_batch": "`clients.js`, `clients-mobile.js`, `clients.css`; pilot B02/B03, full B09",
+      "b00": "pilot"
+    },
+    {
+      "id": "A04",
+      "screen": "`admin-customer`",
+      "scope": "Header/contacts/identity, balance, payout details, referral summary, recent activity, action row and notes; six independently loaded sections: **keys, proxies, payments, support, activity, referrals**; section expansion/detail/pagination",
+      "owner_and_future_batch": "`customer-workspace.js`; B09",
+      "b00": "future batch; source inventory only"
+    },
+    {
+      "id": "A05",
+      "screen": "Customer administrative actions",
+      "scope": "Issue VPN/Proxy, contact channels, personal offer, credit/debit with reason, block/unblock, reset VPN devices, copy ID, key/Proxy details, open payments/support, payout/referral details",
+      "owner_and_future_batch": "`customer-workspace.js`, shared grant handlers; B09/B10",
+      "b00": "future batch; source inventory only"
+    },
+    {
+      "id": "A06",
+      "screen": "`admin-keys` registry",
+      "scope": "Search/filter/sort/status/device/expiry/tariff/server facets, paging/limit, compact rows, client/FO identity, remaining term, counts, devices and row actions; mobile restructuring; grant existing or external recipient",
+      "owner_and_future_batch": "`app.js`, `keys-controls.js`, `keys.css`; B09",
+      "b00": "future batch; source inventory only"
+    },
+    {
+      "id": "A07",
+      "screen": "`admin-key` detail and actions",
+      "scope": "Connection/QR/client/device details; rename, assign, block/unblock, rotate, delete, reset devices; flexible renewal: quantity/unit/date, presets/tariff, no-charge/balance/manual-paid modes and confirmation",
+      "owner_and_future_batch": "`app.js`, `keys-controls.js`; B09",
+      "b00": "future batch; source inventory only"
+    },
+    {
+      "id": "A08",
+      "screen": "`admin-search`",
+      "scope": "Live global search across clients, keys, Proxy; minimum query, no results, results/owner/type/status, open entity; older search-modal helper retained for reachability review",
+      "owner_and_future_batch": "`app.js`; B09",
+      "b00": "future batch; source inventory only"
+    },
+    {
+      "id": "A09",
+      "screen": "`support` administrative inbox",
+      "scope": "Search, status counters, status/channel/sort filters, customer identity, preview/time/status, unread/selection, pagination; no current conversation selected",
+      "owner_and_future_batch": "`app.js`, support modules; B11",
+      "b00": "future batch; source inventory only"
+    },
+    {
+      "id": "A10",
+      "screen": "Administrative support conversation",
+      "scope": "Read/respond; attachment picker/preview; quick replies; status changes including waiting admin/client, in progress, needs info, closed; reopen/delete, customer sidebar/detail, older messages, polling updates",
+      "owner_and_future_batch": "`app.js`, support modules; B11",
+      "b00": "future batch; source inventory only"
+    },
+    {
+      "id": "A11",
+      "screen": "Support settings (feature entry)",
+      "scope": "**Auto acknowledgement** form, enabled/text/save; **Quick replies** create/edit, title/text/enabled, photo/video attachments, library/delete and cancel",
+      "owner_and_future_batch": "`supportSettingsPage`; B11; do not duplicate in global account settings",
+      "b00": "future batch; source inventory only"
+    },
+    {
+      "id": "A12",
+      "screen": "`admin-catalog`",
+      "scope": "**VPN tariffs**, **Telegram Proxy tariffs**, **promotions and promo codes**, **change history**; creation/edit/version conflict, enabled/archive, durations/devices/traffic/prices; promotion product/target/selected plans, dates; code fields; confirmation",
+      "owner_and_future_batch": "`catalog.js`, catalogue backend; pilot B02, full B10",
+      "b00": "pilot"
+    },
+    {
+      "id": "A13",
+      "screen": "Offers and campaigns",
+      "scope": "Single-client offer editor/history; bulk message/offer **4-step wizard** (parameters, channels/message, preview, final confirmation); segments/audience; per-channel availability; campaign history/detail/status, failed delivery retry/cancel and results; customer offer redemption",
+      "owner_and_future_batch": "`offers.js`, `clients.js`; B10",
+      "b00": "future batch; source inventory only"
+    },
+    {
+      "id": "A14",
+      "screen": "`admin-payments`",
+      "scope": "Six tabs: **all, success, pending, error, refunds, top-ups**; day/week/month/year/custom period; KPI cards; search/sort/filter, paging/limits; selection/export; payment or ledger-operation detail panel and its context menu/confirmation, provider/order links",
+      "owner_and_future_batch": "`payments.js`, `admin_payments.py`; B12",
+      "b00": "future batch; source inventory only"
+    },
+    {
+      "id": "A15",
+      "screen": "`admin-reports`",
+      "scope": "Day/week/month/year/custom dates, previous month, product/source/new-vs-renewal/months/devices/payment-channel filters; revenue/KPIs, time series, rankings/donuts/status/source/device breakdowns, sales table/pager, sale-detail view, CSV options, loading/empty/error/unknown",
+      "owner_and_future_batch": "`reportsPage` and analytics helpers in `app.js`, `admin_reports.py`; B12",
+      "b00": "future batch; source inventory only"
+    },
+    {
+      "id": "A16",
+      "screen": "`admin-posts`",
+      "scope": "All/published/drafts/archive/deleted tabs; scheduled status/count/filter; search, filters, list cards/actions, paging; editor create/edit, dirty/saving/saved/conflict; Quill controls; section, media/cover/slideshow/video, links/buttons, pin, client notification, schedule; preview/publish/unpublish/archive/restore/delete",
+      "owner_and_future_batch": "`posts.js`, `publication-buttons.js`, Quill; B13",
+      "b00": "future batch; source inventory only"
+    },
+    {
+      "id": "A17",
+      "screen": "`admin-servers`",
+      "scope": "Infrastructure list: RemnaWave VPN panels and Telegram Proxy servers; refresh, unavailable/empty/per-provider errors; VPN opens key registry/server filter; Proxy opens its existing detail",
+      "owner_and_future_batch": "`adminServersPage`, `admin_dashboard.py`; B12; no new remote panel editor implied",
+      "b00": "future batch; source inventory only"
+    },
+    {
+      "id": "A18",
+      "screen": "`admin-proxy` main console",
+      "scope": "Seven tabs: **servers, proxies, clients, pricing, promotions, statistics, settings**; summary, recent connections, traffic chart, filters/search/sort/pagination; invites and issuing access",
+      "owner_and_future_batch": "`proxy-control.js`; B15",
+      "b00": "future batch; source inventory only"
+    },
+    {
+      "id": "A19",
+      "screen": "Proxy server page",
+      "scope": "URL `px_server={id}&px_server_tab=…`; **overview, settings, proxies, clients**; server summary/API health, limits, enable/disable/maintenance/reload/delete confirmations, registry filters, per-access/client actions, back/forward",
+      "owner_and_future_batch": "`proxy-pages.js`; B15",
+      "b00": "future batch; source inventory only"
+    },
+    {
+      "id": "A20",
+      "screen": "Proxy documentation",
+      "scope": "`px_section=docs`; full-page setup steps, code copy, troubleshooting and source links; preserve commands/content semantics",
+      "owner_and_future_batch": "`proxy-pages.js`, `proxy-guide.js`; B15",
+      "b00": "future batch; source inventory only"
+    },
+    {
+      "id": "A21",
+      "screen": "Proxy connection/admin overlays",
+      "scope": "Five-step add/edit server wizard, test connection/result; grant to account or create one-time invite; access detail/IPs; extend/limit/rotate/block/unblock/move/delete; plan create/edit; invitations; campaigns; clear-IP confirmation. Alternate customer-workspace/legacy grant forms require the reachability check in §3.6",
+      "owner_and_future_batch": "`proxy-control.js`, older app grant helpers; B15",
+      "b00": "future batch; source inventory only"
+    },
+    {
+      "id": "F01",
+      "screen": "`/admin/assistant?chat={id}`",
+      "scope": "Welcome/suggestions, new/existing chat, empty/no history/search groups, title, service/open context, existing/deleted/unavailable chat",
+      "owner_and_future_batch": "`freeman-assistant.js`; B17",
+      "b00": "future batch; source inventory only"
+    },
+    {
+      "id": "F02",
+      "screen": "Assistant messages/composer",
+      "scope": "User/assistant/system, date/time/sent markers, thinking, pending/failure/retry with retained request ID, new-message indicator, multiline input/Enter/Shift+Enter, draft attachments/removal/upload failure; no voice capture",
+      "owner_and_future_batch": "`freeman-assistant.js`; B17",
+      "b00": "smoke"
+    },
+    {
+      "id": "F03",
+      "screen": "Assistant navigation/menus",
+      "scope": "Desktop sidebar, mobile drawer/backdrop, history search, chat rename/delete/new menu, attachment menu (photo/document/file), return to cabinet",
+      "owner_and_future_batch": "Same; B17",
+      "b00": "future batch; source inventory only"
+    },
+    {
+      "id": "F04",
+      "screen": "Assistant rich answers",
+      "scope": "Escaped Markdown/code/lists/quotes, typed table/footer/CSV, KPI/chart/card/dashboard/entity links, images/gallery/viewer/zoom, downloadable files, unavailable/malformed block fallbacks",
+      "owner_and_future_batch": "`assistant-rich.js`; B17",
+      "b00": "future batch; source inventory only"
+    },
+    {
+      "id": "F05",
+      "screen": "Assistant action confirmations",
+      "scope": "Site-change operation cards/detail/result, explicit execution, knowledge proposal/save result, broadcast recipient/channel preview and confirmation, scheduled-action date/time confirmation",
+      "owner_and_future_batch": "`freeman-assistant.js`; B17/B18",
+      "b00": "future batch; source inventory only"
+    },
+    {
+      "id": "F06",
+      "screen": "Assistant panels",
+      "scope": "**Tasks/planning** scheduled/running/done/failed/canceled, open conversation/cancel scheduled; **Files/attachments**; **Knowledge** article/version reader; **Settings** model/status, enable, theme, sounds",
+      "owner_and_future_batch": "`panel()` in Assistant; B18",
+      "b00": "future batch; source inventory only"
+    },
+    {
+      "id": "F07",
+      "screen": "`/admin/ai` inbox",
+      "scope": "**Inbox** counters/list/filter/channel/mode/search/pager, unselected detail, selected conversation/messages/composer, take over/return AI/close",
+      "owner_and_future_batch": "`freeman-ai.js`; B18",
+      "b00": "future batch; source inventory only"
+    },
+    {
+      "id": "F08",
+      "screen": "AI console other tabs",
+      "scope": "**Knowledge** create/edit/read, enabled-for-AI and version; **Settings** integration configuration/status/usage; **Events** log/empty/error",
+      "owner_and_future_batch": "`freeman-ai.js`; B18",
+      "b00": "future batch; source inventory only"
+    },
+    {
+      "id": "F09",
+      "screen": "Unlinked customer AI renderer",
+      "scope": "`aiCustomer()` / channel-confirm markup remains in JS, but public `/ai` redirects and `/api/ai/status` reports disabled",
+      "owner_and_future_batch": "Compatibility inventory only; B18 must not expose this to customers",
+      "b00": "future batch; source inventory only"
+    }
+  ],
+  "overlays": [
+    {
+      "id": "O01",
+      "family": "Identity",
+      "scope": "Email input + OTP; Telegram link/handoff; password/change/setup forms; session revoke confirmation",
+      "future_batch": "P01/P02/P06/P08, C14/A02; B06/B08"
+    },
+    {
+      "id": "O02",
+      "family": "Notifications",
+      "scope": "All notifications, detail/read action, expiry CTA, publication target",
+      "future_batch": "C01/C14/A01; B08"
+    },
+    {
+      "id": "O03",
+      "family": "Trusted browsers",
+      "scope": "Native customer dialog list/revoke/loading/error; mobile-admin full panel and current-device marker",
+      "future_batch": "C14/A02; B08"
+    },
+    {
+      "id": "O04",
+      "family": "Key tools",
+      "scope": "QR viewer, copy feedback, installation steps, rename form, auto-renew controls, device dialog/loading/error/retry, device remove/reset confirmations",
+      "future_batch": "C03/A06/A07; B03/B05/B09"
+    },
+    {
+      "id": "O05",
+      "family": "Paid checkout",
+      "scope": "Selection confirmation; retained pending/uncertain intent; retry/check status; popup-blocked/reopen link; provisioning-pending/success; payment result QR/details/share",
+      "future_batch": "C05/P03–P05; B07"
+    },
+    {
+      "id": "O06",
+      "family": "Money controls",
+      "scope": "Top-up amount/provider confirmation; payout details/withdrawal forms, disabled/minimum state; credit/debit confirmation and reason",
+      "future_batch": "C08/A05; B08/B09"
+    },
+    {
+      "id": "O07",
+      "family": "Customer Proxy tools",
+      "scope": "Access purchase/renew, free-included issue, details/IPs, QR/copy, clear-IP confirmation",
+      "future_batch": "C10; B16"
+    },
+    {
+      "id": "O08",
+      "family": "Client registry controls",
+      "scope": "Filter sheet; saved/quick segment sheet; compact sort; More/export/page-size menu; checkbox indeterminate/page/all-result selection; row menu; campaign history/detail",
+      "future_batch": "A03; B03/B09/B10"
+    },
+    {
+      "id": "O09",
+      "family": "Customer workspace overlays",
+      "scope": "More actions/contact menu; full section expansion; key/Proxy/payment/support/referral details; notes, payout details, account actions",
+      "future_batch": "A04/A05; B09"
+    },
+    {
+      "id": "O10",
+      "family": "Admin VPN tools",
+      "scope": "Issue existing/external customer form; manual days/device presets; assign/rename/block/unblock/rotate/delete/reset; flexible renewal preview/payment modes",
+      "future_batch": "A06/A07; B09"
+    },
+    {
+      "id": "O11",
+      "family": "Catalogue forms",
+      "scope": "VPN/Proxy tariff, promotion, promo code; product-dependent plan choices; date/time; enabled/archive/confirmed; stale version/error",
+      "future_batch": "A12; B10"
+    },
+    {
+      "id": "O12",
+      "family": "Offers",
+      "scope": "Single-client editor, discount/plan/date/contact controls, preview/history/retry/result; bulk four steps and final audience confirmation",
+      "future_batch": "A13/C15; B10"
+    },
+    {
+      "id": "O13",
+      "family": "Payment controls",
+      "scope": "Filters, custom dates, export/selection menus, payment drawer/full mobile detail, row context actions and confirmations",
+      "future_batch": "A14; B12"
+    },
+    {
+      "id": "O14",
+      "family": "Analytics",
+      "scope": "Date/filter/export menus, chart tooltip, sale-detail dialog, missing-series presentation",
+      "future_batch": "A15; B12"
+    },
+    {
+      "id": "O15",
+      "family": "Support conversation",
+      "scope": "Attach/help/quick-reply menus, file/camera picker previews, media viewer, status/action menu, close/reopen/delete confirmation, customer context panel",
+      "future_batch": "C07/A10; B11"
+    },
+    {
+      "id": "O16",
+      "family": "Support administration",
+      "scope": "Auto-reply and quick-reply forms, attachments, edit/cancel/delete",
+      "future_batch": "A11; B11"
+    },
+    {
+      "id": "O17",
+      "family": "Publication editing",
+      "scope": "Filter panel; editor menu, Quill tooltips/dropdowns; add/edit link, CTA button, emoji, media upload/cover/slideshow, scheduling; unsaved-change/save/publish/delete/restore confirmation; preview/article/gallery/video",
+      "future_batch": "A16/P12; B13/B14"
+    },
+    {
+      "id": "O18",
+      "family": "Proxy operations",
+      "scope": "Five server-wizard steps/test, server menu, filter panel, access/IP drawer, account-recipient/invite grant form and reachable alternate grant form, invite creation/result/list, tariff edit, promotion link/result, move/limit/extend/rotate/block/delete/clear-IP confirmation",
+      "future_batch": "A18–A21; B15"
+    },
+    {
+      "id": "O19",
+      "family": "Assistant",
+      "scope": "Mobile drawer; chat menu; attachment popup; rename/delete; image viewer; action/broadcast/knowledge confirmations; schedule form; four panels and task cancellation",
+      "future_batch": "F01–F06; B03/B17/B18"
+    },
+    {
+      "id": "O20",
+      "family": "AI console",
+      "scope": "Filters, mode actions, knowledge forms/previews, theme control",
+      "future_batch": "F07/F08; B18"
+    },
+    {
+      "id": "O21",
+      "family": "Shared feedback",
+      "scope": "Toast/status, form error/error summary, skeleton/spinner, empty state, permission/session/temporary failure, copy/download result, disabled-with-reason",
+      "future_batch": "All; B02/B03 and domain owners"
+    },
+    {
+      "id": "O22",
+      "family": "Browser/native confirmations",
+      "scope": "Current `alert`, `prompt`, `confirm`, native file/camera chooser and external-app handoff",
+      "future_batch": "Replace only app-authored dialogs when preserving exact decision semantics; native OS pickers remain native"
+    }
+  ],
+  "entries": {
+    "index": {
+      "file": "app/web/static/index.html",
+      "scripts_in_document_order": [
+        {
+          "src": "/assets/freeman-identity.js",
+          "defer": true,
+          "async": false
+        },
+        {
+          "src": "/assets/theme-init.js",
+          "defer": false,
+          "async": false
+        },
+        {
+          "src": "/assets/aegis-icons.js",
+          "defer": true,
+          "async": false
+        },
+        {
+          "src": "/assets/ui-system.js",
+          "defer": true,
+          "async": false
+        },
+        {
+          "src": "/assets/auth-unified.js",
+          "defer": true,
+          "async": false
+        },
+        {
+          "src": "/assets/cabinet-loader.js",
+          "defer": true,
+          "async": false
+        },
+        {
+          "src": "/assets/post-payment.js",
+          "defer": false,
+          "async": false
+        },
+        {
+          "src": "/assets/purchase-flow.js",
+          "defer": false,
+          "async": false
+        },
+        {
+          "src": "/assets/page-motion.js",
+          "defer": false,
+          "async": false
+        },
+        {
+          "src": "/assets/support-motion.js",
+          "defer": false,
+          "async": false
+        },
+        {
+          "src": "/assets/payments.js",
+          "defer": false,
+          "async": false
+        },
+        {
+          "src": "/assets/telegram-sdk.js",
+          "defer": false,
+          "async": false
+        },
+        {
+          "src": "/assets/checkout-recovery.js",
+          "defer": false,
+          "async": false
+        },
+        {
+          "src": "/assets/app.js",
+          "defer": false,
+          "async": false
+        },
+        {
+          "src": "/assets/posts.js",
+          "defer": false,
+          "async": false
+        },
+        {
+          "src": "/assets/offers.js",
+          "defer": false,
+          "async": false
+        },
+        {
+          "src": "/assets/keys-controls.js",
+          "defer": false,
+          "async": false
+        },
+        {
+          "src": "/assets/clients.js",
+          "defer": false,
+          "async": false
+        },
+        {
+          "src": "/assets/proxy-control.js",
+          "defer": false,
+          "async": false
+        },
+        {
+          "src": "/assets/proxy-guide.js",
+          "defer": false,
+          "async": false
+        },
+        {
+          "src": "/assets/proxy-pages.js",
+          "defer": false,
+          "async": false
+        },
+        {
+          "src": "/assets/customer-workspace.js",
+          "defer": false,
+          "async": false
+        },
+        {
+          "src": "/assets/mobile-admin-profile.js",
+          "defer": false,
+          "async": false
+        },
+        {
+          "src": "/assets/catalog.js",
+          "defer": false,
+          "async": false
+        },
+        {
+          "src": "/assets/publication-buttons.js",
+          "defer": false,
+          "async": false
+        },
+        {
+          "src": "/assets/payment-window.js",
+          "defer": false,
+          "async": false
+        },
+        {
+          "src": "/assets/clients-mobile.js",
+          "defer": false,
+          "async": false
+        },
+        {
+          "src": "/assets/customer-identity.js",
+          "defer": false,
+          "async": false
+        },
+        {
+          "src": "/assets/freeman-ai-entry.js",
+          "defer": false,
+          "async": false
+        }
+      ],
+      "styles": [
+        "/assets/cabinet.css?v=6550ff1f5c2a"
+      ]
+    },
+    "guest-purchase": {
+      "file": "app/web/static/guest-purchase.html",
+      "scripts_in_document_order": [
+        {
+          "src": "/assets/theme-init.js",
+          "defer": false,
+          "async": false
+        },
+        {
+          "src": "/assets/aegis-icons.js",
+          "defer": true,
+          "async": false
+        },
+        {
+          "src": "/assets/ui-system.js",
+          "defer": true,
+          "async": false
+        },
+        {
+          "src": "/assets/post-payment.js",
+          "defer": true,
+          "async": false
+        },
+        {
+          "src": "/assets/guest-purchase.js",
+          "defer": true,
+          "async": false
+        }
+      ],
+      "styles": [
+        "/assets/guest-purchase.css?v=a149d2f65c4d"
+      ]
+    },
+    "account-management": {
+      "scripts_in_document_order": [
+        {
+          "src": "/assets/theme-init.js",
+          "defer": false,
+          "async": false
+        },
+        {
+          "src": "/assets/ui-system.js",
+          "defer": true,
+          "async": false
+        },
+        {
+          "src": "/assets/account-management.js",
+          "defer": true,
+          "async": false
+        }
+      ]
+    },
+    "freeman-assistant": {
+      "file": "app/web/static/freeman-assistant.html",
+      "scripts_in_document_order": [
+        {
+          "src": "/assets/theme-init.js",
+          "defer": false,
+          "async": false
+        },
+        {
+          "src": "/assets/aegis-icons.js",
+          "defer": true,
+          "async": false
+        },
+        {
+          "src": "/assets/assistant-rich.js",
+          "defer": true,
+          "async": false
+        },
+        {
+          "src": "/assets/page-motion.js",
+          "defer": true,
+          "async": false
+        },
+        {
+          "src": "/assets/ui-system.js",
+          "defer": true,
+          "async": false
+        },
+        {
+          "src": "/assets/freeman-assistant.js",
+          "defer": true,
+          "async": false
+        },
+        {
+          "src": "/assets/freeman-identity.js",
+          "defer": false,
+          "async": false
+        }
+      ],
+      "styles": [
+        "/assets/freeman-assistant.css?v=9f357c256786"
+      ]
+    },
+    "freeman-ai": {
+      "scripts_in_document_order": [
+        {
+          "src": "/assets/theme-init.js",
+          "defer": false,
+          "async": false
+        },
+        {
+          "src": "/assets/aegis-icons.js",
+          "defer": true,
+          "async": false
+        },
+        {
+          "src": "/assets/page-motion.js",
+          "defer": true,
+          "async": false
+        },
+        {
+          "src": "/assets/ui-system.js",
+          "defer": true,
+          "async": false
+        },
+        {
+          "src": "/assets/freeman-ai.js",
+          "defer": true,
+          "async": false
+        }
+      ]
+    }
+  },
+  "source_candidates": [
+    {
+      "file": "app/web/static/account-management.js",
+      "rc_sha256": "65a914795ef09a56ed1c9429420df2d300a6c1350c71b8c75e6dc297869316bb",
+      "literal_action_and_state_attributes": [
+        "data-bind-card",
+        "data-card-choice",
+        "data-master",
+        "data-remove-card",
+        "data-renewal",
+        "data-trial"
+      ],
+      "function_declaration_candidates": [
+        {
+          "name": "request",
+          "line": 4
+        },
+        {
+          "name": "showError",
+          "line": 5
+        },
+        {
+          "name": "load",
+          "line": 9
+        }
+      ],
+      "qualification": "Static candidates include local/dead code; active ownership is in UI-B00-CONTRACTS.md. Not deletion authority."
+    },
+    {
+      "file": "app/web/static/aegis-icons.js",
+      "rc_sha256": "5fb0d5f5975d94d36f632afde66b2bf098d0570bf4023503a592d22624d879c9",
+      "literal_action_and_state_attributes": [],
+      "function_declaration_candidates": [],
+      "qualification": "Static candidates include local/dead code; active ownership is in UI-B00-CONTRACTS.md. Not deletion authority."
+    },
+    {
+      "file": "app/web/static/app.js",
+      "rc_sha256": "cec9cdab97b99a9a66fc52452099ba81521791ecc45aacc0024ebea623a77955",
+      "literal_action_and_state_attributes": [
+        "data-account-auth",
+        "data-account-mode",
+        "data-account-settings",
+        "data-activate-trial",
+        "data-admin-global-live",
+        "data-admin-global-page",
+        "data-admin-global-search",
+        "data-admin-key",
+        "data-admin-key-form",
+        "data-admin-key-operation",
+        "data-admin-list-form",
+        "data-admin-list-limit",
+        "data-admin-list-page",
+        "data-admin-list-status",
+        "data-admin-live-search",
+        "data-admin-open-search",
+        "data-admin-origin",
+        "data-admin-page",
+        "data-admin-period",
+        "data-admin-proxy-input",
+        "data-admin-search",
+        "data-admin-search-result",
+        "data-admin-user",
+        "data-admin-vpn-form",
+        "data-admin-vpn-grant",
+        "data-all-amount",
+        "data-auth-back",
+        "data-auth-resend",
+        "data-autorenew",
+        "data-balance-filter",
+        "data-bind-email",
+        "data-bind-telegram",
+        "data-cancel-edit",
+        "data-card",
+        "data-chart-tooltip",
+        "data-chat-attachments",
+        "data-chat-help",
+        "data-chat-picker",
+        "data-chat-sheet-close",
+        "data-chat-template",
+        "data-checkout",
+        "data-checkout-edit",
+        "data-client-reset-devices",
+        "data-client-reset-form",
+        "data-close-modal",
+        "data-close-ticket",
+        "data-confirm-checkout",
+        "data-copy-install",
+        "data-copy-key",
+        "data-copy-proxy",
+        "data-copy-ref",
+        "data-customer-confirm-cancel",
+        "data-customer-confirm-submit",
+        "data-customer-copy",
+        "data-customer-devices",
+        "data-customer-key-action",
+        "data-customer-proxy",
+        "data-customer-proxy-action",
+        "data-customer-proxy-close",
+        "data-customer-proxy-renew",
+        "data-customer-renew-option",
+        "data-customer-unlink",
+        "data-days",
+        "data-delete-link",
+        "data-delete-news",
+        "data-device-disconnect",
+        "data-device-limit",
+        "data-devices",
+        "data-download-install",
+        "data-edit-link",
+        "data-edit-news",
+        "data-file-count",
+        "data-form",
+        "data-gift-key",
+        "data-grant-preset",
+        "data-grant-recipient",
+        "data-icon",
+        "data-id",
+        "data-infrastructure-refresh",
+        "data-key-devices",
+        "data-key-id",
+        "data-key-install",
+        "data-key-name",
+        "data-key-offer",
+        "data-key-qr",
+        "data-key-rename",
+        "data-key-renew",
+        "data-key-search",
+        "data-key-toggle",
+        "data-key-tone",
+        "data-keys-copy",
+        "data-keys-devices",
+        "data-keys-filter",
+        "data-keys-filter-field",
+        "data-keys-filter-reset",
+        "data-keys-renew-days",
+        "data-keys-unlink",
+        "data-label",
+        "data-message-id",
+        "data-months",
+        "data-new-ticket",
+        "data-notice-open",
+        "data-notice-read",
+        "data-notifications",
+        "data-operation",
+        "data-payment-method",
+        "data-payout-account-label",
+        "data-payout-edit",
+        "data-payout-form",
+        "data-payout-method",
+        "data-pending-plan",
+        "data-plan",
+        "data-post-open",
+        "data-price",
+        "data-profile-avatar",
+        "data-profile-settings",
+        "data-proxy-admin-action",
+        "data-proxy-buy",
+        "data-proxy-client-page",
+        "data-proxy-client-search",
+        "data-proxy-copy-code",
+        "data-proxy-customer",
+        "data-proxy-customer-avatar",
+        "data-proxy-customer-issue",
+        "data-proxy-customer-move",
+        "data-proxy-grant",
+        "data-proxy-invite-copy",
+        "data-proxy-issue",
+        "data-proxy-new",
+        "data-proxy-purchase-options",
+        "data-proxy-recipient",
+        "data-proxy-recipient-select",
+        "data-proxy-server-search",
+        "data-proxy-status",
+        "data-proxy-toggle",
+        "data-purchase-retry",
+        "data-quick-delete",
+        "data-quick-reply",
+        "data-quick-send",
+        "data-record-id",
+        "data-ref-copy-status",
+        "data-referral-chart-retry",
+        "data-referral-more",
+        "data-referral-period",
+        "data-referral-point",
+        "data-referral-retry",
+        "data-rename-key",
+        "data-renew-amount",
+        "data-renew-date",
+        "data-renew-duration",
+        "data-renew-hours",
+        "data-renew-paid-confirm",
+        "data-renew-payment-note",
+        "data-renew-preview",
+        "data-renew-tariff",
+        "data-reply-id",
+        "data-report-dates",
+        "data-report-display",
+        "data-report-export",
+        "data-report-filter",
+        "data-report-keys",
+        "data-report-kind",
+        "data-report-limit",
+        "data-report-page",
+        "data-report-period",
+        "data-report-plan",
+        "data-report-previous",
+        "data-report-reset",
+        "data-report-retry",
+        "data-report-sale",
+        "data-report-sort",
+        "data-report-source",
+        "data-report-tooltip",
+        "data-reset-all-keys",
+        "data-reset-blocked-devices",
+        "data-reset-device-form",
+        "data-revoke-sessions",
+        "data-screen",
+        "data-selected-amount",
+        "data-selected-devices",
+        "data-selected-method",
+        "data-share-ref",
+        "data-shortfall-topup",
+        "data-status",
+        "data-support-autoreply",
+        "data-support-back",
+        "data-support-client-info",
+        "data-support-confirm-close",
+        "data-support-delete-ticket",
+        "data-support-edit-cancel",
+        "data-support-edit-reply",
+        "data-support-filter",
+        "data-support-filter-select",
+        "data-support-flag",
+        "data-support-history-ticket",
+        "data-support-info-tab",
+        "data-support-issue",
+        "data-support-limit",
+        "data-support-menu",
+        "data-support-menu-status",
+        "data-support-message",
+        "data-support-older",
+        "data-support-page",
+        "data-support-pick-reply",
+        "data-support-quick-sheet",
+        "data-support-quick-toggle",
+        "data-support-reopen",
+        "data-support-reply-status",
+        "data-support-search",
+        "data-support-settings",
+        "data-support-settings-back",
+        "data-support-settings-tab",
+        "data-support-sheet-close",
+        "data-support-status-change",
+        "data-support-subscription",
+        "data-support-ticket",
+        "data-tariff-view",
+        "data-telegram-auth",
+        "data-theme-toggle",
+        "data-token",
+        "data-topup",
+        "data-topup-amount",
+        "data-topup-form",
+        "data-use-balance",
+        "data-value",
+        "data-view",
+        "data-vpn-existing",
+        "data-vpn-external",
+        "data-vpn-external-note",
+        "data-vpn-recipient-mode",
+        "data-withdraw",
+        "data-withdraw-form"
+      ],
+      "function_declaration_candidates": [
+        {
+          "name": "login",
+          "line": 17
+        },
+        {
+          "name": "requestAuthCode",
+          "line": 18
+        },
+        {
+          "name": "accountRequest",
+          "line": 22
+        },
+        {
+          "name": "beginTelegramAuth",
+          "line": 28
+        },
+        {
+          "name": "accountModal",
+          "line": 49
+        },
+        {
+          "name": "navButton",
+          "line": 55
+        },
+        {
+          "name": "targetButton",
+          "line": 56
+        },
+        {
+          "name": "targetEnd",
+          "line": 57
+        },
+        {
+          "name": "accountNotifications",
+          "line": 59
+        },
+        {
+          "name": "noticeReadKey",
+          "line": 66
+        },
+        {
+          "name": "noticeId",
+          "line": 67
+        },
+        {
+          "name": "noticeIsRead",
+          "line": 68
+        },
+        {
+          "name": "commonTopbar",
+          "line": 69
+        },
+        {
+          "name": "notificationRows",
+          "line": 70
+        },
+        {
+          "name": "importantNotifications",
+          "line": 71
+        },
+        {
+          "name": "notificationsModal",
+          "line": 72
+        },
+        {
+          "name": "notificationDetail",
+          "line": 73
+        },
+        {
+          "name": "prepareSupportSound",
+          "line": 75
+        },
+        {
+          "name": "playSupportSentSound",
+          "line": 76
+        },
+        {
+          "name": "playSupportReceivedSound",
+          "line": 77
+        },
+        {
+          "name": "scheduleSupportPoll",
+          "line": 79
+        },
+        {
+          "name": "themeSwitch",
+          "line": 82
+        },
+        {
+          "name": "profilePage",
+          "line": 84
+        },
+        {
+          "name": "daysLeft",
+          "line": 99
+        },
+        {
+          "name": "dayWord",
+          "line": 100
+        },
+        {
+          "name": "remainingDays",
+          "line": 101
+        },
+        {
+          "name": "connectionWord",
+          "line": 102
+        },
+        {
+          "name": "deviceWord",
+          "line": 103
+        },
+        {
+          "name": "subscriptionDeviceRow",
+          "line": 104
+        },
+        {
+          "name": "subscriptionCard",
+          "line": 108
+        },
+        {
+          "name": "keysPage",
+          "line": 123
+        },
+        {
+          "name": "hydrateCustomerKeys",
+          "line": 128
+        },
+        {
+          "name": "plansPage",
+          "line": 138
+        },
+        {
+          "name": "checkoutConfirmation",
+          "line": 146
+        },
+        {
+          "name": "updateCheckoutSelection",
+          "line": 151
+        },
+        {
+          "name": "attachmentMarkup",
+          "line": 159
+        },
+        {
+          "name": "supportDate",
+          "line": 160
+        },
+        {
+          "name": "supportStatus",
+          "line": 161
+        },
+        {
+          "name": "supportPage",
+          "line": 163
+        },
+        {
+          "name": "pageHeader",
+          "line": 192
+        },
+        {
+          "name": "topupModal",
+          "line": 193
+        },
+        {
+          "name": "payoutForm",
+          "line": 194
+        },
+        {
+          "name": "openPayoutForm",
+          "line": 198
+        },
+        {
+          "name": "balancePage",
+          "line": 206
+        },
+        {
+          "name": "referralChartMarkup",
+          "line": 212
+        },
+        {
+          "name": "referralPage",
+          "line": 225
+        },
+        {
+          "name": "telegramProxyLink",
+          "line": 245
+        },
+        {
+          "name": "proxyPurchaseModal",
+          "line": 252
+        },
+        {
+          "name": "proxyPage",
+          "line": 253
+        },
+        {
+          "name": "infoPage",
+          "line": 260
+        },
+        {
+          "name": "placeholder",
+          "line": 261
+        },
+        {
+          "name": "loadAdminProxy",
+          "line": 262
+        },
+        {
+          "name": "adminProfilePage",
+          "line": 263
+        },
+        {
+          "name": "adminProxyDashboardPage",
+          "line": 264
+        },
+        {
+          "name": "adminProxySection",
+          "line": 265
+        },
+        {
+          "name": "loadProxyClients",
+          "line": 267
+        },
+        {
+          "name": "loadProxyCustomer",
+          "line": 268
+        },
+        {
+          "name": "proxyCustomerPage",
+          "line": 269
+        },
+        {
+          "name": "proxyClientList",
+          "line": 270
+        },
+        {
+          "name": "proxyDetailHeader",
+          "line": 271
+        },
+        {
+          "name": "proxyCompactFacts",
+          "line": 272
+        },
+        {
+          "name": "proxyDetailsTable",
+          "line": 273
+        },
+        {
+          "name": "proxyGuidePage",
+          "line": 274
+        },
+        {
+          "name": "adminProxyServerPage",
+          "line": 275
+        },
+        {
+          "name": "proxyGrantModal",
+          "line": 277
+        },
+        {
+          "name": "proxyInviteModal",
+          "line": 278
+        },
+        {
+          "name": "adminProxyFields",
+          "line": 279
+        },
+        {
+          "name": "proxyAdminAction",
+          "line": 280
+        },
+        {
+          "name": "adminSearchModal",
+          "line": 281
+        },
+        {
+          "name": "loadAdminList",
+          "line": 283
+        },
+        {
+          "name": "loadAdminKeys",
+          "line": 284
+        },
+        {
+          "name": "adminListControls",
+          "line": 285
+        },
+        {
+          "name": "adminListPagination",
+          "line": 286
+        },
+        {
+          "name": "adminAvatar",
+          "line": 288
+        },
+        {
+          "name": "openAdminKey",
+          "line": 289
+        },
+        {
+          "name": "adminKeyActions",
+          "line": 290
+        },
+        {
+          "name": "adminKeyPage",
+          "line": 291
+        },
+        {
+          "name": "adminKeyActionModal",
+          "line": 293
+        },
+        {
+          "name": "adminKeysPage",
+          "line": 294
+        },
+        {
+          "name": "adminClientsPage",
+          "line": 296
+        },
+        {
+          "name": "openAdminCustomer",
+          "line": 297
+        },
+        {
+          "name": "adminCustomerPage",
+          "line": 298
+        },
+        {
+          "name": "adminGlobalPage",
+          "line": 299
+        },
+        {
+          "name": "runAdminGlobal",
+          "line": 300
+        },
+        {
+          "name": "adminVpnGrantModal",
+          "line": 301
+        },
+        {
+          "name": "loadAdminMonth",
+          "line": 302
+        },
+        {
+          "name": "loadAdminDashboard",
+          "line": 303
+        },
+        {
+          "name": "adminDashboardPage",
+          "line": 304
+        },
+        {
+          "name": "adminPage",
+          "line": 305
+        },
+        {
+          "name": "viewContent",
+          "line": 306
+        },
+        {
+          "name": "copyText",
+          "line": 312
+        },
+        {
+          "name": "say",
+          "line": 318
+        },
+        {
+          "name": "updateNavigation",
+          "line": 320
+        },
+        {
+          "name": "screenMarkup",
+          "line": 333
+        },
+        {
+          "name": "finishScreenTransition",
+          "line": 338
+        },
+        {
+          "name": "updateChatViewport",
+          "line": 347
+        },
+        {
+          "name": "adminSidebar",
+          "line": 363
+        },
+        {
+          "name": "render",
+          "line": 367
+        },
+        {
+          "name": "renderInPlace",
+          "line": 440
+        },
+        {
+          "name": "refresh",
+          "line": 441
+        },
+        {
+          "name": "loadSupport",
+          "line": 444
+        },
+        {
+          "name": "loadReferralChart",
+          "line": 453
+        },
+        {
+          "name": "loadView",
+          "line": 469
+        },
+        {
+          "name": "loadViewContent",
+          "line": 475
+        },
+        {
+          "name": "closeChatSheet",
+          "line": 518
+        },
+        {
+          "name": "openChatSheet",
+          "line": 519
+        },
+        {
+          "name": "supportMessagePayload",
+          "line": 521
+        },
+        {
+          "name": "filePayload",
+          "line": 522
+        },
+        {
+          "name": "filesPayload",
+          "line": 523
+        },
+        {
+          "name": "installModal",
+          "line": 524
+        },
+        {
+          "name": "toggleThemeAnimated",
+          "line": 533
+        },
+        {
+          "name": "showReferralPoint",
+          "line": 656
+        },
+        {
+          "name": "start",
+          "line": 689
+        },
+        {
+          "name": "reportIcon",
+          "line": 724
+        },
+        {
+          "name": "reportsQuery",
+          "line": 725
+        },
+        {
+          "name": "loadReports",
+          "line": 727
+        },
+        {
+          "name": "reportDay",
+          "line": 728
+        },
+        {
+          "name": "reportDate",
+          "line": 729
+        },
+        {
+          "name": "reportTime",
+          "line": 730
+        },
+        {
+          "name": "analyticsIcon",
+          "line": 731
+        },
+        {
+          "name": "analyticsEmpty",
+          "line": 732
+        },
+        {
+          "name": "analyticsGrowth",
+          "line": 733
+        },
+        {
+          "name": "analyticsKpi",
+          "line": 734
+        },
+        {
+          "name": "analyticsChart",
+          "line": 735
+        },
+        {
+          "name": "analyticsDonut",
+          "line": 736
+        },
+        {
+          "name": "analyticsRanks",
+          "line": 737
+        },
+        {
+          "name": "analyticsFacts",
+          "line": 738
+        },
+        {
+          "name": "analyticsGroup",
+          "line": 739
+        },
+        {
+          "name": "reportsPage",
+          "line": 740
+        },
+        {
+          "name": "supportFilters",
+          "line": 745
+        },
+        {
+          "name": "supportUrl",
+          "line": 746
+        },
+        {
+          "name": "supportInbox",
+          "line": 747
+        },
+        {
+          "name": "supportTicketControls",
+          "line": 749
+        },
+        {
+          "name": "changeSupportStatus",
+          "line": 750
+        },
+        {
+          "name": "supportAvatar",
+          "line": 756
+        },
+        {
+          "name": "supportSafeRender",
+          "line": 757
+        },
+        {
+          "name": "supportBolt",
+          "line": 762
+        },
+        {
+          "name": "supportDots",
+          "line": 763
+        },
+        {
+          "name": "supportChannel",
+          "line": 764
+        },
+        {
+          "name": "loadSupportSettings",
+          "line": 766
+        },
+        {
+          "name": "supportSettingsPage",
+          "line": 767
+        },
+        {
+          "name": "supportSheet",
+          "line": 768
+        },
+        {
+          "name": "closeSupportSheet",
+          "line": 769
+        },
+        {
+          "name": "supportShortStatus",
+          "line": 773
+        },
+        {
+          "name": "customerSubscriptionStatus",
+          "line": 775
+        },
+        {
+          "name": "customerDevices",
+          "line": 776
+        },
+        {
+          "name": "customerPeriod",
+          "line": 777
+        },
+        {
+          "name": "customerKeyMarkup",
+          "line": 778
+        },
+        {
+          "name": "customerConfirmMarkup",
+          "line": 779
+        },
+        {
+          "name": "supportClientPanel",
+          "line": 780
+        },
+        {
+          "name": "customerRender",
+          "line": 782
+        },
+        {
+          "name": "customerLoadKey",
+          "line": 783
+        },
+        {
+          "name": "customerRequest",
+          "line": 784
+        },
+        {
+          "name": "customerCopy",
+          "line": 785
+        },
+        {
+          "name": "customerProxyMarkup",
+          "line": 788
+        },
+        {
+          "name": "customerProxyAction",
+          "line": 789
+        },
+        {
+          "name": "supportClientStatus",
+          "line": 793
+        },
+        {
+          "name": "supportWelcome",
+          "line": 794
+        },
+        {
+          "name": "keysIcon",
+          "line": 796
+        },
+        {
+          "name": "keysTariff",
+          "line": 797
+        },
+        {
+          "name": "keysTitle",
+          "line": 798
+        },
+        {
+          "name": "keysRow",
+          "line": 799
+        },
+        {
+          "name": "keysFilters",
+          "line": 800
+        },
+        {
+          "name": "keysRenew",
+          "line": 801
+        },
+        {
+          "name": "keysDevices",
+          "line": 802
+        },
+        {
+          "name": "analyticsTooltip",
+          "line": 808
+        },
+        {
+          "name": "adminServersPage",
+          "line": 813
+        },
+        {
+          "name": "loadAdminServers",
+          "line": 819
+        },
+        {
+          "name": "analyticsTimeline",
+          "line": 828
+        },
+        {
+          "name": "downloadReportCSV",
+          "line": 833
+        },
+        {
+          "name": "keyTraffic",
+          "line": 857
+        },
+        {
+          "name": "flexibleRenewModal",
+          "line": 858
+        },
+        {
+          "name": "renewPreview",
+          "line": 859
+        },
+        {
+          "name": "keyResetConfirmModal",
+          "line": 861
+        },
+        {
+          "name": "customerIdentitySecondary",
+          "line": 867
+        }
+      ],
+      "qualification": "Static candidates include local/dead code; active ownership is in UI-B00-CONTRACTS.md. Not deletion authority."
+    },
+    {
+      "file": "app/web/static/assistant-rich.js",
+      "rc_sha256": "f9c298eae8f539888fdc7c1857e8367e21c9e1e3e3c54518cae42c8f354aeaca",
+      "literal_action_and_state_attributes": [
+        "data-export",
+        "data-image-view"
+      ],
+      "function_declaration_candidates": [],
+      "qualification": "Static candidates include local/dead code; active ownership is in UI-B00-CONTRACTS.md. Not deletion authority."
+    },
+    {
+      "file": "app/web/static/auth-unified.js",
+      "rc_sha256": "9639ed50b19dd5c70b742261efaa6dac14106e144a7485c887d577f0dc4d052a",
+      "literal_action_and_state_attributes": [
+        "data-unified-auth",
+        "data-unified-back",
+        "data-unified-error",
+        "data-unified-resend",
+        "data-unified-telegram"
+      ],
+      "function_declaration_candidates": [],
+      "qualification": "Static candidates include local/dead code; active ownership is in UI-B00-CONTRACTS.md. Not deletion authority."
+    },
+    {
+      "file": "app/web/static/catalog.js",
+      "rc_sha256": "ceadb3fa2635507e5524e77688e070e2c3edd6f5a43854eccc654426074223df",
+      "literal_action_and_state_attributes": [
+        "data-catalog-edit",
+        "data-catalog-error",
+        "data-catalog-form",
+        "data-catalog-new",
+        "data-catalog-new-code",
+        "data-catalog-personal",
+        "data-catalog-plans",
+        "data-catalog-retry",
+        "data-catalog-tab",
+        "data-close-modal"
+      ],
+      "function_declaration_candidates": [
+        {
+          "name": "catalogFetch",
+          "line": 3
+        },
+        {
+          "name": "loadCatalog",
+          "line": 4
+        },
+        {
+          "name": "catalogPage",
+          "line": 5
+        },
+        {
+          "name": "catalogBody",
+          "line": 6
+        },
+        {
+          "name": "catalogRow",
+          "line": 7
+        },
+        {
+          "name": "catalogInput",
+          "line": 8
+        },
+        {
+          "name": "catalogSelect",
+          "line": 9
+        },
+        {
+          "name": "catalogEdit",
+          "line": 10
+        },
+        {
+          "name": "catalogPlanOptions",
+          "line": 11
+        }
+      ],
+      "qualification": "Static candidates include local/dead code; active ownership is in UI-B00-CONTRACTS.md. Not deletion authority."
+    },
+    {
+      "file": "app/web/static/checkout-recovery.js",
+      "rc_sha256": "c5d5b8de58e8fc629a664d10fd6158628d64cd2f9ec7b8cc0080c68651277ee2",
+      "literal_action_and_state_attributes": [],
+      "function_declaration_candidates": [],
+      "qualification": "Static candidates include local/dead code; active ownership is in UI-B00-CONTRACTS.md. Not deletion authority."
+    },
+    {
+      "file": "app/web/static/clients-mobile.js",
+      "rc_sha256": "c424c7ab646a2d374daf7a27f5f4b162d3c1e4ab347648ed76d0a750bb3c58ac",
+      "literal_action_and_state_attributes": [
+        "data-admin-list-limit",
+        "data-crm-campaign-close",
+        "data-crm-export",
+        "data-crm-filter",
+        "data-crm-filter-toggle",
+        "data-crm-message",
+        "data-crm-mobile-clear-segment",
+        "data-crm-mobile-more",
+        "data-crm-mobile-segments",
+        "data-crm-offer",
+        "data-crm-retry",
+        "data-crm-segment",
+        "data-crm-select-all",
+        "data-crm-sheet-apply",
+        "data-crm-sheet-close",
+        "data-crm-sheet-reset"
+      ],
+      "function_declaration_candidates": [],
+      "qualification": "Static candidates include local/dead code; active ownership is in UI-B00-CONTRACTS.md. Not deletion authority."
+    },
+    {
+      "file": "app/web/static/clients.js",
+      "rc_sha256": "0f67f126d47c3e711d1caadc9a688534f58a07f3e4f98c074d78064cfcf0ee29",
+      "literal_action_and_state_attributes": [
+        "data-admin-list-limit",
+        "data-admin-list-page",
+        "data-admin-live-search",
+        "data-admin-user",
+        "data-client-row",
+        "data-crm-campaign-back",
+        "data-crm-campaign-close",
+        "data-crm-campaign-history",
+        "data-crm-campaign-next",
+        "data-crm-campaign-retry",
+        "data-crm-campaign-status",
+        "data-crm-clear",
+        "data-crm-contact",
+        "data-crm-error",
+        "data-crm-expiry",
+        "data-crm-export",
+        "data-crm-filter",
+        "data-crm-filter-toggle",
+        "data-crm-final",
+        "data-crm-menu",
+        "data-crm-message",
+        "data-crm-message-user",
+        "data-crm-offer",
+        "data-crm-offer-user",
+        "data-crm-payments",
+        "data-crm-preview",
+        "data-crm-proxy",
+        "data-crm-reset",
+        "data-crm-segment",
+        "data-crm-select",
+        "data-crm-select-all",
+        "data-crm-select-page",
+        "data-crm-step",
+        "data-crm-step-label",
+        "data-crm-subscriptions",
+        "data-crm-tariffs",
+        "data-crm-variable",
+        "data-selected",
+        "data-value"
+      ],
+      "function_declaration_candidates": [
+        {
+          "name": "crmAgo",
+          "line": 6
+        },
+        {
+          "name": "crmExpiry",
+          "line": 7
+        },
+        {
+          "name": "crmContacts",
+          "line": 8
+        },
+        {
+          "name": "crmRow",
+          "line": 10
+        },
+        {
+          "name": "crmFilterPanel",
+          "line": 11
+        },
+        {
+          "name": "adminClientsPage",
+          "line": 12
+        },
+        {
+          "name": "crmPagination",
+          "line": 13
+        },
+        {
+          "name": "crmApply",
+          "line": 14
+        },
+        {
+          "name": "crmAudience",
+          "line": 15
+        },
+        {
+          "name": "crmExport",
+          "line": 16
+        },
+        {
+          "name": "crmCampaignOpen",
+          "line": 21
+        },
+        {
+          "name": "crmCampaignMount",
+          "line": 22
+        },
+        {
+          "name": "crmCampaignStep",
+          "line": 23
+        },
+        {
+          "name": "crmCampaignPayload",
+          "line": 24
+        },
+        {
+          "name": "crmPreview",
+          "line": 25
+        },
+        {
+          "name": "crmCampaignStatus",
+          "line": 26
+        }
+      ],
+      "qualification": "Static candidates include local/dead code; active ownership is in UI-B00-CONTRACTS.md. Not deletion authority."
+    },
+    {
+      "file": "app/web/static/customer-identity.js",
+      "rc_sha256": "cfac3d561f38bb23617931049878a05cb3605e9d039d11603c477c8a216c24a5",
+      "literal_action_and_state_attributes": [
+        "data-revoke",
+        "data-trusted-devices"
+      ],
+      "function_declaration_candidates": [
+        {
+          "name": "trustedDevicesButton",
+          "line": 2
+        },
+        {
+          "name": "profilePage",
+          "line": 4
+        }
+      ],
+      "qualification": "Static candidates include local/dead code; active ownership is in UI-B00-CONTRACTS.md. Not deletion authority."
+    },
+    {
+      "file": "app/web/static/customer-workspace.js",
+      "rc_sha256": "22e1af76431314b9525a163dfddd24c6ab2e786de941a640b639420bf1c73c00",
+      "literal_action_and_state_attributes": [
+        "data-admin-key",
+        "data-admin-user",
+        "data-close-modal",
+        "data-cp-action",
+        "data-cp-action-form",
+        "data-cp-campaign",
+        "data-cp-copy",
+        "data-cp-detail-page",
+        "data-cp-devices",
+        "data-cp-error",
+        "data-cp-expand",
+        "data-cp-note",
+        "data-cp-payment",
+        "data-cp-proxy",
+        "data-cp-proxy-open",
+        "data-cp-reload",
+        "data-cp-retry",
+        "data-cp-return",
+        "data-cp-scroll",
+        "data-cp-section",
+        "data-cp-summary-refresh",
+        "data-cp-ticket",
+        "data-cp-vpn",
+        "data-cp-vpn-form",
+        "data-status",
+        "data-view"
+      ],
+      "function_declaration_candidates": [
+        {
+          "name": "cpIcon",
+          "line": 5
+        },
+        {
+          "name": "cpStatus",
+          "line": 6
+        },
+        {
+          "name": "cpDate",
+          "line": 7
+        },
+        {
+          "name": "cpCopy",
+          "line": 8
+        },
+        {
+          "name": "cpRequest",
+          "line": 9
+        },
+        {
+          "name": "openAdminCustomer",
+          "line": 10
+        },
+        {
+          "name": "cpRefreshSummary",
+          "line": 11
+        },
+        {
+          "name": "cpLoadSection",
+          "line": 12
+        },
+        {
+          "name": "cpMountSection",
+          "line": 13
+        },
+        {
+          "name": "cpHeader",
+          "line": 14
+        },
+        {
+          "name": "cpSummary",
+          "line": 15
+        },
+        {
+          "name": "cpActions",
+          "line": 16
+        },
+        {
+          "name": "cpQuick",
+          "line": 17
+        },
+        {
+          "name": "cpSection",
+          "line": 18
+        },
+        {
+          "name": "cpSectionBody",
+          "line": 19
+        },
+        {
+          "name": "cpReferral",
+          "line": 20
+        },
+        {
+          "name": "adminCustomerPage",
+          "line": 21
+        },
+        {
+          "name": "cpDialog",
+          "line": 22
+        },
+        {
+          "name": "cpExpand",
+          "line": 23
+        },
+        {
+          "name": "cpActionDialog",
+          "line": 24
+        },
+        {
+          "name": "cpVPN",
+          "line": 25
+        },
+        {
+          "name": "cpProxy",
+          "line": 26
+        },
+        {
+          "name": "openAdminKey",
+          "line": 35
+        },
+        {
+          "name": "adminKeyPage",
+          "line": 36
+        },
+        {
+          "name": "pxRefresh",
+          "line": 37
+        }
+      ],
+      "qualification": "Static candidates include local/dead code; active ownership is in UI-B00-CONTRACTS.md. Not deletion authority."
+    },
+    {
+      "file": "app/web/static/freeman-ai-entry.js",
+      "rc_sha256": "e5b3b1dc1a11026e051c27cd670724239f5406e0d4d95ad4525a15885e5ae30e",
+      "literal_action_and_state_attributes": [
+        "data-ai-open",
+        "data-ai-profile",
+        "data-freeman-ai",
+        "data-support-delete-ticket",
+        "data-support-message"
+      ],
+      "function_declaration_candidates": [],
+      "qualification": "Static candidates include local/dead code; active ownership is in UI-B00-CONTRACTS.md. Not deletion authority."
+    },
+    {
+      "file": "app/web/static/freeman-ai.js",
+      "rc_sha256": "ed764b506575771ce81e23fd00fd3f03a348d6650337efe2ba69d24596dced3a",
+      "literal_action_and_state_attributes": [
+        "data-chat-back",
+        "data-conversation",
+        "data-knowledge",
+        "data-link-confirm",
+        "data-mode",
+        "data-page",
+        "data-state",
+        "data-tab",
+        "data-theme-toggle"
+      ],
+      "function_declaration_candidates": [
+        {
+          "name": "aiApi",
+          "line": 9
+        },
+        {
+          "name": "aiChatMarkup",
+          "line": 15
+        },
+        {
+          "name": "aiMessages",
+          "line": 16
+        },
+        {
+          "name": "aiOpen",
+          "line": 17
+        },
+        {
+          "name": "aiDashboard",
+          "line": 18
+        },
+        {
+          "name": "aiCustomer",
+          "line": 19
+        },
+        {
+          "name": "aiFormat",
+          "line": 29
+        }
+      ],
+      "qualification": "Static candidates include local/dead code; active ownership is in UI-B00-CONTRACTS.md. Not deletion authority."
+    },
+    {
+      "file": "app/web/static/freeman-assistant.js",
+      "rc_sha256": "1bacfc435130c851a14ad16344f36a04e948a2920899f30027ce5398fff6a3e3",
+      "literal_action_and_state_attributes": [
+        "data-attach",
+        "data-broadcast",
+        "data-cancel-task",
+        "data-chat",
+        "data-chat-options",
+        "data-chat-title",
+        "data-confirm",
+        "data-context-mode",
+        "data-delete",
+        "data-drawer-close",
+        "data-enable",
+        "data-file",
+        "data-history",
+        "data-image-close",
+        "data-image-zoom",
+        "data-index",
+        "data-menu",
+        "data-message",
+        "data-new",
+        "data-new-messages",
+        "data-panel",
+        "data-panel-close",
+        "data-pending-send",
+        "data-remove",
+        "data-rename",
+        "data-retry-send",
+        "data-schedule",
+        "data-schedule-save",
+        "data-search",
+        "data-site-confirm",
+        "data-sounds",
+        "data-suggest",
+        "data-theme",
+        "data-upload"
+      ],
+      "function_declaration_candidates": [],
+      "qualification": "Static candidates include local/dead code; active ownership is in UI-B00-CONTRACTS.md. Not deletion authority."
+    },
+    {
+      "file": "app/web/static/freeman-identity.js",
+      "rc_sha256": "cdec0d3fbca93d35596100b2dd205e2309c0be61f208e7bf8115999fea55b404",
+      "literal_action_and_state_attributes": [],
+      "function_declaration_candidates": [],
+      "qualification": "Static candidates include local/dead code; active ownership is in UI-B00-CONTRACTS.md. Not deletion authority."
+    },
+    {
+      "file": "app/web/static/guest-purchase.js",
+      "rc_sha256": "40eaca86f15fc97483e72acab9544e84db3786c50f785b67670e6db2c71e3119",
+      "literal_action_and_state_attributes": [
+        "data-copy",
+        "data-device",
+        "data-icon",
+        "data-tariff"
+      ],
+      "function_declaration_candidates": [
+        {
+          "name": "api",
+          "line": 11
+        },
+        {
+          "name": "fail",
+          "line": 12
+        },
+        {
+          "name": "values",
+          "line": 13
+        },
+        {
+          "name": "optionRows",
+          "line": 16
+        },
+        {
+          "name": "buttonLabel",
+          "line": 17
+        },
+        {
+          "name": "updateSelection",
+          "line": 18
+        },
+        {
+          "name": "draw",
+          "line": 19
+        },
+        {
+          "name": "guestReservePaymentTab",
+          "line": 20
+        },
+        {
+          "name": "guestClosePaymentTab",
+          "line": 21
+        },
+        {
+          "name": "purchase",
+          "line": 22
+        },
+        {
+          "name": "showReceipt",
+          "line": 24
+        },
+        {
+          "name": "loginPage",
+          "line": 25
+        },
+        {
+          "name": "securityPage",
+          "line": 31
+        },
+        {
+          "name": "guestResumePayment",
+          "line": 33
+        },
+        {
+          "name": "loadOwnSubscriptions",
+          "line": 36
+        }
+      ],
+      "qualification": "Static candidates include local/dead code; active ownership is in UI-B00-CONTRACTS.md. Not deletion authority."
+    },
+    {
+      "file": "app/web/static/keys-controls.js",
+      "rc_sha256": "12e8869e1b4102a1a0b8909b586ab4a468b35da012cadf3885938b8f1717601c",
+      "literal_action_and_state_attributes": [
+        "data-admin-list-limit",
+        "data-close-modal",
+        "data-keys-devices",
+        "data-keys-filter-field"
+      ],
+      "function_declaration_candidates": [],
+      "qualification": "Static candidates include local/dead code; active ownership is in UI-B00-CONTRACTS.md. Not deletion authority."
+    },
+    {
+      "file": "app/web/static/mobile-admin-profile.js",
+      "rc_sha256": "15c21af3333d38e75ac2abe0a16128a10f5af0e23e6f460eb2ab1df444404e18",
+      "literal_action_and_state_attributes": [
+        "data-admin-browser-list",
+        "data-admin-browser-retry",
+        "data-admin-browser-revoke",
+        "data-admin-logout",
+        "data-admin-panel",
+        "data-admin-revoke-sessions",
+        "data-ai-open",
+        "data-ai-profile",
+        "data-bind-email",
+        "data-bind-telegram",
+        "data-notifications",
+        "data-profile-settings",
+        "data-screen",
+        "data-theme-toggle",
+        "data-view"
+      ],
+      "function_declaration_candidates": [
+        {
+          "name": "mobileAdminIcon",
+          "line": 4
+        },
+        {
+          "name": "mobileAdminRow",
+          "line": 5
+        },
+        {
+          "name": "mobileAdminGroup",
+          "line": 8
+        },
+        {
+          "name": "mobileAdminPage",
+          "line": 9
+        },
+        {
+          "name": "mobileAdminSettings",
+          "line": 10
+        },
+        {
+          "name": "mobileAdminDetail",
+          "line": 14
+        },
+        {
+          "name": "adminProfilePage",
+          "line": 24
+        },
+        {
+          "name": "viewContent",
+          "line": 34
+        },
+        {
+          "name": "mobileAdminBrowsers",
+          "line": 36
+        }
+      ],
+      "qualification": "Static candidates include local/dead code; active ownership is in UI-B00-CONTRACTS.md. Not deletion authority."
+    },
+    {
+      "file": "app/web/static/offers.js",
+      "rc_sha256": "b5b9690fcc040557682d7eba77d9512e2d4d5f040e1ecfbc83a66195945a4565",
+      "literal_action_and_state_attributes": [
+        "data-key-offer",
+        "data-offer-action",
+        "data-offer-close",
+        "data-offer-date",
+        "data-offer-error",
+        "data-offer-history",
+        "data-offer-id",
+        "data-offer-preview",
+        "data-offer-preview-button",
+        "data-offer-refresh",
+        "data-offer-send",
+        "data-offer-summary",
+        "data-offer-unit",
+        "data-offer-variable"
+      ],
+      "function_declaration_candidates": [
+        {
+          "name": "offerFetch",
+          "line": 4
+        },
+        {
+          "name": "offerMount",
+          "line": 5
+        },
+        {
+          "name": "loadPersonalOffers",
+          "line": 15
+        },
+        {
+          "name": "openKeyOffer",
+          "line": 16
+        },
+        {
+          "name": "offerClose",
+          "line": 17
+        },
+        {
+          "name": "offerMarkup",
+          "line": 18
+        },
+        {
+          "name": "offerPayload",
+          "line": 19
+        },
+        {
+          "name": "offerRefresh",
+          "line": 20
+        },
+        {
+          "name": "offerResult",
+          "line": 21
+        },
+        {
+          "name": "offerPlanPrices",
+          "line": 33
+        }
+      ],
+      "qualification": "Static candidates include local/dead code; active ownership is in UI-B00-CONTRACTS.md. Not deletion authority."
+    },
+    {
+      "file": "app/web/static/page-motion.js",
+      "rc_sha256": "3c6b414a585277225187af3b3f306624922e6ecfc7d86064a91e455550d20741",
+      "literal_action_and_state_attributes": [
+        "data-ai-open"
+      ],
+      "function_declaration_candidates": [],
+      "qualification": "Static candidates include local/dead code; active ownership is in UI-B00-CONTRACTS.md. Not deletion authority."
+    },
+    {
+      "file": "app/web/static/payment-window.js",
+      "rc_sha256": "69f292a94371ff6db145053ce74041631b47a07cc2e51f19173a2de5ee6d4346",
+      "literal_action_and_state_attributes": [],
+      "function_declaration_candidates": [
+        {
+          "name": "reservePaymentTab",
+          "line": 2
+        },
+        {
+          "name": "closeReservedPaymentTab",
+          "line": 3
+        },
+        {
+          "name": "cleanPaymentReturn",
+          "line": 4
+        },
+        {
+          "name": "startExternalPayment",
+          "line": 5
+        },
+        {
+          "name": "purchasePage",
+          "line": 8
+        },
+        {
+          "name": "resumeExternalPayment",
+          "line": 9
+        }
+      ],
+      "qualification": "Static candidates include local/dead code; active ownership is in UI-B00-CONTRACTS.md. Not deletion authority."
+    },
+    {
+      "file": "app/web/static/payments.js",
+      "rc_sha256": "577a971c84583a3bdcb7d7848af623ca9f03dda4ebf444a1963da078267541fb",
+      "literal_action_and_state_attributes": [
+        "data-admin-key",
+        "data-admin-user",
+        "data-pay-clear",
+        "data-pay-copy",
+        "data-pay-date-form",
+        "data-pay-dates",
+        "data-pay-detail-close",
+        "data-pay-detail-retry",
+        "data-pay-export",
+        "data-pay-filter-close",
+        "data-pay-filter-toggle",
+        "data-pay-filters",
+        "data-pay-limit",
+        "data-pay-open",
+        "data-pay-page",
+        "data-pay-period",
+        "data-pay-reset",
+        "data-pay-retry",
+        "data-pay-row",
+        "data-pay-search",
+        "data-pay-sort",
+        "data-pay-tab",
+        "data-screen"
+      ],
+      "function_declaration_candidates": [
+        {
+          "name": "payEsc",
+          "line": 4
+        },
+        {
+          "name": "payIcon",
+          "line": 5
+        },
+        {
+          "name": "payMoney",
+          "line": 6
+        },
+        {
+          "name": "payDate",
+          "line": 7
+        },
+        {
+          "name": "payPill",
+          "line": 8
+        },
+        {
+          "name": "payParams",
+          "line": 9
+        },
+        {
+          "name": "paySaveURL",
+          "line": 10
+        },
+        {
+          "name": "payRender",
+          "line": 11
+        },
+        {
+          "name": "loadPayments",
+          "line": 12
+        },
+        {
+          "name": "paySelect",
+          "line": 13
+        },
+        {
+          "name": "payClose",
+          "line": 14
+        },
+        {
+          "name": "payExport",
+          "line": 15
+        },
+        {
+          "name": "paySkeleton",
+          "line": 16
+        },
+        {
+          "name": "payKPI",
+          "line": 17
+        },
+        {
+          "name": "payOptions",
+          "line": 18
+        },
+        {
+          "name": "payFilter",
+          "line": 19
+        },
+        {
+          "name": "payDetail",
+          "line": 20
+        },
+        {
+          "name": "payRow",
+          "line": 21
+        },
+        {
+          "name": "paymentsPage",
+          "line": 22
+        },
+        {
+          "name": "payMountOverlays",
+          "line": 31
+        }
+      ],
+      "qualification": "Static candidates include local/dead code; active ownership is in UI-B00-CONTRACTS.md. Not deletion authority."
+    },
+    {
+      "file": "app/web/static/post-payment.js",
+      "rc_sha256": "583956cf4667c581cb429239b7c1d766c26c88af48f0ffae07599b83c7992ef8",
+      "literal_action_and_state_attributes": [
+        "data-pp"
+      ],
+      "function_declaration_candidates": [
+        {
+          "name": "model",
+          "line": 9
+        },
+        {
+          "name": "render",
+          "line": 10
+        },
+        {
+          "name": "value",
+          "line": 15
+        },
+        {
+          "name": "footer",
+          "line": 16
+        },
+        {
+          "name": "feedback",
+          "line": 17
+        },
+        {
+          "name": "file",
+          "line": 18
+        },
+        {
+          "name": "download",
+          "line": 19
+        },
+        {
+          "name": "copy",
+          "line": 20
+        },
+        {
+          "name": "qr",
+          "line": 21
+        }
+      ],
+      "qualification": "Static candidates include local/dead code; active ownership is in UI-B00-CONTRACTS.md. Not deletion authority."
+    },
+    {
+      "file": "app/web/static/posts.js",
+      "rc_sha256": "a6a71f28b72bcbc52f488c5416978737910a7c60f422cd6d7276f3c1ce84a205",
+      "literal_action_and_state_attributes": [
+        "data-close-modal",
+        "data-direction",
+        "data-id",
+        "data-post-open",
+        "data-pub-action",
+        "data-pub-alt",
+        "data-pub-caption",
+        "data-pub-client-section",
+        "data-pub-close",
+        "data-pub-confirm-no",
+        "data-pub-confirm-yes",
+        "data-pub-cover",
+        "data-pub-cover-remove",
+        "data-pub-drag",
+        "data-pub-editor-session",
+        "data-pub-editor-slot",
+        "data-pub-emoji",
+        "data-pub-emoji-insert",
+        "data-pub-filter",
+        "data-pub-filter-close",
+        "data-pub-filter-reset",
+        "data-pub-filters",
+        "data-pub-form",
+        "data-pub-limit",
+        "data-pub-link-cancel",
+        "data-pub-link-form",
+        "data-pub-media",
+        "data-pub-menu",
+        "data-pub-menu-close",
+        "data-pub-move",
+        "data-pub-new",
+        "data-pub-page",
+        "data-pub-preview",
+        "data-pub-publish",
+        "data-pub-redo",
+        "data-pub-remove",
+        "data-pub-retry",
+        "data-pub-retry-notification",
+        "data-pub-row",
+        "data-pub-save",
+        "data-pub-search",
+        "data-pub-slide",
+        "data-pub-slide-to",
+        "data-pub-slideshow",
+        "data-pub-tab",
+        "data-pub-undo",
+        "data-pub-upload",
+        "data-screen"
+      ],
+      "function_declaration_candidates": [
+        {
+          "name": "pubEsc",
+          "line": 6
+        },
+        {
+          "name": "pubIcon",
+          "line": 7
+        },
+        {
+          "name": "pubDate",
+          "line": 8
+        },
+        {
+          "name": "postAPI",
+          "line": 9
+        },
+        {
+          "name": "pubQuery",
+          "line": 10
+        },
+        {
+          "name": "pubRender",
+          "line": 11
+        },
+        {
+          "name": "loadPosts",
+          "line": 12
+        },
+        {
+          "name": "pubBadge",
+          "line": 13
+        },
+        {
+          "name": "pubSection",
+          "line": 14
+        },
+        {
+          "name": "pubList",
+          "line": 15
+        },
+        {
+          "name": "pubFilter",
+          "line": 16
+        },
+        {
+          "name": "postsPage",
+          "line": 17
+        },
+        {
+          "name": "pubMediaHTML",
+          "line": 18
+        },
+        {
+          "name": "pubEditorHTML",
+          "line": 19
+        },
+        {
+          "name": "pubCapture",
+          "line": 20
+        },
+        {
+          "name": "pubBeforeRender",
+          "line": 21
+        },
+        {
+          "name": "pubMount",
+          "line": 22
+        },
+        {
+          "name": "pubInitQuill",
+          "line": 23
+        },
+        {
+          "name": "pubUpdateCounter",
+          "line": 24
+        },
+        {
+          "name": "pubUpdateEditor",
+          "line": 25
+        },
+        {
+          "name": "pubChanged",
+          "line": 26
+        },
+        {
+          "name": "pubUpdateEditorStatus",
+          "line": 27
+        },
+        {
+          "name": "pubSave",
+          "line": 28
+        },
+        {
+          "name": "pubCanLeave",
+          "line": 29
+        },
+        {
+          "name": "pubClose",
+          "line": 30
+        },
+        {
+          "name": "pubNew",
+          "line": 31
+        },
+        {
+          "name": "pubEdit",
+          "line": 32
+        },
+        {
+          "name": "pubConfirm",
+          "line": 33
+        },
+        {
+          "name": "pubAction",
+          "line": 34
+        },
+        {
+          "name": "pubMountMenu",
+          "line": 35
+        },
+        {
+          "name": "pubChooseFile",
+          "line": 36
+        },
+        {
+          "name": "pubUpload",
+          "line": 37
+        },
+        {
+          "name": "pubLinkDialog",
+          "line": 38
+        },
+        {
+          "name": "postMedia",
+          "line": 39
+        },
+        {
+          "name": "postArticle",
+          "line": 40
+        },
+        {
+          "name": "openPost",
+          "line": 41
+        },
+        {
+          "name": "pubSetupGalleries",
+          "line": 42
+        },
+        {
+          "name": "pubPreview",
+          "line": 43
+        },
+        {
+          "name": "pubEmoji",
+          "line": 44
+        }
+      ],
+      "qualification": "Static candidates include local/dead code; active ownership is in UI-B00-CONTRACTS.md. Not deletion authority."
+    },
+    {
+      "file": "app/web/static/proxy-control.js",
+      "rc_sha256": "3b4e49340ea66bdae80fe494b9d4a0ce17229c00a61ff7207d017a4665405455",
+      "literal_action_and_state_attributes": [
+        "data-crm-campaign-next",
+        "data-crm-tariffs",
+        "data-label",
+        "data-proxy-new",
+        "data-px-access",
+        "data-px-access-act",
+        "data-px-buy",
+        "data-px-campaign",
+        "data-px-choose-user",
+        "data-px-client",
+        "data-px-close",
+        "data-px-confirm",
+        "data-px-copy",
+        "data-px-customer-access",
+        "data-px-customer-results",
+        "data-px-doc",
+        "data-px-error",
+        "data-px-filter-clear",
+        "data-px-filter-form",
+        "data-px-filters",
+        "data-px-invite-revoke",
+        "data-px-invites",
+        "data-px-issue",
+        "data-px-issue-submit",
+        "data-px-limit",
+        "data-px-open-user",
+        "data-px-page",
+        "data-px-period",
+        "data-px-plan",
+        "data-px-plan-save",
+        "data-px-promotion",
+        "data-px-purchase",
+        "data-px-range",
+        "data-px-search",
+        "data-px-server",
+        "data-px-server-act",
+        "data-px-server-add",
+        "data-px-server-edit",
+        "data-px-server-next",
+        "data-px-server-prev",
+        "data-px-server-step",
+        "data-px-server-step-label",
+        "data-px-server-tab",
+        "data-px-settings",
+        "data-px-sub-label",
+        "data-px-tab",
+        "data-px-test",
+        "data-px-test-result"
+      ],
+      "function_declaration_candidates": [
+        {
+          "name": "pxBadge",
+          "line": 5
+        },
+        {
+          "name": "pxBytes",
+          "line": 6
+        },
+        {
+          "name": "pxDate",
+          "line": 7
+        },
+        {
+          "name": "pxOptions",
+          "line": 8
+        },
+        {
+          "name": "pxSelect",
+          "line": 9
+        },
+        {
+          "name": "pxFetch",
+          "line": 10
+        },
+        {
+          "name": "pxLoad",
+          "line": 11
+        },
+        {
+          "name": "loadAdminProxy",
+          "line": 13
+        },
+        {
+          "name": "pxSummary",
+          "line": 14
+        },
+        {
+          "name": "pxFilters",
+          "line": 15
+        },
+        {
+          "name": "pxToolbar",
+          "line": 16
+        },
+        {
+          "name": "pxPager",
+          "line": 17
+        },
+        {
+          "name": "pxServers",
+          "line": 18
+        },
+        {
+          "name": "pxRecent",
+          "line": 19
+        },
+        {
+          "name": "pxChart",
+          "line": 20
+        },
+        {
+          "name": "pxAccessRows",
+          "line": 21
+        },
+        {
+          "name": "pxRegistry",
+          "line": 22
+        },
+        {
+          "name": "pxClients",
+          "line": 23
+        },
+        {
+          "name": "pxPricing",
+          "line": 24
+        },
+        {
+          "name": "pxSettings",
+          "line": 25
+        },
+        {
+          "name": "pxStatistics",
+          "line": 26
+        },
+        {
+          "name": "pxPromotions",
+          "line": 27
+        },
+        {
+          "name": "adminProxyDashboardPage",
+          "line": 28
+        },
+        {
+          "name": "pxDrawer",
+          "line": 29
+        },
+        {
+          "name": "pxFacts",
+          "line": 30
+        },
+        {
+          "name": "pxServerDrawer",
+          "line": 31
+        },
+        {
+          "name": "pxServerForm",
+          "line": 34
+        },
+        {
+          "name": "pxServerPayload",
+          "line": 35
+        },
+        {
+          "name": "pxIssueForm",
+          "line": 36
+        },
+        {
+          "name": "pxAccess",
+          "line": 37
+        },
+        {
+          "name": "pxConfirm",
+          "line": 38
+        },
+        {
+          "name": "pxCustomer",
+          "line": 39
+        },
+        {
+          "name": "pxPlan",
+          "line": 40
+        },
+        {
+          "name": "pxPurchase",
+          "line": 41
+        },
+        {
+          "name": "pxRefresh",
+          "line": 43
+        }
+      ],
+      "qualification": "Static candidates include local/dead code; active ownership is in UI-B00-CONTRACTS.md. Not deletion authority."
+    },
+    {
+      "file": "app/web/static/proxy-guide.js",
+      "rc_sha256": "b87a9b0a795e2ea461c9c32f2421f67f54c13200d0757c5d5685d46f519b262c",
+      "literal_action_and_state_attributes": [],
+      "function_declaration_candidates": [],
+      "qualification": "Static candidates include local/dead code; active ownership is in UI-B00-CONTRACTS.md. Not deletion authority."
+    },
+    {
+      "file": "app/web/static/proxy-pages.js",
+      "rc_sha256": "0340b7181ca0ef399e7d47b245f167928f14058bb98756bb14d184a28676760d",
+      "literal_action_and_state_attributes": [
+        "data-id",
+        "data-label",
+        "data-px-access",
+        "data-px-client",
+        "data-px-doc",
+        "data-px-guide-copy",
+        "data-px-open-user",
+        "data-px-page-action",
+        "data-px-page-back",
+        "data-px-server-act",
+        "data-px-server-edit",
+        "data-px-server-limit",
+        "data-px-server-page",
+        "data-px-server-search",
+        "data-px-server-tab",
+        "data-px-tab",
+        "data-screen"
+      ],
+      "function_declaration_candidates": [
+        {
+          "name": "pxPageURL",
+          "line": 4
+        },
+        {
+          "name": "pxPageRender",
+          "line": 5
+        },
+        {
+          "name": "pxOpenServer",
+          "line": 6
+        },
+        {
+          "name": "pxServerDrawer",
+          "line": 7
+        },
+        {
+          "name": "pxOpenDocs",
+          "line": 8
+        },
+        {
+          "name": "pxServerValue",
+          "line": 9
+        },
+        {
+          "name": "pxRemaining",
+          "line": 10
+        },
+        {
+          "name": "pxServerContent",
+          "line": 11
+        },
+        {
+          "name": "pxServerProxyRows",
+          "line": 15
+        },
+        {
+          "name": "pxServerRegistry",
+          "line": 16
+        },
+        {
+          "name": "pxServerPage",
+          "line": 17
+        },
+        {
+          "name": "pxDocsPage",
+          "line": 18
+        },
+        {
+          "name": "adminProxyDashboardPage",
+          "line": 19
+        },
+        {
+          "name": "pxSwapContent",
+          "line": 20
+        },
+        {
+          "name": "pxServerLoad",
+          "line": 21
+        },
+        {
+          "name": "pxRestoreLocation",
+          "line": 25
+        }
+      ],
+      "qualification": "Static candidates include local/dead code; active ownership is in UI-B00-CONTRACTS.md. Not deletion authority."
+    },
+    {
+      "file": "app/web/static/publication-buttons.js",
+      "rc_sha256": "d96ccb9668085d22b47849d1d30e747fd1ac2a58958bf34b2724210dcda5a184",
+      "literal_action_and_state_attributes": [
+        "data-pub-button-add",
+        "data-pub-button-cancel",
+        "data-pub-button-error",
+        "data-pub-button-insert",
+        "data-pub-button-text",
+        "data-pub-button-url"
+      ],
+      "function_declaration_candidates": [
+        {
+          "name": "pubMount",
+          "line": 6
+        }
+      ],
+      "qualification": "Static candidates include local/dead code; active ownership is in UI-B00-CONTRACTS.md. Not deletion authority."
+    },
+    {
+      "file": "app/web/static/purchase-flow.js",
+      "rc_sha256": "47520be8bdac0dffa7426ceaca0ba0e6c5d87943103619550e986263bec25cbc",
+      "literal_action_and_state_attributes": [
+        "data-copy-key",
+        "data-key-install",
+        "data-purchase-retry",
+        "data-view"
+      ],
+      "function_declaration_candidates": [
+        {
+          "name": "sortedKeys",
+          "line": 2
+        },
+        {
+          "name": "recentlyPurchased",
+          "line": 6
+        },
+        {
+          "name": "purchasedKey",
+          "line": 10
+        },
+        {
+          "name": "paymentPhase",
+          "line": 14
+        },
+        {
+          "name": "keyDateMetadata",
+          "line": 20
+        },
+        {
+          "name": "purchaseSuccessPage",
+          "line": 26
+        },
+        {
+          "name": "purchasePage",
+          "line": 27
+        },
+        {
+          "name": "purchaseContext",
+          "line": 35
+        },
+        {
+          "name": "completePurchase",
+          "line": 36
+        },
+        {
+          "name": "checkReturnedPayment",
+          "line": 62
+        },
+        {
+          "name": "schedulePaymentCheck",
+          "line": 92
+        },
+        {
+          "name": "previewPurchase",
+          "line": 93
+        }
+      ],
+      "qualification": "Static candidates include local/dead code; active ownership is in UI-B00-CONTRACTS.md. Not deletion authority."
+    },
+    {
+      "file": "app/web/static/quill.js",
+      "rc_sha256": "f6157c72ac9b3f51cdead426335688a027b12405d9d6a4daadd38a676b2d7ff2",
+      "literal_action_and_state_attributes": [
+        "data-checked",
+        "data-formula",
+        "data-label",
+        "data-language",
+        "data-link",
+        "data-list",
+        "data-mode",
+        "data-placeholder",
+        "data-row",
+        "data-value",
+        "data-video"
+      ],
+      "function_declaration_candidates": [],
+      "qualification": "Static candidates include local/dead code; active ownership is in UI-B00-CONTRACTS.md. Not deletion authority."
+    },
+    {
+      "file": "app/web/static/support-motion.js",
+      "rc_sha256": "cf8f8b296ddd35ad1c51de51de3e41362d75aea7e8814aa2d582e3ac1e3b159a",
+      "literal_action_and_state_attributes": [
+        "data-message-id",
+        "data-support-older",
+        "data-support-ticket"
+      ],
+      "function_declaration_candidates": [],
+      "qualification": "Static candidates include local/dead code; active ownership is in UI-B00-CONTRACTS.md. Not deletion authority."
+    },
+    {
+      "file": "app/web/static/telegram-sdk.js",
+      "rc_sha256": "6d44887501190f920a28e9de712b72e990ea2721a8269d84de6c4405160508df",
+      "literal_action_and_state_attributes": [],
+      "function_declaration_candidates": [],
+      "qualification": "Static candidates include local/dead code; active ownership is in UI-B00-CONTRACTS.md. Not deletion authority."
+    },
+    {
+      "file": "app/web/static/theme-init.js",
+      "rc_sha256": "1ceba4aeb3b8062c5c959576231215d769eef73ebe9c48975a33f33085b91230",
+      "literal_action_and_state_attributes": [],
+      "function_declaration_candidates": [],
+      "qualification": "Static candidates include local/dead code; active ownership is in UI-B00-CONTRACTS.md. Not deletion authority."
+    },
+    {
+      "file": "app/web/static/ui-system.js",
+      "rc_sha256": "ebfc9910d40e43c2347bf66ed0803c9547ecc74e90772353f7fb942d60535b19",
+      "literal_action_and_state_attributes": [
+        "data-admin-key-operation",
+        "data-admin-vpn-grant",
+        "data-image-close",
+        "data-image-zoom",
+        "data-panel-close",
+        "data-reset-all-keys"
+      ],
+      "function_declaration_candidates": [],
+      "qualification": "Static candidates include local/dead code; active ownership is in UI-B00-CONTRACTS.md. Not deletion authority."
+    }
+  ],
+  "styles": {
+    "cabinet.css": {
+      "sources": [
+        "cabinet/foundation.css",
+        "cabinet/shell.css",
+        "cabinet/components.css",
+        "cabinet/account.css",
+        "cabinet/profile.css",
+        "cabinet/keys.css",
+        "cabinet/plans.css",
+        "cabinet/clients.css",
+        "cabinet/support.css",
+        "cabinet/payments.css",
+        "cabinet/reports.css",
+        "cabinet/publications.css",
+        "cabinet/proxy.css",
+        "cabinet/referrals.css",
+        "cabinet/catalog.css",
+        "cabinet/motion.css"
+      ],
+      "bytes": 796201,
+      "sha256": "6550ff1f5c2aea3f44d0e9b1144c88a1467a701af8f1bca2304c027415e28284"
+    },
+    "freeman-assistant.css": {
+      "sources": [
+        "shared/theme.css",
+        "pages/assistant.css",
+        "shared/motion.css"
+      ],
+      "bytes": 52563,
+      "sha256": "9f357c25678639b3e4a47fd35345601b1a7c90d54cbe27a1f0f388569c34a012"
+    },
+    "freeman-ai.css": {
+      "sources": [
+        "shared/theme.css",
+        "pages/ai-console.css",
+        "shared/motion.css"
+      ],
+      "bytes": 35367,
+      "sha256": "78f3721da6c1c2521bfb21fc19e49075dabb8f5a487efcacc884e903e1b0103e"
+    },
+    "guest-purchase.css": {
+      "sources": [
+        "pages/auth-payment.css",
+        "pages/guest-purchase.css",
+        "pages/post-payment.css"
+      ],
+      "bytes": 18413,
+      "sha256": "a149d2f65c4d5c6c308af6b98d83a7fdb19550ce938b6340aa771a9a0f405654"
+    },
+    "account-management.css": {
+      "sources": [
+        "pages/guest-purchase.css",
+        "pages/account-management.css"
+      ],
+      "bytes": 8730,
+      "sha256": "a85bacac4f1516e4b6a0ed3678e6222c91ce1730ee21e90f9ad58596767e18e0"
+    }
+  }
+}
